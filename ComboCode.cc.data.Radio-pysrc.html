@@ -87,7 +87,7 @@ ComboCode.cc.tools.io.Database.Database" class="py-name" href="#" onclick="retur
 <a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">         </tt>
 <a name="Radio.__init__"></a><div id="Radio.__init__-def"><a name="L24"></a><tt class="py-lineno"> 24</tt> <a class="py-toggle" href="#" id="Radio.__init__-toggle" onclick="return toggle('Radio.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="ComboCode.cc.data.Radio.Radio-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt><tt class="py-param">path</tt><tt class="py-op">,</tt><tt class="py-param">auto_parse</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-param">db_name</tt><tt class="py-op">=</tt><tt class="py-string">'radio_data.db'</tt><tt class="py-op">,</tt>\ </tt>
 <a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">                 <tt class="py-param">cc_path</tt><tt class="py-op">=</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">expanduser</tt><tt class="py-op">(</tt><tt class="py-string">'~'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt>\ </tt>
-<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">                                      <tt class="py-string">'ComboCode'</tt><tt class="py-op">,</tt><tt class="py-string">'Data'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>         </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">                                      <tt class="py-string">'ComboCode'</tt><tt class="py-op">,</tt><tt class="py-string">'usr'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>         </tt>
 </div><a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">         </tt>
 <a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">        <tt class="py-docstring">""" </tt> </tt>
 <a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring">        Initializing an instance of Radio.</tt> </tt>
@@ -185,7 +185,7 @@ ComboCode.cc.tools.io.Database.Database" class="py-name" href="#" onclick="retur
 <a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-docstring">        @keyword cc_path: The path to the data files of CC, to access Star.dat   </tt> </tt>
 <a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-docstring">                          and Molecule.dat</tt> </tt>
 <a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring">                        </tt> </tt>
-<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring">                          (default: ~/ComboCode/Data/)</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring">                          (default: ~/ComboCode/usr/)</tt> </tt>
 <a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-docstring">        @type cc_path: str</tt> </tt>
 <a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
 <a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-docstring">        """</tt> </tt>
@@ -322,7 +322,7 @@ ComboCode.cc.tools.io.TxtReader.TxtReader.__init__" class="py-name" href="#" onc
 </div><div id="Radio.addStar-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="Radio.addStar-expanded"><a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line">         </tt>
 <a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
 <a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line"><tt class="py-docstring">        Add a new star to the database. A check is ran to see if the requested </tt> </tt>
-<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line"><tt class="py-docstring">        star is known in ~/ComboCode/Data/Star.dat. </tt> </tt>
+<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line"><tt class="py-docstring">        star is known in ~/ComboCode/usr/Star.dat. </tt> </tt>
 <a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
 <a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line"><tt class="py-docstring">        @param star_name: The name of the star (from Star.dat)</tt> </tt>
 <a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line"><tt class="py-docstring">        @type star_name: str</tt> </tt>
@@ -503,7 +503,7 @@ expandto(location.href);
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jun 30 14:40:55 2015
+    Generated by Epydoc 3.0.1 on Thu Jul  9 09:30:55 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
