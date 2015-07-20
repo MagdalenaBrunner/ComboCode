@@ -93,13 +93,11 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.data.instruments.Pacs.Pacs-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_name</span>,
         <span class="summary-sig-arg">oversampling</span>,
-        <span class="summary-sig-arg">path_pacs</span>,
         <span class="summary-sig-arg">path</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">redo_convolution</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">intrinsic</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">path_linefit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">absflux_err</span>=<span class="summary-sig-default">0.2</span>,
-        <span class="summary-sig-arg">path_combocode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">absflux_err</span>=<span class="summary-sig-default">0.2</span>)</span><br />
       Initializing an instance of Pacs().</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.data.instruments.Pacs-pysrc.html#Pacs.__init__">source&nbsp;code</a></span>
@@ -230,9 +228,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.data.instruments.Pacs.Pacs-class.html#getPacsResolution" class="summary-sig-name">getPacsResolution</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/aux/Pacs_Resolution.dat</code><code class="variable-quote">'</code></span>)</span><br />
-      Get the Pacs resolution from CC Data file for all orders.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.data.instruments.Pacs.Pacs-class.html#getPacsResolution" class="summary-sig-name">getPacsResolution</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the Pacs resolution from cc aux file for all orders.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.data.instruments.Pacs-pysrc.html#Pacs.getPacsResolution">source&nbsp;code</a></span>
             
@@ -357,13 +354,11 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_name</span>,
         <span class="sig-arg">oversampling</span>,
-        <span class="sig-arg">path_pacs</span>,
         <span class="sig-arg">path</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">redo_convolution</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">intrinsic</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">path_linefit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">absflux_err</span>=<span class="sig-default">0.2</span>,
-        <span class="sig-arg">path_combocode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">absflux_err</span>=<span class="sig-default">0.2</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -378,13 +373,10 @@
         <li><strong class="pname"><code>star_name</code></strong> (string) - Name of the star from Star.dat</li>
         <li><strong class="pname"><code>oversampling</code></strong> (int) - The PACS instrumental oversampling, for correct convolution of 
           the Sphinx output]</li>
-        <li><strong class="pname"><code>path_pacs</code></strong> (string) - full path to PACS data folder, excluding star_name</li>
         <li><strong class="pname"><code>path</code></strong> (string) - Output folder in the code's home folder. Used to locate the PACS 
           database. If None, it is not used (eg for line measurement 
           matching/identification)
           <p>(default: None)</p></li>
-        <li><strong class="pname"><code>path_combocode</code></strong> (string) - CC home folder
-          <p>(default: '~/ComboCode/')</p></li>
         <li><strong class="pname"><code>intrinsic</code></strong> (bool) - Use the intrinsic Sphinx line profiles for convolving with the 
           spectral resolution? Otherwise the beam convolved line profiles 
           are used.
@@ -597,21 +589,15 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">getPacsResolution</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">filename</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/aux/Pacs_Resolution.dat</code><code class="variable-quote">'</code></span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getPacsResolution</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.data.instruments.Pacs-pysrc.html#Pacs.getPacsResolution">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Get the Pacs resolution from CC Data file for all orders.</p>
+  <p>Get the Pacs resolution from cc aux file for all orders.</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>filename</code></strong> (string) - filename in which the pacs resolution is stored.
-          <p>(default: '~/ComboCode/aux/Pacs_Resolution.dat')</p></li>
-    </ul></dd>
     <dt>Returns: (list[list],list[list])</dt>
         <dd>The resolution as a function of wavelength for the 3 orders</dd>
   </dl>
@@ -693,7 +679,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul  9 09:30:53 2015
+    Generated by Epydoc 3.0.1 on Mon Jul 20 14:31:24 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

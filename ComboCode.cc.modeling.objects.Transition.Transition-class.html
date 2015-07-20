@@ -105,9 +105,7 @@
         <span class="summary-sig-arg">n_quad</span>=<span class="summary-sig-default">100</span>,
         <span class="summary-sig-arg">use_maser_in_sphinx</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">vibrational</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">datafiles</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">path_combocode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default">None</span>)</span><br />
       Initiate a Transition instance, setting all values for the 
       quantummechanical parameters to zero (by default).</td>
           <td align="right" valign="top">
@@ -514,9 +512,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#addDatafile" class="summary-sig-name">addDatafile</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">datafile</span>,
-        <span class="summary-sig-arg">path</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Add a datafile name/multiple filenames for this transition.</td>
+        <span class="summary-sig-arg">datadict</span>)</span><br />
+      Add a datadict for this transition.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.addDatafile">source&nbsp;code</a></span>
             
@@ -568,7 +565,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getVlsr" class="summary-sig-name">getVlsr</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getVlsr" class="summary-sig-name">getVlsr</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>)</span><br />
       Return the vlsr read from the fits file of a resolved-data object, or
       taken from the Star.dat file in case of unresolved data.</td>
           <td align="right" valign="top">
@@ -582,28 +580,12 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#fitLP" class="summary-sig-name">fitLP</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Run the autofit routine for line profiles.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.fitLP">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">float</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getNoise" class="summary-sig-name">getNoise</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getNoise" class="summary-sig-name">getNoise</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>)</span><br />
       Return the noise value of the FIRST data object in this transition, 
       if available.</td>
           <td align="right" valign="top">
@@ -621,9 +603,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getVexp" class="summary-sig-name">getVexp</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getVexp" class="summary-sig-name">getVexp</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>)</span><br />
       Get the gas terminal velocity as estimated from a line profile 
-      fitting routine.</td>
+      fitting routine for the FIRST data object.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getVexp">source&nbsp;code</a></span>
             
@@ -639,7 +622,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getBestVlsr" class="summary-sig-name">getBestVlsr</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getBestVlsr" class="summary-sig-name">getBestVlsr</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>)</span><br />
       If self.best_vlsr is None, the best source velocity will be guessed 
       by comparing chi^2 values between different values for the source 
       velocity</td>
@@ -730,7 +714,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getIntTmbData" class="summary-sig-name">getIntTmbData</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getIntTmbData" class="summary-sig-name">getIntTmbData</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>)</span><br />
       Calculate the integrated Tmb of the data line profile over velocity.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getIntTmbData">source&nbsp;code</a></span>
@@ -747,7 +732,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getPeakTmbData" class="summary-sig-name">getPeakTmbData</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getPeakTmbData" class="summary-sig-name">getPeakTmbData</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>)</span><br />
       Get the peak Tmb of the data line profile.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getPeakTmbData">source&nbsp;code</a></span>
@@ -808,7 +794,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getLoglikelihood" class="summary-sig-name">getLoglikelihood</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">use_bestvlsr</span>=<span class="summary-sig-default">1</span>)</span><br />
+        <span class="summary-sig-arg">use_bestvlsr</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>)</span><br />
       Calculate the loglikelihood of comparison between sphinx and dataset.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getLoglikelihood">source&nbsp;code</a></span>
@@ -865,9 +852,7 @@
         <span class="sig-arg">n_quad</span>=<span class="sig-default">100</span>,
         <span class="sig-arg">use_maser_in_sphinx</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">vibrational</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">path_gastronoom</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">datafiles</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">path_combocode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">path_gastronoom</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -910,8 +895,6 @@
           corrected PACS/SPIRE or resolved data (so not relevant when the 
           intrinsic line strengths are used from the models)
           <p>(default: 0.0)</p></li>
-        <li><strong class="pname"><code>path_combocode</code></strong> (string) - CC home folder
-          <p>(default: '~/ComboCode/')</p></li>
         <li><strong class="pname"><code>n_quad</code></strong> (int) - Number of impact par. in quadrature int(Inu pdp). Relevant for 
           the ray-tracing of the line profiles
           <p>(default: 100)</p></li>
@@ -935,11 +918,6 @@
           vibrational groundstate
           <p>(default: '')</p></li>
         <li><strong class="pname"><code>path_gastronoom</code></strong> (string) - model output folder in the GASTRoNOoM home
-          <p>(default: None)</p></li>
-        <li><strong class="pname"><code>datafiles</code></strong> (string/list) - (multiple) filename(s) and path(s) to a datafile for transition, 
-          specific for the telescope used for this dataset. Only applicable
-          for single transition files, such as ground-based data. None if 
-          no files available.
           <p>(default: None)</p></li>
     </ul></dd>
   </dl>
@@ -1481,27 +1459,35 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">addDatafile</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">datafile</span>,
-        <span class="sig-arg">path</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">datadict</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.addDatafile">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Add a datafile name/multiple filenames for this transition.</p>
-  <p>If datafile has been given a valid value, the self.lpdata list is set 
+  <p>Add a datadict for this transition. Includes filenames as keys, and 
+  fit results as values (can be None, in which case the filename is 
+  excluded)</p>
+  <p>The filenames are saved in self.datafiles, the fitresults in 
+  self.fittedlprof.</p>
+  <p>If datadict has been given a valid value, the self.lpdata list is set 
   back to None, so the datafiles can all be read again.</p>
   <p>When called for a SPIRE or PACS transition, no datafiles are 
   added.</p>
+  <p>The fit results include: The gas terminal velocity, its error, the 
+  soft parabola function and possibly the extra gaussian will be set. It is
+  possible the SP is a gaussian instead, if a soft parabola did not work 
+  well (the no gamma parameter is included in the dictionary).</p>
+  <p>The fit results are taken from the radio database which has the option
+  to (re-)run the LPTools.fitLP method. If no fit results are available 
+  there, no data can be used for this instance of Transition().</p>
+  <p>Typically, the entry db[star_name][transition] is what is given 
+  here.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>datafile</code></strong> (string/list) - the full filename, or multiple filenames</li>
-        <li><strong class="pname"><code>path</code></strong> (str) - The path to the data file. Only used if the path is undefined in 
-          the filename. Typically this is the case, but this keyword allows
-          more elegant handling of the radio data database.
-          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>datadict</code></strong> (dict()) - the filenames and associated fit results</li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -1527,7 +1513,8 @@
   <p>A check is ran to see if the transition in both objects really is the 
   same. Sphinx model id may differ!</p>
   <p>Avoids too much overhead when reading data from files.</p>
-  <p>The same is done for the fitresults from LPTools.fitLP().</p>
+  <p>The same is done for the fitresults from LPTools.fitLP() taken out of 
+  the Radio database.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -1544,7 +1531,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">getVlsr</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getVlsr</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getVlsr">source&nbsp;code</a></span>&nbsp;
@@ -1555,40 +1543,21 @@
   taken from the Star.dat file in case of unresolved data. Note that 
   resolved data may also return vlsr from Star.dat if the vlsr in the data 
   file is significantly different from the value in Star.dat.</p>
+  <p>This is taken from the first lpdata object available by default, but 
+  can be chosen through the index keyword..</p>
   <p>Returns 0.0 if not an unresolved line, and there are no data 
   available.</p>
   <p>This is different from the getBestVlsr() method, which determines the 
   best matching vlsr between data and sphinx, if both are available.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int) - The data list index of the requested noise value
+          <p>(default: 0)</p></li>
+    </ul></dd>
     <dt>Returns: float</dt>
         <dd>the source velocity taken from the fits file OR Star.dat. 0 if 
           data are not available. In km/s!</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="fitLP"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">fitLP</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.fitLP">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Run the autofit routine for line profiles.</p>
-  <p>The gas terminal velocity, its error, the soft parabola function and 
-  possibly the extra gaussian will be set. It is possible the SP is a 
-  gaussian instead, if a soft parabola did not work well.</p>
-  <p>The method makes sure the data have been read. The fitting routine is 
-  only done for the first dataset in the list!</p>
-  <p>Lastly, this method makes sure the noise is calculated for the first 
-  data object in this class.</p>
-  <dl class="fields">
   </dl>
 </td></tr></table>
 </div>
@@ -1599,7 +1568,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">getNoise</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getNoise</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getNoise">source&nbsp;code</a></span>&nbsp;
@@ -1608,9 +1578,15 @@
   
   <p>Return the noise value of the FIRST data object in this transition, if
   available.</p>
-  <p>Note that None is returned if fitLP has not yet been ran, or if no 
-  data are available.</p>
+  <p>Note that None is returned if no data are available.</p>
+  <p>A different index than the default allows access to the other data 
+  objects.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int) - The data list index of the requested noise value
+          <p>(default: 0)</p></li>
+    </ul></dd>
     <dt>Returns: float</dt>
         <dd>The noise value</dd>
   </dl>
@@ -1623,7 +1599,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">getVexp</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getVexp</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getVexp">source&nbsp;code</a></span>&nbsp;
@@ -1631,8 +1608,14 @@
   </tr></table>
   
   <p>Get the gas terminal velocity as estimated from a line profile fitting
-  routine.</p>
+  routine for the FIRST data object. A different index than the default 
+  allows access to the other data objects.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int) - The data list index of the requested noise value
+          <p>(default: 0)</p></li>
+    </ul></dd>
     <dt>Returns: float</dt>
         <dd>vexp</dd>
   </dl>
@@ -1645,7 +1628,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">getBestVlsr</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getBestVlsr</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getBestVlsr">source&nbsp;code</a></span>&nbsp;
@@ -1657,17 +1641,23 @@
   velocity</p>
   <p>May be different from input value vlsr, the original expected source 
   velocity (from Star.dat)!</p>
-  <p>Based on the first dataset in self.lpdata. Note that multiple datasets
-  might be included, but the scaling will be done for only the first one. 
-  Since different datasets are for the same telescope, the same line and 
-  (usually) the same conditions, the source velocity is not expected to be 
-  different for the different datasets anyway.</p>
+  <p>By default, based on the first dataset in self.lpdata. Note that 
+  multiple datasets might be included. If so, a different index can be 
+  given to do the scaling based on a different data object. Scaling is done
+  for only one datase. Since different datasets are for the same telescope,
+  the same line and (usually) the same conditions, the source velocity is 
+  not expected to be different for the different datasets anyway.</p>
   <p>Method will attempt to call self.readData and readSphinx if either are
   not available. If data are still not available, the initial guess is 
   returned. If data are available, but sphinx isn't, vlsr from the fits 
   files is returned, and the initial guess is returned in case of txt 
   files.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int) - The data list index of the requested noise value
+          <p>(default: 0)</p></li>
+    </ul></dd>
     <dt>Returns: float</dt>
         <dd>the best guess vlsr, or the initial guess if no sphinx or data 
           are available [will return vlsr included in fitsfiles if 
@@ -1785,7 +1775,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">getIntTmbData</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getIntTmbData</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getIntTmbData">source&nbsp;code</a></span>&nbsp;
@@ -1794,16 +1785,24 @@
   
   <p>Calculate the integrated Tmb of the data line profile over 
   velocity.</p>
-  <p>Note that only the first of data profiles is used for this, if there 
-  are multiple profiles available for this transition. (i.e. multiple 
-  observations of the same transition with the same telescope)</p>
-  <p>Makes use of the results from the fitLP method. If no extra gaussian 
-  is used, the integrated data profile is returned. Otherwise, the soft 
-  parabola fit is integrated instead to avoid taking into account an 
-  absorption feature in the profile.</p>
+  <p>Note that by default only the first of data profiles is used for this,
+  if there are multiple profiles available for this transition. (i.e. 
+  multiple observations of the same transition with the same telescope)</p>
+  <p>A different index than the default allows access to the other data 
+  objects.</p>
+  <p>Makes use of the results from the LPTools.fitLP method taken from the 
+  Radio database upon adding datafiles. If no extra gaussian is used, the 
+  integrated data profile is returned. Otherwise, the soft parabola fit is 
+  integrated instead to avoid taking into account an absorption feature in 
+  the profile.</p>
   <p>Returns None if no data are available.</p>
   <p>This does not work for PACS or SPIRE data.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int) - The data list index of the requested noise value
+          <p>(default: 0)</p></li>
+    </ul></dd>
     <dt>Returns: float</dt>
         <dd>The integrated data Tmb in K km/s</dd>
   </dl>
@@ -1816,7 +1815,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">getPeakTmbData</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getPeakTmbData</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getPeakTmbData">source&nbsp;code</a></span>&nbsp;
@@ -1828,8 +1828,18 @@
   <p>Is equal to the mean of the 5 points in the data profile around the 
   center of the sphinx profile (ie in the same velocity bin as 
   getPeakTmbSphinx). Makes use of the best_vlsr, so that is ran first.</p>
+  <p>Note that by default only the first of data profiles is used for this,
+  if there are multiple profiles available for this transition. (i.e. 
+  multiple observations of the same transition with the same telescope)</p>
+  <p>A different index than the default allows access to the other data 
+  objects.</p>
   <p>This does not work for PACS or SPIRE data.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int) - The data list index of the requested noise value
+          <p>(default: 0)</p></li>
+    </ul></dd>
     <dt>Returns: float</dt>
         <dd>The peak Tmb of the sphinx line profile</dd>
   </dl>
@@ -1930,7 +1940,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getLoglikelihood</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">use_bestvlsr</span>=<span class="sig-default">1</span>)</span>
+        <span class="sig-arg">use_bestvlsr</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getLoglikelihood">source&nbsp;code</a></span>&nbsp;
@@ -1941,6 +1952,11 @@
   dataset.</p>
   <p>Gives a measure for the goodness of the fit of the SHAPE of the 
   profiles.</p>
+  <p>Note that by default only the first of data profiles is used for this,
+  if there are multiple profiles available for this transition. (i.e. 
+  multiple observations of the same transition with the same telescope)</p>
+  <p>A different index than the default allows access to the other data 
+  objects.</p>
   <p>Done only for the first dataset! Makes use of the filtered sphinx 
   profile for the best vlsr, see self.getBestVlsr() if use_bestvlsr is 
   True. If this keyword is False, filters the sphinx model for the vlsr 
@@ -1955,6 +1971,8 @@
           velocity grid for the model. If not, the vlsr from the Star.dat 
           file or the fits file is used.
           <p>(default: 1)</p></li>
+        <li><strong class="pname"><code>index</code></strong> (int) - The data list index of the requested noise value
+          <p>(default: 0)</p></li>
     </ul></dd>
     <dt>Returns: float</dt>
         <dd>The loglikelihood</dd>
@@ -1988,7 +2006,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul  9 09:30:54 2015
+    Generated by Epydoc 3.0.1 on Mon Jul 20 14:31:24 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

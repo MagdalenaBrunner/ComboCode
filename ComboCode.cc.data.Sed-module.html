@@ -112,10 +112,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.data.Sed-module.html#buildPhotometry" class="summary-sig-name">buildPhotometry</a>(<span class="summary-sig-arg">star_name</span>,
         <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Photometric_IvS</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">psuffix</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Raw/IvS_SEDTool/</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">remove</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">dp</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/Data/SED</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">cc_path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/usr</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">remove</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
       Retrieve the photometry of a star through the IvS repo's SED builder.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#buildPhotometry">source&nbsp;code</a></span>
@@ -151,8 +148,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.data.Sed-module.html#getExtinctionCurve" class="summary-sig-name">getExtinctionCurve</a>(<span class="summary-sig-arg">gal_position</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">ism</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">curve_type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">chiar_tielens</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">av_to_ak_conv</span>=<span class="summary-sig-default">0.112</span>,
-        <span class="summary-sig-arg">path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/MCMax/Extinction_Curves</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">av_to_ak_conv</span>=<span class="summary-sig-default">0.112</span>)</span><br />
       Read extinction curve.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#getExtinctionCurve">source&nbsp;code</a></span>
@@ -216,10 +212,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">buildPhotometry</span>(<span class="sig-arg">star_name</span>,
         <span class="sig-arg">fn</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Photometric_IvS</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">psuffix</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Raw/IvS_SEDTool/</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">remove</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">dp</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/Data/SED</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">cc_path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/usr</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">remove</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#buildPhotometry">source&nbsp;code</a></span>&nbsp;
@@ -236,18 +229,9 @@
         <li><strong class="pname"><code>fn</code></strong> (str) - Output filename of the photometry file. Always appends 
           '_STAR.dat' where STAR is star_name. The file is saved in dp.
           <p>(default: 'Photometric_IvS')</p></li>
-        <li><strong class="pname"><code>psuffix</code></strong> (str) - path suffix for dp where the Raw photometry as downloaded by the 
-          SED tool is saved. To re-download, delete the file associated 
-          with the star.
-          <p>(default: 'Raw/IvS_SEDTool/')</p></li>
         <li><strong class="pname"><code>remove</code></strong> (list[str]) - Photometry to be removed from the output file. e.g. 
           ['WISE','DENIS']
           <p>(default: [])</p></li>
-        <li><strong class="pname"><code>dp</code></strong> (str) - Location for saving the clean photometry file used as input for 
-          CC.
-          <p>(default: ~/Data/SED/)</p></li>
-        <li><strong class="pname"><code>cc_path</code></strong> (string) - path to the combocode folder
-          <p>(default: ~/ComboCode/usr/)</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -286,8 +270,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getExtinctionCurve</span>(<span class="sig-arg">gal_position</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">ism</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">curve_type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">chiar_tielens</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">av_to_ak_conv</span>=<span class="sig-default">0.112</span>,
-        <span class="sig-arg">path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/MCMax/Extinction_Curves</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">av_to_ak_conv</span>=<span class="sig-default">0.112</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#getExtinctionCurve">source&nbsp;code</a></span>&nbsp;
@@ -306,8 +289,6 @@
           <p>(default: 'chiar_tielens')</p></li>
         <li><strong class="pname"><code>av_to_ak_conv</code></strong> (float) - V-band to K-band conversion factor for extinction correction
           <p>(default: 0.112)</p></li>
-        <li><strong class="pname"><code>path</code></strong> (string) - path for extinction curve data
-          <p>(default: '~/MCMax/Extinction_Curves/')</p></li>
     </ul></dd>
     <dt>Returns: (array,array)</dt>
         <dd>The wavelength grid and extinction curve values</dd>
@@ -341,7 +322,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul  9 09:30:53 2015
+    Generated by Epydoc 3.0.1 on Mon Jul 20 14:31:23 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

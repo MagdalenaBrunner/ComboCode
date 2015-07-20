@@ -89,7 +89,8 @@
         <span class="summary-sig-arg">scaling</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">escaling</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">combine_water</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">edists</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
+        <span class="summary-sig-arg">edists</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">pfn_path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
       Make a diagnostic plot for a series of stars, where Imb for 
       transitions of a given molecule are compared with their upper level 
       energies.</td>
@@ -124,6 +125,7 @@
         <span class="summary-sig-arg">extra_mcon</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">extra_dcon</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">pfn_path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">add_linear_fit</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">alf_xmin</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">alf_xmax</span>=<span class="summary-sig-default">None</span>,
@@ -306,7 +308,8 @@
         <span class="sig-arg">scaling</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">escaling</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">combine_water</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">edists</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
+        <span class="sig-arg">edists</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">pfn_path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.statistics.TrendAnalysis-pysrc.html#makeDiagnosticPlot">source&nbsp;code</a></span>&nbsp;
@@ -338,6 +341,9 @@
         <li><strong class="pname"><code>escaling</code></strong> (list[list]) - Include relative errors of extra scaling parameters as lists. len
           is len of scaling, len of an element is len of sg
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>pfn_path</code></strong> (str) - Output folder for diagnostic plots. Default if to be stored 
+          locally.
+          <p>(default: '')</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -365,6 +371,7 @@
         <span class="sig-arg">extra_mcon</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">extra_dcon</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">pfn_path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">add_linear_fit</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">alf_xmin</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">alf_xmax</span>=<span class="sig-default">None</span>,
@@ -469,6 +476,9 @@
           (xpar_co, ypar_co) Only works in dint or cint mode if xratios or 
           yratios has len less than 2.
           <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>pfn_path</code></strong> (str) - Output folder for diagnostic plots. Default if to be stored 
+          locally.
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>alf_xmin</code></strong> (float) - The minimum x value for the linear fit plot, if requested. (This 
           is not the cut off value for the fitting routine itself!) Has to 
           be given if a linear fit is requested.
@@ -798,7 +808,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul  9 09:30:53 2015
+    Generated by Epydoc 3.0.1 on Mon Jul 20 14:31:24 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

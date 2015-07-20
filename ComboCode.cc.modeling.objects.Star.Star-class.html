@@ -95,7 +95,6 @@
         <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">path_mcmax</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">extra_input</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">path_combocode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">example_star</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>)</span><br />
       Initiate an instance of the STAR class.</td>
           <td align="right" valign="top">
@@ -343,11 +342,11 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="calcLL_NO_VIB"></a><span class="summary-sig-name">calcLL_NO_VIB</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Set the default value of LL_NO_VIB (remove vibrational states from 
+          <td><span class="summary-sig"><a name="calcLS_NO_VIB"></a><span class="summary-sig-name">calcLS_NO_VIB</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of LS_NO_VIB (remove vibrational states from 
       the calculation and plots) to zero.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcLL_NO_VIB">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcLS_NO_VIB">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -378,10 +377,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcLL_OFFSET" class="summary-sig-name">calcLL_OFFSET</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Set the default value of LL_OFFSET to 0.0.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcLS_OFFSET" class="summary-sig-name">calcLS_OFFSET</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of LS_OFFSET to 0.0.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcLL_OFFSET">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcLS_OFFSET">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -2059,10 +2058,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="calcLINE_LISTS"></a><span class="summary-sig-name">calcLINE_LISTS</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      If the LINE LISTS keyword is not present, set to False.</td>
+          <td><span class="summary-sig"><a name="calcLINE_SELECT"></a><span class="summary-sig-name">calcLINE_SELECT</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      If the LINE_SELECT keyword is not present, set to False.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcLINE_LISTS">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcLINE_SELECT">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -2509,7 +2508,6 @@
         <span class="sig-arg">path_gastronoom</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">path_mcmax</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">extra_input</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">path_combocode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">example_star</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -2526,8 +2524,6 @@
           <p>(default: None)</p></li>
         <li><strong class="pname"><code>path_mcmax</code></strong> (string) - the folder in ~/MCMax/ for modeling out/input
           <p>(default: None)</p></li>
-        <li><strong class="pname"><code>path_combocode</code></strong> (string) - full path to ComboCode
-          <p>(default: '/home/robinl/ComboCode')</p></li>
         <li><strong class="pname"><code>example_star</code></strong> (dict or Star()) - if not None the STAR object is exact duplicate of example_star. 
           Can be a normal dictionary as well. Paths are not copied and need
           to be given explicitly.
@@ -2848,21 +2844,21 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="calcLL_OFFSET"></a>
+<a name="calcLS_OFFSET"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcLL_OFFSET</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcLS_OFFSET</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcLL_OFFSET">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcLS_OFFSET">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Set the default value of LL_OFFSET to 0.0.</p>
+  <p>Set the default value of LS_OFFSET to 0.0.</p>
   <p>Only used when auto selecting transitions based on a wavelength 
   range.</p>
   <dl class="fields">
@@ -4385,7 +4381,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul  9 09:30:53 2015
+    Generated by Epydoc 3.0.1 on Mon Jul 20 14:31:24 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -93,10 +93,8 @@ new empty dictionary
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.data.Radio.Radio-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">path</span>,
         <span class="summary-sig-arg">auto_parse</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">db_name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">radio_data.db</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">cc_path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/usr</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">db_name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">radio_data.db</code><code class="variable-quote">'</code></span>)</span><br />
       Initializing an instance of Radio.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.data.Radio-pysrc.html#Radio.__init__">source&nbsp;code</a></span>
@@ -194,6 +192,66 @@ new empty dictionary
       folder.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.data.Radio-pysrc.html#Radio.checkFolder">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="convertOldDb"></a><span class="summary-sig-name">convertOldDb</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Convert an existing Radio database from the old format: 
+      db[star][trans] = list to the new format: db[trans][trans][filename] 
+      = fit dict</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.data.Radio-pysrc.html#Radio.convertOldDb">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">dict</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.data.Radio.Radio-class.html#filterContents" class="summary-sig-name">filterContents</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">star_name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Filter out the fit results from the contents of the database, eg for 
+      printing purposes.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.data.Radio-pysrc.html#Radio.filterContents">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.data.Radio.Radio-class.html#fitLP" class="summary-sig-name">fitLP</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">star_name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">trans</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Fit the data line profiles with a soft parabola or a Gaussian 
+      according to LPTools.fitLP() (see that method for further details).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.data.Radio-pysrc.html#Radio.fitLP">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -335,10 +393,8 @@ new empty dictionary
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">path</span>,
         <span class="sig-arg">auto_parse</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">db_name</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">radio_data.db</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">cc_path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/usr</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">db_name</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">radio_data.db</code><code class="variable-quote">'</code></span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -373,11 +429,18 @@ new empty dictionary
   references.</p>
   <p>The database is structured per star_name and per transition 
   definition. So for instance, you will find the file whya_co32_APEX.fits 
-  in a list under db['whya']['TRANSITION=12C16O 0 3 0 0 0 2 0 0 APEX 0.0'] 
-  where you will find ['whya_co32_APEX.fits']</p>
+  in a dict under db['whya']['TRANSITION=12C16O 0 3 0 0 0 2 0 0 APEX 0.0'] 
+  where you will find dict([('whya_co32_APEX.fits',None)])</p>
+  <p>The None refers to the value of the dictionary entry for that file. 
+  This is replaced by the fit results of the line when &gt;&gt;&gt; 
+  db.fitLP(filename='whya_co32_Maercker_new_JCMT.fits') is ran. The method 
+  redoes the fit by default, regardless of there being an entry for it 
+  already. Any required fitting parameters can be passed along to the 
+  function (see LPTools.fitLP()). CC loads fit results from the 
+  database.</p>
   <p>If multiple data files are available for the same star, the same 
   transition and the same telescope, the multiple data files will also be 
-  contained in this list. Note that the transition definition is quite 
+  contained in this dict. Note that the transition definition is quite 
   specific: 1 space between entries, and 11 entries total. It is identical 
   to the input in your combocode inputfile (excluding the final number 
   n_quad, which is model input and has nothing to do with your data).</p>
@@ -406,16 +469,11 @@ new empty dictionary
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>path</code></strong> (string) - Path to the database excluding db name. This is the folder where 
-          the radio data are located.</li>
         <li><strong class="pname"><code>auto_parse</code></strong> (bool) - Automatically parse the target folder for data to be included in 
           the database.
           <p>(default: 0)</p></li>
         <li><strong class="pname"><code>db_name</code></strong> (str) - The name of the database. The default only is used by ComboCode.
           <p>(default: radio_data.db)</p></li>
-        <li><strong class="pname"><code>cc_path</code></strong> (str) - The path to the data files of CC, to access Star.dat and 
-          Molecule.dat
-          <p>(default: ~/ComboCode/usr/)</p></li>
     </ul></dd>
     <dt>Returns: <pre class="literalblock">
 new empty dictionary
@@ -454,7 +512,10 @@ new empty dictionary
       SiS and its isotopologues
     </li>
     <li>
-      H2O and pH2O
+      H2O and pH2O, and their isotopologues
+    </li>
+    <li>
+      SO2 and SO
     </li>
     <li>
       CS
@@ -462,18 +523,12 @@ new empty dictionary
     <li>
       PO and PN
     </li>
-  </ul>
-  <p>Particularly excludes: (because no naming convention/too complex)</p>
-  <ul>
-    <li>
-      SO and SO2
-    </li>
-    <li>
-      H2O and pH2O isotopologues
-    </li>
     <li>
       H2CO
     </li>
+  </ul>
+  <p>Particularly excludes: (because no naming convention/too complex)</p>
+  <ul>
     <li>
       CN
     </li>
@@ -532,7 +587,7 @@ new empty dictionary
   
   <p>Add a new file to the database with given transition definition. If 
   the transition is already present in the database for this particular 
-  star, the filename is added to the list for that transition.</p>
+  star, the filename is added to the dictionary for that transition.</p>
   <p>A single transition for a star can thus have multiple filenames 
   associated with it!</p>
   <p>Note that this method does NOT automatically sync (ie save changes to 
@@ -541,6 +596,8 @@ new empty dictionary
   <p>The transition definition is checked for correctness: single spaces 
   between entries in the defintion, and a total of 11 entries: 1 molecule 
   (shorthand) 8 quantum numbers, 1 offset</p>
+  <p>The fit is not done here. Instead the filename key is added to the 
+  transition's dictionary with value None.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -586,6 +643,93 @@ new empty dictionary
   </dl>
 </td></tr></table>
 </div>
+<a name="filterContents"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">filterContents</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">star_name</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.data.Radio-pysrc.html#Radio.filterContents">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Filter out the fit results from the contents of the database, eg for 
+  printing purposes.</p>
+  <p>If star_name is given, only the star will be printed. Otherwise the 
+  full database is printed.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>star_name</code></strong> (str) - The requested star. Default is to print all of them
+          <p>(default: '')</p></li>
+    </ul></dd>
+    <dt>Returns: dict</dt>
+        <dd>The dictionary with just the relevant contents (trans and file 
+          names)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="fitLP"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fitLP</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">star_name</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">filename</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">trans</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.data.Radio-pysrc.html#Radio.fitLP">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Fit the data line profiles with a soft parabola or a Gaussian 
+  according to LPTools.fitLP() (see that method for further details).</p>
+  <p>Input keywords require one of these:</p>
+  <ul>
+    <li>
+      no keys: all lines in db are fitted
+    </li>
+    <li>
+      star_name: All lines for star are fitted
+    </li>
+    <li>
+      star_name, trans: all lines for transition of star are fitted
+    </li>
+    <li>
+      star_name, filename: only this filename is fitted
+    </li>
+  </ul>
+  <p>The fit is redone by default, regardless of there being an entry in 
+  the db already.</p>
+  <p>Note that this method does NOT automatically sync (ie save changes to 
+  the hard disk) the database. That must be done through an additional flag
+  to avoid excess overhead.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>star_name</code></strong> (str) - The name of the star for which to add the data. If not given, all
+          files in db are fitted.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>filename</code></strong> (str) - The filename of the radio data to be fitted. Must be in the db 
+          folder! Only the filename is used. Any folder path is cut.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>trans</code></strong> (str) - The transition definition. Must be in the correct format!
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>kwargs</code></strong> (dict) - Any additional keywords that are passed on to LPTools.fitLP()</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -613,7 +757,7 @@ new empty dictionary
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul  9 09:30:53 2015
+    Generated by Epydoc 3.0.1 on Mon Jul 20 14:31:24 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -84,8 +84,7 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.data.LPTools-module.html#readLineProfile" class="summary-sig-name">readLineProfile</a>(<span class="summary-sig-arg">filename</span>,
-        <span class="summary-sig-arg">info_path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/usr</code><code class="variable-quote">'</code></span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.data.LPTools-module.html#readLineProfile" class="summary-sig-name">readLineProfile</a>(<span class="summary-sig-arg">filename</span>)</span><br />
       Read a line profile, independent of the type of extension.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.data.LPTools-pysrc.html#readLineProfile">source&nbsp;code</a></span>
@@ -105,8 +104,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.data.LPTools-module.html#integrateLPData" class="summary-sig-name">integrateLPData</a>(<span class="summary-sig-arg">vexp</span>,
         <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">lprof</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">window</span>=<span class="summary-sig-default">1.2</span>,
-        <span class="summary-sig-arg">info_path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/usr</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">window</span>=<span class="summary-sig-default">1.2</span>)</span><br />
       Integrate a line profile read from a fits file or a txt file.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.data.LPTools-pysrc.html#integrateLPData">source&nbsp;code</a></span>
@@ -125,8 +123,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.data.LPTools-module.html#getPeakLPData" class="summary-sig-name">getPeakLPData</a>(<span class="summary-sig-arg">filename</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">lprof</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">vlsr</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">info_path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/usr</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">vlsr</span>=<span class="summary-sig-default">None</span>)</span><br />
       Calculate the peak value of a line profile read from a fits file or a
       txt file.</td>
           <td align="right" valign="top">
@@ -167,7 +164,7 @@
         <span class="summary-sig-arg">index</span>,
         <span class="summary-sig-arg">values</span>,
         <span class="summary-sig-arg">vary</span>,
-        <span class="summary-sig-arg">function</span>=<span class="summary-sig-default">&lt;function soft_parabola at 0x7fedadb50c80&gt;</span>,
+        <span class="summary-sig-arg">function</span>=<span class="summary-sig-default">&lt;function soft_parabola at 0x7f1bde8e2320&gt;</span>,
         <span class="summary-sig-arg">vary_window</span>=<span class="summary-sig-default">0</span>)</span><br />
       Fit a function to a line profile for different initial guesses of a 
       single parameter.</td>
@@ -240,8 +237,7 @@
         <span class="summary-sig-arg">vary_pars</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">vexp</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">i_vexp</span>=<span class="summary-sig-default">15.0</span>,
         <span class="summary-sig-arg">i_gamma</span>=<span class="summary-sig-default">1.0</span>,
-        <span class="summary-sig-arg">do_gauss</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">info_path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/usr</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">do_gauss</span>=<span class="summary-sig-default">0</span>)</span><br />
       Fit a line profile with a soft parabola, and a Gaussian component if 
       required.</td>
           <td align="right" valign="top">
@@ -304,8 +300,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">readLineProfile</span>(<span class="sig-arg">filename</span>,
-        <span class="sig-arg">info_path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/usr</code><code class="variable-quote">'</code></span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">readLineProfile</span>(<span class="sig-arg">filename</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.data.LPTools-pysrc.html#readLineProfile">source&nbsp;code</a></span>&nbsp;
@@ -319,9 +314,6 @@
         <li><strong class="pname"><code>filename</code></strong> (string) - The filename to the data file of the line profile. If None a line
           profile object is expected.
           <p>(default: None)</p></li>
-        <li><strong class="pname"><code>info_path</code></strong> (string) - The path to the folder containing the info file on stars, called 
-          Star.dat.
-          <p>(default: ~/ComboCode/usr/)</p></li>
     </ul></dd>
     <dt>Returns: LPDataReader()</dt>
         <dd>The line profile</dd>
@@ -338,8 +330,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">integrateLPData</span>(<span class="sig-arg">vexp</span>,
         <span class="sig-arg">filename</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">lprof</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">window</span>=<span class="sig-default">1.2</span>,
-        <span class="sig-arg">info_path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/usr</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">window</span>=<span class="sig-default">1.2</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.data.LPTools-pysrc.html#integrateLPData">source&nbsp;code</a></span>&nbsp;
@@ -365,9 +356,6 @@
         <li><strong class="pname"><code>window</code></strong> (float) - The factor with which vexp is multiplied when selecting the 
           integration window in the velocity grid.
           <p>(default: 1.2)</p></li>
-        <li><strong class="pname"><code>info_path</code></strong> (string) - The path to the folder containing the info file on stars, called 
-          Star.dat.
-          <p>(default: ~/ComboCode/usr/)</p></li>
     </ul></dd>
     <dt>Returns: float</dt>
         <dd>The integrated intensity of the profile</dd>
@@ -383,8 +371,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getPeakLPData</span>(<span class="sig-arg">filename</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">lprof</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">vlsr</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">info_path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/usr</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">vlsr</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.data.LPTools-pysrc.html#getPeakLPData">source&nbsp;code</a></span>&nbsp;
@@ -407,9 +394,6 @@
         <li><strong class="pname"><code>lprof</code></strong> (LPDataReader()) - A line profile object (LPDataReader or inheriting classes) If 
           None, a filename is expected!
           <p>(default: None)</p></li>
-        <li><strong class="pname"><code>info_path</code></strong> (string) - The path to the folder containing the info file on stars, called 
-          Star.dat.
-          <p>(default: ~/ComboCode/usr/)</p></li>
         <li><strong class="pname"><code>vlsr</code></strong> (float) - If you want to provide your own vlsr for some reason. Leave as 
           default if you don't have a good reason to do that.
           <p>(default: None)</p></li>
@@ -457,7 +441,7 @@
         <span class="sig-arg">index</span>,
         <span class="sig-arg">values</span>,
         <span class="sig-arg">vary</span>,
-        <span class="sig-arg">function</span>=<span class="sig-default">&lt;function soft_parabola at 0x7fedadb50c80&gt;</span>,
+        <span class="sig-arg">function</span>=<span class="sig-default">&lt;function soft_parabola at 0x7f1bde8e2320&gt;</span>,
         <span class="sig-arg">vary_window</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -594,8 +578,7 @@
         <span class="sig-arg">vary_pars</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">vexp</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">i_vexp</span>=<span class="sig-default">15.0</span>,
         <span class="sig-arg">i_gamma</span>=<span class="sig-default">1.0</span>,
-        <span class="sig-arg">do_gauss</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">info_path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode/usr</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">do_gauss</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.data.LPTools-pysrc.html#fitLP">source&nbsp;code</a></span>&nbsp;
@@ -623,7 +606,7 @@
         <li><strong class="pname"><code>convert_ms_kms</code></strong> (bool) - Convert velocity grid from m/s to km/s.
           <p>(default: 0)</p></li>
         <li><strong class="pname"><code>theory</code></strong> (bool) - If theoretical profile, and filename is given, set vlsr to 0 and 
-          read two columns. lprof and info_path not relevant if True.
+          read two columns. lprof not relevant if True.
           <p>(default: 0)</p></li>
         <li><strong class="pname"><code>vary_pars</code></strong> (list[string]) - The soft parabola parameters varied (can only be vexp or gamma 
           for now). The initial values for parameters listed here are not 
@@ -644,9 +627,6 @@
           Still does the soft parabola fit first to allow for comparison of
           parameters.
           <p>(default: 0)</p></li>
-        <li><strong class="pname"><code>info_path</code></strong> (string) - The path to the folder containing the info file on stars, called 
-          Star.dat.
-          <p>(default: ~/ComboCode/usr/)</p></li>
         <li><strong class="pname"><code>show</code></strong> (bool) - Show the results of the fit
           <p>(default: 0)</p></li>
     </ul></dd>
@@ -684,7 +664,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul  9 09:30:53 2015
+    Generated by Epydoc 3.0.1 on Mon Jul 20 14:31:23 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

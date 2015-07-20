@@ -92,7 +92,6 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_name</span>,
         <span class="summary-sig-arg">path_code</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">codeSep2010</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">path_combocode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">code</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">GASTRoNOoM</code><code class="variable-quote">'</code></span>)</span><br />
       Initializing an instance of Statistics.</td>
           <td align="right" valign="top">
@@ -112,7 +111,6 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#setInstrument" class="summary-sig-name">setInstrument</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">instrument_name</span>,
-        <span class="summary-sig-arg">data_path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">searchstring</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">data_filenames</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">instrument_instance</span>=<span class="summary-sig-default">None</span>,
@@ -258,7 +256,6 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_name</span>,
         <span class="sig-arg">path_code</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">codeSep2010</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">path_combocode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">code</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">GASTRoNOoM</code><code class="variable-quote">'</code></span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -274,9 +271,8 @@
         <li><strong class="pname"><code>star_name</code></strong> (string) - Star name from Star.dat</li>
         <li><strong class="pname"><code>path_code</code></strong> (string) - Output folder in the code's home folder
           <p>(default: 'codeSep2010')</p></li>
-        <li><strong class="pname"><code>path_combocode</code></strong> (string) - CC home folder
-          <p>(default: '~/ComboCode/')</p></li>
-        <li><strong class="pname"><code>code</code></strong> (string) - the code used for producing your output</li>
+        <li><strong class="pname"><code>code</code></strong> (string) - the code used for producing your output
+          <p>(default: 'GASTRoNOoM')</p></li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
@@ -293,7 +289,6 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">setInstrument</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">instrument_name</span>,
-        <span class="sig-arg">data_path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">searchstring</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">data_filenames</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">instrument_instance</span>=<span class="sig-default">None</span>,
@@ -314,9 +309,6 @@
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>instrument_name</code></strong> (string) - The instrument (such as 'PACS', 'SPIRE', or 'FREQ_RESO')</li>
-        <li><strong class="pname"><code>data_path</code></strong> (string) - full path to the data folder, excluding star_name. Not required 
-          if instrument_instance is given.
-          <p>(default: '')</p></li>
         <li><strong class="pname"><code>data_filenames</code></strong> (list[string]) - The data filenames. If empty, auto-search is done, with 
           searchstring.
           <p>(default: [])</p></li>
@@ -465,7 +457,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul  9 09:30:54 2015
+    Generated by Epydoc 3.0.1 on Mon Jul 20 14:31:24 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

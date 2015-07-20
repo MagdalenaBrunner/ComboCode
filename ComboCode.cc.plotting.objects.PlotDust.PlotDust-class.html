@@ -92,8 +92,6 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotDust.PlotDust-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">model</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">sed</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">corrflux_path</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">path_combocode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">path_mcmax</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">runTestDec09</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">inputfilename</span>=<span class="summary-sig-default">None</span>)</span><br />
       Initializing PlotDust session.</td>
@@ -226,7 +224,6 @@
         <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">scaling</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">species</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">AMC</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">path_opac</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/MCMax/Opacities</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">*args</span>,
@@ -357,8 +354,6 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_name</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">model</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">sed</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">corrflux_path</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">path_combocode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">path_mcmax</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">runTestDec09</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">inputfilename</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
@@ -375,8 +370,6 @@
         <li><strong class="pname"><code>star_name</code></strong> (string) - name of the star from Star.dat, use default only when never using
           any star model specific things
           <p>(default: &quot;model&quot;)</p></li>
-        <li><strong class="pname"><code>path_combocode</code></strong> (string) - CC home folder
-          <p>(default: '~/ComboCode/')</p></li>
         <li><strong class="pname"><code>path_mcmax</code></strong> (string) - Output modeling folder in MCMax home folder
           <p>(default: 'runTestDec09')</p></li>
         <li><strong class="pname"><code>inputfilename</code></strong> (string) - name of inputfile that is also copied to the output folder of the
@@ -385,9 +378,6 @@
         <li><strong class="pname"><code>sed</code></strong> (Sed()) - an Sed object needed for plotting the SED. None if not plotting 
           an Sed, but just dust parameters such as                       
           temperature
-          <p>(default: None)</p></li>
-        <li><strong class="pname"><code>corrflux_path</code></strong> (str) - The full path to the folder containing correlated fluxes, such as
-          for MIDI.
           <p>(default: None)</p></li>
     </ul></dd>
     <dt>Overrides:
@@ -619,7 +609,6 @@
         <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">scaling</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">species</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">AMC</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">path_opac</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/MCMax/Opacities</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">*args</span>,
@@ -642,8 +631,6 @@
         <li><strong class="pname"><code>star_grid</code></strong> (list(Star())) - The input Star() models. If default, the MCMax input opacities 
           are plotted.
           <p>(default: [])</p></li>
-        <li><strong class="pname"><code>path_opac</code></strong> (str) - The path to the opacity home folder
-          <p>(default: ~/MCMax/Opacities/)</p></li>
         <li><strong class="pname"><code>scaling</code></strong> (bool) - allow species abundance scaling of opacities
           <p>(default: 1)</p></li>
         <li><strong class="pname"><code>species</code></strong> (list(string)) - If no star_grid or model list are given, this gives the species 
@@ -751,7 +738,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul  9 09:30:54 2015
+    Generated by Epydoc 3.0.1 on Mon Jul 20 14:31:24 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -193,8 +193,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#makeTransition" class="summary-sig-name">makeTransition</a>(<span class="summary-sig-arg">trans</span>,
         <span class="summary-sig-arg">star</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">def_molecs</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">path_combocode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">def_molecs</span>=<span class="summary-sig-default">None</span>)</span><br />
       Create a Transition instance based on a Star object and a standard CC
       input line, with 12 entries in a list.</td>
           <td align="right" valign="top">
@@ -208,33 +207,13 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">list[Transition]</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#makeTransitionsFromTransList" class="summary-sig-name">makeTransitionsFromTransList</a>(<span class="summary-sig-arg">filename</span>,
-        <span class="summary-sig-arg">star</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">path_combocode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>)</span><br />
-      Make Transition objects for the transitions listed in a line list 
-      file, used by CC.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#makeTransitionsFromTransList">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">(model_id,molec_id,trans_id,path_gastronoom,filepath)</span>
+      <span class="summary-type">(model_id,molec_id,trans_id,path_gastronoom)</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#getModelIds" class="summary-sig-name">getModelIds</a>(<span class="summary-sig-arg">filepath</span>)</span><br />
       Return the modelids for a given model folder, as well as 
-      path_gastronoom and the left-over part of the file path.</td>
+      path_gastronoom.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#getModelIds">source&nbsp;code</a></span>
             
@@ -251,7 +230,6 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#makeTransitionFromSphinx" class="summary-sig-name">makeTransitionFromSphinx</a>(<span class="summary-sig-arg">filename</span>,
-        <span class="summary-sig-arg">path_combocode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">use_maser_in_sphinx</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">pull_keys_from_sphdb</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">mline_db</span>=<span class="summary-sig-default">None</span>)</span><br />
@@ -292,9 +270,9 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#makeTransitionsFromRadiat" class="summary-sig-name">makeTransitionsFromRadiat</a>(<span class="summary-sig-arg">molec</span>,
         <span class="summary-sig-arg">telescope</span>,
-        <span class="summary-sig-arg">ll_min</span>,
-        <span class="summary-sig-arg">ll_max</span>,
-        <span class="summary-sig-arg">ll_unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">GHz</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">ls_min</span>,
+        <span class="summary-sig-arg">ls_max</span>,
+        <span class="summary-sig-arg">ls_unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">GHz</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">n_quad</span>=<span class="summary-sig-default">100</span>,
         <span class="summary-sig-arg">offset</span>=<span class="summary-sig-default">0.0</span>,
         <span class="summary-sig-arg">use_maser_in_sphinx</span>=<span class="summary-sig-default">0</span>,
@@ -560,8 +538,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">makeTransition</span>(<span class="sig-arg">trans</span>,
         <span class="sig-arg">star</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">def_molecs</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">path_combocode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">def_molecs</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#makeTransition">source&nbsp;code</a></span>&nbsp;
@@ -571,10 +548,11 @@
   <p>Create a Transition instance based on a Star object and a standard CC 
   input line, with 12 entries in a list. This method assumes the Transition
   definition has been screened by DataIO.checkEntryInfo. If the 12th entry 
-  is not an integer, n_quad is taken from the Star()object if available, 
+  is not an integer, n_quad is taken from the Star() object if available, 
   and otherwise set to 100.</p>
   <p>If a star object is not given, the method creates Molecule() objects 
-  itself For now only 12C16O, 1H1H16O and p1H1H16O are possible.</p>
+  itself For now only 12C16O, 13C16O, 1H1H16O and p1H1H16O are 
+  possible.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -590,46 +568,9 @@
           returned if the requested molecule is not present. If both this 
           and star are not given, a few default molecules are loaded.
           <p>(default: None)</p></li>
-        <li><strong class="pname"><code>path_combocode</code></strong> (string) - CC home folder
-          <p>(default: '/home/robinl/ComboCode')</p></li>
     </ul></dd>
     <dt>Returns: Transition()</dt>
         <dd>The transition object is returned with all info included</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="makeTransitionsFromTransList"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">makeTransitionsFromTransList</span>(<span class="sig-arg">filename</span>,
-        <span class="sig-arg">star</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">path_combocode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#makeTransitionsFromTransList">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Make Transition objects for the transitions listed in a line list 
-  file, used by CC.</p>
-  <p>The syntax is the same as the input Transition lines in a CC 
-  inputfile.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>filename</code></strong> (string) - The filename to the linelist</li>
-        <li><strong class="pname"><code>star</code></strong> (Star()) - The star object providing basic info. Not required, in which case
-          assumptions concerning the Molecule() objects are made.
-          <p>(default: None)</p></li>
-        <li><strong class="pname"><code>path_combocode</code></strong> (string) - The CC home folder
-          <p>(default: ~/ComboCode/)</p></li>
-    </ul></dd>
-    <dt>Returns: list[Transition]</dt>
-        <dd>The Transitions in the file are returned in object form.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -648,15 +589,14 @@
   </tr></table>
   
   <p>Return the modelids for a given model folder, as well as 
-  path_gastronoom and the left-over part of the file path.</p>
+  path_gastronoom.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>filepath</code></strong> (str) - The path to the model folder.</li>
     </ul></dd>
-    <dt>Returns: (model_id,molec_id,trans_id,path_gastronoom,filepath)</dt>
-        <dd>the 3 ids, the path_gastronoom and the left over filepath are 
-          returned</dd>
+    <dt>Returns: (model_id,molec_id,trans_id,path_gastronoom)</dt>
+        <dd>the 3 ids and the path_gastronoom are returned</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -668,7 +608,6 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">makeTransitionFromSphinx</span>(<span class="sig-arg">filename</span>,
-        <span class="sig-arg">path_combocode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">/home/robinl/ComboCode</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">use_maser_in_sphinx</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">pull_keys_from_sphdb</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">mline_db</span>=<span class="sig-default">None</span>)</span>
@@ -687,8 +626,6 @@
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>filename</code></strong> (string) - The sphinx file name, including path</li>
-        <li><strong class="pname"><code>path_combocode</code></strong> (string) - The CC home folder
-          <p>(default: ~/ComboCode/)</p></li>
         <li><strong class="pname"><code>pull_keys_from_sphdb</code></strong> (bool) - Pull keywords from the sphinx database
           <p>(default: 1)</p></li>
         <li><strong class="pname"><code>use_maser_in_sphinx</code></strong> (bool) - The value that is given to the keyword USE_MASER_IN_SPHINX for 
@@ -746,9 +683,9 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">makeTransitionsFromRadiat</span>(<span class="sig-arg">molec</span>,
         <span class="sig-arg">telescope</span>,
-        <span class="sig-arg">ll_min</span>,
-        <span class="sig-arg">ll_max</span>,
-        <span class="sig-arg">ll_unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">GHz</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">ls_min</span>,
+        <span class="sig-arg">ls_max</span>,
+        <span class="sig-arg">ls_unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">GHz</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">n_quad</span>=<span class="sig-default">100</span>,
         <span class="sig-arg">offset</span>=<span class="sig-default">0.0</span>,
         <span class="sig-arg">use_maser_in_sphinx</span>=<span class="sig-default">0</span>,
@@ -768,9 +705,9 @@
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>molec</code></strong> (Molecule()) - The molecule for which the line list is made.</li>
         <li><strong class="pname"><code>telescope</code></strong> (string) - The telescope for which the Transition() list is made.</li>
-        <li><strong class="pname"><code>ll_min</code></strong> (float) - The minimum allowed wavelength/frequency for the transitions</li>
-        <li><strong class="pname"><code>ll_max</code></strong> (float) - The maximum allowed wavelength/frequency for the transitions</li>
-        <li><strong class="pname"><code>ll_unit</code></strong> (string) - The unit of the wavelength/frequency range. Can be: GHz, MHz, Hz,
+        <li><strong class="pname"><code>ls_min</code></strong> (float) - The minimum allowed wavelength/frequency for the transitions</li>
+        <li><strong class="pname"><code>ls_max</code></strong> (float) - The maximum allowed wavelength/frequency for the transitions</li>
+        <li><strong class="pname"><code>ls_unit</code></strong> (string) - The unit of the wavelength/frequency range. Can be: GHz, MHz, Hz,
           MICRON, MM, CM, M
           <p>(default: 'GHz')</p></li>
         <li><strong class="pname"><code>n_quad</code></strong> (int) - The N_QUAD value for GASTRoNOoM sphinx calculations.
@@ -847,7 +784,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul  9 09:30:53 2015
+    Generated by Epydoc 3.0.1 on Mon Jul 20 14:31:23 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
