@@ -91,8 +91,8 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_name</span>,
-        <span class="summary-sig-arg">code</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">GASTRoNOoM</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">path_code</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">codeSep2010</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">code</span>=<span class="summary-sig-default">'GASTRoNOoM'</span>,
+        <span class="summary-sig-arg">path_code</span>=<span class="summary-sig-default">'codeSep2010'</span>,
         <span class="summary-sig-arg">lll_p</span>=<span class="summary-sig-default">None</span>)</span><br />
       Initializing an instance of IntIntStats.</td>
           <td align="right" valign="top">
@@ -149,7 +149,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#calcLoglikelihoodThreshold" class="summary-sig-name">calcLoglikelihoodThreshold</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">bfms</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">bfms</span>=<span class="summary-sig-default">[]</span>,
         <span class="summary-sig-arg">ist</span>=<span class="summary-sig-default">None</span>)</span><br />
       Determine the loglikelihood thresholds from the model grid, assuming 
       the amount of free parameters in the model grid is known.</td>
@@ -169,7 +169,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#printStats" class="summary-sig-name">printStats</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">bfms</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
+        <span class="summary-sig-arg">bfms</span>=<span class="summary-sig-default">[]</span>)</span><br />
       Print the statistics for all transitions and models.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.printStats">source&nbsp;code</a></span>
@@ -187,7 +187,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#selectBestFitModels" class="summary-sig-name">selectBestFitModels</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">int</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default">'int'</span>,
         <span class="summary-sig-arg">use_lll</span>=<span class="summary-sig-default">1</span>)</span><br />
       Returns a list of Star() models for which the uncertainty criteria 
       are satisfied for the selected transitions.</td>
@@ -335,10 +335,10 @@
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.statistics.Statistics.Statistics</code></b>:
-      <code>doDataStats</code>,
-      <code>setDataInfo</code>,
-      <code>setModels</code>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html">Statistics.Statistics</a></code></b>:
+      <code><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#doDataStats">doDataStats</a></code>,
+      <code><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#setDataInfo">setDataInfo</a></code>,
+      <code><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#setModels">setModels</a></code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
@@ -409,8 +409,8 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_name</span>,
-        <span class="sig-arg">code</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">GASTRoNOoM</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">path_code</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">codeSep2010</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">code</span>=<span class="sig-default">'GASTRoNOoM'</span>,
+        <span class="sig-arg">path_code</span>=<span class="sig-default">'codeSep2010'</span>,
         <span class="sig-arg">lll_p</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -467,7 +467,7 @@
         <li><strong class="pname"><code>sample_transitions</code></strong> (list[Transition()]) - Sample transitions used as reference for the data files.</li>
     </ul></dd>
     <dt>Overrides:
-        cc.statistics.Statistics.Statistics.setInstrument
+        <a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#setInstrument">Statistics.Statistics.setInstrument</a>
     </dt>
   </dl>
 </td></tr></table>
@@ -514,7 +514,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">calcLoglikelihoodThreshold</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">bfms</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">bfms</span>=<span class="sig-default">[]</span>,
         <span class="sig-arg">ist</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -556,7 +556,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">printStats</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">bfms</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
+        <span class="sig-arg">bfms</span>=<span class="sig-default">[]</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.printStats">source&nbsp;code</a></span>&nbsp;
@@ -582,7 +582,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">selectBestFitModels</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">int</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">mode</span>=<span class="sig-default">'int'</span>,
         <span class="sig-arg">use_lll</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -846,7 +846,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul 23 14:06:15 2015
+    Generated by Epydoc 3.0.1 on Wed Aug 12 15:03:11 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -111,8 +111,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.data.Sed-module.html#buildPhotometry" class="summary-sig-name">buildPhotometry</a>(<span class="summary-sig-arg">star_name</span>,
-        <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Photometric_IvS</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">remove</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
+        <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">'Photometric_IvS'</span>,
+        <span class="summary-sig-arg">remove</span>=<span class="summary-sig-default">[]</span>)</span><br />
       Retrieve the photometry of a star through the IvS repo's SED builder.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#buildPhotometry">source&nbsp;code</a></span>
@@ -146,8 +146,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.data.Sed-module.html#getExtinctionCurve" class="summary-sig-name">getExtinctionCurve</a>(<span class="summary-sig-arg">gal_position</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">ism</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">curve_type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">chiar_tielens</code><code class="variable-quote">'</code></span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.data.Sed-module.html#getExtinctionCurve" class="summary-sig-name">getExtinctionCurve</a>(<span class="summary-sig-arg">gal_position</span>=<span class="summary-sig-default">'ism'</span>,
+        <span class="summary-sig-arg">curve_type</span>=<span class="summary-sig-default">'chiar_tielens'</span>,
         <span class="summary-sig-arg">av_to_ak_conv</span>=<span class="summary-sig-default">0.112</span>)</span><br />
       Read extinction curve.</td>
           <td align="right" valign="top">
@@ -157,31 +157,6 @@
         </tr>
       </table>
       
-    </td>
-  </tr>
-</table>
-<!-- ==================== VARIABLES ==================== -->
-<a name="section-Variables"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Variables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.data'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.data</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -211,8 +186,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">buildPhotometry</span>(<span class="sig-arg">star_name</span>,
-        <span class="sig-arg">fn</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Photometric_IvS</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">remove</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
+        <span class="sig-arg">fn</span>=<span class="sig-default">'Photometric_IvS'</span>,
+        <span class="sig-arg">remove</span>=<span class="sig-default">[]</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#buildPhotometry">source&nbsp;code</a></span>&nbsp;
@@ -268,8 +243,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">getExtinctionCurve</span>(<span class="sig-arg">gal_position</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">ism</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">curve_type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">chiar_tielens</code><code class="variable-quote">'</code></span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getExtinctionCurve</span>(<span class="sig-arg">gal_position</span>=<span class="sig-default">'ism'</span>,
+        <span class="sig-arg">curve_type</span>=<span class="sig-default">'chiar_tielens'</span>,
         <span class="sig-arg">av_to_ak_conv</span>=<span class="sig-default">0.112</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -322,7 +297,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul 23 14:06:14 2015
+    Generated by Epydoc 3.0.1 on Wed Aug 12 15:03:10 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

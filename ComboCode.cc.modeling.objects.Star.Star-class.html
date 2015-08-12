@@ -95,7 +95,7 @@
         <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">path_mcmax</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">extra_input</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">example_star</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>)</span><br />
+        <span class="summary-sig-arg">example_star</span>=<span class="summary-sig-default">dict()</span>)</span><br />
       Initiate an instance of the STAR class.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.__init__">source&nbsp;code</a></span>
@@ -523,7 +523,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#getDustFn" class="summary-sig-name">getDustFn</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">species</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">species</span>=<span class="summary-sig-default">''</span>)</span><br />
       Return the dust output filename for density and temperature.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustFn">source&nbsp;code</a></span>
@@ -541,8 +541,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#getDustRad" class="summary-sig-name">getDustRad</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">species</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">species</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default">'cm'</span>)</span><br />
       Return the dust radial grid in cm, au or Rstar.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustRad">source&nbsp;code</a></span>
@@ -560,7 +560,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#getDustDensity" class="summary-sig-name">getDustDensity</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">species</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">species</span>=<span class="summary-sig-default">''</span>)</span><br />
       Return the dust density profile from the file made for MCMax.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustDensity">source&nbsp;code</a></span>
@@ -579,7 +579,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#getDustTemperature" class="summary-sig-name">getDustTemperature</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">add_key</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">species</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">species</span>=<span class="summary-sig-default">''</span>)</span><br />
       Return the dust temperature profile from MCMax model.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustTemperature">source&nbsp;code</a></span>
@@ -653,8 +653,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#getGasRad" class="summary-sig-name">getGasRad</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">ftype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">fgr_all</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default">'cm'</span>,
+        <span class="summary-sig-arg">ftype</span>=<span class="summary-sig-default">'fgr_all'</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Return the gas radial grid in cm, AU or Rstar.</td>
           <td align="right" valign="top">
@@ -673,9 +673,9 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#getCoolFn" class="summary-sig-name">getCoolFn</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">ftype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">fgr_all</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">mstr</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">modelid</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">ftype</span>=<span class="summary-sig-default">'fgr_all'</span>,
+        <span class="summary-sig-arg">mstr</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">modelid</span>=<span class="summary-sig-default">''</span>)</span><br />
       Return the cooling output filename.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getCoolFn">source&nbsp;code</a></span>
@@ -2508,7 +2508,7 @@
         <span class="sig-arg">path_gastronoom</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">path_mcmax</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">extra_input</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">example_star</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>)</span>
+        <span class="sig-arg">example_star</span>=<span class="sig-default">dict()</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -3031,7 +3031,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getDustFn</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">species</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">species</span>=<span class="sig-default">''</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustFn">source&nbsp;code</a></span>&nbsp;
@@ -3062,8 +3062,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getDustRad</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">species</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">species</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">unit</span>=<span class="sig-default">'cm'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustRad">source&nbsp;code</a></span>&nbsp;
@@ -3094,7 +3094,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getDustDensity</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">species</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">species</span>=<span class="sig-default">''</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustDensity">source&nbsp;code</a></span>&nbsp;
@@ -3127,7 +3127,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getDustTemperature</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">add_key</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">species</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">species</span>=<span class="sig-default">''</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustTemperature">source&nbsp;code</a></span>&nbsp;
@@ -3248,8 +3248,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getGasRad</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">ftype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">fgr_all</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">unit</span>=<span class="sig-default">'cm'</span>,
+        <span class="sig-arg">ftype</span>=<span class="sig-default">'fgr_all'</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -3283,9 +3283,9 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getCoolFn</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">ftype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">fgr_all</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">mstr</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">modelid</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">ftype</span>=<span class="sig-default">'fgr_all'</span>,
+        <span class="sig-arg">mstr</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">modelid</span>=<span class="sig-default">''</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getCoolFn">source&nbsp;code</a></span>&nbsp;
@@ -4381,7 +4381,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul 23 14:06:15 2015
+    Generated by Epydoc 3.0.1 on Wed Aug 12 15:03:10 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

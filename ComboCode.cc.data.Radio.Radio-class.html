@@ -94,7 +94,7 @@ new empty dictionary
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.data.Radio.Radio-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">auto_parse</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">db_name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">radio_data.db</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">db_name</span>=<span class="summary-sig-default">'radio_data.db'</span>)</span><br />
       Initializing an instance of Radio.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.data.Radio-pysrc.html#Radio.__init__">source&nbsp;code</a></span>
@@ -168,8 +168,8 @@ new empty dictionary
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.data.Radio.Radio-class.html#removeData" class="summary-sig-name">removeData</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_name</span>,
-        <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">trans</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">trans</span>=<span class="summary-sig-default">''</span>)</span><br />
       Remove filenames or transition definitions from the database for a 
       given star_name.</td>
           <td align="right" valign="top">
@@ -225,7 +225,7 @@ new empty dictionary
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.data.Radio.Radio-class.html#filterContents" class="summary-sig-name">filterContents</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">star_name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">star_name</span>=<span class="summary-sig-default">''</span>)</span><br />
       Filter out the fit results from the contents of the database, eg for 
       printing purposes.</td>
           <td align="right" valign="top">
@@ -244,9 +244,9 @@ new empty dictionary
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.data.Radio.Radio-class.html#fitLP" class="summary-sig-name">fitLP</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">star_name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">trans</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">star_name</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">trans</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Fit the data line profiles with a soft parabola or a Gaussian 
       according to LPTools.fitLP() (see that method for further details).</td>
@@ -261,18 +261,18 @@ new empty dictionary
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.tools.io.Database.Database</code></b>:
-      <code>__delitem__</code>,
-      <code>__setitem__</code>,
-      <code>addChangedKey</code>,
-      <code>getChangedKeys</code>,
-      <code>getDeletedKeys</code>,
-      <code>pop</code>,
-      <code>popitem</code>,
-      <code>read</code>,
-      <code>setdefault</code>,
-      <code>sync</code>,
-      <code>update</code>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="ComboCode.cc.tools.io.Database.Database-class.html">tools.io.Database.Database</a></code></b>:
+      <code><a href="ComboCode.cc.tools.io.Database.Database-class.html#__delitem__">__delitem__</a></code>,
+      <code><a href="ComboCode.cc.tools.io.Database.Database-class.html#__setitem__">__setitem__</a></code>,
+      <code><a href="ComboCode.cc.tools.io.Database.Database-class.html#addChangedKey">addChangedKey</a></code>,
+      <code><a href="ComboCode.cc.tools.io.Database.Database-class.html#getChangedKeys">getChangedKeys</a></code>,
+      <code><a href="ComboCode.cc.tools.io.Database.Database-class.html#getDeletedKeys">getDeletedKeys</a></code>,
+      <code><a href="ComboCode.cc.tools.io.Database.Database-class.html#pop">pop</a></code>,
+      <code><a href="ComboCode.cc.tools.io.Database.Database-class.html#popitem">popitem</a></code>,
+      <code><a href="ComboCode.cc.tools.io.Database.Database-class.html#read">read</a></code>,
+      <code><a href="ComboCode.cc.tools.io.Database.Database-class.html#setdefault">setdefault</a></code>,
+      <code><a href="ComboCode.cc.tools.io.Database.Database-class.html#sync">sync</a></code>,
+      <code><a href="ComboCode.cc.tools.io.Database.Database-class.html#update">update</a></code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>dict</code></b>:
       <code>__cmp__</code>,
@@ -394,7 +394,7 @@ new empty dictionary
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">auto_parse</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">db_name</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">radio_data.db</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">db_name</span>=<span class="sig-default">'radio_data.db'</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -617,8 +617,8 @@ new empty dictionary
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">removeData</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_name</span>,
-        <span class="sig-arg">filename</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">trans</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">filename</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">trans</span>=<span class="sig-default">''</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.data.Radio-pysrc.html#Radio.removeData">source&nbsp;code</a></span>&nbsp;
@@ -650,7 +650,7 @@ new empty dictionary
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">filterContents</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">star_name</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">star_name</span>=<span class="sig-default">''</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.data.Radio-pysrc.html#Radio.filterContents">source&nbsp;code</a></span>&nbsp;
@@ -681,9 +681,9 @@ new empty dictionary
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">fitLP</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">star_name</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">filename</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">trans</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">star_name</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">filename</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">trans</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -756,7 +756,7 @@ new empty dictionary
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul 23 14:06:14 2015
+    Generated by Epydoc 3.0.1 on Wed Aug 12 15:03:10 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

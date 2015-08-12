@@ -86,11 +86,11 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.TrendAnalysis-module.html#makeDiagnosticPlot" class="summary-sig-name">makeDiagnosticPlot</a>(<span class="summary-sig-arg">sg</span>,
         <span class="summary-sig-arg">molec</span>,
-        <span class="summary-sig-arg">scaling</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">escaling</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">scaling</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">escaling</span>=<span class="summary-sig-default">[]</span>,
         <span class="summary-sig-arg">combine_water</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">edists</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">pfn_path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">edists</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">pfn_path</span>=<span class="summary-sig-default">''</span>)</span><br />
       Make a diagnostic plot for a series of stars, where Imb for 
       transitions of a given molecule are compared with their upper level 
       energies.</td>
@@ -112,24 +112,24 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.TrendAnalysis-module.html#makeParamPlot" class="summary-sig-name">makeParamPlot</a>(<span class="summary-sig-arg">sg</span>,
         <span class="summary-sig-arg">xpar</span>,
         <span class="summary-sig-arg">ypar</span>,
-        <span class="summary-sig-arg">expar</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">eypar</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">xratios</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">yratios</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">emdot</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">expar</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">eypar</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">xratios</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">yratios</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">emdot</span>=<span class="summary-sig-default">[]</span>,
         <span class="summary-sig-arg">exparlog</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">eyparlog</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">edists</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">dint</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">edists</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default">'dint'</span>,
         <span class="summary-sig-arg">n_data</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">extra_mcon</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">extra_dcon</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">pfn_path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">extra_mcon</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">extra_dcon</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">pfn_path</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">add_linear_fit</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">alf_xmin</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">alf_xmax</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">efcont63</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">efcont63</span>=<span class="summary-sig-default">[]</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Make a diagnostic plot of either measured line strengths or intrinsic
       parameters versus measured line strengths or intrinsic parameters.</td>
@@ -188,7 +188,7 @@
         <span class="summary-sig-arg">n_fit</span>=<span class="summary-sig-default">10000</span>,
         <span class="summary-sig-arg">poly_degree</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">show</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">x_for_yratio</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">y_for_xratio</span>=<span class="summary-sig-default">0</span>)</span><br />
       Fit a polynomial to a data set.</td>
@@ -211,7 +211,7 @@
         <span class="summary-sig-arg">par</span>,
         <span class="summary-sig-arg">epar</span>,
         <span class="summary-sig-arg">par_co</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">edist</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
+        <span class="summary-sig-arg">edist</span>=<span class="summary-sig-default">[]</span>)</span><br />
       Tool for selecting data from a star_grid.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.TrendAnalysis-pysrc.html#selectDataSG">source&nbsp;code</a></span>
@@ -231,15 +231,15 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.TrendAnalysis-module.html#corrSG" class="summary-sig-name">corrSG</a>(<span class="summary-sig-arg">sg</span>,
         <span class="summary-sig-arg">xpar</span>,
         <span class="summary-sig-arg">ypar</span>,
-        <span class="summary-sig-arg">expar</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">eypar</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">expar</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">eypar</span>=<span class="summary-sig-default">[]</span>,
         <span class="summary-sig-arg">xratio</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">yratio</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">eyratio</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">exratio</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">edist</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">xpar_co</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">ypar_co</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
+        <span class="summary-sig-arg">eyratio</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">exratio</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">edist</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">xpar_co</span>=<span class="summary-sig-default">(None,None)</span>,
+        <span class="summary-sig-arg">ypar_co</span>=<span class="summary-sig-default">(None,None)</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       A method focused on finding correlations between parameters and/or 
       data of multiple Star() objects.</td>
@@ -250,31 +250,6 @@
         </tr>
       </table>
       
-    </td>
-  </tr>
-</table>
-<!-- ==================== VARIABLES ==================== -->
-<a name="section-Variables"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Variables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.statistics'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.statistics</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -305,11 +280,11 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">makeDiagnosticPlot</span>(<span class="sig-arg">sg</span>,
         <span class="sig-arg">molec</span>,
-        <span class="sig-arg">scaling</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">escaling</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">scaling</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">escaling</span>=<span class="sig-default">[]</span>,
         <span class="sig-arg">combine_water</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">edists</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">pfn_path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">edists</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">pfn_path</span>=<span class="sig-default">''</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.statistics.TrendAnalysis-pysrc.html#makeDiagnosticPlot">source&nbsp;code</a></span>&nbsp;
@@ -358,24 +333,24 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">makeParamPlot</span>(<span class="sig-arg">sg</span>,
         <span class="sig-arg">xpar</span>,
         <span class="sig-arg">ypar</span>,
-        <span class="sig-arg">expar</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">eypar</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">xratios</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">yratios</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">emdot</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">expar</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">eypar</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">xratios</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">yratios</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">emdot</span>=<span class="sig-default">[]</span>,
         <span class="sig-arg">exparlog</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">eyparlog</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">edists</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">dint</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">edists</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">mode</span>=<span class="sig-default">'dint'</span>,
         <span class="sig-arg">n_data</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">extra_mcon</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">extra_dcon</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">pfn_path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">extra_mcon</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">extra_dcon</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">pfn_path</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">add_linear_fit</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">alf_xmin</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">alf_xmax</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">efcont63</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">efcont63</span>=<span class="sig-default">[]</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -582,7 +557,7 @@
         <span class="sig-arg">n_fit</span>=<span class="sig-default">10000</span>,
         <span class="sig-arg">poly_degree</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">show</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">x_for_yratio</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">y_for_xratio</span>=<span class="sig-default">0</span>)</span>
   </h3>
@@ -662,7 +637,7 @@
         <span class="sig-arg">par</span>,
         <span class="sig-arg">epar</span>,
         <span class="sig-arg">par_co</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">edist</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
+        <span class="sig-arg">edist</span>=<span class="sig-default">[]</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.statistics.TrendAnalysis-pysrc.html#selectDataSG">source&nbsp;code</a></span>&nbsp;
@@ -710,15 +685,15 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">corrSG</span>(<span class="sig-arg">sg</span>,
         <span class="sig-arg">xpar</span>,
         <span class="sig-arg">ypar</span>,
-        <span class="sig-arg">expar</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">eypar</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">expar</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">eypar</span>=<span class="sig-default">[]</span>,
         <span class="sig-arg">xratio</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">yratio</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">eyratio</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">exratio</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">edist</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">xpar_co</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="sig-arg">ypar_co</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
+        <span class="sig-arg">eyratio</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">exratio</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">edist</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">xpar_co</span>=<span class="sig-default">(None,None)</span>,
+        <span class="sig-arg">ypar_co</span>=<span class="sig-default">(None,None)</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -808,7 +783,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul 23 14:06:14 2015
+    Generated by Epydoc 3.0.1 on Wed Aug 12 15:03:10 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
