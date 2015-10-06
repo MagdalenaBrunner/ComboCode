@@ -69,7 +69,7 @@
       reading data
     </li>
     <li>
-      dereddening data
+      downloading photometry
     </li>
   </ul>
 
@@ -98,9 +98,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.data.Sed.Sed-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_name</span>,
-        <span class="summary-sig-arg">distance</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">plot_extrapol_extinction</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">remove</span>=<span class="summary-sig-default">[]</span>)</span><br />
+        <span class="summary-sig-arg">remove</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
       Initializing an Sed instance.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#Sed.__init__">source&nbsp;code</a></span>
@@ -170,10 +168,30 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.data.Sed.Sed-class.html#dereddenData" class="summary-sig-name">dereddenData</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Deredden the data.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.data.Sed.Sed-class.html#readPhotInfo" class="summary-sig-name">readPhotInfo</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">level</span>=<span class="summary-sig-default">0.5</span>)</span><br />
+      Read the photometry band information associated with photometry of 
+      this SED.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#Sed.dereddenData">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#Sed.readPhotInfo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.data.Sed.Sed-class.html#getAk" class="summary-sig-name">getAk</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">distance</span>)</span><br />
+      Retrieve the Ak extinction magnitude for a given distance.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#Sed.getAk">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -252,9 +270,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_name</span>,
-        <span class="sig-arg">distance</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">plot_extrapol_extinction</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">remove</span>=<span class="sig-default">[]</span>)</span>
+        <span class="sig-arg">remove</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -268,15 +284,9 @@
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>star_name</code></strong> (string) - The star name of the object</li>
-        <li><strong class="pname"><code>distance</code></strong> (float) - The distance to the star. If not None, the K-band absorption 
-          coefficient is taken from the Marshall or Drimmel catalogs.
-          <p>(default: None)</p></li>
         <li><strong class="pname"><code>remove</code></strong> (list[str]) - Photometry to be removed from the output file. e.g. 
           ['WISE','DENIS']
           <p>(default: [])</p></li>
-        <li><strong class="pname"><code>plot_extrapol_extinction</code></strong> (bool) - Plot and show the result of the extrapolated interstellar 
-          extinction law by chiar and tielens (2006)
-          <p>(default: 0)</p></li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
@@ -309,30 +319,59 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="dereddenData"></a>
+<a name="readPhotInfo"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">dereddenData</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">readPhotInfo</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">level</span>=<span class="sig-default">0.5</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#Sed.dereddenData">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#Sed.readPhotInfo">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Deredden the data.</p>
-  <p>The interstellar extinction curve by Chiar and Tielens (2006) is used 
-  with an Av to Ak conversion factor of 0.112.</p>
-  <p>The correction is done by interpolating the curve, and extrapolating 
-  to longer wavelengths.</p>
-  <p>The extrapolation is done with a power law fitted to the long 
-  wavelength region (lambda &gt; 22 micron).</p>
-  <p>For short wavelength points below 1.24 micron, the cardelli extinction
-  curve is used.</p>
+  <p>Read the photometry band information associated with photometry of 
+  this SED.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>level</code></strong> (float) - The level at which the cut off for significant transmission of 
+          the photometric bands is placed.
+          <p>(default: 0.5)</p></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAk"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAk</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">distance</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#Sed.getAk">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Retrieve the Ak extinction magnitude for a given distance.</p>
+  <p>The Ak values are saved in the sed object, to cut down the overhead in
+  subsequent calls.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>distance</code></strong> (float) - The distance to the source. If the default, the total extinction 
+          is calculated in given direction.</li>
+    </ul></dd>
+    <dt>Returns: float</dt>
+        <dd>The extinction magnitude in K-band for the requested distance.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -363,7 +402,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Aug 12 15:03:10 2015
+    Generated by Epydoc 3.0.1 on Tue Oct  6 13:44:56 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
