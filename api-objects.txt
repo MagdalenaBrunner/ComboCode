@@ -618,9 +618,12 @@ ComboCode.cc.statistics.ResoStats.ResoStats.printStats	ComboCode.cc.statistics.R
 ComboCode.cc.statistics.ResoStats.ResoStats.setLoglikelihoodThreshold	ComboCode.cc.statistics.ResoStats.ResoStats-class.html#setLoglikelihoodThreshold
 ComboCode.cc.statistics.ResoStats.ResoStats.includeTrans	ComboCode.cc.statistics.ResoStats.ResoStats-class.html#includeTrans
 ComboCode.cc.statistics.SedStats.SedStats	ComboCode.cc.statistics.SedStats.SedStats-class.html
-ComboCode.cc.statistics.SedStats.SedStats.setModelPhotometry	ComboCode.cc.statistics.SedStats.SedStats-class.html#setModelPhotometry
 ComboCode.cc.statistics.SedStats.SedStats.setInstrument	ComboCode.cc.statistics.SedStats.SedStats-class.html#setInstrument
 ComboCode.cc.statistics.SedStats.SedStats.__init__	ComboCode.cc.statistics.SedStats.SedStats-class.html#__init__
+ComboCode.cc.statistics.SedStats.SedStats.getStarGrid	ComboCode.cc.statistics.SedStats.SedStats-class.html#getStarGrid
+ComboCode.cc.statistics.SedStats.SedStats.setModelPhotometry	ComboCode.cc.statistics.SedStats.SedStats-class.html#setModelPhotometry
+ComboCode.cc.statistics.SedStats.SedStats.calcChi2	ComboCode.cc.statistics.SedStats.SedStats-class.html#calcChi2
+ComboCode.cc.statistics.SedStats.SedStats.writeChi2	ComboCode.cc.statistics.SedStats.SedStats-class.html#writeChi2
 ComboCode.cc.statistics.Statistics.Statistics	ComboCode.cc.statistics.Statistics.Statistics-class.html
 ComboCode.cc.statistics.Statistics.Statistics.doDataStats	ComboCode.cc.statistics.Statistics.Statistics-class.html#doDataStats
 ComboCode.cc.statistics.Statistics.Statistics.setDataInfo	ComboCode.cc.statistics.Statistics.Statistics-class.html#setDataInfo
