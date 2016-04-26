@@ -92,8 +92,9 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotDust.PlotDust-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">model</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">sed</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">path_mcmax</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">runTestDec09</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">inputfilename</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">path_mcmax</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">inputfilename</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">fn_add_star</span>=<span class="summary-sig-default">0</span>)</span><br />
       Initializing PlotDust session.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotDust-pysrc.html#PlotDust.__init__">source&nbsp;code</a></span>
@@ -112,10 +113,12 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotDust.PlotDust-class.html#plotSed" class="summary-sig-name">plotSed</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">iterative</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">no_models</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">fn_add_star</span>=<span class="summary-sig-default">0</span>)</span><br />
+        <span class="summary-sig-arg">show_phot_filter</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Creating an SED with 0, 1 or more models and data.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotDust-pysrc.html#PlotDust.plotSed">source&nbsp;code</a></span>
@@ -134,9 +137,9 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotDust.PlotDust-class.html#plotCorrflux" class="summary-sig-name">plotCorrflux</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">no_models</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">fn_add_star</span>=<span class="summary-sig-default">0</span>)</span><br />
+        <span class="summary-sig-arg">no_models</span>=<span class="summary-sig-default">0</span>)</span><br />
       Plot correlated fluxes with 0, 1 or more models and data.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotDust-pysrc.html#PlotDust.plotCorrflux">source&nbsp;code</a></span>
@@ -155,9 +158,9 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotDust.PlotDust-class.html#plotVisibilities" class="summary-sig-name">plotVisibilities</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">no_models</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">fn_add_star</span>=<span class="summary-sig-default">0</span>)</span><br />
+        <span class="summary-sig-arg">no_models</span>=<span class="summary-sig-default">0</span>)</span><br />
       Plot visibilities as a function of baseline.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotDust-pysrc.html#PlotDust.plotVisibilities">source&nbsp;code</a></span>
@@ -174,9 +177,32 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotDust.PlotDust-class.html#plotDensMeixner" class="summary-sig-name">plotDensMeixner</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      A 2D color-scale plot to visualize the density structure of the 
+      Meixner model.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotDust-pysrc.html#PlotDust.plotDensMeixner">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotDust.PlotDust-class.html#plotDens" class="summary-sig-name">plotDens</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">models</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
       Plotting the temperature stratification of the dust.</td>
@@ -198,6 +224,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotDust.PlotDust-class.html#plotTemp" class="summary-sig-name">plotTemp</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">models</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">power</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
@@ -220,6 +247,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotDust.PlotDust-class.html#plotTempSpecies" class="summary-sig-name">plotTempSpecies</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">models</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">include_total</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">power</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
@@ -243,6 +271,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotDust.PlotDust-class.html#plotOpacities" class="summary-sig-name">plotOpacities</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">scaling</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">species</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">AMC</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
@@ -269,6 +298,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotDust.PlotDust-class.html#plotExtinction" class="summary-sig-name">plotExtinction</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">models</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">plot_default</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
       Plotting wavelength dependent extinction efficiencies wrt grain size.</td>
@@ -303,7 +333,8 @@
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>cc.plotting.PlottingSession.PlottingSession</code></b>:
       <code>checkChangedPars</code>,
-      <code>makeModelList</code>
+      <code>makeModelList</code>,
+      <code>setFnPlt</code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
@@ -375,8 +406,9 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_name</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">model</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">sed</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">path_mcmax</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">runTestDec09</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">inputfilename</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">path_mcmax</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">inputfilename</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">fn_add_star</span>=<span class="sig-default">0</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -392,7 +424,7 @@
           any star model specific things
           <p>(default: &quot;model&quot;)</p></li>
         <li><strong class="pname"><code>path_mcmax</code></strong> (string) - Output modeling folder in MCMax home folder
-          <p>(default: 'runTestDec09')</p></li>
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>inputfilename</code></strong> (string) - name of inputfile that is also copied to the output folder of the
           plots, if None nothing is copied
           <p>(default: None)</p></li>
@@ -400,6 +432,9 @@
           an Sed, but just dust parameters such as                       
           temperature
           <p>(default: None)</p></li>
+        <li><strong class="pname"><code>fn_add_star</code></strong> (bool) - Add the star name to the requested plot filename. Only relevant 
+          if fn_plt is given in a sub method.
+          <p>(default: 0)</p></li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
@@ -416,10 +451,12 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotSed</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">iterative</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">no_models</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">fn_add_star</span>=<span class="sig-default">0</span>)</span>
+        <span class="sig-arg">show_phot_filter</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotDust-pysrc.html#PlotDust.plotSed">source&nbsp;code</a></span>&nbsp;
@@ -428,12 +465,16 @@
   
   <p>Creating an SED with 0, 1 or more models and data.</p>
   <p>Includes data preparation on the spot.</p>
+  <p>Additional plotCols keywords can be passed through kwargs. They 
+  overwrite cfg input.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>star_grid</code></strong> (list[Star()]) - list of Star() models to plot. If star_grid is [], only data are 
           plotted.
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>cfg</code></strong> (string) - path to the Plotting2.plotCols config file. If default, the 
           hard-coded default plotting options are used.
           <p>(default: '')</p></li>
@@ -443,8 +484,9 @@
           <p>(default: 0)</p></li>
         <li><strong class="pname"><code>no_models</code></strong> (bool) - Only show data.
           <p>(default: 0)</p></li>
-        <li><strong class="pname"><code>fn_add_star</code></strong> (bool) - Add the star name to the requested plot filename.
-          <p>(default: 1)</p></li>
+        <li><strong class="pname"><code>show_phot_filter</code></strong> (bool) - Show the wavelength band of the photometric filters as an x error
+          bar on the model phot
+          <p>(default: 0)</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -458,9 +500,9 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotCorrflux</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">no_models</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">fn_add_star</span>=<span class="sig-default">0</span>)</span>
+        <span class="sig-arg">no_models</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotDust-pysrc.html#PlotDust.plotCorrflux">source&nbsp;code</a></span>&nbsp;
@@ -475,13 +517,13 @@
         <li><strong class="pname"><code>star_grid</code></strong> (list[Star()]) - list of Star() models to plot. If star_grid is [], only data are 
           plotted.
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>cfg</code></strong> (string) - path to the Plotting2.plotCols config file. If default, the 
           hard-coded default plotting options are used.
           <p>(default: '')</p></li>
         <li><strong class="pname"><code>no_models</code></strong> (bool) - Only show data.
           <p>(default: 0)</p></li>
-        <li><strong class="pname"><code>fn_add_star</code></strong> (bool) - Add the star name to the requested plot filename.
-          <p>(default: 1)</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -495,9 +537,9 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotVisibilities</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">no_models</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">fn_add_star</span>=<span class="sig-default">0</span>)</span>
+        <span class="sig-arg">no_models</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotDust-pysrc.html#PlotDust.plotVisibilities">source&nbsp;code</a></span>&nbsp;
@@ -516,6 +558,8 @@
         <li><strong class="pname"><code>star_grid</code></strong> (list[Star()]) - list of Star() models to plot. If star_grid is [], only data are 
           plotted.
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>cfg</code></strong> (string) - path to the Plotting2.plotCols config file. If default, the 
           hard-coded default plotting options are used.
           <p>(default: '')</p></li>
@@ -523,6 +567,53 @@
           <p>(default: 0)</p></li>
         <li><strong class="pname"><code>fn_add_star</code></strong> (bool) - Add the star name to the requested plot filename.
           <p>(default: 1)</p></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="plotDensMeixner"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plotDensMeixner</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotDust-pysrc.html#PlotDust.plotDensMeixner">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A 2D color-scale plot to visualize the density structure of the 
+  Meixner model. Requires the Star()[DENSTYPE] to be Meixner.</p>
+  <p>The method used for plotting is available in 
+  cc.plotting.PlotMeixner.py and can be used standalone. It is called by 
+  this method as well, prepping the star_grid information to be used with 
+  PlotMeixner.</p>
+  <p>Alternatively, if star_grid is not defined, you can also pass the 
+  plotting input for PlotMeixner.plot() through this method. args is only 
+  passed to the plotDens method in this case.</p>
+  <p>For now the density is plotted in cgs with respect to cm. The density 
+  is normalized to the maximum density in the grid. (rho=rho/rho_max)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>star_grid</code></strong> (list[Star()]) - parameter sets, if [], the parameter sets are determined from the
+          model ids
+          <p>(default: [])</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>cfg</code></strong> (string) - Path to config file for this method. PlotMeixner.plotDens 
+          settings can be changed in cfg. Can be used to update the kwargs 
+          in case the density grid has to be adapted compared to what the 
+          star_grid indicates or what the kwargs contain. Give fn_plt as 
+          filename in cfg.
+          <p>(default: '')</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -537,6 +628,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotDens</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">models</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
   </h3>
@@ -556,6 +648,8 @@
         <li><strong class="pname"><code>models</code></strong> (list[string]) - The model_ids, if [], the parameter sets are expected in 
           star_grid
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>unit</code></strong> (str) - The unit of the plotted radial grid. Can be 'cm','rstar', 'au', 
           'm'
           <p>(default: 'cm')</p></li>
@@ -576,6 +670,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotTemp</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">models</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">power</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
@@ -596,6 +691,8 @@
         <li><strong class="pname"><code>models</code></strong> (list[string]) - The model_ids, if [], the parameter sets are expected in 
           star_grid
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>power</code></strong> (list) - A list of values for s in below formula. If [] no power law is 
           included. Power law parameters  are taken from star_grid[0].
           <p>See Thesis p32, where power is s in T(r) = 
@@ -621,6 +718,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotTempSpecies</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">models</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">include_total</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">power</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
@@ -642,6 +740,8 @@
         <li><strong class="pname"><code>models</code></strong> (list[string]) - The model_ids, if [], the parameter sets are expected in 
           star_grid
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>include_total</code></strong> (bool) - Include the sum of all temperature profiles as well for 
           comparison.
           <p>(default: 0)</p></li>
@@ -669,6 +769,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotOpacities</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">scaling</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">species</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">AMC</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
@@ -693,6 +794,8 @@
         <li><strong class="pname"><code>star_grid</code></strong> (list(Star())) - The input Star() models. If default, the MCMax input opacities 
           are plotted.
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>scaling</code></strong> (bool) - allow species abundance scaling of opacities
           <p>(default: 0)</p></li>
         <li><strong class="pname"><code>species</code></strong> (list(string)) - If no star_grid or model list are given, this gives the species 
@@ -702,7 +805,8 @@
           hard-coded default plotting options are used.
           <p>(default: '')</p></li>
         <li><strong class="pname"><code>index</code></strong> (int) - The index of the kappas in the .opacity/.particle file. 0: 
-          extinction, 1: absorption, 2: scattering
+          extinction, 1: absorption, 2: scattering. Only relevant when 
+          plotting without Star() models.
           <p>(default: 0)</p></li>
     </ul></dd>
   </dl>
@@ -718,6 +822,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotExtinction</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">models</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">plot_default</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
   </h3>
@@ -739,6 +844,8 @@
           <p>(default: [])</p></li>
         <li><strong class="pname"><code>models</code></strong> (list[string]) - The model ids, only required if star_grid is []
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>cfg</code></strong> (string) - path to the Plotting2.plotCols config file. If default, the 
           hard-coded default plotting options are used.
           <p>(default: '')</p></li>
@@ -800,7 +907,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:08 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:51 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

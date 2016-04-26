@@ -122,14 +122,15 @@
         <span class="summary-sig-arg">edists</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">dint</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">n_data</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">extra_mcon</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">extra_dcon</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">extra_mpar</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">extra_dpar</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">pfn_path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">add_linear_fit</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">alf_xmin</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">alf_xmax</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">efcont63</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">seds</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">deredden</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Make a diagnostic plot of either measured line strengths or intrinsic
       parameters versus measured line strengths or intrinsic parameters.</td>
@@ -368,14 +369,15 @@
         <span class="sig-arg">edists</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">dint</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">n_data</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">extra_mcon</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">extra_dcon</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">extra_mpar</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">extra_dpar</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">pfn_path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">add_linear_fit</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">alf_xmin</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">alf_xmax</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">efcont63</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">seds</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">deredden</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -397,35 +399,37 @@
           combined, the data Star() objects are assumed to be listed first.</li>
         <li><strong class="pname"><code>xpar</code></strong> (string/int) - The parameter on the x-axis. Can be either a string (Star() 
           keyword), or an index (of the transition in the first object in 
-          the sg list) for line strengths. In a combo mode (cint or ctmb) 
-          this means it is the index in the transition list of the data 
-          objects rather than the model objects. Transitions in objects 
-          other than the first 1 can have different indices.</li>
+          the sg list) for line strengths, or a float giving the wavelength
+          of the continuum point. When looking at line strengths in a combo
+          mode (cint or ctmb) this means it is the index in the transition 
+          list of the data objects rather than the model objects. 
+          Transitions in objects other than the first 1 can have different 
+          indices. Note the essential difference between floats and 
+          integers!</li>
         <li><strong class="pname"><code>ypar</code></strong> (string/int) - The parameter on the y-axis. Can be either a string (Star() 
           keyword), or an index (of the transition in the first object in 
-          the sg list) for line strengths. In a combo mode (cint or ctmb) 
-          this means it is the index in the transition list of the data 
-          objects rather than the model objects. Transitions in objects 
-          other than the first 1 can have different indices.</li>
-        <li><strong class="pname"><code>xratios</code></strong> (list[int/str]) - If xpar is a line strength, multiple ratios can be requested to 
-          be plotted in succession. Therefore, this gives the indices (if 
-          int, refers to the 1st Star() object in sg) or 'mdot' (if ratio 
-          wrt Mdot) or 'fcont63' (if ratio wrt 6.3 mic continuumflux) for 
-          the x-axis ratio.
+          the sg list) for line strengths, or a float giving the wavelength
+          of the continuum point. When looking at line strengths inn a 
+          combo mode (cint or ctmb) this means it is the index in the 
+          transition list of the data objects rather than the model 
+          objects. Transitions in objects other than the first 1 can have 
+          different indices. Note the essential difference between floats 
+          and integers!</li>
+        <li><strong class="pname"><code>xratios</code></strong> (list[int/str]) - If xpar is a line strength or a continuum point, multiple ratios 
+          can be requested to be plotted in succession. Therefore, this 
+          gives the indices (if int, refers to the 1st Star() object in sg)
+          or 'mdot' (if ratio wrt Mdot) or float (in case of a continuum 
+          wavelength point) for the x-axis ratio.
           <p>(default: [])</p></li>
         <li><strong class="pname"><code>yratios</code></strong> (list[int/str]) - If ypar is a line strength, multiple ratios can be requested to 
           be plotted in succession. Therefore, this gives the indices (if 
           int, refers to the 1st Star() object in sg) or 'mdot' (if ratio 
-          wrt Mdot) or 'fcont63' (if ratio wrt 6.3 mic continuumflux) for 
-          the x-axis ratio.
+          wrt Mdot) or float (in case of a continuum wavelength point) for 
+          the y-axis ratio
           <p>(default: [])</p></li>
         <li><strong class="pname"><code>emdot</code></strong> (list[float]) - Include errors for the x/yratio quantity if it is mdot. Not used 
           for error estimation on mdot as a parameter! The mdot errors are 
           given in log scale.
-          <p>(default: [])</p></li>
-        <li><strong class="pname"><code>efcont63</code></strong> (list[float]) - Include errors for the x/yratio quantity if it is fcont63. Not 
-          used for error estimation on fcont63 as a parameter! The fcont63 
-          errors are given in linear scale
           <p>(default: [])</p></li>
         <li><strong class="pname"><code>expar</code></strong> (array) - The error on the x-parameter if it is a Star() key and if mode is
           cint or dint. Number of entries in array is equal to the number 
@@ -451,21 +455,33 @@
           'cint' or 'ctmb'. Then the extra keyword 'n_data' is required, 
           which indicates how many Star() objects are associated with data.
           The method assumes they are the first objects in the list of 
-          Star() objects.
+          Star() objects. In case only continuum wavelengths are requested 
+          (a combination is possible!), only the first letter really 
+          matters.
           <p>(default: 'dint')</p></li>
         <li><strong class="pname"><code>n_data</code></strong> (int) - The number of data Star() objects, assuming they are the first in
-          the star_grid. Only required if mode == 'combo'.
+          the star_grid. Only required if mode == 'combo'. This number, if 
+          given, must be equal to the number of seds, if given.
           <p>(default: 0)</p></li>
-        <li><strong class="pname"><code>extra_mcon</code></strong> (list[string]) - If extra conditionals are requested for models, the plot is 
-          colour coded based on them. For instance, Star() object keywords 
-          can serve as conditionals. Note that these are only applied when 
-          mode == mtmb, mint, cint or ctmb.
+        <li><strong class="pname"><code>extra_mpar</code></strong> (list[string]) - If extra conditional parameters are requested for models, the 
+          plot is colour coded based on them. For instance, Star() object 
+          keywords can serve as conditionals. Note that these are only 
+          applied when mode == mtmb, mint, cint or ctmb.
           <p>(default: [])</p></li>
-        <li><strong class="pname"><code>extra_dcon</code></strong> (list[string]) - If extra conditionals are requested for data, the plot is colour 
-          coded based on them. For instance, Star() object keywords can 
-          serve as conditionals. Note that these are only applied when mode
-          == dtmb, dint, cint or ctmb.
+        <li><strong class="pname"><code>extra_dpar</code></strong> (list[string]) - If extra conditional parameters are requested for data, the plot 
+          is colour coded based on them. For instance, Star() object 
+          keywords can serve as conditionals. Note that these are only 
+          applied when mode == dtmb, dint, cint or ctmb.
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>seds</code></strong> (list[Sed()]) - The SEDs of the data objects. Only used when xpar or ypar is a 
+          float (and thus continuum points are required). The number of 
+          SEDs given must be equal to n_data, or the number of Star() 
+          objects if mode[0] == 'd'. An error is thrown otherwise.
+          <p>(default: [])</p></li>
+        <li><strong class="pname"><code>deredden</code></strong> (bool) - Deredden the SEDs before plotting, in case of continuum flux 
+          points. This is never done in case only one data object is given 
+          and reddening is requested in models to avoid double correction.
+          <p>(default: 0)</p></li>
         <li><strong class="pname"><code>cfg</code></strong> (string/dict) - config filename read as a dictionary, can replace any keyword 
           given to plotCols. Can also be a dictionary itself, in which case
           no file is read and the kwargs are updated with the content of 
@@ -808,7 +824,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:07 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:50 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -100,6 +100,14 @@
         <span class="summary-sig-arg">lte_request</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">use_collis_radiat_switch</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">dust_to_gas_change_ml_sp</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">use_no_maser_option</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">use_maser_in_sphinx</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">fehler</span>=<span class="summary-sig-default">0.0001</span>,
+        <span class="summary-sig-arg">n_freq</span>=<span class="summary-sig-default">30</span>,
+        <span class="summary-sig-arg">start_approx</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">use_fraction_level_corr</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">fraction_level_corr</span>=<span class="summary-sig-default">0.8</span>,
+        <span class="summary-sig-arg">number_level_max_corr</span>=<span class="summary-sig-default">1e-12</span>,
         <span class="summary-sig-arg">ratio_12c_to_13c</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">ratio_16o_to_17o</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">ratio_16o_to_18o</span>=<span class="summary-sig-default">0</span>,
@@ -162,12 +170,13 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type">dict()</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Molecule.Molecule-class.html#makeDict" class="summary-sig-name">makeDict</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">path</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">path</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">in_progress</span>=<span class="summary-sig-default">0</span>)</span><br />
       Return a dict with molecule string, and other relevant parameters.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.makeDict">source&nbsp;code</a></span>
@@ -284,6 +293,24 @@
       
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Molecule.Molecule-class.html#readMline" class="summary-sig-name">readMline</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Read the mline output for this molecule, given that a model_id is 
+      available.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.readMline">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 </table>
 <!-- ==================== METHOD DETAILS ==================== -->
 <a name="section-MethodDetails"></a>
@@ -325,6 +352,14 @@
         <span class="sig-arg">lte_request</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">use_collis_radiat_switch</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">dust_to_gas_change_ml_sp</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">use_no_maser_option</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">use_maser_in_sphinx</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">fehler</span>=<span class="sig-default">0.0001</span>,
+        <span class="sig-arg">n_freq</span>=<span class="sig-default">30</span>,
+        <span class="sig-arg">start_approx</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">use_fraction_level_corr</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">fraction_level_corr</span>=<span class="sig-default">0.8</span>,
+        <span class="sig-arg">number_level_max_corr</span>=<span class="sig-default">1e-12</span>,
         <span class="sig-arg">ratio_12c_to_13c</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">ratio_16o_to_17o</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">ratio_16o_to_18o</span>=<span class="sig-default">0</span>,
@@ -381,6 +416,24 @@
           <p>(default: 1.)</p></li>
         <li><strong class="pname"><code>use_collis_radiat_switch</code></strong> (bool) - in case of unstable mline, such as for para h2o sometimes
           <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>fehler</code></strong> (float) - convergence criterium in mline
+          <p>(default: 1e-4)</p></li>
+        <li><strong class="pname"><code>n_freq</code></strong> (int) - Number of frequency points in line profile
+          <p>(default: 30)</p></li>
+        <li><strong class="pname"><code>start_approx</code></strong> (bool) - set to 0 when one wants to start with LTE-approx as starting 
+          n(NY,N_IMPACT); set to 1 when starting from another model - with 
+          same NY, N_IMPACT, ...
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>use_fraction_level_corr</code></strong> (bool) - set to 1 if one wants to put a limit on the level-population 
+          correction (BES3).
+          <p>(default: 1)</p></li>
+        <li><strong class="pname"><code>fraction_level_corr</code></strong> (float) - user-defined fraction for maximum change in level-population 
+          correction; useful in case of H2O
+          <p>(default: 0.8)</p></li>
+        <li><strong class="pname"><code>number_level_max_corr</code></strong> (float) - user-defined level population. Only the level corrections for 
+          levels with a higher level population will be used to determine 
+          convergence criterion
+          <p>(default: 1e-12)</p></li>
         <li><strong class="pname"><code>ratio_12c_to_13c</code></strong> (int) - 12c/13c ratio, only relevant for 13co and other molecules with 
           that isotope
           <p>(default: 0)</p></li>
@@ -425,6 +478,16 @@
         <li><strong class="pname"><code>new_temperature_filename</code></strong> (string) - the filename for the temperature structure if 
           set_keyword_change_temperature != 0
           <p>(default: None)</p></li>
+        <li><strong class="pname"><code>use_no_maser_option</code></strong> (bool) - Do not allow masers (neg opacs) in mline RT by setting negative 
+          line opacs to 1e-60 If use_maser_in_sphinx is on, mline will do a
+          final run including masers anyway to see what would happen if 
+          they were inluded by allowing negative opacs for the line profile
+          calculations in sphinx (but not for the convergence in mline).
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>use_maser_in_sphinx</code></strong> (bool) - When on, does a final mline run including masers, allowing 
+          negative opacities. When off, sets the masing line opacities to 
+          1e-60 when writing out the ml3 file.
+          <p>(default: 1)</p></li>
         <li><strong class="pname"><code>linelist</code></strong> (bool) - The molecule is created for the LineList module. No radiative 
           information is read from GASTRoNOoM input files.
           <p>(default: 0)</p></li>
@@ -467,7 +530,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">makeDict</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">path</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">path</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">in_progress</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.makeDict">source&nbsp;code</a></span>&nbsp;
@@ -482,7 +546,13 @@
           For instance, when making dictionaries for Molecule() objects in 
           the case of supercomputer copies.
           <p>(default: None)</p></li>
+        <li><strong class="pname"><code>in_progress</code></strong> (bool) - add an extra dict entry &quot;IN_PROGRESS&quot; if the molecule 
+          is still being calculated somewhere.
+          <p>(default: 0)</p></li>
     </ul></dd>
+    <dt>Returns: dict()</dt>
+        <dd>The molecule dictionary including all relevant, defining 
+          information</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -599,6 +669,29 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="readMline"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">readMline</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.readMline">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Read the mline output for this molecule, given that a model_id is 
+  available.</p>
+  <p>The mline output is available in the MlineReader object, as a property
+  of Molecule().</p>
+  <p>[NYI]</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -626,7 +719,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:08 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:51 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

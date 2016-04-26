@@ -81,18 +81,38 @@
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.tools.Profiler-module.html#tempPowerLaw" class="summary-sig-name">tempPowerLaw</a>(<span class="summary-sig-arg">r</span>,
+        <span class="summary-sig-arg">Ti</span>,
+        <span class="summary-sig-arg">Ri</span>,
+        <span class="summary-sig-arg">epsilon</span>)</span><br />
+      Define a temperature power law.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.tools.Profiler-pysrc.html#tempPowerLaw">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">(array,string)</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.tools.Profiler-module.html#dustTemperaturePowerLaw" class="summary-sig-name">dustTemperaturePowerLaw</a>(<span class="summary-sig-arg">rad</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.tools.Profiler-module.html#tempPowerLawDust" class="summary-sig-name">tempPowerLawDust</a>(<span class="summary-sig-arg">rad</span>,
         <span class="summary-sig-arg">tstar</span>,
         <span class="summary-sig-arg">s</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">add_key</span>=<span class="summary-sig-default">0</span>)</span><br />
       Return a dust temperature power law of the form as suggested by 
       observational evidence.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.tools.Profiler-pysrc.html#dustTemperaturePowerLaw">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.modeling.tools.Profiler-pysrc.html#tempPowerLawDust">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -164,20 +184,52 @@
   </td>
 </tr>
 </table>
-<a name="dustTemperaturePowerLaw"></a>
+<a name="tempPowerLaw"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">dustTemperaturePowerLaw</span>(<span class="sig-arg">rad</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">tempPowerLaw</span>(<span class="sig-arg">r</span>,
+        <span class="sig-arg">Ti</span>,
+        <span class="sig-arg">Ri</span>,
+        <span class="sig-arg">epsilon</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.tools.Profiler-pysrc.html#tempPowerLaw">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Define a temperature power law.</p>
+  <p>The functional form is: Tg(r) = Ti * (Ri/r)^epsilon</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>r</code></strong> (array) - The radial grid in cm</li>
+        <li><strong class="pname"><code>Ti</code></strong> (float) - The initial temperature at Ri in K</li>
+        <li><strong class="pname"><code>Ri</code></strong> (float) - The inner radius in cm</li>
+        <li><strong class="pname"><code>epsilon</code></strong> (float) - The exponent of the temp law</li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The temperature grid</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="tempPowerLawDust"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">tempPowerLawDust</span>(<span class="sig-arg">rad</span>,
         <span class="sig-arg">tstar</span>,
         <span class="sig-arg">s</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">add_key</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.tools.Profiler-pysrc.html#dustTemperaturePowerLaw">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="ComboCode.cc.modeling.tools.Profiler-pysrc.html#tempPowerLawDust">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -262,7 +314,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:07 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:50 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

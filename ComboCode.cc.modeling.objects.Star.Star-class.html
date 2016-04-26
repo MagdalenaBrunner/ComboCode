@@ -95,7 +95,8 @@
         <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">path_mcmax</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">extra_input</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">example_star</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>)</span><br />
+        <span class="summary-sig-arg">example_star</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">print_check_t</span>=<span class="summary-sig-default">1</span>)</span><br />
       Initiate an instance of the STAR class.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.__init__">source&nbsp;code</a></span>
@@ -559,8 +560,27 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#getDustDensity" class="summary-sig-name">getDustDensity</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#getDustTheta" class="summary-sig-name">getDustTheta</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">species</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Return the dust theta grid in radians.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustTheta">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#getDustDensity" class="summary-sig-name">getDustDensity</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">species</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">avg_theta</span>=<span class="summary-sig-default">1</span>)</span><br />
       Return the dust density profile from the file made for MCMax.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustDensity">source&nbsp;code</a></span>
@@ -573,13 +593,14 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">(array,string)</span>
+      <span class="summary-type">array or (array,string)</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#getDustTemperature" class="summary-sig-name">getDustTemperature</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">add_key</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">species</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">species</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">avg_theta</span>=<span class="summary-sig-default">1</span>)</span><br />
       Return the dust temperature profile from MCMax model.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustTemperature">source&nbsp;code</a></span>
@@ -688,6 +709,25 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#getWindDensity" class="summary-sig-name">getWindDensity</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">denstype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">gas</code><code class="variable-quote">'</code></span>)</span><br />
+      Read the n_h2 number density profile and calculate the total gas or 
+      dust density profile from that.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getWindDensity">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -744,6 +784,227 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a name="calcUSE_NO_MASER_OPTION"></a><span class="summary-sig-name">calcUSE_NO_MASER_OPTION</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of USE_NO_MASER_OPTION parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcUSE_NO_MASER_OPTION">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcFEHLER"></a><span class="summary-sig-name">calcFEHLER</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of FEHLER parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcFEHLER">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcN_FREQ"></a><span class="summary-sig-name">calcN_FREQ</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of N_FREQ parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcN_FREQ">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcSTART_APPROX"></a><span class="summary-sig-name">calcSTART_APPROX</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of START_APPROX parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcSTART_APPROX">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcUSE_FRACTION_LEVEL_CORR"></a><span class="summary-sig-name">calcUSE_FRACTION_LEVEL_CORR</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of USE_FRACTION_LEVEL_CORR parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcUSE_FRACTION_LEVEL_CORR">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcFRACTION_LEVEL_CORR"></a><span class="summary-sig-name">calcFRACTION_LEVEL_CORR</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of FRACTION_LEVEL_CORR parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcFRACTION_LEVEL_CORR">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcNUMBER_LEVEL_MAX_CORR"></a><span class="summary-sig-name">calcNUMBER_LEVEL_MAX_CORR</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of NUMBER_LEVEL_MAX_CORR parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcNUMBER_LEVEL_MAX_CORR">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcFRACTION_TAU_STEP"></a><span class="summary-sig-name">calcFRACTION_TAU_STEP</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of FRACTION_TAU_STEP parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcFRACTION_TAU_STEP">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcMIN_TAU_STEP"></a><span class="summary-sig-name">calcMIN_TAU_STEP</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of MIN_TAU_STEP parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcMIN_TAU_STEP">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcWRITE_INTENSITIES"></a><span class="summary-sig-name">calcWRITE_INTENSITIES</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of WRITE_INTENSITIES parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcWRITE_INTENSITIES">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcTAU_MAX"></a><span class="summary-sig-name">calcTAU_MAX</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of TAU_MAX parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcTAU_MAX">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcTAU_MIN"></a><span class="summary-sig-name">calcTAU_MIN</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of TAU_MIN parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcTAU_MIN">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcCHECK_TAU_STEP"></a><span class="summary-sig-name">calcCHECK_TAU_STEP</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of CHECK_TAU_STEP parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcCHECK_TAU_STEP">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a name="calcLOGG"></a><span class="summary-sig-name">calcLOGG</span>(<span class="summary-sig-arg">self</span>)</span><br />
       Set the default value of LOGG to 0.</td>
           <td align="right" valign="top">
@@ -761,11 +1022,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="calcFD2_CONT_63"></a><span class="summary-sig-name">calcFD2_CONT_63</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      If F_CONT_63 is available, that value is multiplied by distance^2 for
-      this key.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcF_CONT_TYPE" class="summary-sig-name">calcF_CONT_TYPE</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of F_CONT_TYPE to MCMax.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcFD2_CONT_63">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcF_CONT_TYPE">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -779,46 +1039,11 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="calcFD2M_CONT_63"></a><span class="summary-sig-name">calcFD2M_CONT_63</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      If F_CONT_63 is available, that value is multiplied by distance^2 and
-      divided by MDOT_GAS for this key.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcAH2O_RATE" class="summary-sig-name">calcAH2O_RATE</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Calculate the outflow rate of H2O, by multiplying the H2O abundance 
+      with the mass-loss rate.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcFD2M_CONT_63">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcF_CONT_63" class="summary-sig-name">calcF_CONT_63</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Set the default value of F_CONT_63 to the monochromatic flux 
-      calculated by MCMax.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcF_CONT_63">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcF_CONT_63_TYPE" class="summary-sig-name">calcF_CONT_63_TYPE</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Set the default value of F_CONT_63_TYPE to MCMax.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcF_CONT_63_TYPE">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcAH2O_RATE">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -1145,6 +1370,23 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcDRIFT_TYPE" class="summary-sig-name">calcDRIFT_TYPE</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the type of drift between dust and gas taken into account.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcDRIFT_TYPE">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcDRIFT" class="summary-sig-name">calcDRIFT</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Find terminal drift velocity from last calculated GASTRoNOoM model.</td>
           <td align="right" valign="top">
@@ -1162,8 +1404,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="calcM_DUST"></a><span class="summary-sig-name">calcM_DUST</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Find total dust mass, based on sigma_0 in the case of a power law.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcM_DUST" class="summary-sig-name">calcM_DUST</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Calculate the total dust mass based on the requested denstype 
+      prescription.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcM_DUST">source&nbsp;code</a></span>
             
@@ -1234,6 +1477,23 @@
       Set the default value of MDOT_GAS_START equal to MDOT_GAS.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcMDOT_GAS_START">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcSHELLMASS_CLASS" class="summary-sig-name">calcSHELLMASS_CLASS</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the order of magnitude of SHELLMASS = Mdot/v_inf.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcSHELLMASS_CLASS">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -1401,10 +1661,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="calcRT_SED"></a><span class="summary-sig-name">calcRT_SED</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Set the default value of MCMax ray-tracing of the SED to False.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcREDDENING" class="summary-sig-name">calcREDDENING</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      A boolean flag for applying interstellar reddening or not.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcRT_SED">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcREDDENING">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -1418,10 +1678,98 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="calcIMAGE"></a><span class="summary-sig-name">calcIMAGE</span>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcREDDENING_MAP" class="summary-sig-name">calcREDDENING_MAP</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      The interstellar extinction map used for determining the interstellar
+      extinction in K-band at a given distance, in the direction of given 
+      longitude and latitude (set in Star.dat).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcREDDENING_MAP">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcREDDENING_LAW" class="summary-sig-name">calcREDDENING_LAW</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      The extinction law used to redden model spectra.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcREDDENING_LAW">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcRT_INCLINATION"></a><span class="summary-sig-name">calcRT_INCLINATION</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of MCMax ray-tracing inclination to 45 degrees.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcRT_INCLINATION">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcRT_NOSOURCE"></a><span class="summary-sig-name">calcRT_NOSOURCE</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of excluding the central source from the ray 
+      tracing of the MCMax model to False.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcRT_NOSOURCE">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcRT_SPEC"></a><span class="summary-sig-name">calcRT_SPEC</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of MCMax ray-tracing of the spectrum to False.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcRT_SPEC">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcRT_IMAGE"></a><span class="summary-sig-name">calcRT_IMAGE</span>(<span class="summary-sig-arg">self</span>)</span><br />
       Set the default value of MCMax image to False.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcIMAGE">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcRT_IMAGE">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -1435,10 +1783,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="calcVISIBILITIES"></a><span class="summary-sig-name">calcVISIBILITIES</span>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a name="calcRT_VIS"></a><span class="summary-sig-name">calcRT_VIS</span>(<span class="summary-sig-arg">self</span>)</span><br />
       Set the default value of MCMax visibilities to False.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcVISIBILITIES">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcRT_VIS">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -1452,10 +1800,45 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="calcREDO_OBS"></a><span class="summary-sig-name">calcREDO_OBS</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Set the default value of redoing observation files to False.</td>
+          <td><span class="summary-sig"><a name="calcRT_BASEVIS"></a><span class="summary-sig-name">calcRT_BASEVIS</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of MCMax visibilities versus baseline to False.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcREDO_OBS">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcRT_BASEVIS">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcRT_REDO"></a><span class="summary-sig-name">calcRT_REDO</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of redoing the MCMax model observation to 
+      False.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcRT_REDO">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#calcRT_OUTPUTFOLDER" class="summary-sig-name">calcRT_OUTPUTFOLDER</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of MCMax ray-tracing outputfolder to empty.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcRT_OUTPUTFOLDER">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -2508,7 +2891,8 @@
         <span class="sig-arg">path_gastronoom</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">path_mcmax</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">extra_input</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">example_star</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>)</span>
+        <span class="sig-arg">example_star</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="sig-arg">print_check_t</span>=<span class="sig-default">1</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -2530,6 +2914,10 @@
           <p>(default: None)</p></li>
         <li><strong class="pname"><code>extra_input</code></strong> (dict or Star()) - extra input that you wish to add to the dict
           <p>(default: None)</p></li>
+        <li><strong class="pname"><code>print_check_t</code></strong> (bool) - Print the dust temperature check automatically. Can still be done
+          manually by running s.checkT or asking for any T_DES_%s or 
+          R_DES_%s keyword where %s is a dust species.
+          <p>(default: 1)</p></li>
     </ul></dd>
     <dt>Returns: Star()</dt>
         <dd>STAR object in the shape of a dictionary which includes all 
@@ -2983,7 +3371,9 @@
   
   <p>Return a Transition() object that has the same parameters as 
   sample.</p>
-  <p>The actual model ids are not included in this comparison!</p>
+  <p>The comparison is done based on the str representation of the trans. 
+  This excludes the dictionary entries of the transition!</p>
+  <p>The actual model ids or data are not included in this comparison!</p>
   <p>None is returned if no match is found.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
@@ -3086,6 +3476,37 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="getDustTheta"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getDustTheta</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">species</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustTheta">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the dust theta grid in radians.</p>
+  <p>This is the angular grid goin from pole at zero radians to equator at 
+  pi/2 radians.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>species</code></strong> (str) - The dust species for which to return the grid. If default or if 
+          T_CONTACT is on, the file is denstemp otherwise it is the species
+          specific file.
+          <p>(default: '')</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>array giving the theta grid.</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="getDustDensity"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -3094,7 +3515,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getDustDensity</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">species</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">species</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">avg_theta</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustDensity">source&nbsp;code</a></span>&nbsp;
@@ -3102,9 +3524,14 @@
   </tr></table>
   
   <p>Return the dust density profile from the file made for MCMax.</p>
-  <p>self.getDustRad returns the radial grid associated with this 
-  profile.</p>
+  <p>self.getDustRad returns the radial grid associated with this profile. 
+  self.getDustTheta returns the angular grid associated with this profile 
+  if angular averaging is off.</p>
   <p>An empty array is returned if the model does not exist.</p>
+  <p>Note that MCMax is a 2D code. By default, the theta coordinate (angle 
+  pole-equator) is averaged out. This can be turned off, in which case the 
+  full density grid is returned giving rho at (r_0,t_0),...,(r_0,t_n), 
+  (r_1,t_0),...,(r_1,t_n),...,(r_n,t_0),...,(r_n,t_n).</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -3112,6 +3539,10 @@
           T_CONTACT is on, the file is denstemp otherwise it is the species
           specific file.
           <p>(default: '')</p></li>
+        <li><strong class="pname"><code>avg_theta</code></strong> (bool) - Average out the angular grid in the density distribution. At a 
+          given radial point, the densities at all thetas are averaged. On 
+          by default.
+          <p>(default: 1)</p></li>
     </ul></dd>
     <dt>Returns: array</dt>
         <dd>the density profile (g/cm3)</dd>
@@ -3127,7 +3558,8 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getDustTemperature</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">add_key</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">species</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">species</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">avg_theta</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getDustTemperature">source&nbsp;code</a></span>&nbsp;
@@ -3135,12 +3567,17 @@
   </tr></table>
   
   <p>Return the dust temperature profile from MCMax model.</p>
-  <p>self.getDustRad returns the radial grid associated with this 
-  profile.</p>
+  <p>self.getDustRad returns the radial grid associated with this profile. 
+  self.getDustTheta returns the angular grid associated with this profile 
+  if angular averaging is off.</p>
   <p>An empty array is returned if the model does not exist.</p>
   <p>The total dust temperature without separate components for the 
   different dust species is returned if no species is requested or if 
   thermal contact is on.</p>
+  <p>Note that MCMax is a 2D code. By default, the theta coordinate (angle 
+  pole-equator) is averaged out. This can be turned off, in which case the 
+  full temperature grid is returned giving T at (r_0,t_0),..., 
+  (r_0,t_n),(r_1,t_0),...,(r_1,t_n),...,(r_n,t_0),...,(r_n,t_n).</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -3150,8 +3587,12 @@
           <p>(default: '')</p></li>
         <li><strong class="pname"><code>add_key</code></strong> (bool) - Add a key for a legend to the ouput as third tuple element.
           <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>avg_theta</code></strong> (bool) - Average out the angular grid in the temperature distribution. At 
+          a given radial point, the temps at all thetas are averaged. On by
+          default.
+          <p>(default: 1)</p></li>
     </ul></dd>
-    <dt>Returns: (array,string)</dt>
+    <dt>Returns: array or (array,string)</dt>
         <dd>The temperature profile (K) as well as a key, if requested.</dd>
   </dl>
 </td></tr></table>
@@ -3315,6 +3756,42 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="getWindDensity"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getWindDensity</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">denstype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">gas</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getWindDensity">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Read the n_h2 number density profile and calculate the total gas or 
+  dust density profile from that. This requires a GASTRoNOoM cooling model 
+  to have been calculated.</p>
+  <p>The gas density is simply calculated by multiplying with the mass of 
+  molecular hydrogen.</p>
+  <p>The dust density is calculated by multiplying the H_2 density with the
+  dust-to-gas ratio. The radial dependence of the velocity profiles is 
+  taken into account. Not the radial dependence of the mass-loss rate, but 
+  CC assumes the d2g ratio remains constant in case of variable mass-loss 
+  rate.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>denstype</code></strong> (str) - The type of density profile, either 'dust' or 'gas'.
+          <p>(default: 'gas')</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The density profile (g/cm3)</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="calcTLR"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -3338,47 +3815,44 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="calcF_CONT_63"></a>
+<a name="calcF_CONT_TYPE"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcF_CONT_63</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcF_CONT_TYPE</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcF_CONT_63">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcF_CONT_TYPE">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Set the default value of F_CONT_63 to the monochromatic flux 
-  calculated by MCMax. If no MCMax model is available, it is set to 
-  None.</p>
-  <p>If set in the inputfile, it is assumed to be the measured 
-  monochromatic flux. A difference between measured and modeled currently 
-  is not available.</p>
+  <p>Set the default value of F_CONT_TYPE to MCMax. This is the type of 
+  derivation of measured continuum fluxes. Can be: ISO, MSX, PHOT, 
+  MCMax</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
 </div>
-<a name="calcF_CONT_63_TYPE"></a>
+<a name="calcAH2O_RATE"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcF_CONT_63_TYPE</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcAH2O_RATE</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcF_CONT_63_TYPE">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcAH2O_RATE">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Set the default value of F_CONT_63_TYPE to MCMax. This is the type of 
-  derivation of the measured 6.3 mic flux. Can be: ISO, MSX, PHOT, 
-  MCMax</p>
+  <p>Calculate the outflow rate of H2O, by multiplying the H2O abundance 
+  with the mass-loss rate.</p>
+  <p>Value is set in units of Msun/yr</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -3574,6 +4048,26 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="calcDRIFT_TYPE"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcDRIFT_TYPE</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcDRIFT_TYPE">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the type of drift between dust and gas taken into account.</p>
+  <p>Is either consistent (from momentum transfer calculation or zero).</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <a name="calcDRIFT"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -3592,6 +4086,44 @@
   model.</p>
   <p>Units are km/s and is given for grain size 0.25 micron.</p>
   <p>If no GASTRoNOoM model exists, the drift is taken to be 0.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="calcM_DUST"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcM_DUST</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcM_DUST">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Calculate the total dust mass based on the requested denstype 
+  prescription.</p>
+  <p>The dust mass is set in solar masses.</p>
+  <p>If Denstype == 'POW': Find total dust mass, based on sigma_0 in the 
+  case of a power law.</p>
+  <p>In all other cases, the dust mass is calculated from the density 
+  profile of the GASTRoNOoM model after correcting for d2g ratio, for 
+  now.</p>
+  <p>Note that in the latter case the dust mass will be an upper limit when
+  compared to the actual dust mass determined by MCMax, if tdesiter is on: 
+  Some of the dust in the density profile will be destroyed based on the 
+  condensation temperature.</p>
+  <p>Only in the case of denstypes POW and MEIXNER this dust mass is 
+  actually used as input for MCMax. This never takes into account the MCMax
+  output. To retrieve the dust mass calculated with MCMax, check the MCMax 
+  log file.</p>
+  <p>Currently GASTRoNOoM is never calculated first, so giving this as 
+  input does not yet work for any denstype other than POW. The value 
+  returned is correct, however. When implemented, 2 iterations will be 
+  required.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -3656,6 +4188,27 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="calcSHELLMASS_CLASS"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcSHELLMASS_CLASS</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcSHELLMASS_CLASS">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the order of magnitude of SHELLMASS = Mdot/v_inf. 0: Mdot/v_inf 
+  &lt; 5e-8 1: 5e-8 &lt;= Mdot/v_inf &lt; 2e-7 2: 2e-7 &lt;= Mdot/v_inf 
+  &lt; 5e-7 3: 5e-7 &lt;= Mdot/v_inf</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <a name="calcMDOT_CLASS"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -3670,7 +4223,7 @@
     </td>
   </tr></table>
   
-  <p>Set the order of magnitude of MDOT. 0: Mdot &lt; 1e-6 1: 1e-6 &lt;= 
+  <p>Set the order of magnitude of MDOT. 0: Mdot &lt; 3e-7 1: 3e-7 &lt;= 
   Mdot &lt; 3e-6 2: 3e-6 &lt;= Mdot &lt; 1e-5 3: 1e-5 &lt;= Mdot</p>
   <dl class="fields">
   </dl>
@@ -3798,6 +4351,99 @@
   <p>Calculate dust terminal velocity from gas terminal velocity and 
   drift.</p>
   <p>Given in km/s.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="calcREDDENING"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcREDDENING</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcREDDENING">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A boolean flag for applying interstellar reddening or not. This is 
+  model (read: distance) dependent, hence belongs in Star() objects.</p>
+  <p>Having this available here makes it possible to compare using 
+  reddening or not.</p>
+  <p>Default value is set to 0.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="calcREDDENING_MAP"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcREDDENING_MAP</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcREDDENING_MAP">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The interstellar extinction map used for determining the interstellar 
+  extinction in K-band at a given distance, in the direction of given 
+  longitude and latitude (set in Star.dat).</p>
+  <p>Default is Marshall et al. 2006 (marshall), but is replaced by Drimmel
+  et al. 2003 (drimmel) in case ll and bb are outside the range of 
+  availability in Marshall.</p>
+  <p>Alternatives are Arenou et al. 1992 (arenou) and Schlegel et al. 1998 
+  (schlegel).</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="calcREDDENING_LAW"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcREDDENING_LAW</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcREDDENING_LAW">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The extinction law used to redden model spectra.</p>
+  <p>Default is the combination of the laws by Fitzpatrick et al. 2004 
+  (Optical) and Chiar &amp; Tielens 2006 (IR), see IvS repo for more 
+  details at cc.ivs.sed.reddening.</p>
+  <p>Alternatives include cardelli1989, donnell1994, fitzpatrick1999, 
+  fitzpatrick2004, chiar2006.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="calcRT_OUTPUTFOLDER"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcRT_OUTPUTFOLDER</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcRT_OUTPUTFOLDER">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the default value of MCMax ray-tracing outputfolder to empty. The 
+  output model observations are then saved in the model output folder.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -4381,7 +5027,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:08 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:51 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

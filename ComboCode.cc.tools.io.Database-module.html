@@ -111,6 +111,25 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#convertDbKeys" class="summary-sig-name">convertDbKeys</a>(<span class="summary-sig-arg">path_input</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Convert your local databases such that some keywords are shifted 
+      around according to their relevance for the different subcodes of 
+      GASTRoNOoM.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#convertDbKeys">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#updateDustMCMaxDatabase" class="summary-sig-name">updateDustMCMaxDatabase</a>(<span class="summary-sig-arg">filename</span>)</span><br />
       Update dust filenames in MCMax database with the new OPAC_PATH 
       system.</td>
@@ -146,11 +165,11 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#cleanSphinxDatabase" class="summary-sig-name">cleanSphinxDatabase</a>(<span class="summary-sig-arg">db_path</span>)</span><br />
-      Remove any transitions with a dictionary that includes the 
-      IN_PROGRESS key.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#cleanDatabase" class="summary-sig-name">cleanDatabase</a>(<span class="summary-sig-arg">db_path</span>)</span><br />
+      Remove any db entries with a dictionary that includes the IN_PROGRESS
+      key.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#cleanSphinxDatabase">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#cleanDatabase">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -179,16 +198,160 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type">Database()</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#addDefaultKeywordToDatabase" class="summary-sig-name">addDefaultKeywordToDatabase</a>(<span class="summary-sig-arg">keyword</span>,
-        <span class="summary-sig-arg">value</span>,
-        <span class="summary-sig-arg">db_fn</span>)</span><br />
-      Add a default value for a new keyword to the database.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#addKeyCooling" class="summary-sig-name">addKeyCooling</a>(<span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">val</span>,
+        <span class="summary-sig-arg">db_fn</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">db</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Add a (key,value) pair to every entry in the cooling database.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#addDefaultKeywordToDatabase">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#addKeyCooling">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Database()</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#rmKeyCooling" class="summary-sig-name">rmKeyCooling</a>(<span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">val</span>,
+        <span class="summary-sig-arg">db_fn</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">db</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Remove a key from every entry in the cooling database.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#rmKeyCooling">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Database()</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#addKeyMline" class="summary-sig-name">addKeyMline</a>(<span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">val</span>,
+        <span class="summary-sig-arg">db_fn</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">db</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">id</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Add a (key,value) pair to every entry in the mline database.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#addKeyMline">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Database()</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#rmKeyMline" class="summary-sig-name">rmKeyMline</a>(<span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">db_fn</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">db</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">id</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Remove a key from every entry in the mline database.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#rmKeyMline">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Database()</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#rmKeySphinx" class="summary-sig-name">rmKeySphinx</a>(<span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">db_fn</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">db</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">id</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Remove a key from the sphinx database entries.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#rmKeySphinx">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Database()</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#addKeySphinx" class="summary-sig-name">addKeySphinx</a>(<span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">val</span>,
+        <span class="summary-sig-arg">db_fn</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">db</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">id</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Add a (key,value) pair to every entry of the sphinx database entries.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#addKeySphinx">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Database()</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#rmKeyPacs" class="summary-sig-name">rmKeyPacs</a>(<span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">db_fn</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">db</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">id</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Remove a key from the PACS database entries.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#rmKeyPacs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Database()</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#addKeyPacs" class="summary-sig-name">addKeyPacs</a>(<span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">val</span>,
+        <span class="summary-sig-arg">db_fn</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">db</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">id</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Add a (key,value) pair to every entry of the PACS database entries.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#addKeyPacs">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -202,10 +365,13 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#addUseStarfileToMline" class="summary-sig-name">addUseStarfileToMline</a>(<span class="summary-sig-arg">db_fn</span>)</span><br />
-      Add a USE_STARFILE to mline database.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.Database-module.html#replaceSubstring" class="summary-sig-name">replaceSubstring</a>(<span class="summary-sig-arg">db</span>,
+        <span class="summary-sig-arg">oldss</span>,
+        <span class="summary-sig-arg">newss</span>)</span><br />
+      Replace a substring of values in database entries, such as the home 
+      directory of filenames.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#addUseStarfileToMline">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#replaceSubstring">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -257,6 +423,50 @@
   </td>
 </tr>
 </table>
+<a name="convertDbKeys"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">convertDbKeys</span>(<span class="sig-arg">path_input</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#convertDbKeys">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Convert your local databases such that some keywords are shifted 
+  around according to their relevance for the different subcodes of 
+  GASTRoNOoM.</p>
+  <p>Moves USE_MASER_IN_SPHINX from sphinx to mline. Sets it to the default
+  value of 1, since it was never changed for mline.</p>
+  <p>Moves USE_NO_MASER_OPTION, N_FREQ, START_APPROX, 
+  USE_FRACTION_LEVEL_CORR, FRACTION_LEVEL_CORR, NUMBER_LEVEL_MAX_CORR from 
+  cooling to mline.</p>
+  <p>Moves WRITE_INTENSITIES, TAU_MAX, TAU_MIN, CHECK_TAU_STEP from cooling
+  to sphinx.</p>
+  <p>Adds the new keywords N_IMPACT_EXTRA[_RIN/ROUT] to cooling.</p>
+  <p>Adds the new keywords FRACTION_TAU_STEP, MIN_TAU_STEP to sphinx.</p>
+  <p>Adds the new keyword FEHLER to mline.</p>
+  <p>Converts any 'double' notation in str format to the floats, e.g. 
+  TAU_MIN='-6d0' becomes TAU_MIN=-6.</p>
+  <p>Converts all cooling, mline, sphinx and pacs databases found in the 
+  GASTRoNOoM home folder.</p>
+  <p>Can Update ComboCode input files for the maser keywords.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>path_input</code></strong> (str) - The location of your ComboCode inputfiles. Use empty string or 
+          None if you do not want to update your input- files 
+          automatically. Is directly inserted into glob so takes wildcards,
+          eg /Users/robinl/ComboCode/input/*.dat
+          <p>(default: '')</p></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="updateDustMCMaxDatabase"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -306,22 +516,23 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="cleanSphinxDatabase"></a>
+<a name="cleanDatabase"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">cleanSphinxDatabase</span>(<span class="sig-arg">db_path</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">cleanDatabase</span>(<span class="sig-arg">db_path</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#cleanSphinxDatabase">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#cleanDatabase">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Remove any transitions with a dictionary that includes the IN_PROGRESS
+  <p>Remove any db entries with a dictionary that includes the IN_PROGRESS 
   key.</p>
+  <p>Works for cooling, mline and sphinx databases.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -361,53 +572,346 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="addDefaultKeywordToDatabase"></a>
+<a name="addKeyCooling"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">addDefaultKeywordToDatabase</span>(<span class="sig-arg">keyword</span>,
-        <span class="sig-arg">value</span>,
-        <span class="sig-arg">db_fn</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addKeyCooling</span>(<span class="sig-arg">key</span>,
+        <span class="sig-arg">val</span>,
+        <span class="sig-arg">db_fn</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">db</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#addDefaultKeywordToDatabase">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#addKeyCooling">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Add a default value for a new keyword to the database.</p>
-  <p>Does not work if keyword is already in present in the database!</p>
+  <p>Add a (key,value) pair to every entry in the cooling database.</p>
+  <p>Not added to a particular entry if already present.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>keyword</code></strong> (db key type (string mostly)) - The name of the keyword in the database for every model.</li>
-        <li><strong class="pname"><code>value</code></strong> (string/float/...) - The default value for the keyword.</li>
-        <li><strong class="pname"><code>db_fn</code></strong> (string) - The filename and path of the database.</li>
+        <li><strong class="pname"><code>key</code></strong> (str) - The name of the keyword to be added.</li>
+        <li><strong class="pname"><code>val</code></strong> (any) - The default value for the keyword.</li>
+        <li><strong class="pname"><code>db_fn</code></strong> (string) - The filename and path of the database. Only required if db is not
+          given.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>db</code></strong> (Database()) - The database. Is updated and returned. If not given, a filename 
+          is required.
+          <p>(default: None)</p></li>
     </ul></dd>
+    <dt>Returns: Database()</dt>
+        <dd>The new database, not yet synchronized.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="addUseStarfileToMline"></a>
+<a name="rmKeyCooling"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">addUseStarfileToMline</span>(<span class="sig-arg">db_fn</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rmKeyCooling</span>(<span class="sig-arg">key</span>,
+        <span class="sig-arg">val</span>,
+        <span class="sig-arg">db_fn</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">db</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#addUseStarfileToMline">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#rmKeyCooling">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Add a USE_STARFILE to mline database.</p>
+  <p>Remove a key from every entry in the cooling database.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>db_fn</code></strong> (string) - The filename and path of the database.</li>
+        <li><strong class="pname"><code>key</code></strong> (str) - The name of the keyword to be removed.</li>
+        <li><strong class="pname"><code>db_fn</code></strong> (string) - The filename and path of the database. Only required if db is not
+          given.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>db</code></strong> (Database()) - The database. Is updated and returned. If not given, a filename 
+          is required.
+          <p>(default: None)</p></li>
+    </ul></dd>
+    <dt>Returns: Database()</dt>
+        <dd>The new database, not yet synchronized.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addKeyMline"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addKeyMline</span>(<span class="sig-arg">key</span>,
+        <span class="sig-arg">val</span>,
+        <span class="sig-arg">db_fn</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">db</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">id</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#addKeyMline">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Add a (key,value) pair to every entry in the mline database.</p>
+  <p>Not added to a particular entry if already present.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key</code></strong> (str) - The keyword to be added</li>
+        <li><strong class="pname"><code>val</code></strong> (any) - The default value of the keyword</li>
+        <li><strong class="pname"><code>db_fn</code></strong> (string) - The filename and path of the database. Only required if db is not
+          given.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>db</code></strong> (Database()) - The database. Is updated and returned. If not given, a filename 
+          is required.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>id</code></strong> (str) - If the (key,val) pair is only to be added to one cooling id, give
+          that id here. If not given, the pair is added to all ids If id 
+          not in db, nothing is done.
+          <p>(default: '')</p></li>
+    </ul></dd>
+    <dt>Returns: Database()</dt>
+        <dd>The new database, not yet synchronized.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rmKeyMline"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rmKeyMline</span>(<span class="sig-arg">key</span>,
+        <span class="sig-arg">db_fn</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">db</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">id</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#rmKeyMline">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Remove a key from every entry in the mline database.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key</code></strong> (str) - The keyword to be removed</li>
+        <li><strong class="pname"><code>db_fn</code></strong> (string) - The filename and path of the database. Only required if db is not
+          given.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>db</code></strong> (Database()) - The database. Is updated and returned. If not given, a filename 
+          is required.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>id</code></strong> (str) - If the key is only to be removed from one cooling id, give that 
+          id here. If not given, the key is removed from all ids If id not 
+          in db, nothing is done.
+          <p>(default: '')</p></li>
+    </ul></dd>
+    <dt>Returns: Database()</dt>
+        <dd>The new database, not yet synchronized.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rmKeySphinx"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rmKeySphinx</span>(<span class="sig-arg">key</span>,
+        <span class="sig-arg">db_fn</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">db</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">id</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#rmKeySphinx">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Remove a key from the sphinx database entries.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key</code></strong> (str) - They keyword to be removed</li>
+        <li><strong class="pname"><code>db_fn</code></strong> (string) - The filename and path of the database. Only required if db is not
+          given.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>db</code></strong> (Database()) - The database. Is updated and returned. If not given, a filename 
+          is required.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>id</code></strong> (str) - If the key is only to be removed from one cooling id, give that 
+          id here. If not given, the key is removed from all ids If id not 
+          in db, nothing is done.
+          <p>(default: '')</p></li>
+    </ul></dd>
+    <dt>Returns: Database()</dt>
+        <dd>The new database, not yet synchronized.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addKeySphinx"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addKeySphinx</span>(<span class="sig-arg">key</span>,
+        <span class="sig-arg">val</span>,
+        <span class="sig-arg">db_fn</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">db</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">id</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#addKeySphinx">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Add a (key,value) pair to every entry of the sphinx database 
+  entries.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key</code></strong> (str) - They keyword to be added</li>
+        <li><strong class="pname"><code>val</code></strong> (any) - The default value of the keyword</li>
+        <li><strong class="pname"><code>db_fn</code></strong> (string) - The filename and path of the database. Only required if db is not
+          given.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>db</code></strong> (Database()) - The database. Is updated and returned. If not given, a filename 
+          is required.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>id</code></strong> (str) - If the (key,val) pair is only to be added to one cooling id, give
+          that id here. If not given, the pair is added to all ids If id 
+          not in db, nothing is done.
+          <p>(default: '')</p></li>
+    </ul></dd>
+    <dt>Returns: Database()</dt>
+        <dd>The new database, not yet synchronized.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rmKeyPacs"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rmKeyPacs</span>(<span class="sig-arg">key</span>,
+        <span class="sig-arg">db_fn</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">db</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">id</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#rmKeyPacs">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Remove a key from the PACS database entries.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key</code></strong> (str) - They keyword to be removed</li>
+        <li><strong class="pname"><code>db_fn</code></strong> (string) - The filename and path of the database. Only required if db is not
+          given.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>db</code></strong> (Database()) - The database. Is updated and returned. If not given, a filename 
+          is required.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>id</code></strong> (str) - If the key is only to be removed from one cooling id, give that 
+          id here. Note this is the COOLING ID, not the pacs id. Iteration 
+          over all pacs ids is always done. However, if id is given it is 
+          cross checked with the cooling id in the entry and only then 
+          added. If not given, the key is removed from all pacs ids as well
+          as cooling ids. If cooling id not in db, nothing is done.
+          <p>(default: '')</p></li>
+    </ul></dd>
+    <dt>Returns: Database()</dt>
+        <dd>The new database, not yet synchronized.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addKeyPacs"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addKeyPacs</span>(<span class="sig-arg">key</span>,
+        <span class="sig-arg">val</span>,
+        <span class="sig-arg">db_fn</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">db</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">id</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#addKeyPacs">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Add a (key,value) pair to every entry of the PACS database 
+  entries.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key</code></strong> (str) - They keyword to be added</li>
+        <li><strong class="pname"><code>val</code></strong> (any) - The default value of the keyword</li>
+        <li><strong class="pname"><code>db_fn</code></strong> (string) - The filename and path of the database. Only required if db is not
+          given.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>db</code></strong> (Database()) - The database. Is updated and returned. If not given, a filename 
+          is required.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>id</code></strong> (str) - If the (key,val) pair is only to be added to one pacs id, give 
+          that id here. If not given, the pair is added to all ids. If id 
+          not in db, nothing is done.
+          <p>(default: '')</p></li>
+    </ul></dd>
+    <dt>Returns: Database()</dt>
+        <dd>The new database, not yet synchronized.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="replaceSubstring"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">replaceSubstring</span>(<span class="sig-arg">db</span>,
+        <span class="sig-arg">oldss</span>,
+        <span class="sig-arg">newss</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.Database-pysrc.html#replaceSubstring">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Replace a substring of values in database entries, such as the home 
+  directory of filenames. This is applied to all strings in the database 
+  vals!</p>
+  <p>This applies to the value of a dictionary (key,value) pair on the 
+  second level of the database (the first level being (model_id, 
+  dictionary). Does not work for embedded dictionaries in a dictionary, 
+  such as the dust_species embedded dictionary in an MCMax database!</p>
+  <p>The database is not synchronized in this method.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>db</code></strong> (Database()) - The database (for now only MCMax or cooling)</li>
+        <li><strong class="pname"><code>oldss</code></strong> (str) - The old home name (eg /home/mariev/ or /home/)</li>
+        <li><strong class="pname"><code>newss</code></strong> (str) - The new home name (efg /Users/robinl/ or /Users/)</li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -439,7 +943,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:07 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:50 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

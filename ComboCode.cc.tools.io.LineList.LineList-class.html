@@ -239,9 +239,14 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.LineList.LineList-class.html#makeTransitions" class="summary-sig-name">makeTransitions</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">telescope</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">offset</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">n_quad</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">use_maser_in_sphinx</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">offset</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">n_quad</span>=<span class="summary-sig-default">100</span>,
+        <span class="summary-sig-arg">fraction_tau_step</span>=<span class="summary-sig-default">0.01</span>,
+        <span class="summary-sig-arg">min_tau_step</span>=<span class="summary-sig-default">0.0001</span>,
+        <span class="summary-sig-arg">write_intensities</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">tau_max</span>=<span class="summary-sig-default">12.0</span>,
+        <span class="summary-sig-arg">tau_min</span>=<span class="summary-sig-default">-6.0</span>,
+        <span class="summary-sig-arg">check_tau_step</span>=<span class="summary-sig-default">0.01</span>)</span><br />
       Make a list of transitions from the line list that was read.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.tools.io.LineList-pysrc.html#LineList.makeTransitions">source&nbsp;code</a></span>
@@ -408,9 +413,14 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">makeTransitions</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">telescope</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">offset</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">n_quad</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">use_maser_in_sphinx</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">offset</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">n_quad</span>=<span class="sig-default">100</span>,
+        <span class="sig-arg">fraction_tau_step</span>=<span class="sig-default">0.01</span>,
+        <span class="sig-arg">min_tau_step</span>=<span class="sig-default">0.0001</span>,
+        <span class="sig-arg">write_intensities</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">tau_max</span>=<span class="sig-default">12.0</span>,
+        <span class="sig-arg">tau_min</span>=<span class="sig-default">-6.0</span>,
+        <span class="sig-arg">check_tau_step</span>=<span class="sig-default">0.01</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.tools.io.LineList-pysrc.html#LineList.makeTransitions">source&nbsp;code</a></span>&nbsp;
@@ -418,8 +428,8 @@
   </tr></table>
   
   <p>Make a list of transitions from the line list that was read.</p>
-  <p>If any of the extra transition parameters is None, the default in 
-  Transition.Transition.__init__() is used.</p>
+  <p>Default transitions parameters are the same as those used in 
+  Transition.Transition.__init__().</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -429,9 +439,23 @@
           <p>(default: None)</p></li>
         <li><strong class="pname"><code>n_quad</code></strong> (int) - The number of grid points in the formal integration when 
           calculating the line profile in sphinx.
-          <p>(default: None)</p></li>
-        <li><strong class="pname"><code>use_maser_in_sphinx</code></strong> (bool) - Allow masering in sphinx calculations
-          <p>(default: None)</p></li>
+          <p>(default: 100)</p></li>
+        <li><strong class="pname"><code>fraction_tau_step</code></strong> (float) - tau_total*fraction_tau_step gives min. delta_tau in strahl.f. If 
+          too low, min_tau_step will be used.
+          <p>(default: 1e-2)</p></li>
+        <li><strong class="pname"><code>min_tau_step</code></strong> (float) - minimum of delta_tau in strahl.f
+          <p>(default: 1e-4)</p></li>
+        <li><strong class="pname"><code>write_intensities</code></strong> (bool) - set to 1 to write the intensities of first 50 impact-parameters 
+          at the end of sphinx
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>tau_max</code></strong> (float) - maximum optical depth used for the calculation of the formal 
+          integral
+          <p>(default: 12.)</p></li>
+        <li><strong class="pname"><code>tau_min</code></strong> (float) - maximum optical depth used for the calculation of the formal 
+          integral
+          <p>(default: -6.)</p></li>
+        <li><strong class="pname"><code>check_tau_step</code></strong> (float) - check.par.in sphinx if step in tau not too large
+          <p>(default: 0.01)</p></li>
     </ul></dd>
     <dt>Returns: list[Transition]</dt>
         <dd>The transitions</dd>
@@ -465,7 +489,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:08 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:52 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -129,11 +129,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.UnresoStats.UnresoStats-class.html#setRatios" class="summary-sig-name">setRatios</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">chi2_type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">normal</code><code class="variable-quote">'</code></span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.UnresoStats.UnresoStats-class.html#setLineStrengths" class="summary-sig-name">setLineStrengths</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Find the peak to peak ratios of data versus model.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.statistics.UnresoStats-pysrc.html#UnresoStats.setRatios">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.statistics.UnresoStats-pysrc.html#UnresoStats.setLineStrengths">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -147,7 +146,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.UnresoStats.UnresoStats-class.html#calcChiSquared" class="summary-sig-name">calcChiSquared</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.UnresoStats.UnresoStats-class.html#calcChiSquared" class="summary-sig-name">calcChiSquared</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">chi2_method</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">diff</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">ndf</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default">None</span>)</span><br />
       Calculate the chi_squared value for given models and data.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.UnresoStats-pysrc.html#UnresoStats.calcChiSquared">source&nbsp;code</a></span>
@@ -166,8 +168,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.UnresoStats.UnresoStats-class.html#__setIntRatios" class="summary-sig-name" onclick="show_private();">__setIntRatios</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">ifn</span>,
-        <span class="summary-sig-arg">fn</span>,
-        <span class="summary-sig-arg">chi2_type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">normal</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">fn</span>)</span><br />
       Calculate ratios of integrated intensities, if requested.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.UnresoStats-pysrc.html#UnresoStats.__setIntRatios">source&nbsp;code</a></span>
@@ -204,7 +205,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.UnresoStats.UnresoStats-class.html#getRatios" class="summary-sig-name">getRatios</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">this_id</span>,
+        <span class="summary-sig-arg">this_id</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">sel_type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">peak_ratios</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">data_type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">peak_ratios</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">return_negative</span>=<span class="summary-sig-default">0</span>,
@@ -387,18 +388,17 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="setRatios"></a>
+<a name="setLineStrengths"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">setRatios</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">chi2_type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">normal</code><code class="variable-quote">'</code></span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setLineStrengths</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.statistics.UnresoStats-pysrc.html#UnresoStats.setRatios">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="ComboCode.cc.statistics.UnresoStats-pysrc.html#UnresoStats.setLineStrengths">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
@@ -406,13 +406,6 @@
   <p>The result are saved in the self.peak_ratios dictionary, see 
   __init__.__doc__()</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>chi2_type</code></strong> (string) - The type of chi-squared calculated for integrated fluxes. 
-          'normal' for the usual kind, 'log' for chi2 of the log of the 
-          integrated fluxes and noise.
-          <p>(default: normal)</p></li>
-    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -423,7 +416,10 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcChiSquared</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcChiSquared</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">chi2_method</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">diff</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">ndf</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">filename</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.statistics.UnresoStats-pysrc.html#UnresoStats.calcChiSquared">source&nbsp;code</a></span>&nbsp;
@@ -432,10 +428,26 @@
   
   <p>Calculate the chi_squared value for given models and data.</p>
   <p>If integrated fluxes are available, they are used without the line 
-  blends.</p>
+  blends. LINES FLAGGED AS A BLEND ARE EXCLUDED FROM THE CHI2 
+  CALCULATION.</p>
   <p>If not, the modeled, convolved spectrum is compared directly with the 
   data, where the model is not just 0 flux.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>chi2_method</code></strong> (string) - The type of chi-squared calculated for integrated fluxes. 'diff' 
+          for standard chi^2 kind, 'log' for redistributing the data/model 
+          ratios on an absolute logarithmic scale before calculating the 
+          chi2
+          <p>(default: 'diff')</p></li>
+        <li><strong class="pname"><code>ndf</code></strong> (int) - Number of degrees of freedom. Default in case of calculating for 
+          one single model. Typically the number of variable grid 
+          parameters in a grid calculation.
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>filename</code></strong> (string) - the filename for which you want to return the list, if None, all 
+          filenames are used and the lists are merged into one
+          <p>(default: None)</p></li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -448,8 +460,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__setIntRatios</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">ifn</span>,
-        <span class="sig-arg">fn</span>,
-        <span class="sig-arg">chi2_type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">normal</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">fn</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.statistics.UnresoStats-pysrc.html#UnresoStats.__setIntRatios">source&nbsp;code</a></span>&nbsp;
@@ -465,10 +476,6 @@
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>ifn</code></strong> (int) - Index of the data band in self.instrument lists.</li>
         <li><strong class="pname"><code>fn</code></strong> (string) - The filename of the data set. Needed for book keeping.</li>
-        <li><strong class="pname"><code>chi2_type</code></strong> (string) - The type of chi-squared calculated for integrated fluxes. 
-          'normal' for the usual kind, 'log' for chi2 of the log of the 
-          integrated fluxes and noise.
-          <p>(default: normal)</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -508,7 +515,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getRatios</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">this_id</span>,
+        <span class="sig-arg">this_id</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">sel_type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">peak_ratios</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">data_type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">peak_ratios</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">return_negative</span>=<span class="sig-default">0</span>,
@@ -521,14 +528,23 @@
   
   <p>Return all ratios for all filenames, including only the values that 
   are not None.</p>
+  <p>Selection type helps to filter out blended lines (negative values for 
+  the ratios), or unavailable ratios (None). Can only be int_ratios or 
+  peak_ratios when this_id is not None.</p>
+  <p>The data type that is returned can be any of the dictionaries tracking
+  stuff in this object.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>this_id</code></strong> (string) - The requested instrument id</li>
+        <li><strong class="pname"><code>this_id</code></strong> (string) - The requested instrument id. Can be None in case both sel_type 
+          and data_type point to dictionaries that are not sorted per 
+          model.
+          <p>(default: None)</p></li>
         <li><strong class="pname"><code>sel_type</code></strong> (string) - The type of data used to select values, one of 'peak_ratios' or 
           'int_ratios'
           <p>(default: 'peak_ratios')</p></li>
-        <li><strong class="pname"><code>data_type</code></strong> (string) - the type of data returned, one of 'peak_ratios' or 'central_wav'
+        <li><strong class="pname"><code>data_type</code></strong> (string) - the type of data returned, one of 'peak_ratios', 'int_ratios', 
+          'central_mwav', '*_bands'
           <p>(default: 'peak_ratios')</p></li>
         <li><strong class="pname"><code>return_negative</code></strong> (bool) - only return the negative peak ratios or equivalent (lower 
           limits).
@@ -630,7 +646,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:08 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:52 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -103,7 +103,12 @@
         <span class="summary-sig-arg">exc_energy</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">int_intensity_log</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">n_quad</span>=<span class="summary-sig-default">100</span>,
-        <span class="summary-sig-arg">use_maser_in_sphinx</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">fraction_tau_step</span>=<span class="summary-sig-default">0.01</span>,
+        <span class="summary-sig-arg">min_tau_step</span>=<span class="summary-sig-default">0.0001</span>,
+        <span class="summary-sig-arg">write_intensities</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">tau_max</span>=<span class="summary-sig-default">12.0</span>,
+        <span class="summary-sig-arg">tau_min</span>=<span class="summary-sig-default">-6.0</span>,
+        <span class="summary-sig-arg">check_tau_step</span>=<span class="summary-sig-default">0.01</span>,
         <span class="summary-sig-arg">vibrational</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default">None</span>)</span><br />
       Initiate a Transition instance, setting all values for the 
@@ -183,6 +188,23 @@
       trans.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.__hash__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#readTelescopeProperties" class="summary-sig-name">readTelescopeProperties</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Read the telescope properties from Telescope.dat.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.readTelescopeProperties">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -511,8 +533,26 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#resetData" class="summary-sig-name">resetData</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Reset the data read for this object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.resetData">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#addDatafile" class="summary-sig-name">addDatafile</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">datadict</span>)</span><br />
+        <span class="summary-sig-arg">datadict</span>,
+        <span class="summary-sig-arg">replace</span>=<span class="summary-sig-default">0</span>)</span><br />
       Add a datadict for this transition.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.addDatafile">source&nbsp;code</a></span>
@@ -547,7 +587,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#setData" class="summary-sig-name">setData</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">trans</span>)</span><br />
+        <span class="summary-sig-arg">trans</span>,
+        <span class="summary-sig-arg">replace</span>=<span class="summary-sig-default">0</span>)</span><br />
       Set data equal to the data in a different Transition object, but for 
       the same transition.</td>
           <td align="right" valign="top">
@@ -643,7 +684,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getIntIntIntSphinx" class="summary-sig-name">getIntIntIntSphinx</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">si</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">si</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">cont_subtract</span>=<span class="summary-sig-default">1</span>)</span><br />
       Calculate the integrated intrinsic intensity of the sphinx line 
       profile in SI or cgs units.</td>
           <td align="right" valign="top">
@@ -661,7 +703,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getIntConIntSphinx" class="summary-sig-name">getIntConIntSphinx</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getIntConIntSphinx" class="summary-sig-name">getIntConIntSphinx</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cont_subtract</span>=<span class="summary-sig-default">1</span>)</span><br />
       Calculate the integrated convolved intensity of the sphinx line 
       profile over velocity.</td>
           <td align="right" valign="top">
@@ -679,7 +722,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getIntTmbSphinx" class="summary-sig-name">getIntTmbSphinx</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getIntTmbSphinx" class="summary-sig-name">getIntTmbSphinx</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cont_subtract</span>=<span class="summary-sig-default">1</span>)</span><br />
       Calculate the integrated Tmb of the sphinx line profile over 
       velocity.</td>
           <td align="right" valign="top">
@@ -710,12 +754,13 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">float</span>
+      <span class="summary-type">(float,float)</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getIntTmbData" class="summary-sig-name">getIntTmbData</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>)</span><br />
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">use_fit</span>=<span class="summary-sig-default">0</span>)</span><br />
       Calculate the integrated Tmb of the data line profile over velocity.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getIntTmbData">source&nbsp;code</a></span>
@@ -795,7 +840,9 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getLoglikelihood" class="summary-sig-name">getLoglikelihood</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">use_bestvlsr</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>)</span><br />
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">partial</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">vcut</span>=<span class="summary-sig-default">0.0</span>)</span><br />
       Calculate the loglikelihood of comparison between sphinx and dataset.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getLoglikelihood">source&nbsp;code</a></span>
@@ -850,7 +897,12 @@
         <span class="sig-arg">exc_energy</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">int_intensity_log</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">n_quad</span>=<span class="sig-default">100</span>,
-        <span class="sig-arg">use_maser_in_sphinx</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">fraction_tau_step</span>=<span class="sig-default">0.01</span>,
+        <span class="sig-arg">min_tau_step</span>=<span class="sig-default">0.0001</span>,
+        <span class="sig-arg">write_intensities</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">tau_max</span>=<span class="sig-default">12.0</span>,
+        <span class="sig-arg">tau_min</span>=<span class="sig-default">-6.0</span>,
+        <span class="sig-arg">check_tau_step</span>=<span class="sig-default">0.01</span>,
         <span class="sig-arg">vibrational</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">path_gastronoom</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
@@ -898,8 +950,22 @@
         <li><strong class="pname"><code>n_quad</code></strong> (int) - Number of impact par. in quadrature int(Inu pdp). Relevant for 
           the ray-tracing of the line profiles
           <p>(default: 100)</p></li>
-        <li><strong class="pname"><code>use_maser_in_spinx</code></strong> (bool) - using maser calc in sphinx code
+        <li><strong class="pname"><code>fraction_tau_step</code></strong> (float) - tau_total*fraction_tau_step gives min. delta_tau in strahl.f. If 
+          too low, min_tau_step will be used.
+          <p>(default: 1e-2)</p></li>
+        <li><strong class="pname"><code>min_tau_step</code></strong> (float) - minimum of delta_tau in strahl.f
+          <p>(default: 1e-4)</p></li>
+        <li><strong class="pname"><code>write_intensities</code></strong> (bool) - set to 1 to write the intensities of first 50 impact-parameters 
+          at the end of sphinx
           <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>tau_max</code></strong> (float) - maximum optical depth used for the calculation of the formal 
+          integral
+          <p>(default: 12.)</p></li>
+        <li><strong class="pname"><code>tau_min</code></strong> (float) - maximum optical depth used for the calculation of the formal 
+          integral
+          <p>(default: -6.)</p></li>
+        <li><strong class="pname"><code>check_tau_step</code></strong> (float) - check.par.in sphinx if step in tau not too large
+          <p>(default: 0.01)</p></li>
         <li><strong class="pname"><code>frequency</code></strong> (float) - if not None the frequency of the transition is taken to be this 
           parameter in Hz, if None the frequency of this transition is 
           derived from the GASTRoNOoM radiative input file
@@ -1016,6 +1082,27 @@
   <dl class="fields">
     <dt>Returns: int</dt>
         <dd>The hash number:</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="readTelescopeProperties"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">readTelescopeProperties</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.readTelescopeProperties">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Read the telescope properties from Telescope.dat.</p>
+  <p>This currently includes the telescope size in m, and the default 
+  absolute flux calibration uncertainty.</p>
+  <dl class="fields">
   </dl>
 </td></tr></table>
 </div>
@@ -1138,7 +1225,7 @@
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>in_progress</code></strong> (bool) - add an extra dict entry &quot;IN_PROGRESS&quot; if the transition
-          is still being calculated on Vic.
+          is still being calculated.
           <p>(default: 0)</p></li>
     </ul></dd>
     <dt>Returns: dict()</dt>
@@ -1451,6 +1538,26 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="resetData"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">resetData</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.resetData">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Reset the data read for this object. Datafiles will have to be added 
+  anew through addDataFile or setData.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <a name="addDatafile"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -1459,7 +1566,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">addDatafile</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">datadict</span>)</span>
+        <span class="sig-arg">datadict</span>,
+        <span class="sig-arg">replace</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.addDatafile">source&nbsp;code</a></span>&nbsp;
@@ -1488,6 +1596,8 @@
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>datadict</code></strong> (dict()) - the filenames and associated fit results</li>
+        <li><strong class="pname"><code>replace</code></strong> (bool) - Replace data if they had already been added before.
+          <p>(default: 0)</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -1500,7 +1610,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">setData</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">trans</span>)</span>
+        <span class="sig-arg">trans</span>,
+        <span class="sig-arg">replace</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.setData">source&nbsp;code</a></span>&nbsp;
@@ -1509,7 +1620,7 @@
   
   <p>Set data equal to the data in a different Transition object, but for 
   the same transition. Does not erase data if they have already been set in
-  this object.</p>
+  this object, unless explicitly requested.</p>
   <p>A check is ran to see if the transition in both objects really is the 
   same. Sphinx model id may differ!</p>
   <p>Avoids too much overhead when reading data from files.</p>
@@ -1520,6 +1631,8 @@
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>trans</code></strong> (Transition()) - The other Transition() object, assumes the transition is the 
           same, but possibly different sphinx models.</li>
+        <li><strong class="pname"><code>replace</code></strong> (bool) - Replace data if they had already been added before.
+          <p>(default: 0)</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -1673,7 +1786,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getIntIntIntSphinx</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">si</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">si</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">cont_subtract</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getIntIntIntSphinx">source&nbsp;code</a></span>&nbsp;
@@ -1687,6 +1801,9 @@
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>cont_subtract</code></strong> (bool) - Subtract the continuum value outside the line from the whole line
+          profile.
+          <p>(default: 1)</p></li>
         <li><strong class="pname"><code>units</code></strong> (string) - The unit system in which the integrated intensity is returned. 
           Can be 'si' or 'cgs'.
           <p>(default: 'si')</p></li>
@@ -1704,7 +1821,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">getIntConIntSphinx</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getIntConIntSphinx</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cont_subtract</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getIntConIntSphinx">source&nbsp;code</a></span>&nbsp;
@@ -1715,6 +1833,12 @@
   profile over velocity.</p>
   <p>Returns None if no sphinx profile is available yet!</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>cont_subtract</code></strong> (bool) - Subtract the continuum value outside the line from the whole line
+          profile.
+          <p>(default: 1)</p></li>
+    </ul></dd>
     <dt>Returns: float</dt>
         <dd>The integrated convolved intensity of the line profile in erg 
           km/s/s/cm2</dd>
@@ -1728,7 +1852,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">getIntTmbSphinx</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getIntTmbSphinx</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cont_subtract</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getIntTmbSphinx">source&nbsp;code</a></span>&nbsp;
@@ -1739,6 +1864,12 @@
   velocity.</p>
   <p>Returns None if no sphinx profile is available yet!</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>cont_subtract</code></strong> (bool) - Subtract the continuum value outside the line from the whole line
+          profile.
+          <p>(default: 1)</p></li>
+    </ul></dd>
     <dt>Returns: float</dt>
         <dd>The integrated model Tmb profile in K km/s</dd>
   </dl>
@@ -1776,7 +1907,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getIntTmbData</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">index</span>=<span class="sig-default">0</span>)</span>
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">use_fit</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getIntTmbData">source&nbsp;code</a></span>&nbsp;
@@ -1795,6 +1927,23 @@
   integrated data profile is returned. Otherwise, the soft parabola fit is 
   integrated instead to avoid taking into account an absorption feature in 
   the profile.</p>
+  <p>The fitted line profile can be forced to be used for the integrated 
+  line strength.</p>
+  <p>The uncertainty is also returned. Three options:</p>
+  <ul>
+    <li>
+      The default absolute flux calibration uncertainty from Telescope.dat
+    </li>
+    <li>
+      The above + the fitting uncertainty [TBI]
+    </li>
+    <li>
+      The abs flux cal uncertainty set in Radio.py + the fitting 
+      uncertainty [TBI]
+    </li>
+  </ul>
+  <p>The fitting uncertainty is currently not yet implemented, nor the 
+  option to add the the flux calibration uncertainty to Radio.py. [TBI]</p>
   <p>Returns None if no data are available.</p>
   <p>This does not work for PACS or SPIRE data.</p>
   <dl class="fields">
@@ -1803,8 +1952,8 @@
         <li><strong class="pname"><code>index</code></strong> (int) - The data list index of the requested noise value
           <p>(default: 0)</p></li>
     </ul></dd>
-    <dt>Returns: float</dt>
-        <dd>The integrated data Tmb in K km/s</dd>
+    <dt>Returns: (float,float)</dt>
+        <dd>The integrated data Tmb in K km/s and the relative uncertainty</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1882,7 +2031,7 @@
           'inblend'. All transitions involved in the blend are then given 
           by st_blends.</li>
         <li><strong class="pname"><code>dint_err</code></strong> (float) - The fitting uncertainty on the intensity  + absolute flux 
-          calibration uncertainty of 20%.</li>
+          calibration uncertainty of 20%. Relative value!</li>
         <li><strong class="pname"><code>vlsr</code></strong> (float) - The source velocity with respect to the local standard of rest in
           cm/s.</li>
         <li><strong class="pname"><code>st_blends</code></strong> (list[Transition()]) - List of sample transitions involved in a line blend detected by 
@@ -1928,7 +2077,8 @@
     <dt>Returns: (float,float,list)</dt>
         <dd>The integrated intensity measured in unresolved data for this 
           filename, in SI units of W/m2, and the fitting uncertainty + 
-          absolute flux calibration uncertainty.</dd>
+          absolute flux calibration uncertainty (relative value!), and the 
+          blends if applicable.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1941,7 +2091,9 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getLoglikelihood</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">use_bestvlsr</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">index</span>=<span class="sig-default">0</span>)</span>
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">partial</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">vcut</span>=<span class="sig-default">0.0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getLoglikelihood">source&nbsp;code</a></span>&nbsp;
@@ -1971,6 +2123,12 @@
           velocity grid for the model. If not, the vlsr from the Star.dat 
           file or the fits file is used.
           <p>(default: 1)</p></li>
+        <li><strong class="pname"><code>partial</code></strong> (int) - Use a partial profile rather than the entire profile. Set to 1 
+          for larger than the cutoff value (vcut), set to -1 for smaller 
+          than the cutoff value.
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>vcut</code></strong> (float) - The cut off value in km/s used by partial.
+          <p>(default: 0.0)</p></li>
         <li><strong class="pname"><code>index</code></strong> (int) - The data list index of the requested noise value
           <p>(default: 0)</p></li>
     </ul></dd>
@@ -2006,7 +2164,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:08 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:51 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

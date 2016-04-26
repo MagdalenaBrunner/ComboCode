@@ -115,7 +115,9 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#getLineStrengths" class="summary-sig-name">getLineStrengths</a>(<span class="summary-sig-arg">trl</span>,
         <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">dint</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">nans</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">n_data</span>=<span class="summary-sig-default">0</span>)</span><br />
+        <span class="summary-sig-arg">n_data</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">scale</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Get the line strengths from Transition() objects, either from data or
       from models defined by the mode.</td>
           <td align="right" valign="top">
@@ -156,7 +158,8 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#extractTransFromStars" class="summary-sig-name">extractTransFromStars</a>(<span class="summary-sig-arg">star_grid</span>,
         <span class="summary-sig-arg">sort_freq</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">sort_molec</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">dtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">all</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">dtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">all</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">reset_data</span>=<span class="summary-sig-default">1</span>)</span><br />
       Extract a list a of unique transitions included in a list of Star() 
       objects and sort them.</td>
           <td align="right" valign="top">
@@ -193,7 +196,8 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#makeTransition" class="summary-sig-name">makeTransition</a>(<span class="summary-sig-arg">trans</span>,
         <span class="summary-sig-arg">star</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">def_molecs</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">def_molecs</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Create a Transition instance based on a Star object and a standard CC
       input line, with 11 or 12 entries in a list.</td>
           <td align="right" valign="top">
@@ -230,8 +234,6 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#makeTransitionFromSphinx" class="summary-sig-name">makeTransitionFromSphinx</a>(<span class="summary-sig-arg">filename</span>,
-        <span class="summary-sig-arg">use_maser_in_sphinx</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">pull_keys_from_sphdb</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">mline_db</span>=<span class="summary-sig-default">None</span>)</span><br />
       Make a Transition() based on the filename of a Sphinx file.</td>
           <td align="right" valign="top">
@@ -249,8 +251,7 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#sphinxDbRecovery" class="summary-sig-name">sphinxDbRecovery</a>(<span class="summary-sig-arg">path_gastronoom</span>,
-        <span class="summary-sig-arg">use_maser_in_sphinx</span>=<span class="summary-sig-default">0</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#sphinxDbRecovery" class="summary-sig-name">sphinxDbRecovery</a>(<span class="summary-sig-arg">path_gastronoom</span>)</span><br />
       Reconstruct a sphinx database based on existing model_ids, presence 
       of sph2 files and inclusion in the mline database.</td>
           <td align="right" valign="top">
@@ -275,9 +276,14 @@
         <span class="summary-sig-arg">ls_unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">GHz</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">n_quad</span>=<span class="summary-sig-default">100</span>,
         <span class="summary-sig-arg">offset</span>=<span class="summary-sig-default">0.0</span>,
-        <span class="summary-sig-arg">use_maser_in_sphinx</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">no_vib</span>=<span class="summary-sig-default">0</span>)</span><br />
+        <span class="summary-sig-arg">no_vib</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">fraction_tau_step</span>=<span class="summary-sig-default">0.01</span>,
+        <span class="summary-sig-arg">write_intensities</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">tau_max</span>=<span class="summary-sig-default">12.0</span>,
+        <span class="summary-sig-arg">tau_min</span>=<span class="summary-sig-default">-6.0</span>,
+        <span class="summary-sig-arg">check_tau_step</span>=<span class="summary-sig-default">0.01</span>,
+        <span class="summary-sig-arg">min_tau_step</span>=<span class="summary-sig-default">0.0001</span>)</span><br />
       Make Transition() objects from a Radiat file of a molecule, within a 
       given wavelength/frequency range.</td>
           <td align="right" valign="top">
@@ -360,7 +366,9 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getLineStrengths</span>(<span class="sig-arg">trl</span>,
         <span class="sig-arg">mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">dint</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">nans</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">n_data</span>=<span class="sig-default">0</span>)</span>
+        <span class="sig-arg">n_data</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">scale</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#getLineStrengths">source&nbsp;code</a></span>&nbsp;
@@ -369,6 +377,8 @@
   
   <p>Get the line strengths from Transition() objects, either from data or 
   from models defined by the mode.</p>
+  <p>Additional keywords for the functions that return LSs from the 
+  Transition() object can be passed along as **kwargs.</p>
   <p>Modes:</p>
   <ul>
     <li>
@@ -410,6 +420,9 @@
           <p>(default: 1)</p></li>
         <li><strong class="pname"><code>n_data</code></strong> (int) - The number of data Star() objects, assuming they are the first in
           the star_grid. Only required if mode == 'combo'.
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>scale</code></strong> (bool) - Scale data to antenna of 1 m**2, necessary if comparing data from
+          different telescopes
           <p>(default: 0)</p></li>
     </ul></dd>
     <dt>Returns: (list[float],list[float])</dt>
@@ -466,7 +479,8 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">extractTransFromStars</span>(<span class="sig-arg">star_grid</span>,
         <span class="sig-arg">sort_freq</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">sort_molec</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">dtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">all</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">dtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">all</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">reset_data</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#extractTransFromStars">source&nbsp;code</a></span>&nbsp;
@@ -478,8 +492,11 @@
   <p>A selection can be made on data type, which is either a telescope or 
   instrument, or all, or all unresolved, or all resolved.</p>
   <p>The list of transitions is copied to make sure no funky references 
-  mess with the original transitions. list() and set() make sure of 
-  this.</p>
+  mess with the original transitions.</p>
+  <p>The data can be reset, since data do not uniquely identify a 
+  transition object. However, in some cases it is useful to keep the data 
+  in the object if the extracted list will always work for the same Star() 
+  object.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -497,6 +514,9 @@
           string in telescope name. Invalid definitions return an empty 
           list.
           <p>(default: 'all')</p></li>
+        <li><strong class="pname"><code>reset_data</code></strong> (bool) - Reset the data properties to default, so they have to be read 
+          again.
+          <p>(default: 1)</p></li>
     </ul></dd>
     <dt>Returns: list[Transition()]</dt>
         <dd>a list of unique transitions included in all Star() objects in 
@@ -538,7 +558,8 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">makeTransition</span>(<span class="sig-arg">trans</span>,
         <span class="sig-arg">star</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">def_molecs</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">def_molecs</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#makeTransition">source&nbsp;code</a></span>&nbsp;
@@ -568,6 +589,11 @@
           returned if the requested molecule is not present. If both this 
           and star are not given, a few default molecules are loaded.
           <p>(default: None)</p></li>
+        <li><strong class="pname"><code>kwargs</code></strong> (dict) - Any additional keywords given here are added to the Transition 
+          object creation. If not valid there, an error will be thrown. The
+          keys given here will overwrite what is in star! Usually, only use
+          this option when working with defaults (and star is not given)
+          <p>(default: {})</p></li>
     </ul></dd>
     <dt>Returns: Transition()</dt>
         <dd>The transition object is returned with all info included</dd>
@@ -608,8 +634,6 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">makeTransitionFromSphinx</span>(<span class="sig-arg">filename</span>,
-        <span class="sig-arg">use_maser_in_sphinx</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">pull_keys_from_sphdb</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">mline_db</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -626,13 +650,6 @@
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>filename</code></strong> (string) - The sphinx file name, including path</li>
-        <li><strong class="pname"><code>pull_keys_from_sphdb</code></strong> (bool) - Pull keywords from the sphinx database
-          <p>(default: 1)</p></li>
-        <li><strong class="pname"><code>use_maser_in_sphinx</code></strong> (bool) - The value that is given to the keyword USE_MASER_IN_SPHINX for 
-          the the Transiton() object. If different values are needed, you 
-          will have to change them manually. Only required if no 
-          information is taken from the sph db
-          <p>(default: 0)</p></li>
         <li><strong class="pname"><code>mline_db</code></strong> (Database()) - The mline database, which can be passed in case one wants to 
           reduce overhead. Not required though.
           <p>(default: None)</p></li>
@@ -649,8 +666,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">sphinxDbRecovery</span>(<span class="sig-arg">path_gastronoom</span>,
-        <span class="sig-arg">use_maser_in_sphinx</span>=<span class="sig-default">0</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">sphinxDbRecovery</span>(<span class="sig-arg">path_gastronoom</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#sphinxDbRecovery">source&nbsp;code</a></span>&nbsp;
@@ -666,10 +682,6 @@
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>path_gastronoom</code></strong> (string) - The path_gastronoom to the output folder</li>
-        <li><strong class="pname"><code>use_maser_in_sphinx</code></strong> (bool) - The value that is given to the keyword USE_MASER_IN_SPHINX for 
-          the database entry. If different values are needed, you will have
-          to change them manually.
-          <p>(default: 0)</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -688,9 +700,14 @@
         <span class="sig-arg">ls_unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">GHz</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">n_quad</span>=<span class="sig-default">100</span>,
         <span class="sig-arg">offset</span>=<span class="sig-default">0.0</span>,
-        <span class="sig-arg">use_maser_in_sphinx</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">path_gastronoom</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">no_vib</span>=<span class="sig-default">0</span>)</span>
+        <span class="sig-arg">no_vib</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">fraction_tau_step</span>=<span class="sig-default">0.01</span>,
+        <span class="sig-arg">write_intensities</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">tau_max</span>=<span class="sig-default">12.0</span>,
+        <span class="sig-arg">tau_min</span>=<span class="sig-default">-6.0</span>,
+        <span class="sig-arg">check_tau_step</span>=<span class="sig-default">0.01</span>,
+        <span class="sig-arg">min_tau_step</span>=<span class="sig-default">0.0001</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#makeTransitionsFromRadiat">source&nbsp;code</a></span>&nbsp;
@@ -712,10 +729,24 @@
           <p>(default: 'GHz')</p></li>
         <li><strong class="pname"><code>n_quad</code></strong> (int) - The N_QUAD value for GASTRoNOoM sphinx calculations.
           <p>(default: 100)</p></li>
+        <li><strong class="pname"><code>fraction_tau_step</code></strong> (float) - tau_total*fraction_tau_step gives min. delta_tau in strahl.f. If 
+          too low, min_tau_step will be used.
+          <p>(default: 1e-2)</p></li>
+        <li><strong class="pname"><code>min_tau_step</code></strong> (float) - minimum of delta_tau in strahl.f
+          <p>(default: 1e-4)</p></li>
+        <li><strong class="pname"><code>write_intensities</code></strong> (bool) - set to 1 to write the intensities of first 50 impact-parameters 
+          at the end of sphinx
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>tau_max</code></strong> (float) - maximum optical depth used for the calculation of the formal 
+          integral
+          <p>(default: 12.)</p></li>
+        <li><strong class="pname"><code>tau_min</code></strong> (float) - maximum optical depth used for the calculation of the formal 
+          integral
+          <p>(default: -6.)</p></li>
+        <li><strong class="pname"><code>check_tau_step</code></strong> (float) - check.par.in sphinx if step in tau not too large
+          <p>(default: 0.01)</p></li>
         <li><strong class="pname"><code>offset</code></strong> (float) - The offset from center position for calculations in sphinx
           <p>(default: 0.0)</p></li>
-        <li><strong class="pname"><code>use_maser_in_spinx</code></strong> (bool) - using maser calc in sphinx code
-          <p>(default: 0)</p></li>
         <li><strong class="pname"><code>path_gastronoom</code></strong> (string) - model output folder in the GASTRoNOoM home
           <p>(default: None)</p></li>
         <li><strong class="pname"><code>no_vib</code></strong> (bool) - Do not include vibrational states in the output list.
@@ -784,7 +815,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:07 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:50 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

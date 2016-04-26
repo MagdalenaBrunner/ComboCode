@@ -113,7 +113,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.codes.MCMax-module.html#readModelSpectrum" class="summary-sig-name">readModelSpectrum</a>(<span class="summary-sig-arg">dpath</span>,
-        <span class="summary-sig-arg">rt_sed</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">rt_spec</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">fn_spec</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">spectrum45.0.dat</code><code class="variable-quote">'</code></span>)</span><br />
       Read the model output spectrum.</td>
           <td align="right" valign="top">
@@ -150,56 +150,18 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.codes.MCMax-module.html#rayTraceSpectrum" class="summary-sig-name">rayTraceSpectrum</a>(<span class="summary-sig-arg">model_id</span>,
-        <span class="summary-sig-arg">path_mcmax</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">runTestDec09</code><code class="variable-quote">'</code></span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.codes.MCMax-module.html#rayTrace" class="summary-sig-name">rayTrace</a>(<span class="summary-sig-arg">rt_type</span>,
+        <span class="summary-sig-arg">model_id</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">path_mcmax</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">modelfolder</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">outputfolder</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">inputfilename</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">redo_rt</span>=<span class="summary-sig-default">0</span>)</span><br />
-      Do the ray-tracing of the spectrum according to 
-      cc.path.mobs/Spec.out, but only if spectrum45.0.dat does not exist 
-      yet.</td>
+        <span class="summary-sig-arg">nosource</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">redo</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">inclination</span>=<span class="summary-sig-default">45.0</span>)</span><br />
+      Ray trace an MCMax model.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.codes.MCMax-pysrc.html#rayTraceSpectrum">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.codes.MCMax-module.html#rayTraceImage" class="summary-sig-name">rayTraceImage</a>(<span class="summary-sig-arg">model_id</span>,
-        <span class="summary-sig-arg">path_mcmax</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">runTestDec09</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">inputfilename</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">remove_source</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">output_folder</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
-      Do the ray-tracing of images, according to cc.path.mobs/Image.out.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.codes.MCMax-pysrc.html#rayTraceImage">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.codes.MCMax-module.html#rayTraceVisibilities" class="summary-sig-name">rayTraceVisibilities</a>(<span class="summary-sig-arg">model_id</span>,
-        <span class="summary-sig-arg">path_mcmax</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">runTestDec09</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">inputfilename</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
-      Do the ray-tracing of visibilities, according to 
-      cc.path.mobs/Visibilities.out.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.codes.MCMax-pysrc.html#rayTraceVisibilities">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.modeling.codes.MCMax-pysrc.html#rayTrace">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -259,7 +221,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">readModelSpectrum</span>(<span class="sig-arg">dpath</span>,
-        <span class="sig-arg">rt_sed</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">rt_spec</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">fn_spec</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">spectrum45.0.dat</code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -274,11 +236,11 @@
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>dpath</code></strong> (string) - folder that contains the MCMax outputfiles</li>
-        <li><strong class="pname"><code>rt_sed</code></strong> (bool) - If a ray-traced spectrum is requested
+        <li><strong class="pname"><code>rt_spec</code></strong> (bool) - If a ray-traced spectrum is requested
           <p>(default: 1)</p></li>
         <li><strong class="pname"><code>fn_spec</code></strong> (str) - The filename of the ray-traced spectrum. Typically this is the 
           default name, but can be different depending on the ray-tracing 
-          angle that is used. Not used if MCSpec are used.
+          angle (inclination) that is used. Not used if MCSpec are used.
           <p>(default: spectrum45.0.dat)</p></li>
     </ul></dd>
     <dt>Returns: (array,array)</dt>
@@ -309,7 +271,7 @@
         <li><strong class="pname"><code>dpath</code></strong> (string) - folder that contains the MCMax outputfiles</li>
         <li><strong class="pname"><code>fn_spec</code></strong> (str) - The filename of the ray-traced visibilities. Typically this is 
           the default name, but can be different depending on the 
-          inclination (or baseline) that is used.
+          inclination that is used.
           <p>(default: visibility01.0.dat)</p></li>
     </ul></dd>
     <dt>Returns: dict</dt>
@@ -318,102 +280,66 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="rayTraceSpectrum"></a>
+<a name="rayTrace"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">rayTraceSpectrum</span>(<span class="sig-arg">model_id</span>,
-        <span class="sig-arg">path_mcmax</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">runTestDec09</code><code class="variable-quote">'</code></span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">rayTrace</span>(<span class="sig-arg">rt_type</span>,
+        <span class="sig-arg">model_id</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">path_mcmax</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">modelfolder</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">outputfolder</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">inputfilename</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">redo_rt</span>=<span class="sig-default">0</span>)</span>
+        <span class="sig-arg">nosource</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">redo</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">inclination</span>=<span class="sig-default">45.0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.codes.MCMax-pysrc.html#rayTraceSpectrum">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="ComboCode.cc.modeling.codes.MCMax-pysrc.html#rayTrace">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Do the ray-tracing of the spectrum according to cc.path.mobs/Spec.out,
-  but only if spectrum45.0.dat does not exist yet.</p>
+  <p>Ray trace an MCMax model. If output of the requested type and 
+  inclination is found the ray tracing is NOT done anew. Ask for redo_rt if
+  the ray tracing must be re-done.</p>
+  <p>Alternatively, request a different location for the output. The 
+  resulting model observations are moved to the new folder, so that any ray
+  tracing is always re-done when called anew.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>model_id</code></strong> (string) - the model_id of the requested model</li>
-        <li><strong class="pname"><code>path_mcmax</code></strong> (string) - modeling folder in MCMax home</li>
-        <li><strong class="pname"><code>inputfilename</code></strong> (string) - the inputfilename of the model. if '': filename is 
-          inputMCMax_model_YYYY-MM-DDhHH-mm-ss.
+        <li><strong class="pname"><code>rt_type</code></strong> (str) - The type of output requested. One of ['spec','image',
+          'vis','basevis'] for spectrum, images, visibilities as function 
+          of wavelength, visibilities as function of baseline respectively.
+          Requires, respectively, Spec.out, Image.out, Visibilities.out, 
+          Basevis.out as observation files in cc.path.mobs.</li>
+        <li><strong class="pname"><code>model_id</code></strong> (string) - the model_id of the requested model. Only required when 
+          model_folder is not given.
           <p>(default: '')</p></li>
-        <li><strong class="pname"><code>redo_rt</code></strong> (bool) - redo the ray tracing of the spectrum regardless of the spectrum 
+        <li><strong class="pname"><code>path_mcmax</code></strong> (str) - modeling folder in MCMax home. Only required if model_folder is 
+          not given.
+          <p>(default: '')s</p></li>
+        <li><strong class="pname"><code>model_folder</code></strong> (str) - The location of the model_folder. path_mcmax and model_id are 
+          ignored if this is given. This folder is checked for existing 
+          model observations, in which case the ray tracing is not done.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>outputfolder</code></strong> (str) - The location of the output folder. By default, set at the model 
+          folder. This folder is *not* checked for existing model 
+          observations.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>inputfilename</code></strong> (string) - the inputfilename of the model. if '': filename is 
+          inputMCMax_model_YYYY-MM-DDhHH-mm-ss in path_mcmax/ models/.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>nosource</code></strong> (bool) - remove the central source from the model observation
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>redo</code></strong> (bool) - redo the ray tracing of the spectrum regardless of the spectrum 
           already existing or not
           <p>(default: 0)</p></li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="rayTraceImage"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">rayTraceImage</span>(<span class="sig-arg">model_id</span>,
-        <span class="sig-arg">path_mcmax</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">runTestDec09</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">inputfilename</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">remove_source</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">output_folder</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.codes.MCMax-pysrc.html#rayTraceImage">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Do the ray-tracing of images, according to cc.path.mobs/Image.out.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>model_id</code></strong> (string) - the model_id of the requested model</li>
-        <li><strong class="pname"><code>path_mcmax</code></strong> (string) - modeling folder in MCMax home</li>
-        <li><strong class="pname"><code>inputfilename</code></strong> (string) - the inputfilename of the model. if '': filename is 
-          inputMCMax_model_YYYY-MM-DDhHH-mm-ss.
-          <p>(default: '')</p></li>
-        <li><strong class="pname"><code>remove_source</code></strong> (bool) - remove the central source from the image
-          <p>(default: 0)</p></li>
-        <li><strong class="pname"><code>output_folder</code></strong> (str) - The location of the output folder. By default, set at the model 
-          output folder.
-          <p>(default: '')</p></li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="rayTraceVisibilities"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">rayTraceVisibilities</span>(<span class="sig-arg">model_id</span>,
-        <span class="sig-arg">path_mcmax</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">runTestDec09</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">inputfilename</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.codes.MCMax-pysrc.html#rayTraceVisibilities">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Do the ray-tracing of visibilities, according to 
-  cc.path.mobs/Visibilities.out.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>model_id</code></strong> (string) - the model_id of the requested model</li>
-        <li><strong class="pname"><code>path_mcmax</code></strong> (string) - modeling folder in MCMax home</li>
-        <li><strong class="pname"><code>inputfilename</code></strong> (string) - the inputfilename of the model. if '': filename is 
-          inputMCMax_model_YYYY-MM-DDhHH-mm-ss.
-          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>inclination</code></strong> (float) - The inclination of the observer towards the object.
+          <p>(default: 45.0)</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -445,7 +371,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:07 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:50 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

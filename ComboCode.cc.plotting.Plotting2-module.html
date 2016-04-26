@@ -122,6 +122,25 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">str</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.plotting.Plotting2-module.html#saveFig" class="summary-sig-name">saveFig</a>(<span class="summary-sig-arg">filename</span>,
+        <span class="summary-sig-arg">extension</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">pdf</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">landscape</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Save a figure to a filename for a given extension.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.plotting.Plotting2-pysrc.html#saveFig">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">(list[string],list[string])</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -361,9 +380,9 @@
         <li><strong class="pname"><code>extension</code></strong> (string/list) - extension of the plot filename, adds dot if not present If None, 
           three outputfiles are created: png, eps, pdf Multiple extensions 
           can be requested at the same time through a list.
-          <p>(default: None)</p></li>
+          <p>(default: pdf)</p></li>
         <li><strong class="pname"><code>figsize</code></strong> (tuple(float,float)) - the size of the figure, default is A4 page ratio
-          <p>(default: (20.*math.sqrt(2.), 20.) )</p></li>
+          <p>(default: (20.*np.sqrt(2.), 20.) )</p></li>
         <li><strong class="pname"><code>show_plot</code></strong> (bool) - show fig before saving (hit enter to continue to save)
           <p>(default: 0)</p></li>
         <li><strong class="pname"><code>xaxis</code></strong> (string) - name of x axis (TeX enabled)
@@ -622,11 +641,11 @@
         <li><strong class="pname"><code>extension</code></strong> (string/list) - extension of the plot filename, adds dot if not present If None, 
           three output files are created: png, eps, pdf Multiple extensions
           can be requested at the same time through a list.
-          <p>(default: None)</p></li>
+          <p>(default: pdf)</p></li>
         <li><strong class="pname"><code>number_subplots</code></strong> (int) - #subplots in which to plot in vertical direction
           <p>(default: 1)</p></li>
-        <li><strong class="pname"><code>figsize</code></strong> (tuple(float,float)) - the size of the figure, A4 page ratio is (20.*math.sqrt(2.), 
-          20.). Default is other ratio.
+        <li><strong class="pname"><code>figsize</code></strong> (tuple(float,float)) - the size of the figure, A4 page ratio is (20.*np.sqrt(2.), 20.). 
+          Default is other ratio.
           <p>(default: (12.5,8) )</p></li>
         <li><strong class="pname"><code>show_plot</code></strong> (bool) - show fig before saving (hit enter to continue to save)
           <p>(default: 0)</p></li>
@@ -875,6 +894,38 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="saveFig"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">saveFig</span>(<span class="sig-arg">filename</span>,
+        <span class="sig-arg">extension</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">pdf</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">landscape</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.plotting.Plotting2-pysrc.html#saveFig">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Save a figure to a filename for a given extension.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>filename</code></strong> (str) - The full path+filename of the figure, except the extension</li>
+        <li><strong class="pname"><code>extension</code></strong> (list(str)) - The extension of the figure requested. Can be a list. If None, 
+          figures are saved in .pdf, .png, and .eps.
+          <p>(default: pdf)</p></li>
+        <li><strong class="pname"><code>landscape</code></strong> (bool) - Save the figure in landscape mode.
+          <p>(default: 0)</p></li>
+    </ul></dd>
+    <dt>Returns: str</dt>
+        <dd>The full filename with extension</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="setLineTypes"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -1103,7 +1154,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:07 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:50 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

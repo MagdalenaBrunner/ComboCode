@@ -131,33 +131,6 @@
       
     </td>
   </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.data.instruments.Pacs-module.html#writeIntIntTable" class="summary-sig-name">writeIntIntTable</a>(<span class="summary-sig-arg">filename</span>,
-        <span class="summary-sig-arg">stars</span>,
-        <span class="summary-sig-arg">trans</span>,
-        <span class="summary-sig-arg">dpacs</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
-        <span class="summary-sig-arg">searchstring</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">os2_us3</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">mark_trans</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">extra_marker</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">\\tablefootmark{f}</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">blend_mark</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">\\tablefootmark{$\\star$}</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">print_summary</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">sort_freq</span>=<span class="summary-sig-default">1</span>)</span><br />
-      Write a table with integrated line intensities and their 
-      uncertainties for multiple stars.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.data.instruments.Pacs-pysrc.html#writeIntIntTable">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
 </table>
 <!-- ==================== VARIABLES ==================== -->
 <a name="section-Variables"></a>
@@ -238,65 +211,6 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="writeIntIntTable"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">writeIntIntTable</span>(<span class="sig-arg">filename</span>,
-        <span class="sig-arg">stars</span>,
-        <span class="sig-arg">trans</span>,
-        <span class="sig-arg">dpacs</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
-        <span class="sig-arg">searchstring</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">os2_us3</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">mark_trans</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">extra_marker</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">\\tablefootmark{f}</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">blend_mark</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">\\tablefootmark{$\\star$}</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">print_summary</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">sort_freq</span>=<span class="sig-default">1</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.data.instruments.Pacs-pysrc.html#writeIntIntTable">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Write a table with integrated line intensities and their uncertainties
-  for multiple stars.</p>
-  <p>The table - for now - is only available in LaTeX format.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>filename</code></strong> (string) - The filename of the to be written table.</li>
-        <li><strong class="pname"><code>stars</code></strong> (list[string]) - The stars for which the table is created.</li>
-        <li><strong class="pname"><code>trans</code></strong> (list[Transition()]) - The transitions for which the integrated intensities are selected
-          from the PACS line fit results of each star.</li>
-        <li><strong class="pname"><code>path_pacs</code></strong> (string) - full path to PACS data folder, excluding star_name Only needed 
-          when PACS data objects are created from scratch.
-          <p>(default: ~/Data/PACS/)</p></li>
-        <li><strong class="pname"><code>dpacs</code></strong> (dict(Pacs())) - The data objects for PACS for each star. If not given, they are 
-          generated automatically with path_linefit 'lineFit', oversampling
-          6 and given path_pacs.
-          <p>(default: None)</p></li>
-        <li><strong class="pname"><code>blend_mark</code></strong> (string) - The marker used for blended lines.
-          <p>(default:      ablefootmark{$\star$})</p></li>
-        <li><strong class="pname"><code>mark_trans</code></strong> (list) - If a subset of transitions has to be marked with an extra mark, 
-          they are included in this list.
-          <p>(default: [])</p></li>
-        <li><strong class="pname"><code>extra_marker</code></strong> (string) - The marker used for the subset mark_trans
-          <p>(default:    ablefootmark{f})</p></li>
-        <li><strong class="pname"><code>searchstring</code></strong> (string) - the searchstring conditional for the auto-search, if data have 
-          not been read into given Pacs objects or if new Pacs objects are 
-          generated.
-          <p>(default: 'os2_us3')</p></li>
-        <li><strong class="pname"><code>sort_freq</code></strong> (bool) - Sort the transitions on frequency. Otherwise sort on wavelength.
-          <p>(default: 1)</p></li>
-        <li><strong class="pname"><code>print_summary</code></strong> (bool) - Print a summary at the end.
-          <p>(default: 0)</p></li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -324,7 +238,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:07 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:49 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

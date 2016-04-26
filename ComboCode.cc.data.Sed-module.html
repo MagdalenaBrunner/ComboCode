@@ -106,6 +106,31 @@
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">(array[float],array[float])</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.data.Sed-module.html#getCFlux" class="summary-sig-name">getCFlux</a>(<span class="summary-sig-arg">wav</span>,
+        <span class="summary-sig-arg">seds</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">nans</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">deredden</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">law</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Fitz2004Chiar2006</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">lawtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">ism</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">map</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">marshall</code><code class="variable-quote">'</code></span>)</span><br />
+      Retrieve the continuum flux at a given wavelength from either a model
+      spectrum or an observation.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#getCFlux">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">array</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -204,6 +229,77 @@
   </td>
 </tr>
 </table>
+<a name="getCFlux"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getCFlux</span>(<span class="sig-arg">wav</span>,
+        <span class="sig-arg">seds</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">nans</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">deredden</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">law</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Fitz2004Chiar2006</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">lawtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">ism</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">map</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">marshall</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.data.Sed-pysrc.html#getCFlux">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Retrieve the continuum flux at a given wavelength from either a model 
+  spectrum or an observation. If both seds and star_grid are given, values 
+  from the seds are returned first in the array, then the models.</p>
+  <p>For now assumes the observation is either an ISO SWS spectrum OR that 
+  the continuum point is given in a dictionary that is property of the 
+  Sed() object (sed.cflux) with wavelengths as keys.</p>
+  <p>star_grid are all models! Works also when seds or star_grid are 
+  empty.</p>
+  <p>Reddening is taken into account when requested in the models and 
+  parameters are taken from the model objects. However, this is only 
+  allowed if only one data object is given (otherwise model reddening 
+  doesn't make sense)</p>
+  <p>Dereddening of data is also possible (and extra arguments can be 
+  passed to the reddening law), in which case distances have to be given 
+  for the seds. If any model reddening is requested and only sed is given, 
+  sed dereddening is always turned off.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>wav</code></strong> (float) - The continuum wavelength point</li>
+        <li><strong class="pname"><code>seds</code></strong> (list(Sed())) - The SEDs of the data objects. Number of SEDs sets the amount of 
+          Star() objects represent data versus number of models.
+          <p>(default: [])</p></li>
+        <li><strong class="pname"><code>star_grid</code></strong> (list(Star())) - The data + model objects
+          <p>(default: [])</p></li>
+        <li><strong class="pname"><code>nans</code></strong> (bool) - Set undefined line strengths as nans. Errors are set as a nan if 
+          it concerns mode==dint. Otherwise, they are not set.
+          <p>(default: 1)</p></li>
+        <li><strong class="pname"><code>deredden</code></strong> (list) - Deredden the SEDs with distances given here. This option is 
+          turned off automatically if any reddening is requested in the 
+          models and only one sed is given to avoid double correction. 
+          Number of distances given must be equal to number of SEDs given. 
+          If not, it is also turned off.
+          <p>(default: [])</p></li>
+        <li><strong class="pname"><code>law</code></strong> (str) - The reddening law for DEREDDENING
+          <p>(default: 'Fitz2004Chiar2006')</p></li>
+        <li><strong class="pname"><code>lawtype</code></strong> (str) - The type of Chiar &amp; Tielens reddening law (either ism or gc) 
+          for DEREDDENING
+          <p>(default: 'ism')</p></li>
+        <li><strong class="pname"><code>map</code></strong> (str) - The galactic 3d extinction model for DEREDDENING.
+          <p>(default: 'marshall')</p></li>
+    </ul></dd>
+    <dt>Returns: (array[float],array[float])</dt>
+        <dd>The continuum fluxes in W/m2/Hz with length that of star_grid, as
+          well as errors if applicable. If a combo mode is requested, 
+          errors are given when available, and listed as None/nan if not 
+          available (Plotting2 module knows how to deal with this).</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="calcPhotometry"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -320,7 +416,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:07 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:49 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

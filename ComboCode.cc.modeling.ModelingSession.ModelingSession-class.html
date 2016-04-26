@@ -93,7 +93,8 @@
         <span class="summary-sig-arg">code</span>,
         <span class="summary-sig-arg">path</span>,
         <span class="summary-sig-arg">replace_db_entry</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">new_entries</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
+        <span class="summary-sig-arg">new_entries</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">single_session</span>=<span class="summary-sig-default">0</span>)</span><br />
       Initializing an instance of ModelingSession.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.ModelingSession-pysrc.html#ModelingSession.__init__">source&nbsp;code</a></span>
@@ -156,10 +157,30 @@
         <span class="summary-sig-arg">modellist</span>,
         <span class="summary-sig-arg">code</span>,
         <span class="summary-sig-arg">ignoreAbun</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">extra_dict</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">extra_dict</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">check_keys</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
       Comparing a command_list with a database entry.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.ModelingSession-pysrc.html#ModelingSession.compareCommandLists">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="cCL"></a><span class="summary-sig-name">cCL</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Short-hand helper function for compareCommandLists.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.ModelingSession-pysrc.html#ModelingSession.cCL">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -240,7 +261,8 @@
         <span class="sig-arg">code</span>,
         <span class="sig-arg">path</span>,
         <span class="sig-arg">replace_db_entry</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">new_entries</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
+        <span class="sig-arg">new_entries</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">single_session</span>=<span class="sig-default">0</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -261,6 +283,8 @@
         <li><strong class="pname"><code>new_entries</code></strong> (list[str]) - The new model_ids when replace_db_entry is 1 of other models in 
           the grid. These are not replaced!
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>single_session</code></strong> (bool) - If this is the only CC session. Speeds up db check.
+          <p>(default: 0)</p></li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
@@ -329,7 +353,8 @@
         <span class="sig-arg">modellist</span>,
         <span class="sig-arg">code</span>,
         <span class="sig-arg">ignoreAbun</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">extra_dict</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">extra_dict</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">check_keys</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.ModelingSession-pysrc.html#ModelingSession.compareCommandLists">source&nbsp;code</a></span>&nbsp;
@@ -350,6 +375,9 @@
           comparison on top of this_list. The extra entries are assumed 
           present in modellist otherwise the comparison will return False.
           <p>(default: None)</p></li>
+        <li><strong class="pname"><code>check_keys</code></strong> (list[str]) - Only check keys given in this list. If empty, the standard 
+          keyword lists are used.
+          <p>(default: [])</p></li>
     </ul></dd>
     <dt>Returns: bool</dt>
         <dd>Comparison between the two parameter sets</dd>
@@ -383,7 +411,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:07 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:51 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

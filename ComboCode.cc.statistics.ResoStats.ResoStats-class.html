@@ -92,9 +92,9 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_name</span>,
         <span class="summary-sig-arg">code</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">GASTRoNOoM</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">path_code</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">codeSep2010</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">path_code</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">codeJun2013</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">lll_p</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Initializing an instance of ResoStats.</td>
+      Initializing an instance of IntIntStats.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.__init__">source&nbsp;code</a></span>
             
@@ -129,7 +129,9 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#setIntensities" class="summary-sig-name">setIntensities</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">use_bestvlsr</span>=<span class="summary-sig-default">1</span>)</span><br />
+        <span class="summary-sig-arg">use_bestvlsr</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">partial</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">vcut</span>=<span class="summary-sig-default">0</span>)</span><br />
       The data intensities are stored in the dictionary 
       self.dintint/self.dpeakint, the model intensities in 
       self.mintint/self.mpeakint.</td>
@@ -168,31 +170,14 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#printStats" class="summary-sig-name">printStats</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">bfms</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
-      Print the statistics for all transitions and models.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#setNoisy" class="summary-sig-name">setNoisy</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ist</span>,
+        <span class="summary-sig-arg">isnoisy</span>)</span><br />
+      Set a transition given by its index to be included or excluded in the
+      proper best fit determination, through either integrated or peak 
+      Tmbs.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.printStats">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">list[Star()]</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#selectBestFitModels" class="summary-sig-name">selectBestFitModels</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">int</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">use_lll</span>=<span class="summary-sig-default">1</span>)</span><br />
-      Returns a list of Star() models for which the uncertainty criteria 
-      are satisfied for the selected transitions.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.selectBestFitModels">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.setNoisy">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -206,14 +191,12 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#setNoisy" class="summary-sig-name">setNoisy</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">ist</span>,
-        <span class="summary-sig-arg">isnoisy</span>)</span><br />
-      Set a transition given by its index to be included or excluded in the
-      proper best fit determination, through either integrated or peak 
-      Tmbs.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#resetNoisy" class="summary-sig-name">resetNoisy</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">factor</span>,
+        <span class="summary-sig-arg">use_fit</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Change criterion for noisy lines.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.setNoisy">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.resetNoisy">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -333,6 +316,331 @@
       
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#printStats" class="summary-sig-name">printStats</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">bfms</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
+      Print the statistics for all transitions and models.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.printStats">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list[Star()]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#selectBestFitModels" class="summary-sig-name">selectBestFitModels</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">int</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">use_lll</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">output</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Returns a list of Star() models for which the uncertainty criteria 
+      are satisfied for the selected transitions.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.selectBestFitModels">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list[Star()]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#selectBestFitModelsLLL" class="summary-sig-name">selectBestFitModelsLLL</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">output</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Same function as selectBestFitModels, but uses only the loglikelihood
+      statistic.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.selectBestFitModelsLLL">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#findLLLRange" class="summary-sig-name">findLLLRange</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">includedTrans</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Determines whether a model lies within a 95% confidence interval 
+      around the best fitting model (per line).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.findLLLRange">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#selectBestFitperLine" class="summary-sig-name">selectBestFitperLine</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">use_lll</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">excludevib</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Checks which lines are fitted by which models, using all four 
+      selection criteria.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.selectBestFitperLine">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#selectBestFitperLineLLL" class="summary-sig-name">selectBestFitperLineLLL</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">excludevib</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">plot</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Checks which lines are fitted by which models according to the 
+      loglikelihood statistic.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.selectBestFitperLineLLL">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcLLL"></a><span class="summary-sig-name">calcLLL</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">plot</span>=<span class="summary-sig-default">0</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcLLL">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#calcRatioIntTmb" class="summary-sig-name">calcRatioIntTmb</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">useNoisy</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">useRms</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">err</span>=<span class="summary-sig-default">0.2</span>,
+        <span class="summary-sig-arg">err_noisy</span>=<span class="summary-sig-default">0.3</span>,
+        <span class="summary-sig-arg">plot</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Calculate the ratio of the integrated main beam intensity per 
+      transition.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcRatioIntTmb">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="combineRatioIntLLL"></a><span class="summary-sig-name">combineRatioIntLLL</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">useNoisy</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">useRms</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">err</span>=<span class="summary-sig-default">0.2</span>,
+        <span class="summary-sig-arg">err_noisy</span>=<span class="summary-sig-default">0.3</span>,
+        <span class="summary-sig-arg">plot</span>=<span class="summary-sig-default">0</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.combineRatioIntLLL">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="makeInput"></a><span class="summary-sig-name">makeInput</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">model_array</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.makeInput">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#calcRatioPeakTmb" class="summary-sig-name">calcRatioPeakTmb</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">useNoisy</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">useRms</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">err</span>=<span class="summary-sig-default">0.2</span>,
+        <span class="summary-sig-arg">err_noisy</span>=<span class="summary-sig-default">0.3</span>,
+        <span class="summary-sig-arg">plot</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Calculate the ratio of the peak main beam intensity per transition.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcRatioPeakTmb">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#calcRatioComboTmb" class="summary-sig-name">calcRatioComboTmb</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">useNoisy</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">useRms</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">err</span>=<span class="summary-sig-default">0.2</span>,
+        <span class="summary-sig-arg">err_noisy</span>=<span class="summary-sig-default">0.3</span>,
+        <span class="summary-sig-arg">plot</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Combine the ratio of the integrated and peak main beam intensity per 
+      transition.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcRatioComboTmb">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#calcChiSquared" class="summary-sig-name">calcChiSquared</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">P</span>=<span class="summary-sig-default">2</span>,
+        <span class="summary-sig-arg">useTeleUncertainties</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">useNoisy</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">err</span>=<span class="summary-sig-default">0.2</span>,
+        <span class="summary-sig-arg">err_noisy</span>=<span class="summary-sig-default">0.3</span>)</span><br />
+      Calculate the (reduced) chi squared of the integrated main beam 
+      intensities.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcChiSquared">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#plotBestFit" class="summary-sig-name">plotBestFit</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">plot_int</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">plot_peak</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">plot_combo</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Can only be perfomed after self.selectBestFitperLine().</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.plotBestFit">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="printBestFitperLine"></a><span class="summary-sig-name">printBestFitperLine</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">bfm_int</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">bfm_peak</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">bfm_combo</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">bfm_lll</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Print output of selectBestFitperLine(), using fittedLines_bfmxxx.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.printBestFitperLine">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="printBestFitperModel"></a><span class="summary-sig-name">printBestFitperModel</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">bfm_int</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">bfm_peak</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">bfm_combo</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">bfm_lll</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Print output of selectBestFitperLine(), using fittedModels_bfmxxx.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.printBestFitperModel">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>cc.statistics.Statistics.Statistics</code></b>:
@@ -410,7 +718,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_name</span>,
         <span class="sig-arg">code</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">GASTRoNOoM</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">path_code</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">codeSep2010</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">path_code</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">codeJun2013</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">lll_p</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -419,7 +727,7 @@
     </td>
   </tr></table>
   
-  <p>Initializing an instance of ResoStats.</p>
+  <p>Initializing an instance of IntIntStats.</p>
   <p>Then run setInstrument, setModels and setIntensities. The rest of the 
   class works interactively.</p>
   <dl class="fields">
@@ -480,7 +788,9 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">setIntensities</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">use_bestvlsr</span>=<span class="sig-default">1</span>)</span>
+        <span class="sig-arg">use_bestvlsr</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">partial</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">vcut</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.setIntensities">source&nbsp;code</a></span>&nbsp;
@@ -548,78 +858,6 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="printStats"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">printStats</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">bfms</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.printStats">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Print the statistics for all transitions and models.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>bfms</code></strong> (list[Star]) - A list of a subselection of Star() models. If specified only the 
-          models in this list will be printed.
-          <p>(default: [])</p></li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="selectBestFitModels"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">selectBestFitModels</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">int</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">use_lll</span>=<span class="sig-default">1</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.selectBestFitModels">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns a list of Star() models for which the uncertainty criteria are
-  satisfied for the selected transitions.</p>
-  <p>Transitions can be selected or deselected by the includeTrans and 
-  excludeTrans methods.</p>
-  <p>The uncertainty criteria are preset but can be changed by the 
-  setUncertainty method.</p>
-  <p>Note that for lines in which the peak Tmb is less than 3*sigma, the 
-  goodness of fit is determined based on the comparison between peak of 
-  sphinx model and the 3*sigma level. Less: included, more: excluded. Note 
-  that the sphinx peak values are scaled down by the uncertainty on the 
-  data, to take into account data uncertainties as well.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>mode</code></strong> (string) - The mode for model selection. Include: int, peak, combo int: 
-          based on the integrated intensity ratios, peak: based on the peak
-          intensity ratios combo: Based on both
-          <p>(default: 'int')</p></li>
-        <li><strong class="pname"><code>use_lll</code></strong> (bool) - Also use the loglikelihood statistics in selecting best fit 
-          models. For this it is required to set a threshold loglikelihood 
-          value: Anything smaller than this is included in the best fit 
-          model list. Use the setLoglikelihoodThreshold() or setLLL()
-          <p>(default: 1)</p></li>
-    </ul></dd>
-    <dt>Returns: list[Star()]</dt>
-        <dd>The 'best fitting' Star() models according to the uncertainty 
-          criteria.</dd>
-  </dl>
-</td></tr></table>
-</div>
 <a name="setNoisy"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -653,6 +891,39 @@
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>ist</code></strong> (int/list) - The index/indices of the transitions to be included.</li>
         <li><strong class="pname"><code>isnoisy</code></strong> (bool) - Is the dataset noisy or not?</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="resetNoisy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">resetNoisy</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">factor</span>,
+        <span class="sig-arg">use_fit</span>=<span class="sig-default">True</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.resetNoisy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Change criterion for noisy lines.  By default, the script checks if 
+  the peak of the line profile is above 3 sigma in the dataset. With this 
+  method, the factor can be changed.</p>
+  <p>With use_fit, it is possible to use the gaussian or parabolic fit to 
+  the data to derive the integrated intensity instead of the line itself 
+  for noisy lines.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>factor</code></strong> (int) - Sigma level. If the peak intensity of a line is below this level,
+          it is marked as noisy.</li>
+        <li><strong class="pname"><code>use_fit</code></strong> (bool) - Use gaussian or parabolic fit instead of the line to derive the 
+          integrated intensity of noisy lines</li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -819,6 +1090,347 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="printStats"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">printStats</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">bfms</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.printStats">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Print the statistics for all transitions and models.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>bfms</code></strong> (list[Star]) - A list of a subselection of Star() models. If specified only the 
+          models in this list will be printed.
+          <p>(default: [])</p></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="selectBestFitModels"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">selectBestFitModels</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">int</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">use_lll</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">output</span>=<span class="sig-default">1</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.selectBestFitModels">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a list of Star() models for which the uncertainty criteria are
+  satisfied for the selected transitions.</p>
+  <p>Transitions can be selected or deselected by the includeTrans and 
+  excludeTrans methods.</p>
+  <p>The uncertainty criteria are preset but can be changed by the 
+  setUncertainty method.</p>
+  <p>Note that for lines in which the peak Tmb is less than 3*sigma, the 
+  goodness of fit is determined based on the comparison between peak of 
+  sphinx model and the 3*sigma level. Less: included, more: excluded. Note 
+  that the sphinx peak values are scaled down by the uncertainty on the 
+  data, to take into account data uncertainties as well.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>mode</code></strong> (string) - The mode for model selection. Include: int, peak, combo int: 
+          based on the integrated intensity ratios, peak: based on the peak
+          intensity ratios combo: Based on both
+          <p>(default: 'int')</p></li>
+        <li><strong class="pname"><code>use_lll</code></strong> (bool) - Also use the loglikelihood statistics in selecting best fit 
+          models. For this it is required to set a threshold loglikelihood 
+          value: Anything smaller than this is included in the best fit 
+          model list. Use the setLoglikelihoodThreshold() or setLLL()
+          <p>(default: 1)</p></li>
+    </ul></dd>
+    <dt>Returns: list[Star()]</dt>
+        <dd>The 'best fitting' Star() models according to the uncertainty 
+          criteria.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="selectBestFitModelsLLL"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">selectBestFitModelsLLL</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">output</span>=<span class="sig-default">1</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.selectBestFitModelsLLL">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Same function as selectBestFitModels, but uses only the loglikelihood 
+  statistic.</p>
+  <dl class="fields">
+    <dt>Returns: list[Star()]</dt>
+        <dd>The 'best fitting' Star() models according to the loglikelihood 
+          statistic.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="findLLLRange"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">findLLLRange</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">includedTrans</span>=<span class="sig-default">1</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.findLLLRange">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Determines whether a model lies within a 95% confidence interval 
+  around the best fitting model (per line). As the best fitting model is 
+  included in the arrays, at least one model within the range is to be 
+  expected.</p>
+  <p>Based on Decin et al. 2007:</p>
+  <ul>
+    <li>
+      l_m \leq l \leq l_m - quant/2
+    </li>
+    <li>
+      l_m \leq l \leq lll_threshold
+    </li>
+  </ul>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="selectBestFitperLine"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">selectBestFitperLine</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">use_lll</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">excludevib</span>=<span class="sig-default">1</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.selectBestFitperLine">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Checks which lines are fitted by which models, using all four 
+  selection criteria. For every criterion, a list 'ocurrences_bfmxxx' is 
+  made. This list contains a sublist for each model, len(list) = # models. 
+  Every sublist contains a one or zero, indicating wether a line is fitted 
+  by the model according to the criterion, len(sublist) = # lines.</p>
+  <p>The lists fittedLines_bfmxxx contain how often a line was modelled 
+  according to the criterion, len(list) = # lines.</p>
+  <p>The lists fittedModels_bfmxxx contain the number of lines each model 
+  fitted according to the criterion, len(list) = # models.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="selectBestFitperLineLLL"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">selectBestFitperLineLLL</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">excludevib</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">plot</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.selectBestFitperLineLLL">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Checks which lines are fitted by which models according to the 
+  loglikelihood statistic. A  list 'ocurrences_bfmlll' is made. This list 
+  contains a sublist for each model, len(list) = # models. Every sublist 
+  contains a one or zero, indicating wether a line is fitted by the model 
+  according to the criterion, len(sublist) = # lines.</p>
+  <p>The list fittedLines_bfmlll contains how often a line was modelled 
+  according to the criterion, len(list) = # lines.</p>
+  <p>The list fittedModels_bfmlll contains the number of lines each model 
+  fitted according to the criterion, len(list) = # models.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="calcRatioIntTmb"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcRatioIntTmb</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">useNoisy</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">useRms</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">err</span>=<span class="sig-default">0.2</span>,
+        <span class="sig-arg">err_noisy</span>=<span class="sig-default">0.3</span>,
+        <span class="sig-arg">plot</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcRatioIntTmb">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Calculate the ratio of the integrated main beam intensity per 
+  transition.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>useNoisy</code></strong> (bool) - assign a larger error to noisy lines</li>
+        <li><strong class="pname"><code>useRms</code></strong> (bool) - use statistical noise in addition to instrumental error</li>
+        <li><strong class="pname"><code>err</code></strong> (float) - error on data</li>
+        <li><strong class="pname"><code>err_noisy</code></strong> (float) - error on noisy data (only needed when useNoisy = 1)</li>
+        <li><strong class="pname"><code>plot</code></strong> (bool) - Plot the output</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="calcRatioPeakTmb"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcRatioPeakTmb</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">useNoisy</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">useRms</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">err</span>=<span class="sig-default">0.2</span>,
+        <span class="sig-arg">err_noisy</span>=<span class="sig-default">0.3</span>,
+        <span class="sig-arg">plot</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcRatioPeakTmb">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Calculate the ratio of the peak main beam intensity per 
+  transition.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>useNoisy</code></strong> (bool) - assign a larger error to noisy lines</li>
+        <li><strong class="pname"><code>useRms</code></strong> (bool) - use statistical noise in addition to instrumental error</li>
+        <li><strong class="pname"><code>err</code></strong> (float) - error on data</li>
+        <li><strong class="pname"><code>err_noisy</code></strong> (float) - error on noisy data (only needed when useNoisy = 1)</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="calcRatioComboTmb"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcRatioComboTmb</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">useNoisy</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">useRms</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">err</span>=<span class="sig-default">0.2</span>,
+        <span class="sig-arg">err_noisy</span>=<span class="sig-default">0.3</span>,
+        <span class="sig-arg">plot</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcRatioComboTmb">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Combine the ratio of the integrated and peak main beam intensity per 
+  transition.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>useNoisy</code></strong> (bool) - assign a larger error to noisy lines</li>
+        <li><strong class="pname"><code>useRms</code></strong> (bool) - use statistical noise in addition to instrumental error</li>
+        <li><strong class="pname"><code>err</code></strong> (float) - error on data</li>
+        <li><strong class="pname"><code>err_noisy</code></strong> (float) - error on noisy data (only needed when useNoisy = 1)</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="calcChiSquared"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">calcChiSquared</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">P</span>=<span class="sig-default">2</span>,
+        <span class="sig-arg">useTeleUncertainties</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">useNoisy</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">err</span>=<span class="sig-default">0.2</span>,
+        <span class="sig-arg">err_noisy</span>=<span class="sig-default">0.3</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcChiSquared">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Calculate the (reduced) chi squared of the integrated main beam 
+  intensities.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>P</code></strong> (int) - Degrees of freedom = len(data) - P</li>
+        <li><strong class="pname"><code>useTeleUncertainties</code></strong> (bool) - Use telescope uncertainties instead of a fixed error.</li>
+        <li><strong class="pname"><code>useNoisy</code></strong> (bool) - Use a higher uncertainty for noisy lines</li>
+        <li><strong class="pname"><code>err</code></strong> (float) - Fixed uncertainty on lines (if not telescope uncertainties)</li>
+        <li><strong class="pname"><code>err_noisy</code></strong> (float) - Uncertainty on noisy lines</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="plotBestFit"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plotBestFit</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">plot_int</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">plot_peak</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">plot_combo</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.plotBestFit">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Can only be perfomed after self.selectBestFitperLine().</p>
+  <p>Visualization of self.occurences_bfm(mode), self,verdict_(mode)_soft, 
+  and self.occurences_bfmlll.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -846,7 +1458,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:08 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:51 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -134,16 +134,16 @@
       
     </td>
   </tr>
-<tr>
+<tr class="private">
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ComboCode.ComboCode-class.html#setStarName" class="summary-sig-name">setStarName</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Set star_name for the ComboCode object.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ComboCode.ComboCode-class.html#__setStarName" class="summary-sig-name" onclick="show_private();">__setStarName</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set star_name for the ComboCode object as a tuple.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.ComboCode-pysrc.html#ComboCode.setStarName">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.ComboCode-pysrc.html#ComboCode.__setStarName">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -227,7 +227,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ComboCode.ComboCode-class.html#addRadioData" class="summary-sig-name">addRadioData</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.ComboCode.ComboCode-class.html#addRadioData" class="summary-sig-name">addRadioData</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">sn</span>)</span><br />
       Add radio data to Transition() objects in all Star() objects.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ComboCode-pysrc.html#ComboCode.addRadioData">source&nbsp;code</a></span>
@@ -365,7 +366,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="setPlotManager"></a><span class="summary-sig-name">setPlotManager</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Set up the plot manager.</td>
+      Set up the plot manager(s) for each star name.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ComboCode-pysrc.html#ComboCode.setPlotManager">source&nbsp;code</a></span>
             
@@ -623,24 +624,24 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="setStarName"></a>
-<div>
+<a name="__setStarName"></a>
+<div class="private">
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">setStarName</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__setStarName</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.ComboCode-pysrc.html#ComboCode.setStarName">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="ComboCode.cc.ComboCode-pysrc.html#ComboCode.__setStarName">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Set star_name for the ComboCode object.</p>
+  <p>Set star_name for the ComboCode object as a tuple.</p>
   <p>Typically this is only one name for a standard modelling session, but 
   can be made multiple names as well for a statistical study.</p>
-  <p>The ComboCode object keeps track of all the data in lists.</p>
+  <p>The ComboCode object keeps track of all the data in dicts.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -676,7 +677,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">addRadioData</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addRadioData</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">sn</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ComboCode-pysrc.html#ComboCode.addRadioData">source&nbsp;code</a></span>&nbsp;
@@ -686,7 +688,17 @@
   <p>Add radio data to Transition() objects in all Star() objects.</p>
   <p>Only done if RADIO_PATH is given and if a file named radio_data.db is 
   present in the given folder.</p>
+  <p>This method can be called multiple times per session for different 
+  stars in which case the data in the transition objects will be 
+  replaced.</p>
+  <p>self.radio_trans maintains a list of &quot;sample transitions&quot; 
+  that contain data. These function as data blueprints for transitions in 
+  the star_grid</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>sn</code></strong> (str) - The star name for which to add data to the transitions</li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -805,7 +817,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:07 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:50 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

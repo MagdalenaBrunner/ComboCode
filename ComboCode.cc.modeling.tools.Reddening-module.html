@@ -65,23 +65,36 @@
   <p>How does reddening in ComboCode work?</p>
   <p>First and foremost, we define the interstellar extinction in the 
   Johnson K band. The magnitude of extinction, Ak, is derived from 
-  extinction models. Either from Marshall et al. 2006, or from Drimmel et 
-  al. 2003 if not available from the former. Ak requires the distance to be
+  extinction models. Either from Marshall et al. 2006, or from Schlegel et 
+  al. 1998 if not available from the former. Ak requires the distance to be
   given, before it can be applied to a model. All of our modeling requires 
-  a distance as input, so this is not an issue in practice.</p>
+  a distance as input, so this is not an issue in practice. If needed, the 
+  extinction model can be changed to a different 3d galactic map from 
+  marshall (or Schlegel), see getAk.</p>
+  <p>A note on the extinction models. Schlegel et al say that they could 
+  not verify their values at |bb| &lt; 5 degrees, so they should not be 
+  trusted. However, Sans Fuentes et al 2014 checked those values by 
+  comparing them with OGLE maps for the |ll| &lt; 10 degrees region and 
+  found a very good match. Common practice is to compare model values with 
+  measurements, in -- for instance -- the IRSA catalog. 
+  http://irsa.ipac.caltech.edu/applications/DUST/ (based on COBE/DIRBE 
+  maps) Here, you can find total extinction in several bands. This then 
+  needs to be converted to the distance you're looking at for your source. 
+  It is more convenient to use galactic 3D models and do this exercise once
+  for a given direction to see how accurate the models are.</p>
   <p>The interstellar extinction law of preference is that of Chiar and 
   Tielens 2006. This law is given normalized per Ak and can be directly 
-  combined with the interstellar extinction given from Marshall or Drimmel.
-  We use the curve for the local ISM. The alternative is a curve for the 
-  galactic center, but even in the direction of the galactic center the 
-  local ISM doesn't change much in terms of dust extinction, except at very
-  large distances on the order of 5kpc or more. We don't work with sources 
-  at those distances for now, so we can safely ignore it. For completeness,
-  the GC curve is made as well and provided as an option in the reddening 
-  module of IvS repo.</p>
-  <p>However, while Marshall gives Ak and presents no issue, Drimmel gives 
-  Av. To convert Av to Ak, we have to convert the V-band normalization of 
-  Drimmel to K-band normalization. Chiar and Tielens, however, derived a 
+  combined with the interstellar extinction given from Marshall or 
+  Schlegel. We use the curve for the local ISM. The alternative is a curve 
+  for the galactic center, but even in the direction of the galactic center
+  the local ISM doesn't change much in terms of dust extinction, except at 
+  very large distances on the order of 5kpc or more. We don't work with 
+  sources at those distances for now, so we can safely ignore it. For 
+  completeness, the GC curve is made as well and provided as an option in 
+  the reddening module of IvS repo.</p>
+  <p>However, while Marshall gives Ak and presents no issue, other maps 
+  give Av. To convert Av to Ak, we have to convert the V-band normalization
+  of Drimmel to K-band normalization. Chiar and Tielens, however, derived a
   law only in the IR hence no V-band normalization can be defined. We need 
   a different interstellar reddening law in V-band to be compared with the 
   infrared law of the former. The most recent V-band reddening law is given
@@ -131,10 +144,11 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.tools.Reddening-module.html#getAk" class="summary-sig-name">getAk</a>(<span class="summary-sig-arg">ll</span>,
         <span class="summary-sig-arg">bb</span>,
         <span class="summary-sig-arg">distance</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">law</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Fitz2004Chiar2006</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">map</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">marshall</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">law</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">fitz2004chiar2006</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">lawtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">ism</code><code class="variable-quote">'</code></span>)</span><br />
       Find the Johnson K-band interstellar extinction at given longitude 
-      and latitude.</td>
+      and latitude for a given galactic extinction model.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.tools.Reddening-pysrc.html#getAk">source&nbsp;code</a></span>
             
@@ -240,7 +254,8 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getAk</span>(<span class="sig-arg">ll</span>,
         <span class="sig-arg">bb</span>,
         <span class="sig-arg">distance</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">law</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Fitz2004Chiar2006</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">map</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">marshall</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">law</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">fitz2004chiar2006</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">lawtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">ism</code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -249,7 +264,11 @@
   </tr></table>
   
   <p>Find the Johnson K-band interstellar extinction at given longitude and
-  latitude.</p>
+  latitude for a given galactic extinction model.</p>
+  <p>Default is marshall, and if not available there, schlegel. When 
+  marshall is requested, schlegel is always returned for ll and bb outside 
+  the range of marshall.</p>
+  <p>Alternatives are arenou, drimmel and schlegel, see ivs repo.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -258,9 +277,12 @@
         <li><strong class="pname"><code>distance</code></strong> (float) - Distance to the star. Default is None, in which case the full 
           extinction to infinity in a given direction is returned
           <p>(default: None)</p></li>
+        <li><strong class="pname"><code>map</code></strong> (str) - The galactic 3d extinction model.
+          <p>(default: 'marshall')</p></li>
         <li><strong class="pname"><code>law</code></strong> (str) - The reddening law
-          <p>(default: 'Fitz2004Chiar2006')</p></li>
-        <li><strong class="pname"><code>lawtype</code></strong> (str) - The type of Chiar &amp; Tielens reddening law (either ism or gc)
+          <p>(default: 'fitz2004chiar2006')</p></li>
+        <li><strong class="pname"><code>lawtype</code></strong> (str) - The type of Chiar &amp; Tielens reddening law (either ism or gc).
+          Only when relevant.
           <p>(default: 'ism')</p></li>
     </ul></dd>
     <dt>Returns: float</dt>
@@ -372,7 +394,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:07 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:50 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

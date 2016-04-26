@@ -91,10 +91,11 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_name</span>,
-        <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">codeJun2013</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Output2014</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">inputfilename</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">pacs</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">spire</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">spire</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">fn_add_star</span>=<span class="summary-sig-default">1</span>)</span><br />
       Initializing an instance of PlotGas.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.__init__">source&nbsp;code</a></span>
@@ -132,6 +133,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotVelocity" class="summary-sig-name">plotVelocity</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">models</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
       Plot velocity versus radius for every model in star_grid.</td>
           <td align="right" valign="top">
@@ -152,6 +154,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotTemp" class="summary-sig-name">plotTemp</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">models</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">force_plot</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
       Plot temperature profiles of all models.</td>
@@ -182,6 +185,7 @@
         <span class="summary-sig-arg">limited_axis_labels</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">date_tag</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">n_max_models</span>=<span class="summary-sig-default">10</span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">fn_suffix</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">fit_vlsr</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">plot_intrinsic</span>=<span class="summary-sig-default">0</span>,
@@ -232,6 +236,7 @@
         <span class="summary-sig-arg">star_grid</span>,
         <span class="summary-sig-arg">include_sphinx</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">instrument</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">PACS</code><code class="variable-quote">'</code></span>)</span><br />
       Plot linelists along with the indicated data.</td>
@@ -254,6 +259,7 @@
         <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">models</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">per_molecule</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>)</span><br />
       Plot abundance profiles for all molecules in every model.</td>
@@ -274,6 +280,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotLineContributions" class="summary-sig-name">plotLineContributions</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">normalized</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">do_sort</span>=<span class="summary-sig-default">1</span>,
@@ -347,7 +354,6 @@
         <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">dimensions</span>=<span class="summary-sig-default"><code class="variable-group">(</code>5<code class="variable-op">, </code>2<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">fn_add_star</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">mark_undetected</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">remove_axis_titles</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">include_band</span>=<span class="summary-sig-default">1</span>)</span><br />
@@ -376,8 +382,7 @@
         <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">include_band</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">number_subplots</span>=<span class="summary-sig-default">3</span>,
-        <span class="summary-sig-arg">mark_undetected</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">fn_add_star</span>=<span class="summary-sig-default">1</span>)</span><br />
+        <span class="summary-sig-arg">mark_undetected</span>=<span class="summary-sig-default">0</span>)</span><br />
       Plot PACS data along with Sphinx results, one plot per band.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotPacs">source&nbsp;code</a></span>
@@ -426,11 +431,32 @@
         <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">number_subplots</span>=<span class="summary-sig-default">3</span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">fn_add_star</span>=<span class="summary-sig-default">1</span>)</span><br />
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
       Plot SPIRE data along with Sphinx results.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotSpire">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotIntTmb" class="summary-sig-name">plotIntTmb</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">scale</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Plot of the integrated main beam temperature of the molecular data 
+      and that obtained from model(s).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotIntTmb">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -442,7 +468,8 @@
     <td colspan="2" class="summary">
     <p class="indent-wrapped-lines"><b>Inherited from <code>cc.plotting.PlottingSession.PlottingSession</code></b>:
       <code>checkChangedPars</code>,
-      <code>makeModelList</code>
+      <code>makeModelList</code>,
+      <code>setFnPlt</code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
@@ -513,10 +540,11 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_name</span>,
-        <span class="sig-arg">path_gastronoom</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">codeJun2013</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">path_gastronoom</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Output2014</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">inputfilename</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">pacs</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">spire</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">spire</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">fn_add_star</span>=<span class="sig-default">1</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -541,6 +569,9 @@
         <li><strong class="pname"><code>spire</code></strong> (Spire()) - a Spire object needed for plotting SPIRE data. None of no SPIRE 
           data involved.
           <p>(default: None)</p></li>
+        <li><strong class="pname"><code>fn_add_star</code></strong> (bool) - Add the star name to the requested plot filename. Only relevant 
+          if fn_plt is given in a sub method.
+          <p>(default: 1)</p></li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
@@ -585,6 +616,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotVelocity</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">models</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -600,6 +632,8 @@
           <p>(default: [])</p></li>
         <li><strong class="pname"><code>models</code></strong> (list[string]) - The model ids, only required if star_grid is []
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>cfg</code></strong> (string) - path to the Plotting2.plotCols config file. If default, the 
           hard-coded default plotting options are used.
           <p>(default: '')</p></li>
@@ -617,6 +651,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotTemp</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">models</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">force_plot</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
   </h3>
@@ -633,6 +668,8 @@
           <p>(default: [])</p></li>
         <li><strong class="pname"><code>models</code></strong> (list[string]) - The model ids, only required if star_grid is []
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>force_plot</code></strong> (bool) - force a plotting if more than models are requested
           <p>(default: 0)</p></li>
         <li><strong class="pname"><code>cfg</code></strong> (string) - path to the Plotting2.plotCols config file. If default, the 
@@ -661,6 +698,7 @@
         <span class="sig-arg">limited_axis_labels</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">date_tag</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">n_max_models</span>=<span class="sig-default">10</span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">fn_suffix</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">fit_vlsr</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">plot_intrinsic</span>=<span class="sig-default">0</span>,
@@ -700,6 +738,8 @@
           <p>(default: 1)</p></li>
         <li><strong class="pname"><code>n_max_models</code></strong> (bool) - Maximum number of models per tile
           <p>(default: 10)</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>fn_suffix</code></strong> (string) - A suffix that is appended to the filename. For instance, when 
           running the plot command for a best fit subgrid of Star() models 
           as to not overwrite the plot of the full grid.
@@ -782,6 +822,7 @@
         <span class="sig-arg">star_grid</span>,
         <span class="sig-arg">include_sphinx</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">instrument</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">PACS</code><code class="variable-quote">'</code></span>)</span>
   </h3>
@@ -799,6 +840,8 @@
           <p>(default: 1)</p></li>
         <li><strong class="pname"><code>cfg</code></strong> (string) - path to the Plotting2.plotCols config file. If default, the 
           hard-coded default plotting options are used.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
           <p>(default: '')</p></li>
         <li><strong class="pname"><code>fn_trans_marker</code></strong> (string) - A file that includes TRANSITION definitions. These transitions 
           will be marked up in the plot. For instance, when indicating a 
@@ -826,6 +869,7 @@
         <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">models</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">per_molecule</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>)</span>
   </h3>
@@ -845,6 +889,8 @@
         <li><strong class="pname"><code>cfg</code></strong> (string) - path to the Plotting2.plotCols config file. If default, the 
           hard-coded default plotting options are used.
           <p>(default: '')</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>per_molecule</code></strong> (bool) - Plot one molecule for all models in one figure.
           <p>(default: 0)</p></li>
         <li><strong class="pname"><code>unit</code></strong> (str) - The radial unit. Can be 'cm', 'au', 'm' or 'rstar'
@@ -862,6 +908,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotLineContributions</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">normalized</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">do_sort</span>=<span class="sig-default">1</span>,
@@ -878,6 +925,8 @@
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>star_grid</code></strong> (list[Star()]) - The model parameter sets</li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A base plot filename. Includes folder. If not, a default is added
+          <p>(default: '')</p></li>
         <li><strong class="pname"><code>cfg</code></strong> (string) - path to the Plotting2.plotCols config file. If default, the 
           hard-coded default plotting options are used.
           <p>(default: '')</p></li>
@@ -990,7 +1039,6 @@
         <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">dimensions</span>=<span class="sig-default"><code class="variable-group">(</code>5<code class="variable-op">, </code>2<code class="variable-group">)</code></span>,
-        <span class="sig-arg">fn_add_star</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">mark_undetected</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">remove_axis_titles</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">include_band</span>=<span class="sig-default">1</span>)</span>
@@ -1015,8 +1063,6 @@
         <li><strong class="pname"><code>cfg</code></strong> (string) - path to the Plotting2.plotCols config file. If default, the 
           hard-coded default plotting options are used.
           <p>(default: '')</p></li>
-        <li><strong class="pname"><code>fn_add_star</code></strong> (bool) - Add the star name to the requested plot filename.
-          <p>(default: 1)</p></li>
         <li><strong class="pname"><code>fn_plt</code></strong> (string) - A plot filename for the tiled plot.
           <p>(default: '')</p></li>
         <li><strong class="pname"><code>fn_trans_marker</code></strong> (string) - A file that includes TRANSITION definitions. These transitions 
@@ -1062,8 +1108,7 @@
         <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">include_band</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">number_subplots</span>=<span class="sig-default">3</span>,
-        <span class="sig-arg">mark_undetected</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">fn_add_star</span>=<span class="sig-default">1</span>)</span>
+        <span class="sig-arg">mark_undetected</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotPacs">source&nbsp;code</a></span>&nbsp;
@@ -1096,13 +1141,10 @@
           defined line label (through the star_grid['GAS_LINES']), lines 
           can be marked up.
           <p>(default: '')</p></li>
-        <li><strong class="pname"><code>fn_add_star</code></strong> (bool) - Add the star name to the requested plot filename. Only relevant 
-          if fn_plt is given.
-          <p>(default: 1)</p></li>
         <li><strong class="pname"><code>mark_undetected</code></strong> (bool) - Mark the undetected transitions in the same way extra marked 
           transitions would be marked by fn_trans_marker.
           <p>(default: 0)</p></li>
-        <li><strong class="pname"><code>include_band</code></strong> (bool) - Include a name tag for the band order in the plot.
+        <li><strong class="pname"><code>include_band</code></strong> (bool) - Include a name tag for the band order in plot.
           <p>(default: 1)</p></li>
         <li><strong class="pname"><code>line_label_dashedvib</code></strong> (bool) - Use dashed lines for vibrational transitions in line label lines.
           <p>(default: 0)</p></li>
@@ -1187,8 +1229,7 @@
         <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">number_subplots</span>=<span class="sig-default">3</span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">fn_add_star</span>=<span class="sig-default">1</span>)</span>
+        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotSpire">source&nbsp;code</a></span>&nbsp;
@@ -1222,9 +1263,43 @@
         <li><strong class="pname"><code>cfg</code></strong> (string) - path to the Plotting2.plotCols config file. If default, the 
           hard-coded default plotting options are used.
           <p>(default: '')</p></li>
-        <li><strong class="pname"><code>fn_add_star</code></strong> (bool) - Add the star name to the requested plot filename. Only relevant 
-          if fn_plt is given.
-          <p>(default: 1)</p></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="plotIntTmb"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plotIntTmb</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">scale</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotIntTmb">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Plot of the integrated main beam temperature of the molecular data and
+  that obtained from model(s). Jup vs K.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>star_grid</code></strong> (list[Star()]) - star models to be included in
+          <p>(default: [])</p></li>
+        <li><strong class="pname"><code>scale</code></strong> (bool) - scale int. Tmb to an antenna of 1 m**2, necesarry to compare data
+          from different telescope_string
+          <p>(default = 1)</p></li>
+        <li><strong class="pname"><code>fn_plt</code></strong> (string) - A plot filename to which an index is added for each subband.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>cfg</code></strong> (string) - path to the Plotting2.plotCols config file. If default, the 
+          hard-coded default plotting options are used.
+          <p>(default: '')</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -1256,7 +1331,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:08 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:51 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

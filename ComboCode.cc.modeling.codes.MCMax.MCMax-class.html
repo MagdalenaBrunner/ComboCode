@@ -94,7 +94,8 @@
         <span class="summary-sig-arg">path_mcmax</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">runTest</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">replace_db_entry</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">db</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">new_entries</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
+        <span class="summary-sig-arg">new_entries</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">single_session</span>=<span class="summary-sig-default">0</span>)</span><br />
       Initializing an instance of ModelingSession.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.codes.MCMax-pysrc.html#MCMax.__init__">source&nbsp;code</a></span>
@@ -165,12 +166,31 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.codes.MCMax.MCMax-class.html#cCL" class="summary-sig-name">cCL</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Short-hand helper function for compareCommandLists.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.codes.MCMax-pysrc.html#MCMax.cCL">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">bool</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.codes.MCMax.MCMax-class.html#checkDatabase" class="summary-sig-name">checkDatabase</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Checking cooling database.</td>
+      Checking MCMax database.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.codes.MCMax-pysrc.html#MCMax.checkDatabase">source&nbsp;code</a></span>
             
@@ -274,7 +294,8 @@
         <span class="sig-arg">path_mcmax</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">runTest</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">replace_db_entry</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">db</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">new_entries</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
+        <span class="sig-arg">new_entries</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">single_session</span>=<span class="sig-default">0</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -297,6 +318,8 @@
         <li><strong class="pname"><code>new_entries</code></strong> (list[str]) - The new model_ids when replace_db_entry is 1 of other models in 
           the grid. These are not replaced!
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>single_session</code></strong> (bool) - If this is the only CC session. Speeds up db check.
+          <p>(default: 0)</p></li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
@@ -404,6 +427,30 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="cCL"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">cCL</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.codes.MCMax-pysrc.html#MCMax.cCL">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Short-hand helper function for compareCommandLists.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        cc.modeling.ModelingSession.ModelingSession.cCL
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
 <a name="checkDatabase"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -418,7 +465,7 @@
     </td>
   </tr></table>
   
-  <p>Checking cooling database.</p>
+  <p>Checking MCMax database.</p>
   <dl class="fields">
     <dt>Returns: bool</dt>
         <dd>The presence of the MCMax model in the database</dd>
@@ -476,7 +523,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Oct  7 16:38:08 2015
+    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:51 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
