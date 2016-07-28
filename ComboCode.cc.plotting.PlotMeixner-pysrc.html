@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ComboCode.cc.plotting.PlotMeixner</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ComboCode-module.html">Package&nbsp;ComboCode</a> ::
+        <a href="ComboCode.cc-module.html">Package&nbsp;cc</a> ::
+        <a href="ComboCode.cc.plotting-module.html">Package&nbsp;plotting</a> ::
+        Module&nbsp;PlotMeixner
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ComboCode.cc.plotting.PlotMeixner-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="ComboCode.cc.plotting.PlotMeixner-module.html">Module ComboCode.cc.plotting.PlotMeixner</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">numpy</tt> <tt class="py-keyword">as</tt> <tt class="py-name">np</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">math</tt> <tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Function ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.sin()=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath-module.html#sin,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.sin=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#sin,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.sin=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy-module.html#sin,Method ComboCode.cc.ivs.units.conversions.Unit.sin()=ComboCode.cc.ivs.units.conversions.Unit-class.html#sin,Function ComboCode.cc.ivs.units.uncertainties.umath.sin()=ComboCode.cc.ivs.units.uncertainties.umath-module.html#sin,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.core.sin=ComboCode.cc.ivs.units.uncertainties.unumpy.core-module.html#sin,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.sin=ComboCode.cc.ivs.units.uncertainties.unumpy-module.html#sin"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.sin
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.sin
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.sin
+ComboCode.cc.ivs.units.conversions.Unit.sin
+ComboCode.cc.ivs.units.uncertainties.umath.sin
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.sin
+ComboCode.cc.ivs.units.uncertainties.unumpy.sin" class="py-name" href="#" onclick="return doclink('link-0', 'sin', 'link-0');">sin</a></tt><tt class="py-op">,</tt><tt id="link-1" class="py-name" targets="Function ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.cos()=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath-module.html#cos,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.cos=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#cos,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.cos=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy-module.html#cos,Method ComboCode.cc.ivs.units.conversions.Unit.cos()=ComboCode.cc.ivs.units.conversions.Unit-class.html#cos,Function ComboCode.cc.ivs.units.uncertainties.umath.cos()=ComboCode.cc.ivs.units.uncertainties.umath-module.html#cos,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.core.cos=ComboCode.cc.ivs.units.uncertainties.unumpy.core-module.html#cos,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.cos=ComboCode.cc.ivs.units.uncertainties.unumpy-module.html#cos"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.cos
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.cos
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.cos
+ComboCode.cc.ivs.units.conversions.Unit.cos
+ComboCode.cc.ivs.units.uncertainties.umath.cos
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.cos
+ComboCode.cc.ivs.units.uncertainties.unumpy.cos" class="py-name" href="#" onclick="return doclink('link-1', 'cos', 'link-1');">cos</a></tt><tt class="py-op">,</tt><tt id="link-2" class="py-name" targets="Function ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.exp()=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath-module.html#exp,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.exp=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#exp,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.exp=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy-module.html#exp,Method ComboCode.cc.ivs.units.conversions.Unit.exp()=ComboCode.cc.ivs.units.conversions.Unit-class.html#exp,Function ComboCode.cc.ivs.units.uncertainties.umath.exp()=ComboCode.cc.ivs.units.uncertainties.umath-module.html#exp,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.core.exp=ComboCode.cc.ivs.units.uncertainties.unumpy.core-module.html#exp,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.exp=ComboCode.cc.ivs.units.uncertainties.unumpy-module.html#exp"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.exp
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.exp
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.exp
+ComboCode.cc.ivs.units.conversions.Unit.exp
+ComboCode.cc.ivs.units.uncertainties.umath.exp
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.exp
+ComboCode.cc.ivs.units.uncertainties.unumpy.exp" class="py-name" href="#" onclick="return doclink('link-2', 'exp', 'link-2');">exp</a></tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">matplotlib</tt><tt class="py-op">.</tt><tt class="py-name">pyplot</tt> <tt class="py-keyword">as</tt> <tt class="py-name">plt</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">pylab</tt> <tt class="py-keyword">as</tt> <tt class="py-name">pl</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-3" class="py-name" targets="Package ComboCode.cc=ComboCode.cc-module.html,Variable ComboCode.cc.ivs.units.constants.cc=ComboCode.cc.ivs.units.constants-module.html#cc"><a title="ComboCode.cc
+ComboCode.cc.ivs.units.constants.cc" class="py-name" href="#" onclick="return doclink('link-3', 'cc', 'link-3');">cc</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Package ComboCode.cc.plotting=ComboCode.cc.plotting-module.html"><a title="ComboCode.cc.plotting" class="py-name" href="#" onclick="return doclink('link-4', 'plotting', 'link-4');">plotting</a></tt> <tt class="py-keyword">import</tt> <tt id="link-5" class="py-name" targets="Module ComboCode.cc.plotting.Plotting2=ComboCode.cc.plotting.Plotting2-module.html"><a title="ComboCode.cc.plotting.Plotting2" class="py-name" href="#" onclick="return doclink('link-5', 'Plotting2', 'link-5');">Plotting2</a></tt> </tt>
+<a name="expDensFunc"></a><div id="expDensFunc-def"><a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt> <a class="py-toggle" href="#" id="expDensFunc-toggle" onclick="return toggle('expDensFunc');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="ComboCode.cc.plotting.PlotMeixner-module.html#expDensFunc">expDensFunc</a><tt class="py-op">(</tt><tt class="py-param">r</tt><tt class="py-op">,</tt><tt class="py-param">rSw</tt><tt class="py-op">,</tt><tt class="py-param">exponent</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="expDensFunc-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="expDensFunc-expanded"><a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-6" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.exp
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.exp
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.exp
+ComboCode.cc.ivs.units.conversions.Unit.exp
+ComboCode.cc.ivs.units.uncertainties.umath.exp
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.exp
+ComboCode.cc.ivs.units.uncertainties.unumpy.exp" class="py-name" href="#" onclick="return doclink('link-6', 'exp', 'link-2');">exp</a></tt><tt class="py-op">(</tt><tt class="py-op">-</tt><tt class="py-op">(</tt><tt class="py-name">r</tt><tt class="py-op">/</tt><tt class="py-name">rSw</tt><tt class="py-op">)</tt><tt class="py-op">**</tt><tt class="py-name">exponent</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"> </tt>
+<a name="densityFunc"></a><div id="densityFunc-def"><a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">np</tt><tt class="py-op">.</tt><tt class="py-name">vectorize</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt> <a class="py-toggle" href="#" id="densityFunc-toggle" onclick="return toggle('densityFunc');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="ComboCode.cc.plotting.PlotMeixner-module.html#densityFunc">densityFunc</a><tt class="py-op">(</tt><tt class="py-param">r</tt><tt class="py-op">,</tt><tt class="py-param">theta</tt><tt class="py-op">,</tt><tt class="py-param">A</tt><tt class="py-op">,</tt><tt class="py-param">B</tt><tt class="py-op">,</tt><tt class="py-param">C</tt><tt class="py-op">,</tt><tt class="py-param">D</tt><tt class="py-op">,</tt><tt class="py-param">E</tt><tt class="py-op">,</tt><tt class="py-param">F</tt><tt class="py-op">,</tt><tt class="py-param">rMin</tt><tt class="py-op">,</tt><tt class="py-param">rSw</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="densityFunc-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="densityFunc-expanded"><a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">    <tt class="py-name">exponent</tt> <tt class="py-op">=</tt> <tt class="py-op">-</tt><tt class="py-name">B</tt><tt class="py-op">*</tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">+</tt><tt class="py-name">C</tt><tt class="py-op">*</tt><tt class="py-op">(</tt><tt id="link-7" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.sin
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.sin
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.sin
+ComboCode.cc.ivs.units.conversions.Unit.sin
+ComboCode.cc.ivs.units.uncertainties.umath.sin
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.sin
+ComboCode.cc.ivs.units.uncertainties.unumpy.sin" class="py-name" href="#" onclick="return doclink('link-7', 'sin', 'link-0');">sin</a></tt><tt class="py-op">(</tt><tt class="py-name">theta</tt><tt class="py-op">)</tt><tt class="py-op">**</tt><tt class="py-name">F</tt><tt class="py-op">)</tt><tt class="py-op">*</tt><tt class="py-op">(</tt><tt id="link-8" class="py-name" targets="Function ComboCode.cc.plotting.PlotMeixner.expDensFunc()=ComboCode.cc.plotting.PlotMeixner-module.html#expDensFunc"><a title="ComboCode.cc.plotting.PlotMeixner.expDensFunc" class="py-name" href="#" onclick="return doclink('link-8', 'expDensFunc', 'link-8');">expDensFunc</a></tt><tt class="py-op">(</tt><tt class="py-name">r</tt><tt class="py-op">,</tt><tt class="py-name">rSw</tt><tt class="py-op">,</tt><tt class="py-name">D</tt><tt class="py-op">)</tt><tt class="py-op">/</tt>\ </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">                                        <tt id="link-9" class="py-name"><a title="ComboCode.cc.plotting.PlotMeixner.expDensFunc" class="py-name" href="#" onclick="return doclink('link-9', 'expDensFunc', 'link-8');">expDensFunc</a></tt><tt class="py-op">(</tt><tt class="py-name">rMin</tt><tt class="py-op">,</tt><tt class="py-name">rSw</tt><tt class="py-op">,</tt><tt class="py-name">D</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">    <tt id="link-10" class="py-name" targets="Function ComboCode.cc.ivs.sed.distance.rho()=ComboCode.cc.ivs.sed.distance-module.html#rho"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-10', 'rho', 'link-10');">rho</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">r</tt><tt class="py-op">/</tt><tt class="py-name">rMin</tt><tt class="py-op">)</tt><tt class="py-op">**</tt><tt class="py-name">exponent</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">    <tt id="link-11" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-11', 'rho', 'link-10');">rho</a></tt> <tt class="py-op">=</tt> <tt id="link-12" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-12', 'rho', 'link-10');">rho</a></tt> <tt class="py-op">*</tt> <tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">+</tt><tt class="py-name">A</tt><tt class="py-op">*</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">-</tt><tt id="link-13" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.cos
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.cos
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.cos
+ComboCode.cc.ivs.units.conversions.Unit.cos
+ComboCode.cc.ivs.units.uncertainties.umath.cos
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.cos
+ComboCode.cc.ivs.units.uncertainties.unumpy.cos" class="py-name" href="#" onclick="return doclink('link-13', 'cos', 'link-1');">cos</a></tt><tt class="py-op">(</tt><tt class="py-name">theta</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">**</tt><tt class="py-name">F</tt><tt class="py-op">)</tt><tt class="py-op">*</tt><tt class="py-op">(</tt><tt id="link-14" class="py-name"><a title="ComboCode.cc.plotting.PlotMeixner.expDensFunc" class="py-name" href="#" onclick="return doclink('link-14', 'expDensFunc', 'link-8');">expDensFunc</a></tt><tt class="py-op">(</tt><tt class="py-name">r</tt><tt class="py-op">,</tt><tt class="py-name">rSw</tt><tt class="py-op">,</tt><tt class="py-name">E</tt><tt class="py-op">)</tt><tt class="py-op">/</tt>\ </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">                                          <tt id="link-15" class="py-name"><a title="ComboCode.cc.plotting.PlotMeixner.expDensFunc" class="py-name" href="#" onclick="return doclink('link-15', 'expDensFunc', 'link-8');">expDensFunc</a></tt><tt class="py-op">(</tt><tt class="py-name">rMin</tt><tt class="py-op">,</tt><tt class="py-name">rSw</tt><tt class="py-op">,</tt><tt class="py-name">E</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-16" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-16', 'rho', 'link-10');">rho</a></tt> </tt>
+</div><a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"> </tt>
+<a name="plotDens"></a><div id="plotDens-def"><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt> <a class="py-toggle" href="#" id="plotDens-toggle" onclick="return toggle('plotDens');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="ComboCode.cc.plotting.PlotMeixner-module.html#plotDens">plotDens</a><tt class="py-op">(</tt><tt class="py-param">A</tt><tt class="py-op">,</tt><tt class="py-param">B</tt><tt class="py-op">,</tt><tt class="py-param">C</tt><tt class="py-op">,</tt><tt class="py-param">D</tt><tt class="py-op">,</tt><tt class="py-param">E</tt><tt class="py-op">,</tt><tt class="py-param">F</tt><tt class="py-op">,</tt><tt class="py-param">rPlot</tt><tt class="py-op">,</tt><tt class="py-param">rMin</tt><tt class="py-op">,</tt><tt class="py-param">rSw</tt><tt class="py-op">,</tt><tt class="py-param">nRad</tt><tt class="py-op">,</tt><tt class="py-param">nTheta</tt><tt class="py-op">,</tt><tt class="py-param">filename</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt>\ </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">             <tt class="py-param">extension</tt><tt class="py-op">=</tt><tt class="py-string">'pdf'</tt><tt class="py-op">,</tt><tt class="py-param">landscape</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-param">show</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-param">figsize</tt><tt class="py-op">=</tt><tt class="py-op">(</tt><tt class="py-number">5.5</tt><tt class="py-op">,</tt> <tt class="py-number">10</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="plotDens-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="plotDens-expanded"><a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">     </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">    <tt class="py-comment">#-- Define the radial and angular grids</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">    <tt class="py-name">R</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">logspace</tt><tt class="py-op">(</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Function ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10()=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath-module.html#log10,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#log10,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy-module.html#log10,Method ComboCode.cc.ivs.units.conversions.Unit.log10()=ComboCode.cc.ivs.units.conversions.Unit-class.html#log10,Function ComboCode.cc.ivs.units.uncertainties.umath.log10()=ComboCode.cc.ivs.units.uncertainties.umath-module.html#log10,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10=ComboCode.cc.ivs.units.uncertainties.unumpy.core-module.html#log10,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.log10=ComboCode.cc.ivs.units.uncertainties.unumpy-module.html#log10"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-17', 'log10', 'link-17');">log10</a></tt><tt class="py-op">(</tt><tt class="py-name">rMin</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-18', 'log10', 'link-17');">log10</a></tt><tt class="py-op">(</tt><tt class="py-name">rPlot</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">num</tt><tt class="py-op">=</tt><tt class="py-name">nRad</tt><tt class="py-op">,</tt> <tt class="py-name">endpoint</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">)</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">    <tt class="py-name">Theta</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">arange</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Variable ComboCode.cc.ivs.sigproc.lmfit.utilfuncs.pi=ComboCode.cc.ivs.sigproc.lmfit.utilfuncs-module.html#pi"><a title="ComboCode.cc.ivs.sigproc.lmfit.utilfuncs.pi" class="py-name" href="#" onclick="return doclink('link-19', 'pi', 'link-19');">pi</a></tt><tt class="py-op">/</tt><tt class="py-number">2.0</tt><tt class="py-op">+</tt><tt class="py-number">1.0</tt><tt class="py-op">/</tt><tt class="py-name">float</tt><tt class="py-op">(</tt><tt class="py-name">nTheta</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.utilfuncs.pi" class="py-name" href="#" onclick="return doclink('link-20', 'pi', 'link-19');">pi</a></tt><tt class="py-op">/</tt><tt class="py-number">2.0</tt><tt class="py-op">)</tt><tt class="py-op">/</tt><tt class="py-op">(</tt><tt class="py-name">nTheta</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">    <tt class="py-name">R</tt><tt class="py-op">,</tt><tt class="py-name">Theta</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">meshgrid</tt><tt class="py-op">(</tt><tt class="py-name">R</tt><tt class="py-op">,</tt><tt class="py-name">Theta</tt><tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">     </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">    <tt class="py-comment">#-- Calculate the Meixner density distribution</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">    <tt id="link-21" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-21', 'rho', 'link-10');">rho</a></tt> <tt class="py-op">=</tt> <tt id="link-22" class="py-name" targets="Variable ComboCode.cc.plotting.PlotMeixner.densityFunc=ComboCode.cc.plotting.PlotMeixner-module.html#densityFunc"><a title="ComboCode.cc.plotting.PlotMeixner.densityFunc" class="py-name" href="#" onclick="return doclink('link-22', 'densityFunc', 'link-22');">densityFunc</a></tt><tt class="py-op">(</tt><tt class="py-name">R</tt><tt class="py-op">,</tt><tt class="py-name">Theta</tt><tt class="py-op">,</tt><tt class="py-name">A</tt><tt class="py-op">,</tt><tt class="py-name">B</tt><tt class="py-op">,</tt><tt class="py-name">C</tt><tt class="py-op">,</tt><tt class="py-name">D</tt><tt class="py-op">,</tt><tt class="py-name">E</tt><tt class="py-op">,</tt><tt class="py-name">F</tt><tt class="py-op">,</tt><tt class="py-name">rMin</tt><tt class="py-op">,</tt><tt class="py-name">rSw</tt><tt class="py-op">)</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">    <tt class="py-comment">#-- Figure consists of two subplots, one with the density map, and one with</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">    <tt class="py-comment">#   profiles at 0 and 90 degrees.</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">    <tt class="py-name">fig</tt> <tt class="py-op">=</tt> <tt class="py-name">plt</tt><tt class="py-op">.</tt><tt class="py-name">figure</tt><tt class="py-op">(</tt><tt class="py-name">figsize</tt><tt class="py-op">=</tt><tt class="py-name">figsize</tt><tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">     </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">    <tt class="py-comment">#-- Make the color scale density plot</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">    <tt class="py-name">ax</tt> <tt class="py-op">=</tt> <tt class="py-name">fig</tt><tt class="py-op">.</tt><tt class="py-name">add_subplot</tt><tt class="py-op">(</tt><tt class="py-number">211</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">    <tt class="py-name">pl</tt><tt class="py-op">.</tt><tt class="py-name">pcolor</tt><tt class="py-op">(</tt><tt class="py-name">R</tt><tt class="py-op">*</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.sin
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.sin
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.sin
+ComboCode.cc.ivs.units.conversions.Unit.sin
+ComboCode.cc.ivs.units.uncertainties.umath.sin
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.sin
+ComboCode.cc.ivs.units.uncertainties.unumpy.sin" class="py-name" href="#" onclick="return doclink('link-23', 'sin', 'link-0');">sin</a></tt><tt class="py-op">(</tt><tt class="py-name">Theta</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">R</tt><tt class="py-op">*</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.cos
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.cos
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.cos
+ComboCode.cc.ivs.units.conversions.Unit.cos
+ComboCode.cc.ivs.units.uncertainties.umath.cos
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.cos
+ComboCode.cc.ivs.units.uncertainties.unumpy.cos" class="py-name" href="#" onclick="return doclink('link-24', 'cos', 'link-1');">cos</a></tt><tt class="py-op">(</tt><tt class="py-name">Theta</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-25', 'log10', 'link-17');">log10</a></tt><tt class="py-op">(</tt><tt id="link-26" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-26', 'rho', 'link-10');">rho</a></tt><tt class="py-op">/</tt><tt id="link-27" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-27', 'rho', 'link-10');">rho</a></tt><tt class="py-op">.</tt><tt class="py-name">max</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">    <tt class="py-name">pl</tt><tt class="py-op">.</tt><tt class="py-name">pcolor</tt><tt class="py-op">(</tt><tt class="py-op">-</tt><tt class="py-name">R</tt><tt class="py-op">*</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.sin
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.sin
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.sin
+ComboCode.cc.ivs.units.conversions.Unit.sin
+ComboCode.cc.ivs.units.uncertainties.umath.sin
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.sin
+ComboCode.cc.ivs.units.uncertainties.unumpy.sin" class="py-name" href="#" onclick="return doclink('link-28', 'sin', 'link-0');">sin</a></tt><tt class="py-op">(</tt><tt class="py-name">Theta</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">R</tt><tt class="py-op">*</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.cos
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.cos
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.cos
+ComboCode.cc.ivs.units.conversions.Unit.cos
+ComboCode.cc.ivs.units.uncertainties.umath.cos
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.cos
+ComboCode.cc.ivs.units.uncertainties.unumpy.cos" class="py-name" href="#" onclick="return doclink('link-29', 'cos', 'link-1');">cos</a></tt><tt class="py-op">(</tt><tt class="py-name">Theta</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-30', 'log10', 'link-17');">log10</a></tt><tt class="py-op">(</tt><tt id="link-31" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-31', 'rho', 'link-10');">rho</a></tt><tt class="py-op">/</tt><tt id="link-32" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-32', 'rho', 'link-10');">rho</a></tt><tt class="py-op">.</tt><tt class="py-name">max</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">    <tt class="py-name">pl</tt><tt class="py-op">.</tt><tt class="py-name">pcolor</tt><tt class="py-op">(</tt><tt class="py-op">-</tt><tt class="py-name">R</tt><tt class="py-op">*</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.sin
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.sin
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.sin
+ComboCode.cc.ivs.units.conversions.Unit.sin
+ComboCode.cc.ivs.units.uncertainties.umath.sin
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.sin
+ComboCode.cc.ivs.units.uncertainties.unumpy.sin" class="py-name" href="#" onclick="return doclink('link-33', 'sin', 'link-0');">sin</a></tt><tt class="py-op">(</tt><tt class="py-name">Theta</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-op">-</tt><tt class="py-name">R</tt><tt class="py-op">*</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.cos
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.cos
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.cos
+ComboCode.cc.ivs.units.conversions.Unit.cos
+ComboCode.cc.ivs.units.uncertainties.umath.cos
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.cos
+ComboCode.cc.ivs.units.uncertainties.unumpy.cos" class="py-name" href="#" onclick="return doclink('link-34', 'cos', 'link-1');">cos</a></tt><tt class="py-op">(</tt><tt class="py-name">Theta</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-35', 'log10', 'link-17');">log10</a></tt><tt class="py-op">(</tt><tt id="link-36" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-36', 'rho', 'link-10');">rho</a></tt><tt class="py-op">/</tt><tt id="link-37" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-37', 'rho', 'link-10');">rho</a></tt><tt class="py-op">.</tt><tt class="py-name">max</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">    <tt class="py-name">pl</tt><tt class="py-op">.</tt><tt class="py-name">pcolor</tt><tt class="py-op">(</tt><tt class="py-name">R</tt><tt class="py-op">*</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.sin
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.sin
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.sin
+ComboCode.cc.ivs.units.conversions.Unit.sin
+ComboCode.cc.ivs.units.uncertainties.umath.sin
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.sin
+ComboCode.cc.ivs.units.uncertainties.unumpy.sin" class="py-name" href="#" onclick="return doclink('link-38', 'sin', 'link-0');">sin</a></tt><tt class="py-op">(</tt><tt class="py-name">Theta</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-op">-</tt><tt class="py-name">R</tt><tt class="py-op">*</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.cos
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.cos
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.cos
+ComboCode.cc.ivs.units.conversions.Unit.cos
+ComboCode.cc.ivs.units.uncertainties.umath.cos
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.cos
+ComboCode.cc.ivs.units.uncertainties.unumpy.cos" class="py-name" href="#" onclick="return doclink('link-39', 'cos', 'link-1');">cos</a></tt><tt class="py-op">(</tt><tt class="py-name">Theta</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-40', 'log10', 'link-17');">log10</a></tt><tt class="py-op">(</tt><tt id="link-41" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-41', 'rho', 'link-10');">rho</a></tt><tt class="py-op">/</tt><tt id="link-42" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-42', 'rho', 'link-10');">rho</a></tt><tt class="py-op">.</tt><tt class="py-name">max</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">    <tt class="py-name">fig</tt><tt class="py-op">.</tt><tt class="py-name">subplots_adjust</tt><tt class="py-op">(</tt><tt class="py-name">right</tt><tt class="py-op">=</tt><tt class="py-number">0.8</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">    <tt class="py-name">fig</tt><tt class="py-op">.</tt><tt class="py-name">subplots_adjust</tt><tt class="py-op">(</tt><tt class="py-name">bottom</tt><tt class="py-op">=</tt><tt class="py-number">0.1</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">    <tt class="py-name">cbar_ax</tt> <tt class="py-op">=</tt> <tt class="py-name">fig</tt><tt class="py-op">.</tt><tt class="py-name">add_axes</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-number">0.85</tt><tt class="py-op">,</tt> <tt class="py-number">0.54</tt><tt class="py-op">,</tt> <tt class="py-number">0.05</tt><tt class="py-op">,</tt> <tt class="py-number">0.36</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">    <tt class="py-name">pl</tt><tt class="py-op">.</tt><tt class="py-name">colorbar</tt><tt class="py-op">(</tt><tt class="py-name">cax</tt><tt class="py-op">=</tt><tt class="py-name">cbar_ax</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">     </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line">    <tt class="py-comment">#-- Add density distribution at 0 and 90 degrees, and a r^-2 distribution</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">    <tt class="py-name">ax2</tt> <tt class="py-op">=</tt> <tt class="py-name">fig</tt><tt class="py-op">.</tt><tt class="py-name">add_subplot</tt><tt class="py-op">(</tt><tt class="py-number">212</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">    <tt class="py-name">ax2</tt><tt class="py-op">.</tt><tt class="py-name">plot</tt><tt class="py-op">(</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-43" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-43', 'log10', 'link-17');">log10</a></tt><tt class="py-op">(</tt><tt class="py-name">R</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-44" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-44', 'log10', 'link-17');">log10</a></tt><tt class="py-op">(</tt><tt id="link-45" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-45', 'rho', 'link-10');">rho</a></tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">/</tt><tt id="link-46" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-46', 'rho', 'link-10');">rho</a></tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">max</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-string">'black'</tt><tt class="py-op">,</tt>\ </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">             <tt class="py-name">lw</tt><tt class="py-op">=</tt><tt class="py-number">2</tt><tt class="py-op">,</tt><tt class="py-name">marker</tt><tt class="py-op">=</tt><tt class="py-string">'x'</tt><tt class="py-op">,</tt><tt class="py-name">label</tt><tt class="py-op">=</tt><tt class="py-string">r'$\theta = 0^\circ$'</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line">    <tt class="py-name">ax2</tt><tt class="py-op">.</tt><tt class="py-name">plot</tt><tt class="py-op">(</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-47" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-47', 'log10', 'link-17');">log10</a></tt><tt class="py-op">(</tt><tt class="py-name">R</tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-48" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-48', 'log10', 'link-17');">log10</a></tt><tt class="py-op">(</tt><tt id="link-49" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-49', 'rho', 'link-10');">rho</a></tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">/</tt><tt id="link-50" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-50', 'rho', 'link-10');">rho</a></tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">max</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-string">'magenta'</tt><tt class="py-op">,</tt>\ </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">             <tt class="py-name">lw</tt><tt class="py-op">=</tt><tt class="py-number">2</tt><tt class="py-op">,</tt><tt class="py-name">marker</tt><tt class="py-op">=</tt><tt class="py-string">'|'</tt><tt class="py-op">,</tt> <tt class="py-name">label</tt><tt class="py-op">=</tt><tt class="py-string">r'$\theta = 90^\circ$'</tt><tt class="py-op">)</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line">    <tt class="py-name">ax2</tt><tt class="py-op">.</tt><tt class="py-name">plot</tt><tt class="py-op">(</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-51" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-51', 'log10', 'link-17');">log10</a></tt><tt class="py-op">(</tt><tt class="py-name">R</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-52" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-52', 'log10', 'link-17');">log10</a></tt><tt class="py-op">(</tt><tt class="py-name">rMin</tt><tt class="py-op">*</tt><tt class="py-name">rMin</tt><tt class="py-op">/</tt><tt class="py-op">(</tt><tt class="py-name">R</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">*</tt><tt class="py-name">R</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-string">'green'</tt><tt class="py-op">,</tt>\ </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line">             <tt class="py-name">lw</tt><tt class="py-op">=</tt><tt class="py-number">2</tt><tt class="py-op">,</tt><tt class="py-name">label</tt><tt class="py-op">=</tt><tt class="py-string">r'$r^{-2}$'</tt><tt class="py-op">)</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line">    <tt class="py-name">ax2</tt><tt class="py-op">.</tt><tt class="py-name">legend</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">    <tt class="py-name">label</tt> <tt class="py-op">=</tt> <tt class="py-string">r'$\rho_0[r_{\rm min}] / \rho_{90}[r_{\rm min}] = $'</tt><tt class="py-op">+</tt>\ </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line">             <tt class="py-string">'{:10.3e}'</tt><tt class="py-op">.</tt><tt class="py-name">format</tt><tt class="py-op">(</tt><tt id="link-53" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-53', 'rho', 'link-10');">rho</a></tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">/</tt><tt id="link-54" class="py-name"><a title="ComboCode.cc.ivs.sed.distance.rho" class="py-name" href="#" onclick="return doclink('link-54', 'rho', 'link-10');">rho</a></tt><tt class="py-op">[</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">    <tt class="py-name">ax2</tt><tt class="py-op">.</tt><tt class="py-name">text</tt><tt class="py-op">(</tt><tt class="py-number">0.25</tt><tt class="py-op">,</tt><tt class="py-number">1.02</tt><tt class="py-op">,</tt><tt class="py-name">label</tt><tt class="py-op">,</tt><tt class="py-name">transform</tt><tt class="py-op">=</tt><tt class="py-name">ax2</tt><tt class="py-op">.</tt><tt class="py-name">transAxes</tt><tt class="py-op">)</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line"> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">     </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">filename</tt><tt class="py-op">:</tt> <tt class="py-name">filename</tt> <tt class="py-op">=</tt> <tt id="link-55" class="py-name"><a title="ComboCode.cc.plotting.Plotting2" class="py-name" href="#" onclick="return doclink('link-55', 'Plotting2', 'link-5');">Plotting2</a></tt><tt class="py-op">.</tt><tt id="link-56" class="py-name" targets="Function ComboCode.cc.plotting.Plotting2.saveFig()=ComboCode.cc.plotting.Plotting2-module.html#saveFig"><a title="ComboCode.cc.plotting.Plotting2.saveFig" class="py-name" href="#" onclick="return doclink('link-56', 'saveFig', 'link-56');">saveFig</a></tt><tt class="py-op">(</tt><tt class="py-name">filename</tt><tt class="py-op">,</tt><tt class="py-name">extension</tt><tt class="py-op">,</tt><tt class="py-name">landscape</tt><tt class="py-op">)</tt> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-57" class="py-name" targets="Method ComboCode.cc.modeling.tools.ContinuumDivision.ContinuumDivision.show()=ComboCode.cc.modeling.tools.ContinuumDivision.ContinuumDivision-class.html#show"><a title="ComboCode.cc.modeling.tools.ContinuumDivision.ContinuumDivision.show" class="py-name" href="#" onclick="return doclink('link-57', 'show', 'link-57');">show</a></tt><tt class="py-op">:</tt> <tt class="py-name">pl</tt><tt class="py-op">.</tt><tt id="link-58" class="py-name"><a title="ComboCode.cc.modeling.tools.ContinuumDivision.ContinuumDivision.show" class="py-name" href="#" onclick="return doclink('link-58', 'show', 'link-57');">show</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line">     </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">filename</tt> </tt>
+</div><a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line"> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line"> </tt>
+<a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line"> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">__name__</tt> <tt class="py-op">==</tt> <tt class="py-string">'__main__'</tt><tt class="py-op">:</tt> </tt>
+<a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line"> </tt>
+<a name="L78"></a><tt class="py-lineno">78</tt>  <tt class="py-line">    <tt class="py-name">A</tt> <tt class="py-op">=</tt> <tt class="py-number">100.0</tt> </tt>
+<a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line">    <tt class="py-name">B</tt> <tt class="py-op">=</tt> <tt class="py-number">2.0</tt> </tt>
+<a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line">    <tt class="py-name">C</tt> <tt class="py-op">=</tt> <tt class="py-number">1.0</tt> </tt>
+<a name="L81"></a><tt class="py-lineno">81</tt>  <tt class="py-line">    <tt class="py-name">D</tt> <tt class="py-op">=</tt> <tt class="py-number">0.5</tt> </tt>
+<a name="L82"></a><tt class="py-lineno">82</tt>  <tt class="py-line">    <tt class="py-name">E</tt> <tt class="py-op">=</tt> <tt class="py-number">0.0</tt> </tt>
+<a name="L83"></a><tt class="py-lineno">83</tt>  <tt class="py-line">    <tt class="py-name">F</tt> <tt class="py-op">=</tt> <tt class="py-number">2.0</tt> </tt>
+<a name="L84"></a><tt class="py-lineno">84</tt>  <tt class="py-line">    <tt class="py-name">rPlot</tt> <tt class="py-op">=</tt> <tt class="py-number">1E16</tt> </tt>
+<a name="L85"></a><tt class="py-lineno">85</tt>  <tt class="py-line">    <tt class="py-name">rMin</tt> <tt class="py-op">=</tt> <tt class="py-number">1E13</tt> </tt>
+<a name="L86"></a><tt class="py-lineno">86</tt>  <tt class="py-line">    <tt class="py-name">rSw</tt> <tt class="py-op">=</tt> <tt class="py-number">5E13</tt> </tt>
+<a name="L87"></a><tt class="py-lineno">87</tt>  <tt class="py-line">    <tt class="py-name">nTheta</tt> <tt class="py-op">=</tt> <tt class="py-number">50</tt> </tt>
+<a name="L88"></a><tt class="py-lineno">88</tt>  <tt class="py-line">    <tt class="py-name">nRad</tt> <tt class="py-op">=</tt> <tt class="py-number">50</tt> </tt>
+<a name="L89"></a><tt class="py-lineno">89</tt>  <tt class="py-line"> </tt>
+<a name="L90"></a><tt class="py-lineno">90</tt>  <tt class="py-line">    <tt id="link-59" class="py-name" targets="Function ComboCode.cc.plotting.PlotMeixner.plotDens()=ComboCode.cc.plotting.PlotMeixner-module.html#plotDens,Method ComboCode.cc.plotting.objects.PlotDust.PlotDust.plotDens()=ComboCode.cc.plotting.objects.PlotDust.PlotDust-class.html#plotDens"><a title="ComboCode.cc.plotting.PlotMeixner.plotDens
+ComboCode.cc.plotting.objects.PlotDust.PlotDust.plotDens" class="py-name" href="#" onclick="return doclink('link-59', 'plotDens', 'link-59');">plotDens</a></tt><tt class="py-op">(</tt><tt class="py-name">A</tt><tt class="py-op">,</tt><tt class="py-name">B</tt><tt class="py-op">,</tt><tt class="py-name">C</tt><tt class="py-op">,</tt><tt class="py-name">D</tt><tt class="py-op">,</tt><tt class="py-name">E</tt><tt class="py-op">,</tt><tt class="py-name">F</tt><tt class="py-op">,</tt><tt class="py-name">rPlot</tt><tt class="py-op">,</tt><tt class="py-name">rMin</tt><tt class="py-op">,</tt><tt class="py-name">rSw</tt><tt class="py-op">,</tt><tt class="py-name">nRad</tt><tt class="py-op">,</tt><tt class="py-name">nTheta</tt><tt class="py-op">,</tt><tt id="link-60" class="py-name"><a title="ComboCode.cc.modeling.tools.ContinuumDivision.ContinuumDivision.show" class="py-name" href="#" onclick="return doclink('link-60', 'show', 'link-57');">show</a></tt><tt class="py-op">=</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L91"></a><tt class="py-lineno">91</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:56 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

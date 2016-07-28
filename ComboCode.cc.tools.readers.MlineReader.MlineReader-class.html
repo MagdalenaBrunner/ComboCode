@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ComboCode.cc.tools.readers.MlineReader.MlineReader</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ComboCode-module.html">Package&nbsp;ComboCode</a> ::
+        <a href="ComboCode.cc-module.html">Package&nbsp;cc</a> ::
+        <a href="ComboCode.cc.tools-module.html">Package&nbsp;tools</a> ::
+        <a href="ComboCode.cc.tools.readers-module.html">Package&nbsp;readers</a> ::
+        <a href="ComboCode.cc.tools.readers.MlineReader-module.html">Module&nbsp;MlineReader</a> ::
+        Class&nbsp;MlineReader
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ComboCode.cc.tools.readers.MlineReader.MlineReader-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class MlineReader</h1><p class="nomargin-top"><span class="codelink"><a href="ComboCode.cc.tools.readers.MlineReader-pysrc.html#MlineReader">source&nbsp;code</a></span></p>
+<center>
+
+</center>
+<hr />
+<p>A Reader for Mline output files.</p>
+  <p>This class inherits from both PopReader and MolReader, and thus 
+  provides spectroscopic information of the molecule as given in the mline 
+  output. In principle this information should be identical to what is read
+  by RadiatReader from the GASTRoNOoM spectroscopic input files. This 
+  information is read from ml1.</p>
+  <p>In addition, mline output gives other information calculated by the 
+  radiative transfer, and that is available here as well. The level 
+  populations specifically are managed through methods in PopReader. This 
+  class then also provides additional data such as source function, optical
+  depth, etc. This information is read from ml3.</p>
+  <p>MlineReader only depends on GASTRoNOoM output and does not require 
+  information from the databases or input files.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><pre class="literalblock">
+new empty dictionary
+
+</pre></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MlineReader.MlineReader-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fn</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Creating an Mline object ready for reading Mline output.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MlineReader-pysrc.html#MlineReader.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MlineReader.MlineReader-class.html#read" class="summary-sig-name">read</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Read the mline output files ml1 and ml3.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MlineReader-pysrc.html#MlineReader.read">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MlineReader.MlineReader-class.html#__readML1" class="summary-sig-name" onclick="show_private();">__readML1</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Read molecule spectroscopic properties and basic circumstellar radial
+      profiles from the ml1 file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MlineReader-pysrc.html#MlineReader.__readML1">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MlineReader.MlineReader-class.html#__readML3" class="summary-sig-name" onclick="show_private();">__readML3</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Read the information from the ML3 file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MlineReader-pysrc.html#MlineReader.__readML3">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MlineReader.MlineReader-class.html#getProp" class="summary-sig-name">getProp</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">prop</span>)</span><br />
+      Return a radial circumstellar profile associated with the impact 
+      parameter grid for the molecule of this mline model.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MlineReader-pysrc.html#MlineReader.getProp">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.tools.readers.MolReader.MolReader</code></b>:
+      <code>getLEnergy</code>,
+      <code>getLI</code>,
+      <code>getLWeight</code>,
+      <code>getTEinsteinA</code>,
+      <code>getTFrequency</code>,
+      <code>getTI</code>,
+      <code>getTLower</code>,
+      <code>getTUpper</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.tools.readers.SpectroscopyReader.SpectroscopyReader</code></b>:
+      <code>get</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.tools.readers.PopReader.PopReader</code></b>:
+      <code>getInterp</code>,
+      <code>getP</code>,
+      <code>getPop</code>,
+      <code>plotPop</code>,
+      <code>setInterp</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.tools.readers.Reader.Reader</code></b>:
+      <code>getFile</code>,
+      <code>readFile</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>dict</code></b>:
+      <code>__cmp__</code>,
+      <code>__contains__</code>,
+      <code>__delitem__</code>,
+      <code>__eq__</code>,
+      <code>__ge__</code>,
+      <code>__getattribute__</code>,
+      <code>__getitem__</code>,
+      <code>__gt__</code>,
+      <code>__iter__</code>,
+      <code>__le__</code>,
+      <code>__len__</code>,
+      <code>__lt__</code>,
+      <code>__ne__</code>,
+      <code>__new__</code>,
+      <code>__repr__</code>,
+      <code>__setitem__</code>,
+      <code>__sizeof__</code>,
+      <code>clear</code>,
+      <code>copy</code>,
+      <code>fromkeys</code>,
+      <code>has_key</code>,
+      <code>items</code>,
+      <code>iteritems</code>,
+      <code>iterkeys</code>,
+      <code>itervalues</code>,
+      <code>keys</code>,
+      <code>pop</code>,
+      <code>popitem</code>,
+      <code>setdefault</code>,
+      <code>update</code>,
+      <code>values</code>,
+      <code>viewitems</code>,
+      <code>viewkeys</code>,
+      <code>viewvalues</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>dict</code></b>:
+      <code>__hash__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fn</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MlineReader-pysrc.html#MlineReader.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Creating an Mline object ready for reading Mline output.</p>
+  <p>Reading mline output through full filename, including filepath.</p>
+  <p>The mlinefile number is given as *, which is then replaced as 
+  needed.</p>
+  <p>The wildcard character does not have to be present, and is inserted 
+  automatically. It is handled down the line by the parent classes.</p>
+  <p>Additional args and kwargs are passed to the dict creation (parent of 
+  Reader)</p>
+  <p>Note that properties based on the filename are saved as instance 
+  properties (such as id, molecule name, filename).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fn</code></strong> (string) - The mline filename, including filepath. The mline file number is 
+          given by *.</li>
+    </ul></dd>
+    <dt>Returns: <pre class="literalblock">
+new empty dictionary
+
+</pre></dt>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="read"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">read</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MlineReader-pysrc.html#MlineReader.read">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Read the mline output files ml1 and ml3.</p>
+  <p>The information is stored in the instance dictionary.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        cc.tools.readers.PopReader.PopReader.read
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__readML1"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__readML1</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MlineReader-pysrc.html#MlineReader.__readML1">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Read molecule spectroscopic properties and basic circumstellar radial 
+  profiles from the ml1 file.</p>
+  <p>This is the information that is returned by MolReader methods.</p>
+  <p>Note that the level indexing is J + 1 for simple molecules like CO. 
+  For any molecule, the 0-energy level has index 1!</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__readML3"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__readML3</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MlineReader-pysrc.html#MlineReader.__readML3">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Read the information from the ML3 file.</p>
+  <p>This includes in six blocks, with subblocks for each impact 
+  parameter:</p>
+  <ul>
+    <li>
+      Scattering integral (si)
+    </li>
+    <li>
+      Source function (sf)
+    </li>
+    <li>
+      Line opacities (lo): if negative (or 1e-60 when 
+      use_no_maser_option=1) the line is masing.
+    </li>
+    <li>
+      Number densities (pop)
+    </li>
+    <li>
+      Derivative of scat int wrt line opacity times line opacity at line 
+      center (DsiDloXlo) (see GASTRoNOoM src code source_mline/lamit.f for 
+      details: D1)
+    </li>
+    <li>
+      Derivative of scat int wrt src function times src function at line 
+      center (DsiDsfXsf) (see GASTRoNOoM src code source_mline/lamit.f for 
+      details: D2)
+    </li>
+  </ul>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="getProp"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getProp</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">prop</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MlineReader-pysrc.html#MlineReader.getProp">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return a radial circumstellar profile associated with the impact 
+  parameter grid for the molecule of this mline model.</p>
+  <p>The impact parameter grid in cm is available through getP().</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>prop</code></strong> (str) - The requested property. One of p_rstar, vel (km/s), nmol (cm^-3),
+          nh2 (cm^-3), amol, Tg (K), Td (K).</li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The abundance profile</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:51 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

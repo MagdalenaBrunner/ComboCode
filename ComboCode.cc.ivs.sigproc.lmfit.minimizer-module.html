@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ComboCode.cc.ivs.sigproc.lmfit.minimizer</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ComboCode-module.html">Package&nbsp;ComboCode</a> ::
+        <a href="ComboCode.cc-module.html">Package&nbsp;cc</a> ::
+        <a href="ComboCode.cc.ivs-module.html">Package&nbsp;ivs</a> ::
+        <a href="ComboCode.cc.ivs.sigproc-module.html">Package&nbsp;sigproc</a> ::
+        <a href="ComboCode.cc.ivs.sigproc.lmfit-module.html">Package&nbsp;lmfit</a> ::
+        Module&nbsp;minimizer
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module minimizer</h1><p class="nomargin-top"><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-pysrc.html">source&nbsp;code</a></span></p>
+<pre class="literalblock">
+
+Simple minimizer  is a wrapper around scipy.leastsq, allowing a
+user to build a fitting model as a function of general purpose
+Fit Parameters that can be fixed or floated, bounded, and written
+as a simple expression of other Fit Parameters.
+
+The user sets up a model in terms of instance of Parameters, writes a
+function-to-be-minimized (residual function) in terms of these Parameters.
+
+   Copyright (c) 2011 Matthew Newville, The University of Chicago
+   &lt;newville@cars.uchicago.edu&gt;
+
+</pre>
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer.MinimizerException-class.html" class="summary-name">MinimizerException</a><br />
+      General Purpose Exception
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer.Minimizer-class.html" class="summary-name">Minimizer</a><br />
+      general minimizer
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-module.html#asteval_with_uncertainties" class="summary-sig-name">asteval_with_uncertainties</a>(<span class="summary-sig-arg">*vals</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      given values for variables, calculate object value.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-pysrc.html#asteval_with_uncertainties">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-module.html#eval_stderr" class="summary-sig-name">eval_stderr</a>(<span class="summary-sig-arg">obj</span>,
+        <span class="summary-sig-arg">uvars</span>,
+        <span class="summary-sig-arg">_names</span>,
+        <span class="summary-sig-arg">_pars</span>,
+        <span class="summary-sig-arg">_asteval</span>)</span><br />
+      evaluate uncertainty and set .stderr for a parameter `obj` given the 
+      uncertain values `uvars` (a list of uncertainties.ufloats), a list of
+      parameter names that matches uvars, and a dict of param objects, 
+      keyed by name.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-pysrc.html#eval_stderr">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="check_ast_errors"></a><span class="summary-sig-name">check_ast_errors</span>(<span class="summary-sig-arg">error</span>)</span><br />
+      check for errors derived from asteval, raise MinimizerException</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-pysrc.html#check_ast_errors">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="minimize"></a><span class="summary-sig-name">minimize</span>(<span class="summary-sig-arg">fcn</span>,
+        <span class="summary-sig-arg">params</span>,
+        <span class="summary-sig-arg">method</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">leastsq</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">args</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">kws</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">scale_covar</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">engine</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iter_cb</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**fit_kws</span>)</span><br />
+      simple minimization function, finding the values for the params which
+      give the minimal sum-of-squares of the array return by fcn</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-pysrc.html#minimize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-module.html#make_paras_and_func" class="summary-sig-name">make_paras_and_func</a>(<span class="summary-sig-arg">fcn</span>,
+        <span class="summary-sig-arg">x0</span>,
+        <span class="summary-sig-arg">used_kwargs</span>=<span class="summary-sig-default">None</span>)</span><br />
+      nach A function which takes a function a makes a parameters-dict for 
+      it.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-pysrc.html#make_paras_and_func">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="HAS_SCALAR_MIN"></a><span class="summary-name">HAS_SCALAR_MIN</span> = <code title="True">True</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.ivs.sigproc.lmfit'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.ivs.sigproc.lmfit</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="asteval_with_uncertainties"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">asteval_with_uncertainties</span>(<span class="sig-arg">*vals</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-pysrc.html#asteval_with_uncertainties">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>given values for variables, calculate object value. This is used by 
+  the uncertainties package to calculate the uncertainty in an object even 
+  with a complicated expression.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="eval_stderr"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">eval_stderr</span>(<span class="sig-arg">obj</span>,
+        <span class="sig-arg">uvars</span>,
+        <span class="sig-arg">_names</span>,
+        <span class="sig-arg">_pars</span>,
+        <span class="sig-arg">_asteval</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-pysrc.html#eval_stderr">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>evaluate uncertainty and set .stderr for a parameter `obj` given the 
+  uncertain values `uvars` (a list of uncertainties.ufloats), a list of 
+  parameter names that matches uvars, and a dict of param objects, keyed by
+  name.</p>
+  <p>This uses the uncertainties package wrapped function to evaluate the 
+  uncertainty for an arbitrary expression (in obj.ast) of parameters.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="make_paras_and_func"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">make_paras_and_func</span>(<span class="sig-arg">fcn</span>,
+        <span class="sig-arg">x0</span>,
+        <span class="sig-arg">used_kwargs</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-pysrc.html#make_paras_and_func">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>nach A function which takes a function a makes a parameters-dict for 
+  it.</p>
+  <p>Takes the function fcn. A starting guess x0 for the non kwargs 
+  paramter must be also given. If kwargs are used, used_kwargs is dict were
+  the keys are the used kwarg and the values are the starting values.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:49 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

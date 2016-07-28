@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ComboCode.cc.tools.readers.CollisReader.CollisReader</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ComboCode-module.html">Package&nbsp;ComboCode</a> ::
+        <a href="ComboCode.cc-module.html">Package&nbsp;cc</a> ::
+        <a href="ComboCode.cc.tools-module.html">Package&nbsp;tools</a> ::
+        <a href="ComboCode.cc.tools.readers-module.html">Package&nbsp;readers</a> ::
+        <a href="ComboCode.cc.tools.readers.CollisReader-module.html">Module&nbsp;CollisReader</a> ::
+        Class&nbsp;CollisReader
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class CollisReader</h1><p class="nomargin-top"><span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader">source&nbsp;code</a></span></p>
+<center>
+
+</center>
+<hr />
+<p>A Reader for collisional rate data.</p>
+  <p>This class inherits from SpectroscopyReader.</p>
+  <p>Methods for reading and managing collisional rate data are provided. 
+  In case the basic methods are not sufficient, subclasses provide 
+  code-specific methods. The basic methods apply to the collis files for 
+  GASTRoNOoM.</p>
+  <p>Inheriting from CollisReader are:</p>
+  <ul>
+    <li>
+      LamdaReader for reading Lamda molecular data files, used in MCP/ALI.
+    </li>
+  </ul>
+  <p>Other molecular spectroscopic data are typically handled by MolReader.
+  Level populations are handled by PopReader. For GASTRoNOoM this is 
+  combined in MlineReader for rad trans output, and available through 
+  RadiatReader for spectroscopic input.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><pre class="literalblock">
+new empty dictionary
+
+</pre></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fn</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Initialize an CollisReader object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#read" class="summary-sig-name">read</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Read the collision rates file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.read">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#getTI" class="summary-sig-name">getTI</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">coll_trans</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">lup</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">llow</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Return the indices of the transitions read from the collisional rate 
+      data.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getTI">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#getTUpper" class="summary-sig-name">getTUpper</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">coll_trans</code><code class="variable-quote">'</code></span>)</span><br />
+      Return the indices of the upper states of the &lt;nline&gt; included 
+      transitions.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getTUpper">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#getTLower" class="summary-sig-name">getTLower</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">coll_trans</code><code class="variable-quote">'</code></span>)</span><br />
+      Return the indices of the lower states of the &lt;nline&gt; included 
+      transitions.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getTLower">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#getRates" class="summary-sig-name">getRates</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">lup</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">llow</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Retrieve the collision rates, sorted by collisional transition index.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getRates">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#getTemp" class="summary-sig-name">getTemp</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Retrieve the temperature grid for the collision rates.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getTemp">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#setInterp" class="summary-sig-name">setInterp</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">spline</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Set the interpolator for the collision rates versus temperature.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.setInterp">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">interpolator</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#getInterp" class="summary-sig-name">getInterp</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>)</span><br />
+      Get the interpolator for a given transition index.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getInterp">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#plotCollis" class="summary-sig-name">plotCollis</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">indices</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Plot the collision rates for given transitions as a function of 
+      temperature.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.plotCollis">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.tools.readers.SpectroscopyReader.SpectroscopyReader</code></b>:
+      <code>get</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.tools.readers.Reader.Reader</code></b>:
+      <code>getFile</code>,
+      <code>readFile</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>dict</code></b>:
+      <code>__cmp__</code>,
+      <code>__contains__</code>,
+      <code>__delitem__</code>,
+      <code>__eq__</code>,
+      <code>__ge__</code>,
+      <code>__getattribute__</code>,
+      <code>__getitem__</code>,
+      <code>__gt__</code>,
+      <code>__iter__</code>,
+      <code>__le__</code>,
+      <code>__len__</code>,
+      <code>__lt__</code>,
+      <code>__ne__</code>,
+      <code>__new__</code>,
+      <code>__repr__</code>,
+      <code>__setitem__</code>,
+      <code>__sizeof__</code>,
+      <code>clear</code>,
+      <code>copy</code>,
+      <code>fromkeys</code>,
+      <code>has_key</code>,
+      <code>items</code>,
+      <code>iteritems</code>,
+      <code>iterkeys</code>,
+      <code>itervalues</code>,
+      <code>keys</code>,
+      <code>pop</code>,
+      <code>popitem</code>,
+      <code>setdefault</code>,
+      <code>update</code>,
+      <code>values</code>,
+      <code>viewitems</code>,
+      <code>viewkeys</code>,
+      <code>viewvalues</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>dict</code></b>:
+      <code>__hash__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fn</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialize an CollisReader object. The filename and additional 
+  args/kwargs are passed to the Reader parent class, where the dict is made
+  and the filename is stored.</p>
+  <p>Additional args/kwargs are used for the dict creation.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fn</code></strong> (str) - The filename of collisional rate data.</li>
+    </ul></dd>
+    <dt>Returns: <pre class="literalblock">
+new empty dictionary
+
+</pre></dt>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="read"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">read</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.read">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Read the collision rates file. Assumes GASTRoNOoM format.</p>
+  <p>To read ALI/MCP collision rates (which are in the Lamda format), make 
+  use of the LamdaReader, which redefines this method. The other retrieval 
+  methods remain valid.</p>
+  <p>Each transition is stored as an index, and gives upper and lower level
+  index as well as the collision rate.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTI"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTI</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">itype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">coll_trans</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">lup</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">llow</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getTI">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the indices of the transitions read from the collisional rate 
+  data.</p>
+  <p>A specific index (or array of indices) can be requested by specifying 
+  the lower and upper level index.</p>
+  <p>LamdaReader first inherits from MolReader, so the default will be 
+  itype 'trans' for LamdaReader.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>itype</code></strong> (str) - The type of index. Default is for CollisReader. Needs to be here 
+          in case LamdaReader calls this method, where the type has to be 
+          specified. It will call both this method after the version in 
+          MolReader and pass on the call.
+          <p>(default: 'coll_trans')</p></li>
+        <li><strong class="pname"><code>lup</code></strong> (int) - The index of the upper energy level in the transition. If both 
+          this and llow are None, all transition indices are returned.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>llow</code></strong> (int) - The index of the lower energy level in the transition. If both 
+          this and lup are None, all transition indices are returned.
+          <p>(default: None)</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The transition indices</dd>
+    <dt>Overrides:
+        cc.tools.readers.SpectroscopyReader.SpectroscopyReader.getTI
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTUpper"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTUpper</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">itype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">coll_trans</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getTUpper">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the indices of the upper states of the &lt;nline&gt; included 
+  transitions.</p>
+  <p>These are NOT the quantum numbers! Especially for CO-type molecules, 
+  the J-level is equal to level_index-1.</p>
+  <p>In case a single upper level is requested via index, the level index 
+  is extracted from the array.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int/array) - The index. In case of default, all are returned. Can be any 
+          array-like object that includes indices
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>itype</code></strong> (str) - The type of index. Default is for CollisReader. MolReader needs 
+          this to be 'trans'.
+          <p>(default: 'coll_trans')</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The upper level indices/x ordered by transition index.</dd>
+    <dt>Overrides:
+        cc.tools.readers.SpectroscopyReader.SpectroscopyReader.getTUpper
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTLower"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTLower</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">itype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">coll_trans</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getTLower">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the indices of the lower states of the &lt;nline&gt; included 
+  transitions.</p>
+  <p>These are NOT the quantum numbers! Especially for CO-type molecules, 
+  the J-level is equal to level_index-1.</p>
+  <p>In case a single lower level is requested via index, the level index 
+  is extracted from the array.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int/array) - The index. In case of default, all are returned. Can be any 
+          array-like object that includes indices
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>itype</code></strong> (str) - The type of index. Default is for CollisReader. MolReader needs 
+          this to be 'trans'.
+          <p>(default: 'coll_trans')</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The lower level indices/x ordered by transition index.</dd>
+    <dt>Overrides:
+        cc.tools.readers.SpectroscopyReader.SpectroscopyReader.getTLower
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getRates"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getRates</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">lup</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">llow</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getRates">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Retrieve the collision rates, sorted by collisional transition 
+  index.</p>
+  <p>An index can be specified to retrieve a specific set of collision 
+  rates.</p>
+  <p>Alternatively, the lup and llow can be specified. index takes 
+  precedence</p>
+  <p>The rates are given as a function of the temperature, accessible by 
+  getTemp.</p>
+  <p>In case a single set of rates is requested via index, the rates array 
+  is extracted from the encompassing array.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int/array) - The index. In case of default, all are returned. Can be any 
+          array-like object that includes indices
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>lup</code></strong> (int) - The index of the upper energy level in the transition. If both 
+          this and llow are None, all transition indices are returned.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>llow</code></strong> (int) - The index of the lower energy level in the transition. If both 
+          this and lup are None, all transition indices are returned.
+          <p>(default: None)</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The collision rates (in cm^3 s^-1) are returned as arrays as a 
+          function of temperature for given coll_trans indices.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTemp"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTemp</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getTemp">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Retrieve the temperature grid for the collision rates.</p>
+  <dl class="fields">
+    <dt>Returns: array</dt>
+        <dd>The temperature grid in K</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setInterp"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setInterp</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">itype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">spline</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.setInterp">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the interpolator for the collision rates versus temperature.</p>
+  <p>Additional arguments can be passed to the interpolator object.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int/list) - The transition index. If default, all collision rates are 
+          interpolated. If an iterable object (such as a list) the method 
+          iterates over the indices. If a single value, only one set of 
+          rates is interpolated.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>itype</code></strong> (str) - The type of interpolator. Either spline or linear.
+          <p>(default: 'spline')</p></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getInterp"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getInterp</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getInterp">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the interpolator for a given transition index.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int) - The level index</li>
+    </ul></dd>
+    <dt>Returns: interpolator</dt>
+        <dd>The colision rates (in cm^3 s^-1) interpolator as a function of 
+          temperature in K.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="plotCollis"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plotCollis</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fn</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">indices</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.plotCollis">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Plot the collision rates for given transitions as a function of 
+  temperature.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fn</code></strong> (str) - Filename of the plot, including path and extension. If None the 
+          plot is shown in the python session.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>indices</code></strong> (array) - The coll_trans indices to be plotted. Default in case all 
+          transitions are to be plotted.
+          <p>(default: None)</p></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:51 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

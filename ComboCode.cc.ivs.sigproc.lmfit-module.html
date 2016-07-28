@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ComboCode.cc.ivs.sigproc.lmfit</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ComboCode-module.html">Package&nbsp;ComboCode</a> ::
+        <a href="ComboCode.cc-module.html">Package&nbsp;cc</a> ::
+        <a href="ComboCode.cc.ivs-module.html">Package&nbsp;ivs</a> ::
+        <a href="ComboCode.cc.ivs.sigproc-module.html">Package&nbsp;sigproc</a> ::
+        Package&nbsp;lmfit
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ComboCode.cc.ivs.sigproc.lmfit-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PACKAGE DESCRIPTION ==================== -->
+<h1 class="epydoc">Package lmfit</h1><p class="nomargin-top"><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit-pysrc.html">source&nbsp;code</a></span></p>
+<pre class="literalblock">
+
+LMfit-py provides a Least-Squares Minimization routine and
+class with a simple, flexible approach to parameterizing a
+model for fitting to data.  Named Parameters can be held
+fixed or freely adjusted in the fit, or held between lower
+and upper bounds.  If the separate asteval module has been
+installed, parameters can be constrained as a simple
+mathematical expression of other Parameters.
+
+version: 0.7.2
+last update: 20-June-2013
+License: BSD
+Author:  Matthew Newville &lt;newville@cars.uchicago.edu&gt;
+        Center for Advanced Radiation Sources,
+        The University of Chicago
+        
+Changes applied to lmfit and uncertainties to make it work with sigproc:
+
+fixed uncertainties import to accomodate its place in the ivs repository
+uncertainties.umath
+    import uncertainties -&gt; from ivs.sigproc.lmfit import uncertainties
+
+uncertainties.unumpy.__init__:
+    from uncertainties.unumpy import core -&gt; import core
+    uncertainties.unumpy -&gt; ivs.sigproc.lmfit.uncertainties.unumpy
+
+uncertainties.unumpy.core:
+    import uncertainties -&gt; from ivs.sigproc.lmfit import uncertainties
+    
+uncertainties.unumpy.ulinalg
+    from uncertainties import __author__ -&gt; from ivs.sigproc.lmfit.uncertainties import __author__
+    from uncertainties.unumpy import core -&gt; import core
+
+Delete all tests as they are not nessesary at all. 
+uncertainties.unumpy.test_unumpy, uncertainties.unumpy.test_ulinalg,
+uncertainties.test_umath, uncertainties.test_uncertainties
+
+</pre>
+
+<hr />
+<div class="fields">      <p><strong>Version:</strong>
+        0.7.2
+      </p>
+</div><!-- ==================== SUBMODULES ==================== -->
+<a name="section-Submodules"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Submodules</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Submodules"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr><td class="summary">
+  <ul class="nomargin">
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.asteval-module.html">ComboCode.cc.ivs.sigproc.lmfit.asteval</a></strong>: <em class="summary">Safe(ish) evaluator of python expressions, using ast module.</em>    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.astutils-module.html">ComboCode.cc.ivs.sigproc.lmfit.astutils</a></strong>: <em class="summary">utility functions for asteval</em>    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.confidence-module.html">ComboCode.cc.ivs.sigproc.lmfit.confidence</a></strong>: <em class="summary">Contains functions to calculate confidence intervals.</em>    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer-module.html">ComboCode.cc.ivs.sigproc.lmfit.minimizer</a></strong>: <em class="summary">Simple minimizer  is a wrapper around scipy.leastsq, allowing a
+user to build a fitting model as a function of general purpose
+Fit Parameters that can be fixed or floated, bounded, and written
+as a simple expression of other Fit Parameters.</em>    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.ordereddict-module.html">ComboCode.cc.ivs.sigproc.lmfit.ordereddict</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.parameter-module.html">ComboCode.cc.ivs.sigproc.lmfit.parameter</a></strong>: <em class="summary">Parameter class</em>    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.printfuncs-module.html">ComboCode.cc.ivs.sigproc.lmfit.printfuncs</a></strong>: <em class="summary">Created on Fri Apr 20 19:24:21 2012</em>    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html">ComboCode.cc.ivs.sigproc.lmfit.uncertainties</a></strong>: <em class="summary">Calculations with full error propagation for quantities with uncertainties.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath-module.html">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath</a></strong>: <em class="summary">Mathematical operations that generalize many operations from the
+standard math module so that they also work on numbers with
+uncertainties.</em>    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy-module.html">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy</a></strong>: <em class="summary">Utilities for NumPy arrays and matrices that contain numbers with
+uncertainties.</em>
+    <ul>
+    <li class="private"> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html" onclick="show_private();">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core</a></strong>: <em class="summary">Core functions used by unumpy and some of its submodules.</em>    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.ulinalg-module.html">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.ulinalg</a></strong>: <em class="summary">This module provides uncertainty-aware functions that generalize 
+        some of the functions from numpy.linalg.</em>    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.utilfuncs-module.html">ComboCode.cc.ivs.sigproc.lmfit.utilfuncs</a></strong>: <em class="summary">Utility mathematical functions and common lineshapes for minimizer</em>    </li>
+  </ul></td></tr>
+</table>
+
+<br />
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit-module.html#__xall__" class="summary-name">__xall__</a> = <code title="['minimize',
+ 'Minimizer',
+ 'Parameter',
+ 'Parameters',
+ 'conf_interval',
+ 'conf_interval2d',
+ 'make_paras_and_func',
+ 'fit_report',
+..."><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">minimize</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">Minimizer</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">Parameter</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">Parameters</code><code class="variable-quote">'</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.ivs.sigproc.lmfit'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.ivs.sigproc.lmfit</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__xall__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">__xall__</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">minimize</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">Minimizer</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">Parameter</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">Parameters</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">conf_interval</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">conf_interval2d</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">make_paras_and_func</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">fit_report</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:49 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

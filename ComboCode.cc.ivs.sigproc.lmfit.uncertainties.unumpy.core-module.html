@@ -1,0 +1,1574 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ComboCode-module.html">Package&nbsp;ComboCode</a> ::
+        <a href="ComboCode.cc-module.html">Package&nbsp;cc</a> ::
+        <a href="ComboCode.cc.ivs-module.html">Package&nbsp;ivs</a> ::
+        <a href="ComboCode.cc.ivs.sigproc-module.html">Package&nbsp;sigproc</a> ::
+        <a href="ComboCode.cc.ivs.sigproc.lmfit-module.html">Package&nbsp;lmfit</a> ::
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html">Package&nbsp;uncertainties</a> ::
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy-module.html">Package&nbsp;unumpy</a> ::
+        Module&nbsp;core
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module core</h1><p class="nomargin-top"><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html">source&nbsp;code</a></span></p>
+<p>Core functions used by unumpy and some of its submodules.</p>
+  <p>(c) 2010-2013 by Eric O. LEBIGOT (EOL).</p>
+
+<hr />
+<div class="fields">      <p><strong>Author:</strong>
+        Eric O. LEBIGOT (EOL) &lt;eric.lebigot@normalesup.org&gt;
+      </p>
+</div><!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.matrix-class.html" class="summary-name">matrix</a><br />
+      Class equivalent to numpy.matrix, but that behaves better when the 
+        matrix contains numbers with uncertainties.
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#unumpy_to_numpy_matrix" class="summary-sig-name" onclick="show_private();">unumpy_to_numpy_matrix</a>(<span class="summary-sig-arg">arr</span>)</span><br />
+      If arr in a unumpy.matrix, it is converted to a numpy.matrix.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#unumpy_to_numpy_matrix">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#nominal_values" class="summary-sig-name">nominal_values</a>(<span class="summary-sig-arg">arr</span>)</span><br />
+      Returns the nominal values of the numbers in NumPy array arr.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#nominal_values">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#std_devs" class="summary-sig-name">std_devs</a>(<span class="summary-sig-arg">arr</span>)</span><br />
+      Returns the standard deviations of the numbers in NumPy array arr.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#std_devs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#derivative" class="summary-sig-name" onclick="show_private();">derivative</a>(<span class="summary-sig-arg">u</span>,
+        <span class="summary-sig-arg">var</span>)</span><br />
+      Returns the derivative of u along var, if u is an 
+      uncertainties.AffineScalarFunc instance, and if var is one of the 
+      variables on which it depends.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#derivative">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#wrap_array_func" class="summary-sig-name" onclick="show_private();">wrap_array_func</a>(<span class="summary-sig-arg">func</span>)</span><br />
+      Returns a version of the function func() that works even when func() 
+      is given a NumPy array that contains numbers with uncertainties.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#wrap_array_func">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#uarray" class="summary-sig-name">uarray</a>(<span class="summary-sig-arg">(values, std_devs)</span>)</span><br />
+      Returns a NumPy array of numbers with uncertainties initialized with 
+      the given nominal values and standard deviations.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#uarray">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#array_derivative" class="summary-sig-name" onclick="show_private();">array_derivative</a>(<span class="summary-sig-arg">array_like</span>,
+        <span class="summary-sig-arg">var</span>)</span><br />
+      Returns the derivative of the given array with respect to the given 
+      variable.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#array_derivative">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#func_with_deriv_to_uncert_func" class="summary-sig-name" onclick="show_private();">func_with_deriv_to_uncert_func</a>(<span class="summary-sig-arg">func_with_derivatives</span>)</span><br />
+      Returns a function that can be applied to array-like objects that
+contain numbers with uncertainties (lists, lists of lists, Numpy
+arrays, etc.).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#func_with_deriv_to_uncert_func">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#inv_with_derivatives" class="summary-sig-name" onclick="show_private();">inv_with_derivatives</a>(<span class="summary-sig-arg">arr</span>,
+        <span class="summary-sig-arg">input_type</span>,
+        <span class="summary-sig-arg">derivatives</span>)</span><br />
+      Defines the matrix inverse and its derivatives.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#inv_with_derivatives">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#_inv" class="summary-sig-name" onclick="show_private();">_inv</a>(<span class="summary-sig-arg">array_like</span>,
+        <span class="summary-sig-arg">*args</span>)</span><br />
+      Version of numpy.linalg.inv that works with array-like objects
+that contain numbers with uncertainties.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#_inv">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#pinv_with_derivatives" class="summary-sig-name" onclick="show_private();">pinv_with_derivatives</a>(<span class="summary-sig-arg">arr</span>,
+        <span class="summary-sig-arg">input_type</span>,
+        <span class="summary-sig-arg">derivatives</span>,
+        <span class="summary-sig-arg">rcond</span>)</span><br />
+      Defines the matrix pseudo-inverse and its derivatives.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#pinv_with_derivatives">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#_pinv_with_uncert" class="summary-sig-name" onclick="show_private();">_pinv_with_uncert</a>(<span class="summary-sig-arg">array_like</span>,
+        <span class="summary-sig-arg">*args</span>)</span><br />
+      array_like -- array-like object that contains numbers with 
+      uncertainties (list, Numpy ndarray or matrix, etc.).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#_pinv_with_uncert">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#_pinv" class="summary-sig-name" onclick="show_private();">_pinv</a>(<span class="summary-sig-arg">array_like</span>,
+        <span class="summary-sig-arg">rcond</span>=<span class="summary-sig-default">1e-15</span>)</span><br />
+      Version of numpy.linalg.pinv that works with array-like objects
+that contain numbers with uncertainties.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#_pinv">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#umatrix" class="summary-sig-name">umatrix</a>(<span class="summary-sig-arg">*args</span>)</span><br />
+      Constructs a matrix that contains numbers with uncertainties.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#umatrix">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#define_vectorized_funcs" class="summary-sig-name" onclick="show_private();">define_vectorized_funcs</a>()</span><br />
+      Defines vectorized versions of functions from uncertainties.umath.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#define_vectorized_funcs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#to_nominal_values" class="summary-name" onclick="show_private();">to_nominal_values</a> = <code title="numpy.vectorize(uncertainties.nominal_value, otypes= [float], doc= (&quot;A\
+pplies uncertainties.nominal_value to the elements of&quot; &quot; a NumPy (or u\
+numpy) array (this includes matrices).&quot;))">numpy.vectorize(uncertainties.nominal_valu<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#to_std_devs" class="summary-name" onclick="show_private();">to_std_devs</a> = <code title="numpy.vectorize(uncertainties.std_dev, otypes= [float], doc= (&quot;Returns\
+ the standard deviation of the numbers with uncertainties&quot; &quot; contained\
+ in a NumPy array, or zero for other objects.&quot;))">numpy.vectorize(uncertainties.std_dev, otypes= [<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#_uarray" class="summary-name" onclick="show_private();">_uarray</a> = <code title="numpy.vectorize(lambda v, s: uncertainties.Variable(v, s), otypes= [ob\
+ject])">numpy.vectorize(lambda v, s: uncertainties.Variable(<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_pinv_default"></a><span class="summary-name">_pinv_default</span> = <code title="1e-15">1e-15</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#__package__" class="summary-name" onclick="show_private();">__package__</a> = <code title="'ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.un</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#arccos" class="summary-name">arccos</a> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3bd0&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b3<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#arccosh" class="summary-name">arccosh</a> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3c50&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#arcsin" class="summary-name">arcsin</a> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3c90&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b3<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#arctan" class="summary-name">arctan</a> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3d10&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b3<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#arctan2" class="summary-name">arctan2</a> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3d50&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#arctanh" class="summary-name">arctanh</a> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3d90&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="asinh"></a><span class="summary-name">asinh</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3cd0&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b3cd0&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ceil"></a><span class="summary-name">ceil</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3dd0&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b3dd0&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#copysign" class="summary-name">copysign</a> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3e10&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="cos"></a><span class="summary-name">cos</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3e50&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b3e50&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="cosh"></a><span class="summary-name">cosh</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3e90&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b3e90&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#degrees" class="summary-name">degrees</a> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3ed0&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="erf"></a><span class="summary-name">erf</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3f10&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b3f10&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="erfc"></a><span class="summary-name">erfc</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3f50&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b3f50&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="exp"></a><span class="summary-name">exp</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3f90&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b3f90&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="expm1"></a><span class="summary-name">expm1</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3b3fd0&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3b3fd0&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="fabs"></a><span class="summary-name">fabs</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6050&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6050&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="floor"></a><span class="summary-name">floor</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6090&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6090&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="fmod"></a><span class="summary-name">fmod</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c60d0&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c60d0&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="gamma"></a><span class="summary-name">gamma</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6110&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6110&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="hypot"></a><span class="summary-name">hypot</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6150&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6150&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="isinf"></a><span class="summary-name">isinf</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6190&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6190&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="isnan"></a><span class="summary-name">isnan</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c61d0&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c61d0&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ldexp"></a><span class="summary-name">ldexp</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6550&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6550&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#lgamma" class="summary-name">lgamma</a> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6210&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="log"></a><span class="summary-name">log</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6250&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6250&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="log10"></a><span class="summary-name">log10</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6290&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6290&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="log1p"></a><span class="summary-name">log1p</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c62d0&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c62d0&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="modf"></a><span class="summary-name">modf</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6510&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6510&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="pow"></a><span class="summary-name">pow</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6310&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6310&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#radians" class="summary-name">radians</a> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6350&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="sin"></a><span class="summary-name">sin</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6390&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6390&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="sinh"></a><span class="summary-name">sinh</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c63d0&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c63d0&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="sqrt"></a><span class="summary-name">sqrt</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6410&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6410&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="tan"></a><span class="summary-name">tan</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6450&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6450&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="tanh"></a><span class="summary-name">tanh</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c6490&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c6490&gt;</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="trunc"></a><span class="summary-name">trunc</span> = <code title="&lt;numpy.lib.function_base.vectorize object at 0x10d3c64d0&gt;">&lt;numpy.lib.function_base.vectorize object at 0x10d3c64d0&gt;</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="unumpy_to_numpy_matrix"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">unumpy_to_numpy_matrix</span>(<span class="sig-arg">arr</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#unumpy_to_numpy_matrix">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>If arr in a unumpy.matrix, it is converted to a numpy.matrix. 
+  Otherwise, it is returned unchanged.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="nominal_values"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">nominal_values</span>(<span class="sig-arg">arr</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#nominal_values">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the nominal values of the numbers in NumPy array arr.</p>
+  <p>Elements that are not uncertainties.AffineScalarFunc are passed 
+  through untouched (because a numpy.array can contain numbers with 
+  uncertainties and pure floats simultaneously).</p>
+  <p>If arr is of type unumpy.matrix, the returned array is a numpy.matrix,
+  because the resulting matrix does not contain numbers with 
+  uncertainties.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="std_devs"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">std_devs</span>(<span class="sig-arg">arr</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#std_devs">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the standard deviations of the numbers in NumPy array arr.</p>
+  <p>Elements that are not uncertainties.AffineScalarFunc are given a zero 
+  uncertainty ((because a numpy.array can contain numbers with 
+  uncertainties and pure floats simultaneously)..</p>
+  <p>If arr is of type unumpy.matrix, the returned array is a numpy.matrix,
+  because the resulting matrix does not contain numbers with 
+  uncertainties.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="derivative"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">derivative</span>(<span class="sig-arg">u</span>,
+        <span class="sig-arg">var</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#derivative">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the derivative of u along var, if u is an 
+  uncertainties.AffineScalarFunc instance, and if var is one of the 
+  variables on which it depends.  Otherwise, return 0.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="wrap_array_func"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">wrap_array_func</span>(<span class="sig-arg">func</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#wrap_array_func">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a version of the function func() that works even when func() 
+  is given a NumPy array that contains numbers with uncertainties.</p>
+  <p>func() is supposed to return a NumPy array.</p>
+  <p>This wrapper is similar to uncertainties.wrap(), except that it 
+  handles an array argument instead of float arguments.</p>
+  <p>func -- version that takes and returns a single NumPy array.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="uarray"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">uarray</span>(<span class="sig-arg">(values, std_devs)</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#uarray">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a NumPy array of numbers with uncertainties initialized with 
+  the given nominal values and standard deviations.</p>
+  <p>values, std_devs -- valid arguments for numpy.array, with identical 
+  shapes (list of numbers, list of lists, numpy.ndarray, etc.).</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="array_derivative"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">array_derivative</span>(<span class="sig-arg">array_like</span>,
+        <span class="sig-arg">var</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#array_derivative">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the derivative of the given array with respect to the given 
+  variable.</p>
+  <p>The returned derivative is a Numpy ndarray of the same shape as 
+  array_like, that contains floats.</p>
+  <p>array_like -- array-like object (list, etc.)  that contains scalars or
+  numbers with uncertainties.</p>
+  <p>var -- Variable object.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="func_with_deriv_to_uncert_func"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">func_with_deriv_to_uncert_func</span>(<span class="sig-arg">func_with_derivatives</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#func_with_deriv_to_uncert_func">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Returns a function that can be applied to array-like objects that
+contain numbers with uncertainties (lists, lists of lists, Numpy
+arrays, etc.).
+
+func_with_derivatives -- defines a function that takes array-like
+objects containing scalars and returns an array.  Both the value
+and the derivatives of this function with respect to multiple
+scalar parameters are calculated by func_with_derivatives().
+
+func_with_derivatives(arr, input_type, derivatives, *args) returns
+an iterator.  The first element is the value of the function at
+point 'arr' (with the correct type).  The following elements are
+arrays that represent the derivative of the function for each
+derivative array from the iterator 'derivatives'.
+
+  func_with_derivatives takes the following arguments:
+
+  arr -- Numpy ndarray of scalars where the function must be
+  evaluated.
+
+  input_type -- type of the input array-like object.  This type is
+  used for determining the type that the function should return.
+
+  derivatives -- iterator that returns the derivatives of the
+  argument of the function with respect to multiple scalar
+  variables.  func_with_derivatives() returns the derivatives of
+  the defined function with respect to these variables.
+
+  args -- additional arguments that define the result (example:
+  for the pseudo-inverse numpy.linalg.pinv: numerical cutoff).
+
+Examples of func_with_derivatives: inv_with_derivatives().
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="inv_with_derivatives"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">inv_with_derivatives</span>(<span class="sig-arg">arr</span>,
+        <span class="sig-arg">input_type</span>,
+        <span class="sig-arg">derivatives</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#inv_with_derivatives">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Defines the matrix inverse and its derivatives.</p>
+  <p>See the definition of func_with_deriv_to_uncert_func() for its 
+  detailed semantics.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_inv"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_inv</span>(<span class="sig-arg">array_like</span>,
+        <span class="sig-arg">*args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#_inv">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Version of numpy.linalg.inv that works with array-like objects
+that contain numbers with uncertainties.
+
+The result is a unumpy.matrix if numpy.linalg.pinv would return a
+matrix for the array of nominal values.
+
+Analytical formulas are used.
+
+Original documentation:
+
+Compute the (multiplicative) inverse of a matrix.
+
+Given a square matrix `a`, return the matrix `ainv` satisfying
+``dot(a, ainv) = dot(ainv, a) = eye(a.shape[0])``.
+
+Parameters
+----------
+a : (..., M, M) array_like
+    Matrix to be inverted.
+
+Returns
+-------
+ainv : (..., M, M) ndarray or matrix
+    (Multiplicative) inverse of the matrix `a`.
+
+Raises
+------
+LinAlgError
+    If `a` is not square or inversion fails.
+
+Notes
+-----
+
+.. versionadded:: 1.8.0
+
+Broadcasting rules apply, see the `numpy.linalg` documentation for
+details.
+
+Examples
+--------
+&gt;&gt;&gt; from numpy.linalg import inv
+&gt;&gt;&gt; a = np.array([[1., 2.], [3., 4.]])
+&gt;&gt;&gt; ainv = inv(a)
+&gt;&gt;&gt; np.allclose(np.dot(a, ainv), np.eye(2))
+True
+&gt;&gt;&gt; np.allclose(np.dot(ainv, a), np.eye(2))
+True
+
+If a is a matrix object, then the return value is a matrix as well:
+
+&gt;&gt;&gt; ainv = inv(np.matrix(a))
+&gt;&gt;&gt; ainv
+matrix([[-2. ,  1. ],
+        [ 1.5, -0.5]])
+
+Inverses of several matrices can be computed at once:
+
+&gt;&gt;&gt; a = np.array([[[1., 2.], [3., 4.]], [[1, 3], [3, 5]]])
+&gt;&gt;&gt; inv(a)
+array([[[-2. ,  1. ],
+        [ 1.5, -0.5]],
+       [[-5. ,  2. ],
+        [ 3. , -1. ]]])
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="pinv_with_derivatives"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pinv_with_derivatives</span>(<span class="sig-arg">arr</span>,
+        <span class="sig-arg">input_type</span>,
+        <span class="sig-arg">derivatives</span>,
+        <span class="sig-arg">rcond</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#pinv_with_derivatives">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Defines the matrix pseudo-inverse and its derivatives.</p>
+  <p>Works with real or complex matrices.</p>
+  <p>See the definition of func_with_deriv_to_uncert_func() for its 
+  detailed semantics.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_pinv_with_uncert"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_pinv_with_uncert</span>(<span class="sig-arg">array_like</span>,
+        <span class="sig-arg">*args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#_pinv_with_uncert">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>array_like -- array-like object that contains numbers with 
+  uncertainties (list, Numpy ndarray or matrix, etc.).</p>
+  <p>args -- additional arguments that are passed directly to 
+  func_with_derivatives.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_pinv"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_pinv</span>(<span class="sig-arg">array_like</span>,
+        <span class="sig-arg">rcond</span>=<span class="sig-default">1e-15</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#_pinv">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Version of numpy.linalg.pinv that works with array-like objects
+that contain numbers with uncertainties.
+
+The result is a unumpy.matrix if numpy.linalg.pinv would return a
+matrix for the array of nominal values.
+
+Analytical formulas are used.
+
+Original documentation:
+
+Compute the (Moore-Penrose) pseudo-inverse of a matrix.
+
+Calculate the generalized inverse of a matrix using its
+singular-value decomposition (SVD) and including all
+*large* singular values.
+
+Parameters
+----------
+a : (M, N) array_like
+  Matrix to be pseudo-inverted.
+rcond : float
+  Cutoff for small singular values.
+  Singular values smaller (in modulus) than
+  `rcond` * largest_singular_value (again, in modulus)
+  are set to zero.
+
+Returns
+-------
+B : (N, M) ndarray
+  The pseudo-inverse of `a`. If `a` is a `matrix` instance, then so
+  is `B`.
+
+Raises
+------
+LinAlgError
+  If the SVD computation does not converge.
+
+Notes
+-----
+The pseudo-inverse of a matrix A, denoted :math:`A^+`, is
+defined as: &quot;the matrix that 'solves' [the least-squares problem]
+:math:`Ax = b`,&quot; i.e., if :math:`\bar{x}` is said solution, then
+:math:`A^+` is that matrix such that :math:`\bar{x} = A^+b`.
+
+It can be shown that if :math:`Q_1 \Sigma Q_2^T = A` is the singular
+value decomposition of A, then
+:math:`A^+ = Q_2 \Sigma^+ Q_1^T`, where :math:`Q_{1,2}` are
+orthogonal matrices, :math:`\Sigma` is a diagonal matrix consisting
+of A's so-called singular values, (followed, typically, by
+zeros), and then :math:`\Sigma^+` is simply the diagonal matrix
+consisting of the reciprocals of A's singular values
+(again, followed by zeros). [1]_
+
+References
+----------
+.. [1] G. Strang, *Linear Algebra and Its Applications*, 2nd Ed., Orlando,
+       FL, Academic Press, Inc., 1980, pp. 139-142.
+
+Examples
+--------
+The following example checks that ``a * a+ * a == a`` and
+``a+ * a * a+ == a+``:
+
+&gt;&gt;&gt; a = np.random.randn(9, 6)
+&gt;&gt;&gt; B = np.linalg.pinv(a)
+&gt;&gt;&gt; np.allclose(a, np.dot(a, np.dot(B, a)))
+True
+&gt;&gt;&gt; np.allclose(B, np.dot(B, np.dot(a, B)))
+True
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@uncertainties.set_doc("""
+    Version of numpy.linalg.pinv that works with array-like objects
+    that contain numbers with uncertainties.
+
+    The result is a unumpy.matrix if numpy.linalg.pinv would return a
+    matrix for the array of nominal values.
+
+    Analytical formulas are used.
+
+    Original documentation:
+    %s
+    """ % numpy.linalg.pinv.__doc__)</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="umatrix"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">umatrix</span>(<span class="sig-arg">*args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#umatrix">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Constructs a matrix that contains numbers with uncertainties.</p>
+  <p>The input data is the same as for uarray(...): a tuple with the 
+  nominal values, and the standard deviations.</p>
+  <p>The returned matrix can be inverted, thanks to the fact that it is a 
+  unumpy.matrix object instead of a numpy.matrix one.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="define_vectorized_funcs"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">define_vectorized_funcs</span>()</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-pysrc.html#define_vectorized_funcs">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Defines vectorized versions of functions from uncertainties.umath.</p>
+  <p>Some functions have their name translated, so as to follow NumPy's 
+  convention (example: math.acos -&gt; numpy.arccos).</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="to_nominal_values"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">to_nominal_values</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+numpy.vectorize(uncertainties.nominal_value, otypes= [float], doc= (&quot;A<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+pplies uncertainties.nominal_value to the elements of&quot; &quot; a NumPy (or u<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+numpy) array (this includes matrices).&quot;))
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="to_std_devs"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">to_std_devs</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+numpy.vectorize(uncertainties.std_dev, otypes= [float], doc= (&quot;Returns<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+ the standard deviation of the numbers with uncertainties&quot; &quot; contained<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+ in a NumPy array, or zero for other objects.&quot;))
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_uarray"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_uarray</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+numpy.vectorize(lambda v, s: uncertainties.Variable(v, s), otypes= [ob<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+ject])
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__package__"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">__package__</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy</code><code class="variable-quote">'</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="arccos"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">arccos</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;numpy.lib.function_base.vectorize object at 0x10d3b3bd0&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="arccosh"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">arccosh</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;numpy.lib.function_base.vectorize object at 0x10d3b3c50&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="arcsin"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">arcsin</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;numpy.lib.function_base.vectorize object at 0x10d3b3c90&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="arctan"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">arctan</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;numpy.lib.function_base.vectorize object at 0x10d3b3d10&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="arctan2"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">arctan2</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;numpy.lib.function_base.vectorize object at 0x10d3b3d50&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="arctanh"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">arctanh</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;numpy.lib.function_base.vectorize object at 0x10d3b3d90&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="copysign"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">copysign</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;numpy.lib.function_base.vectorize object at 0x10d3b3e10&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="degrees"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">degrees</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;numpy.lib.function_base.vectorize object at 0x10d3b3ed0&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="lgamma"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">lgamma</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;numpy.lib.function_base.vectorize object at 0x10d3c6210&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="radians"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">radians</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+&lt;numpy.lib.function_base.vectorize object at 0x10d3c6350&gt;
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:49 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

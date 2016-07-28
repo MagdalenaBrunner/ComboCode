@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ComboCode.cc.ivs.sigproc.lmfit.uncertainties</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ComboCode-module.html">Package&nbsp;ComboCode</a> ::
+        <a href="ComboCode.cc-module.html">Package&nbsp;cc</a> ::
+        <a href="ComboCode.cc.ivs-module.html">Package&nbsp;ivs</a> ::
+        <a href="ComboCode.cc.ivs.sigproc-module.html">Package&nbsp;sigproc</a> ::
+        <a href="ComboCode.cc.ivs.sigproc.lmfit-module.html">Package&nbsp;lmfit</a> ::
+        Package&nbsp;uncertainties
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PACKAGE DESCRIPTION ==================== -->
+<h1 class="epydoc">Package uncertainties</h1><p class="nomargin-top"><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html">source&nbsp;code</a></span></p>
+<pre class="literalblock">
+
+Calculations with full error propagation for quantities with uncertainties.
+Derivatives can also be calculated.
+
+Web user guide: http://packages.python.org/uncertainties/.
+
+Example of possible calculation: (0.2 +/- 0.01)**2 = 0.04 +/- 0.004.
+
+Correlations between expressions are correctly taken into account (for
+instance, with x = 0.2+/-0.01, 2*x-x-x is exactly zero, as is y-x-x
+with y = 2*x).
+
+Examples:
+
+  import uncertainties
+  from uncertainties import ufloat
+  from uncertainties.umath import *  # sin(), etc.
+
+  # Mathematical operations:
+  x = ufloat((0.20, 0.01))  # x = 0.20+/-0.01
+  x = ufloat(&quot;0.20+/-0.01&quot;)  # Other representation
+  x = ufloat(&quot;0.20(1)&quot;)  # Other representation
+  x = ufloat(&quot;0.20&quot;)  # Implicit uncertainty of +/-1 on the last digit
+  print x**2  # Square: prints &quot;0.04+/-0.004&quot;
+  print sin(x**2)  # Prints &quot;0.0399...+/-0.00399...&quot;
+
+  print x.std_score(0.17)  # Prints &quot;-3.0&quot;: deviation of -3 sigmas
+
+  # Access to the nominal value, and to the uncertainty:
+  square = x**2  # Square
+  print square  # Prints &quot;0.04+/-0.004&quot;
+  print square.nominal_value  # Prints &quot;0.04&quot;
+  print square.std_dev()  # Prints &quot;0.004...&quot;
+
+  print square.derivatives[x]  # Partial derivative: 0.4 (= 2*0.20)
+
+  # Correlations:
+  u = ufloat((1, 0.05), &quot;u variable&quot;)  # Tag
+  v = ufloat((10, 0.1), &quot;v variable&quot;)
+  sum_value = u+v
+
+  u.set_std_dev(0.1)  # Standard deviations can be updated on the fly
+  print sum_value - u - v  # Prints &quot;0.0&quot; (exact result)
+
+  # List of all sources of error:
+  print sum_value  # Prints &quot;11+/-0.1414...&quot;
+  for (var, error) in sum_value.error_components().iteritems():
+      print &quot;%s: %f&quot; % (var.tag, error)  # Individual error components
+
+  # Covariance matrices:
+  cov_matrix = uncertainties.covariance_matrix([u, v, sum_value])
+  print cov_matrix  # 3x3 matrix
+
+  # Correlated variables can be constructed from a covariance matrix, if
+  # NumPy is available:
+  (u2, v2, sum2) = uncertainties.correlated_values([1, 10, 11],
+                                                   cov_matrix)
+  print u2  # Value and uncertainty of u: correctly recovered (1+/-0.1)
+  print uncertainties.covariance_matrix([u2, v2, sum2])  # == cov_matrix
+
+- The main function provided by this module is ufloat, which creates
+numbers with uncertainties (Variable objects).  Variable objects can
+be used as if they were regular Python numbers.  The main attributes
+and methods of Variable objects are defined in the documentation of
+the Variable class.
+
+- Valid operations on numbers with uncertainties include basic
+mathematical functions (addition, etc.).
+
+Most operations from the standard math module (sin, etc.) can be applied
+on numbers with uncertainties by using their generalization from the
+uncertainties.umath module:
+
+  from uncertainties.umath import sin
+  print sin(ufloat(&quot;1+/-0.01&quot;))  # 0.841...+/-0.005...
+  print sin(1)  # umath.sin() also works on floats, exactly like math.sin()
+
+Logical operations (&gt;, ==, etc.) are also supported.
+
+Basic operations on NumPy arrays or matrices of numbers with
+uncertainties can be performed:
+
+  2*numpy.array([ufloat((1, 0.01)), ufloat((2, 0.1))])
+
+More complex operations on NumPy arrays can be performed through the
+dedicated uncertainties.unumpy sub-module (see its documentation).
+
+Calculations that are performed through non-Python code (Fortran, C,
+etc.) can handle numbers with uncertainties instead of floats through
+the provided wrap() wrapper:
+
+  import uncertainties
+
+  # wrapped_f is a version of f that can take arguments with
+  # uncertainties, even if f only takes floats:
+  wrapped_f = uncertainties.wrap(f)
+
+If some derivatives of the wrapped function f are known (analytically,
+or numerically), they can be given to wrap()--see the documentation
+for wrap().
+
+- Utility functions are also provided: the covariance matrix between
+random variables can be calculated with covariance_matrix(), or used
+as input for the definition of correlated quantities (correlated_values()
+function--defined only if the NumPy module is available).
+
+- Mathematical expressions involving numbers with uncertainties
+generally return AffineScalarFunc objects, which also print as a value
+with uncertainty.  Their most useful attributes and methods are
+described in the documentation for AffineScalarFunc.  Note that
+Variable objects are also AffineScalarFunc objects.  UFloat is an
+alias for AffineScalarFunc, provided as a convenience: testing whether
+a value carries an uncertainty handled by this module should be done
+with insinstance(my_value, UFloat).
+
+- Mathematically, numbers with uncertainties are, in this package,
+probability distributions.  These probabilities are reduced to two
+numbers: a nominal value and an uncertainty.  Thus, both variables
+(Variable objects) and the result of mathematical operations
+(AffineScalarFunc objects) contain these two values (respectively in
+their nominal_value attribute and through their std_dev() method).
+
+The uncertainty of a number with uncertainty is simply defined in
+this package as the standard deviation of the underlying probability
+distribution.
+
+The numbers with uncertainties manipulated by this package are assumed
+to have a probability distribution mostly contained around their
+nominal value, in an interval of about the size of their standard
+deviation.  This should cover most practical cases.  A good choice of
+nominal value for a number with uncertainty is thus the median of its
+probability distribution, the location of highest probability, or the
+average value.
+
+- When manipulating ensembles of numbers, some of which contain
+uncertainties, it can be useful to access the nominal value and
+uncertainty of all numbers in a uniform manner:
+
+  x = ufloat(&quot;3+/-0.1&quot;)
+  print nominal_value(x)  # Prints 3
+  print std_dev(x)  # Prints 0.1
+  print nominal_value(3)  # Prints 3: nominal_value works on floats
+  print std_dev(3)  # Prints 0: std_dev works on floats
+
+- Probability distributions (random variables and calculation results)
+are printed as:
+
+  nominal value +/- standard deviation
+
+but this does not imply any property on the nominal value (beyond the
+fact that the nominal value is normally inside the region of high
+probability density), or that the probability distribution of the
+result is symmetrical (this is rarely strictly the case).
+
+- Linear approximations of functions (around the nominal values) are
+used for the calculation of the standard deviation of mathematical
+expressions with this package.
+
+The calculated standard deviations and nominal values are thus
+meaningful approximations as long as the functions involved have
+precise linear expansions in the region where the probability
+distribution of their variables is the largest.  It is therefore
+important that uncertainties be small.  Mathematically, this means
+that the linear term of functions around the nominal values of their
+variables should be much larger than the remaining higher-order terms
+over the region of significant probability.
+
+For instance, sin(0+/-0.01) yields a meaningful standard deviation
+since it is quite linear over 0+/-0.01.  However, cos(0+/-0.01) yields
+an approximate standard deviation of 0 (because the cosine is not well
+approximated by a line around 0), which might not be precise enough
+for all applications.
+
+- Comparison operations (&gt;, ==, etc.) on numbers with uncertainties
+have a pragmatic semantics, in this package: numbers with
+uncertainties can be used wherever Python numbers are used, most of
+the time with a result identical to the one that would be obtained
+with their nominal value only.  However, since the objects defined in
+this module represent probability distributions and not pure numbers,
+comparison operator are interpreted in a specific way.
+
+The result of a comparison operation (&quot;==&quot;, &quot;&gt;&quot;, etc.) is defined so as
+to be essentially consistent with the requirement that uncertainties
+be small: the value of a comparison operation is True only if the
+operation yields True for all infinitesimal variations of its random
+variables, except, possibly, for an infinitely small number of cases.
+
+Example:
+
+  &quot;x = 3.14; y = 3.14&quot; is such that x == y
+
+but
+
+  x = ufloat((3.14, 0.01))
+  y = ufloat((3.14, 0.01))
+
+is not such that x == y, since x and y are independent random
+variables that almost never give the same value.  However, x == x
+still holds.
+
+The boolean value (bool(x), &quot;if x...&quot;) of a number with uncertainty x
+is the result of x != 0.
+
+- The uncertainties package is for Python 2.5 and above.
+
+- This package contains tests.  They can be run either manually or
+automatically with the nose unit testing framework (nosetests).
+
+(c) 2009-2013 by Eric O. LEBIGOT (EOL) &lt;eric.lebigot@normalesup.org&gt;.
+Please send feature requests, bug reports, or feedback to this address.
+
+Please support future development by donating $5 or more through PayPal!
+
+This software is released under a dual license.  (1) The BSD license.
+(2) Any other license, as long as it is obtained from the original
+author.
+
+</pre>
+
+<hr />
+<div class="fields">      <p><strong>Version:</strong>
+        1.9
+      </p>
+      <p><strong>Author:</strong>
+        Eric O. LEBIGOT (EOL) &lt;eric.lebigot@normalesup.org&gt;
+      </p>
+</div><!-- ==================== SUBMODULES ==================== -->
+<a name="section-Submodules"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Submodules</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Submodules"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr><td class="summary">
+  <ul class="nomargin">
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath-module.html">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath</a></strong>: <em class="summary">Mathematical operations that generalize many operations from the
+standard math module so that they also work on numbers with
+uncertainties.</em>    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy-module.html">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy</a></strong>: <em class="summary">Utilities for NumPy arrays and matrices that contain numbers with
+uncertainties.</em>
+    <ul>
+    <li class="private"> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html" onclick="show_private();">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core</a></strong>: <em class="summary">Core functions used by unumpy and some of its submodules.</em>    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.ulinalg-module.html">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.ulinalg</a></strong>: <em class="summary">This module provides uncertainty-aware functions that generalize 
+        some of the functions from numpy.linalg.</em>    </li>
+    </ul>
+    </li>
+  </ul></td></tr>
+</table>
+
+<br />
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.NotUpcast-class.html" class="summary-name" onclick="show_private();">NotUpcast</a><br />
+      Raised when an object cannot be converted to a number with 
+        uncertainty
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.NumericalDerivatives-class.html" class="summary-name" onclick="show_private();">NumericalDerivatives</a><br />
+      Convenient access to the partial derivatives of a function, 
+        calculated numerically.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.AffineScalarFunc-class.html" class="summary-name" onclick="show_private();">AffineScalarFunc</a><br />
+      Affine functions that support basic mathematical operations
+(addition, etc.).
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.AffineScalarFunc-class.html" class="summary-name">UFloat</a><br />
+      Affine functions that support basic mathematical operations
+(addition, etc.).
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.Variable-class.html" class="summary-name" onclick="show_private();">Variable</a><br />
+      Representation of a float-like scalar random variable, along with 
+        its uncertainty.
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#set_doc" class="summary-sig-name" onclick="show_private();">set_doc</a>(<span class="summary-sig-arg">doc_string</span>)</span><br />
+      Decorator function that sets the docstring to the given text.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#set_doc">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="deprecation"></a><span class="summary-sig-name">deprecation</span>(<span class="summary-sig-arg">message</span>)</span><br />
+      Warns the user with the given message, by issuing a 
+      DeprecationWarning.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#deprecation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#correlated_values" class="summary-sig-name">correlated_values</a>(<span class="summary-sig-arg">nom_values</span>,
+        <span class="summary-sig-arg">covariance_mat</span>,
+        <span class="summary-sig-arg">tags</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Returns numbers with uncertainties (AffineScalarFunc objects) that 
+      correctly reproduce the given covariance matrix, and have the given 
+      (float) values as their nominal value.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#correlated_values">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#correlated_values_norm" class="summary-sig-name">correlated_values_norm</a>(<span class="summary-sig-arg">values_with_std_dev</span>,
+        <span class="summary-sig-arg">correlation_mat</span>,
+        <span class="summary-sig-arg">tags</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Returns correlated values like correlated_values(), but takes
+instead as input:</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#correlated_values_norm">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#to_affine_scalar" class="summary-sig-name" onclick="show_private();">to_affine_scalar</a>(<span class="summary-sig-arg">x</span>)</span><br />
+      Transforms x into a constant affine scalar function 
+      (AffineScalarFunc), unless it is already an AffineScalarFunc (in 
+      which case x is returned unchanged).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#to_affine_scalar">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#partial_derivative" class="summary-sig-name">partial_derivative</a>(<span class="summary-sig-arg">f</span>,
+        <span class="summary-sig-arg">param_num</span>)</span><br />
+      Returns a function that numerically calculates the partial derivative
+      of function f with respect to its argument number param_num.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#partial_derivative">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#wrap" class="summary-sig-name">wrap</a>(<span class="summary-sig-arg">f</span>,
+        <span class="summary-sig-arg">derivatives_iter</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Wraps a function f into a function that also accepts numbers with 
+      uncertainties (UFloat objects) and returns a number with 
+      uncertainties.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#wrap">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#_force_aff_func_args" class="summary-sig-name" onclick="show_private();">_force_aff_func_args</a>(<span class="summary-sig-arg">func</span>)</span><br />
+      Takes an operator op(x, y) and wraps it.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#_force_aff_func_args">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_eq_on_aff_funcs"></a><span class="summary-sig-name">_eq_on_aff_funcs</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">y_with_uncert</span>)</span><br />
+      __eq__ operator, assuming that both self and y_with_uncert are 
+      AffineScalarFunc objects.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#_eq_on_aff_funcs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_ne_on_aff_funcs"></a><span class="summary-sig-name">_ne_on_aff_funcs</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">y_with_uncert</span>)</span><br />
+      __ne__ operator, assuming that both self and y_with_uncert are 
+      AffineScalarFunc objects.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#_ne_on_aff_funcs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_gt_on_aff_funcs"></a><span class="summary-sig-name">_gt_on_aff_funcs</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">y_with_uncert</span>)</span><br />
+      __gt__ operator, assuming that both self and y_with_uncert are 
+      AffineScalarFunc objects.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#_gt_on_aff_funcs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_ge_on_aff_funcs"></a><span class="summary-sig-name">_ge_on_aff_funcs</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">y_with_uncert</span>)</span><br />
+      __ge__ operator, assuming that both self and y_with_uncert are 
+      AffineScalarFunc objects.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#_ge_on_aff_funcs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_lt_on_aff_funcs"></a><span class="summary-sig-name">_lt_on_aff_funcs</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">y_with_uncert</span>)</span><br />
+      __lt__ operator, assuming that both self and y_with_uncert are 
+      AffineScalarFunc objects.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#_lt_on_aff_funcs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_le_on_aff_funcs"></a><span class="summary-sig-name">_le_on_aff_funcs</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">y_with_uncert</span>)</span><br />
+      __le__ operator, assuming that both self and y_with_uncert are 
+      AffineScalarFunc objects.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#_le_on_aff_funcs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_ops_with_reflection"></a><span class="summary-sig-name">get_ops_with_reflection</span>()</span><br />
+      Returns operators with a reflection, along with their derivatives 
+      (for float operands).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#get_ops_with_reflection">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_operators_to_AffineScalarFunc"></a><span class="summary-sig-name">add_operators_to_AffineScalarFunc</span>()</span><br />
+      Adds many operators (__add__, etc.) to the AffineScalarFunc class.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#add_operators_to_AffineScalarFunc">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#nominal_value" class="summary-sig-name">nominal_value</a>(<span class="summary-sig-arg">x</span>)</span><br />
+      Returns the nominal value of x if it is a quantity with uncertainty 
+      (i.e., an AffineScalarFunc object); otherwise, returns x unchanged.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#nominal_value">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#std_dev" class="summary-sig-name">std_dev</a>(<span class="summary-sig-arg">x</span>)</span><br />
+      Returns the standard deviation of x if it is a quantity with 
+      uncertainty (i.e., an AffineScalarFunc object); otherwise, returns 
+      the float 0.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#std_dev">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#covariance_matrix" class="summary-sig-name">covariance_matrix</a>(<span class="summary-sig-arg">nums_with_uncert</span>)</span><br />
+      Returns a matrix that contains the covariances between the given 
+      sequence of numbers with uncertainties (AffineScalarFunc objects).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#covariance_matrix">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="correlation_matrix"></a><span class="summary-sig-name">correlation_matrix</span>(<span class="summary-sig-arg">nums_with_uncert</span>)</span><br />
+      Returns the correlation matrix of the given sequence of numbers with 
+      uncertainties, as a NumPy array of floats.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#correlation_matrix">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#parse_error_in_parentheses" class="summary-sig-name" onclick="show_private();">parse_error_in_parentheses</a>(<span class="summary-sig-arg">representation</span>)</span><br />
+      Returns (value, error) from a string representing a number with 
+      uncertainty like 12.34(5), 12.34(142), 12.5(3.4) or 12.3(4.2)e3.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#parse_error_in_parentheses">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#str_to_number_with_uncert" class="summary-sig-name" onclick="show_private();">str_to_number_with_uncert</a>(<span class="summary-sig-arg">representation</span>)</span><br />
+      Given a string that represents a number with uncertainty, returns the
+nominal value and the uncertainty.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#str_to_number_with_uncert">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#ufloat" class="summary-sig-name">ufloat</a>(<span class="summary-sig-arg">representation</span>,
+        <span class="summary-sig-arg">tag</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Returns a random variable (Variable object).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#ufloat">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__version_info__"></a><span class="summary-name">__version_info__</span> = <code title="(1, 9)"><code class="variable-group">(</code>1<code class="variable-op">, </code>9<code class="variable-group">)</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#CONSTANT_TYPES" class="summary-name" onclick="show_private();">CONSTANT_TYPES</a> = <code title="(&lt;type 'float'&gt;,
+ &lt;type 'int'&gt;,
+ &lt;type 'complex'&gt;,
+ &lt;type 'numpy.number'&gt;)"><code class="variable-group">(</code>&lt;type 'float'&gt;<code class="variable-op">, </code>&lt;type 'int'&gt;<code class="variable-op">, </code>&lt;type 'complex<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_ops_with_reflection"></a><span class="summary-name">_ops_with_reflection</span> = <code title="get_ops_with_reflection()">get_ops_with_reflection()</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_modified_operators"></a><span class="summary-name">_modified_operators</span> = <code title="['neg', 'abs', 'pos', 'trunc']"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">neg</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">abs</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">pos</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">trunc</code><code class="variable-quote">'</code><code class="variable-group">]</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#_modified_ops_with_reflection" class="summary-name" onclick="show_private();">_modified_ops_with_reflection</a> = <code title="['radd',
+ 'rpow',
+ 'sub',
+ 'rtruediv',
+ 'rfloordiv',
+ 'pow',
+ 'rdiv',
+ 'rsub',
+..."><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">radd</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">rpow</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">sub</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">rtrue</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="POSITIVE_DECIMAL_UNSIGNED"></a><span class="summary-name">POSITIVE_DECIMAL_UNSIGNED</span> = <code title="'(\\d+)(\\.\\d*)?'"><code class="variable-quote">'</code><code class="variable-string">(\\d+)(\\.\\d*)?</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#NUMBER_WITH_UNCERT_RE_STR" class="summary-name" onclick="show_private();">NUMBER_WITH_UNCERT_RE_STR</a> = <code title="'''
+    ([+-])?  # Sign
+    (\\d+)(\\.\\d*)?  # Main number
+    (?:\\((\\d+)(\\.\\d*)?\\))?  # Optional uncertainty
+    ([eE][+-]?\\d+)?  # Optional exponent
+    '''"><code class="variable-quote">'</code><code class="variable-string">\n    ([+-])?  # Sign\n    (\\d+)</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-module.html#NUMBER_WITH_UNCERT_RE" class="summary-name" onclick="show_private();">NUMBER_WITH_UNCERT_RE</a> = <code title="re.compile(r'(?x)^([\+-])?(\d+)(\.\d*)?(?:\((\d+)(\.\d*)?\))?([eE][\+-\
+]?\d+)?$')">re.compile(r'<code class="re-flags">(?x)</code>^<code class="re-group">(</code><code class="re-group">[</code>\+-<code class="re-group">]</code><code class="re-group">)</code><code class="re-op">?</code><code class="re-group">(</code>\d<code class="re-op">+</code><code class="re-group">)</code><code class="re-group">(</code>\.\d<code class="re-op">*</code><code class="re-group">)</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.ivs.sigproc.lmfit.uncertainties'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.ivs.sigproc.lmfit.uncertainties</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="set_doc"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_doc</span>(<span class="sig-arg">doc_string</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#set_doc">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Decorator function that sets the docstring to the given text.</p>
+  <p>It is useful for functions whose docstring is calculated (including 
+  string substitutions).</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="correlated_values"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">correlated_values</span>(<span class="sig-arg">nom_values</span>,
+        <span class="sig-arg">covariance_mat</span>,
+        <span class="sig-arg">tags</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#correlated_values">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns numbers with uncertainties (AffineScalarFunc objects) that 
+  correctly reproduce the given covariance matrix, and have the given 
+  (float) values as their nominal value.</p>
+  <p>The correlated_values_norm() function returns the same result, but 
+  takes a correlation matrix instead of a covariance matrix.</p>
+  <p>The list of values and the covariance matrix must have the same 
+  length, and the matrix must be a square (symmetric) one.</p>
+  <p>The numbers with uncertainties returned depend on newly created, 
+  independent variables (Variable objects).</p>
+  <p>If 'tags' is not None, it must list the tag of each new independent 
+  variable.</p>
+  <p>nom_values -- sequence with the nominal (real) values of the numbers 
+  with uncertainties to be returned.</p>
+  <p>covariance_mat -- full covariance matrix of the returned numbers with 
+  uncertainties (not the statistical correlation matrix, i.e., not the 
+  normalized covariance matrix). For example, the first element of this 
+  matrix is the variance of the first returned number with uncertainty.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="correlated_values_norm"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">correlated_values_norm</span>(<span class="sig-arg">values_with_std_dev</span>,
+        <span class="sig-arg">correlation_mat</span>,
+        <span class="sig-arg">tags</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#correlated_values_norm">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Returns correlated values like correlated_values(), but takes
+instead as input:
+
+- nominal (float) values along with their standard deviation, and
+
+- a correlation matrix (i.e. a normalized covariance matrix
+  normalized with individual standard deviations).
+
+values_with_std_dev -- sequence of (nominal value, standard
+deviation) pairs. The returned, correlated values have these
+nominal values and standard deviations.
+
+correlation_mat -- correlation matrix (i.e. the normalized
+covariance matrix, a matrix with ones on its diagonal).
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="to_affine_scalar"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">to_affine_scalar</span>(<span class="sig-arg">x</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#to_affine_scalar">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Transforms x into a constant affine scalar function 
+  (AffineScalarFunc), unless it is already an AffineScalarFunc (in which 
+  case x is returned unchanged).</p>
+  <p>Raises an exception unless 'x' belongs to some specific classes of 
+  objects that are known not to depend on AffineScalarFunc objects (which 
+  then cannot be considered as constants).</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="partial_derivative"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">partial_derivative</span>(<span class="sig-arg">f</span>,
+        <span class="sig-arg">param_num</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#partial_derivative">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a function that numerically calculates the partial derivative 
+  of function f with respect to its argument number param_num.</p>
+  <p>The step parameter represents the shift of the parameter used in the 
+  numerical approximation.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="wrap"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">wrap</span>(<span class="sig-arg">f</span>,
+        <span class="sig-arg">derivatives_iter</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#wrap">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Wraps a function f into a function that also accepts numbers with 
+  uncertainties (UFloat objects) and returns a number with uncertainties.  
+  Doing so may be necessary when function f cannot be expressed 
+  analytically (with uncertainties-compatible operators and functions like 
+  +, *, umath.sin(), etc.).</p>
+  <p>f must return a scalar (not a list, etc.).</p>
+  <p>In the wrapped function, the standard Python scalar arguments of f 
+  (float, int, etc.) can be replaced by numbers with uncertainties. The 
+  result will contain the appropriate uncertainty.</p>
+  <p>If no argument to the wrapped function has an uncertainty, f simply 
+  returns its usual, scalar result.</p>
+  <p>If supplied, derivatives_iter can be an iterable that generally 
+  contains functions; each successive function is the partial derivative of
+  f with respect to the corresponding variable (one function for each 
+  argument of f, which takes as many arguments as f).  If instead of a 
+  function, an element of derivatives_iter contains None, then it is 
+  automatically replaced by the relevant numerical derivative; this can be 
+  used for non-scalar arguments of f (like string arguments).</p>
+  <p>If derivatives_iter is None, or if derivatives_iter contains a fixed 
+  (and finite) number of elements, then any missing derivative is 
+  calculated numerically.</p>
+  <p>An infinite number of derivatives can be specified by having 
+  derivatives_iter be an infinite iterator; this can for instance be used 
+  for specifying the derivatives of functions with a undefined number of 
+  argument (like sum(), whose partial derivatives all return 1).</p>
+  <p>Example (for illustration purposes only, as uncertainties.umath.sin() 
+  runs faster than the examples that follow): wrap(math.sin) is a sine 
+  function that can be applied to numbers with uncertainties.  Its 
+  derivative will be calculated numerically.  wrap(math.sin, [None]) would 
+  have produced the same result.  wrap(math.sin, [math.cos]) is the same 
+  function, but with an analytically defined derivative.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_force_aff_func_args"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_force_aff_func_args</span>(<span class="sig-arg">func</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#_force_aff_func_args">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Takes an operator op(x, y) and wraps it.</p>
+  <p>The constructed operator returns func(x, to_affine_scalar(y)) if y can
+  be upcast with to_affine_scalar(); otherwise, it returns 
+  NotImplemented.</p>
+  <p>Thus, func() is only called on two AffineScalarFunc objects, if its 
+  first argument is an AffineScalarFunc.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="nominal_value"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">nominal_value</span>(<span class="sig-arg">x</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#nominal_value">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the nominal value of x if it is a quantity with uncertainty 
+  (i.e., an AffineScalarFunc object); otherwise, returns x unchanged.</p>
+  <p>This utility function is useful for transforming a series of numbers, 
+  when only some of them generally carry an uncertainty.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="std_dev"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">std_dev</span>(<span class="sig-arg">x</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#std_dev">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the standard deviation of x if it is a quantity with 
+  uncertainty (i.e., an AffineScalarFunc object); otherwise, returns the 
+  float 0.</p>
+  <p>This utility function is useful for transforming a series of numbers, 
+  when only some of them generally carry an uncertainty.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="covariance_matrix"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">covariance_matrix</span>(<span class="sig-arg">nums_with_uncert</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#covariance_matrix">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a matrix that contains the covariances between the given 
+  sequence of numbers with uncertainties (AffineScalarFunc objects). The 
+  resulting matrix implicitly depends on their ordering in 
+  'nums_with_uncert'.</p>
+  <p>The covariances are floats (never int objects).</p>
+  <p>The returned covariance matrix is the exact linear approximation 
+  result, if the nominal values of the numbers with uncertainties and of 
+  their variables are their mean.  Otherwise, the returned covariance 
+  matrix should be close to its linear approximation value.</p>
+  <p>The returned matrix is a list of lists.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="parse_error_in_parentheses"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">parse_error_in_parentheses</span>(<span class="sig-arg">representation</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#parse_error_in_parentheses">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns (value, error) from a string representing a number with 
+  uncertainty like 12.34(5), 12.34(142), 12.5(3.4) or 12.3(4.2)e3. If no 
+  parenthesis is given, an uncertainty of one on the last digit is 
+  assumed.</p>
+  <p>Raises ValueError if the string cannot be parsed.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="str_to_number_with_uncert"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">str_to_number_with_uncert</span>(<span class="sig-arg">representation</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#str_to_number_with_uncert">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Given a string that represents a number with uncertainty, returns the
+nominal value and the uncertainty.
+
+The string can be of the form:
+- 124.5+/-0.15
+- 124.50(15)
+- 124.50(123)
+- 124.5
+
+When no numerical error is given, an uncertainty of 1 on the last
+digit is implied.
+
+Raises ValueError if the string cannot be parsed.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ufloat"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ufloat</span>(<span class="sig-arg">representation</span>,
+        <span class="sig-arg">tag</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties-pysrc.html#ufloat">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Returns a random variable (Variable object).
+
+Converts the representation of a number into a number with
+uncertainty (a random variable, defined by a nominal value and
+a standard deviation).
+
+The representation can be a (value, standard deviation) sequence,
+or a string.
+
+Strings of the form '12.345+/-0.015', '12.345(15)', or '12.3' are
+recognized (see full list below).  In the last case, an
+uncertainty of +/-1 is assigned to the last digit.
+
+'tag' is an optional string tag for the variable.  Variables
+don't have to have distinct tags.  Tags are useful for tracing
+what values (and errors) enter in a given result (through the
+error_components() method).
+
+Examples of valid string representations:
+
+    -1.23(3.4)
+    -1.34(5)
+    1(6)
+    3(4.2)
+    -9(2)
+    1234567(1.2)
+    12.345(15)
+    -12.3456(78)e-6
+    12.3(0.4)e-5
+    0.29
+    31.
+    -31.
+    31
+    -3.1e10
+    169.0(7)
+    169.1(15)
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="CONSTANT_TYPES"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">CONSTANT_TYPES</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">(</code>&lt;type 'float'&gt;<code class="variable-op">,</code>
+ &lt;type 'int'&gt;<code class="variable-op">,</code>
+ &lt;type 'complex'&gt;<code class="variable-op">,</code>
+ &lt;type 'numpy.number'&gt;<code class="variable-group">)</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_modified_ops_with_reflection"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">_modified_ops_with_reflection</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">radd</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">rpow</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">sub</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">rtruediv</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">rfloordiv</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">pow</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">rdiv</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">rsub</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="NUMBER_WITH_UNCERT_RE_STR"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">NUMBER_WITH_UNCERT_RE_STR</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-quote">'''</code><code class="variable-string"></code>
+<code class="variable-string">    ([+-])?  # Sign</code>
+<code class="variable-string">    (\\d+)(\\.\\d*)?  # Main number</code>
+<code class="variable-string">    (?:\\((\\d+)(\\.\\d*)?\\))?  # Optional uncertainty</code>
+<code class="variable-string">    ([eE][+-]?\\d+)?  # Optional exponent</code>
+<code class="variable-string">    </code><code class="variable-quote">'''</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="NUMBER_WITH_UNCERT_RE"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">NUMBER_WITH_UNCERT_RE</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+re.compile(r'<code class="re-flags">(?x)</code>^<code class="re-group">(</code><code class="re-group">[</code>\+-<code class="re-group">]</code><code class="re-group">)</code><code class="re-op">?</code><code class="re-group">(</code>\d<code class="re-op">+</code><code class="re-group">)</code><code class="re-group">(</code>\.\d<code class="re-op">*</code><code class="re-group">)</code><code class="re-op">?</code><code class="re-group">(?:</code>\(<code class="re-group">(</code>\d<code class="re-op">+</code><code class="re-group">)</code><code class="re-group">(</code>\.\d<code class="re-op">*</code><code class="re-group">)</code><code class="re-op">?</code>\)<code class="re-group">)</code><code class="re-op">?</code><code class="re-group">(</code><code class="re-group">[</code>eE<code class="re-group">]</code><code class="re-group">[</code>\+-<code class="re-group"></code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="re-group">]</code><code class="re-op">?</code>\d<code class="re-op">+</code><code class="re-group">)</code><code class="re-op">?</code>$')
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:49 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

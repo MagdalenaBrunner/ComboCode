@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ComboCode.cc.modeling.profilers.Profiler</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ComboCode-module.html">Package&nbsp;ComboCode</a> ::
+        <a href="ComboCode.cc-module.html">Package&nbsp;cc</a> ::
+        <a href="ComboCode.cc.modeling-module.html">Package&nbsp;modeling</a> ::
+        <a href="ComboCode.cc.modeling.profilers-module.html">Package&nbsp;profilers</a> ::
+        Module&nbsp;Profiler
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ComboCode.cc.modeling.profilers.Profiler-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module Profiler</h1><p class="nomargin-top"><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html">source&nbsp;code</a></span></p>
+<p>Tools for making profiles of any kind.</p>
+  <p>Author: R. Lombaert</p>
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.modeling.profilers.Profiler.Profiler-class.html" class="summary-name">Profiler</a><br />
+      An interface for creating profiles, and allowing to evaluate them 
+        and calculate the central difference with respect to a coordinate 
+        grid.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.modeling.profilers.Profiler.Profiler2D-class.html" class="summary-name">Profiler2D</a><br />
+      An interface for creating 2D profiles, and allowing to evaluate 
+        them and calculate the central difference with respect to a 2D 
+        coordinate grid.
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Profiler-module.html#waterFraction1StepProfiler" class="summary-sig-name">waterFraction1StepProfiler</a>(<span class="summary-sig-arg">model_id</span>,
+        <span class="summary-sig-arg">path_gastronoom</span>,
+        <span class="summary-sig-arg">fraction</span>,
+        <span class="summary-sig-arg">rfrac</span>)</span><br />
+      Create a 1-step fractional profile for water.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#waterFraction1StepProfiler">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">interpolation object</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Profiler-module.html#interp_file" class="summary-sig-name">interp_file</a>(<span class="summary-sig-arg">x</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">read_func</span>=<span class="summary-sig-default">&lt;function readCols at 0x104165ed8&gt;</span>,
+        <span class="summary-sig-arg">xcol</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">ycol</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">spline</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">ikwargs</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">ext</code><code class="variable-quote">'</code><code class="variable-op">: </code>3<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">k</code><code class="variable-quote">'</code><code class="variable-op">: </code>3<code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Read an arbitrary file and return an interpolation object for that 
+      file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#interp_file">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Profiler-module.html#step" class="summary-sig-name">step</a>(<span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">ylow</span>,
+        <span class="summary-sig-arg">yhigh</span>,
+        <span class="summary-sig-arg">xstep</span>)</span><br />
+      Step function.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#step">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Profiler-module.html#constant2D" class="summary-sig-name">constant2D</a>(<span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">cfunc</span>,
+        <span class="summary-sig-arg">axis</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Define a 2D array where the variable is constant with respect to one 
+      of the two axes.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#constant2D">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Profiler-module.html#constant" class="summary-sig-name">constant</a>(<span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">c</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Define a function for a constant profile.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#constant">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Profiler-module.html#zero" class="summary-sig-name">zero</a>(<span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Define a function for a zero profile.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#zero">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Profiler-module.html#zero2D" class="summary-sig-name">zero2D</a>(<span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Define a function for a zero profile.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#zero2D">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.modeling.profilers'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.modeling.profilers</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="waterFraction1StepProfiler"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">waterFraction1StepProfiler</span>(<span class="sig-arg">model_id</span>,
+        <span class="sig-arg">path_gastronoom</span>,
+        <span class="sig-arg">fraction</span>,
+        <span class="sig-arg">rfrac</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#waterFraction1StepProfiler">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create a 1-step fractional profile for water.</p>
+  <p>The original water abundance profile is taken from the output of the 
+  original model without fractional abundances.</p>
+  <p>These fraction profiles can be used for CHANGE_ABUNDANCE_FRACTION in 
+  mline</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>model_id</code></strong> (string) - The model id of the original cooling model</li>
+        <li><strong class="pname"><code>path_gastronoom</code></strong> (string) - The model subfolder in ~/GASTRoNOoM/</li>
+        <li><strong class="pname"><code>fraction</code></strong> (float) - the fraction used</li>
+        <li><strong class="pname"><code>rfrac</code></strong> (float) - the radius at the step to the fractional abundance [cm]</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="interp_file"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">interp_file</span>(<span class="sig-arg">x</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">read_func</span>=<span class="sig-default">&lt;function readCols at 0x104165ed8&gt;</span>,
+        <span class="sig-arg">xcol</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">ycol</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">itype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">spline</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">ikwargs</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">ext</code><code class="variable-quote">'</code><code class="variable-op">: </code>3<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">k</code><code class="variable-quote">'</code><code class="variable-op">: </code>3<code class="variable-group">}</code></span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#interp_file">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Read an arbitrary file and return an interpolation object for that 
+  file.</p>
+  <p>Extra arguments are passed to the chosen read_func. This must include 
+  a filename. Order of args/kwargs follows that of the requested 
+  function.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (array) - The x grid requested for the interpolation. Note that this is a 
+          dummy variable to allow Profiler to work with this function. x 
+          can however be used for the interpolation if xcol is None, but 
+          that requires x to have the same dimensions as the y variable.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>read_func</code></strong> (function/str) - The function used to read the file. Default is straightforward 
+          function for reading columns. Alternatives include getInputData, 
+          getKeyData, etc. Can be given as a string, in which case the 
+          function must be defined in DataIO.
+          <p>(default: DataIO.readCols)</p></li>
+        <li><strong class="pname"><code>xcol</code></strong> (int) - The column index of the X independent variable
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>ycol</code></strong> (int) - The column index of the Y dependent variable
+          <p>(default: 1)</p></li>
+        <li><strong class="pname"><code>itype</code></strong> (str) - The type of interpolator used. Either 'linear' or 'spline'.
+          <p>(default: 'spline')</p></li>
+        <li><strong class="pname"><code>ikwargs</code></strong> (dict) - Extra keyword arguments for the interpolation. Default 
+          extrapolates by returning boundary values, and interpolates with 
+          spline of order 3.
+          <p>(default: {'ext':3,'k':3})</p></li>
+    </ul></dd>
+    <dt>Returns: interpolation object</dt>
+        <dd>The interpolation object for the file.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="step"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">step</span>(<span class="sig-arg">x</span>,
+        <span class="sig-arg">ylow</span>,
+        <span class="sig-arg">yhigh</span>,
+        <span class="sig-arg">xstep</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#step">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Step function. At x &lt;= xstep: ylow, at x &gt; xstep: yhigh.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (array/float) - x grid (can be array or float)</li>
+        <li><strong class="pname"><code>ylow</code></strong> (float) - y value for x &lt; xstep</li>
+        <li><strong class="pname"><code>yhigh</code></strong> (float) - y value for x &gt; xstep</li>
+        <li><strong class="pname"><code>xstep</code></strong> (float) - The boundary value between high and low end</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="constant2D"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">constant2D</span>(<span class="sig-arg">x</span>,
+        <span class="sig-arg">y</span>,
+        <span class="sig-arg">cfunc</span>,
+        <span class="sig-arg">axis</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#constant2D">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Define a 2D array where the variable is constant with respect to one 
+  of the two axes.</p>
+  <p>The function can be passed any arbitrary args and kwargs.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (array) - The primary coordinate on axis 0</li>
+        <li><strong class="pname"><code>y</code></strong> (array) - The secondary coordinate on axis 1.</li>
+        <li><strong class="pname"><code>cfunc</code></strong> (function/interpolator) - The function for the variable axis. Can be an interpolator.</li>
+        <li><strong class="pname"><code>axis</code></strong> (int) - The axis that is constant. x is 0, y is 1.
+          <p>(default: 1)</p></li>
+        <li><strong class="pname"><code>args</code></strong> (dict) - args to be passed to function. Should be empty in case of 
+          interpolator.
+          <p>(default: ())</p></li>
+        <li><strong class="pname"><code>kwargs</code></strong> (dict) - kwargs to be passed to function. Should be empty in case of 
+          interpolator.
+          <p>(default: {})</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The 2d profile (x.size,y.size)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="constant"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">constant</span>(<span class="sig-arg">x</span>,
+        <span class="sig-arg">c</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#constant">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Define a function for a constant profile.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (array) - The radial points</li>
+        <li><strong class="pname"><code>c</code></strong> (float) - The constant value. If None, it is taken from args/kwargs. This 
+          allows arbitrary naming of the constant. Except of course either 
+          x or y. A constant must always be given!
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>args</code></strong> (dict) - In case the constant is defined under a different name
+          <p>(default: ())</p></li>
+        <li><strong class="pname"><code>kwargs</code></strong> (dict) - In case the constant is defined under a different name
+          <p>(default: {})</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The constant profile, either 1d (x.size) or 2d (x.size,y.size)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="zero"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">zero</span>(<span class="sig-arg">x</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#zero">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Define a function for a zero profile.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (array) - The coordinate points</li>
+        <li><strong class="pname"><code>args</code></strong> (dict) - To catch any extra keywords. They are not used.
+          <p>(default: ())</p></li>
+        <li><strong class="pname"><code>kwargs</code></strong> (dict) - To catch any extra keywords. They are not used.
+          <p>(default: {})</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The constant profile, either 1d (x.size) or 2d (x.size,y.size)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="zero2D"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">zero2D</span>(<span class="sig-arg">x</span>,
+        <span class="sig-arg">y</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Profiler-pysrc.html#zero2D">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Define a function for a zero profile.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (array) - The coordinate points</li>
+        <li><strong class="pname"><code>y</code></strong> (array) - The secondary points. If None, a 1d array is returned. If not 
+          None a 2d array is returned.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>args</code></strong> (dict) - To catch any extra keywords. They are not used.
+          <p>(default: ())</p></li>
+        <li><strong class="pname"><code>kwargs</code></strong> (dict) - To catch any extra keywords. They are not used.
+          <p>(default: {})</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The constant profile, either 1d (x.size) or 2d (x.size,y.size)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:49 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

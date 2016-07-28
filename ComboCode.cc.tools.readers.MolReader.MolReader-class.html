@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ComboCode.cc.tools.readers.MolReader.MolReader</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ComboCode-module.html">Package&nbsp;ComboCode</a> ::
+        <a href="ComboCode.cc-module.html">Package&nbsp;cc</a> ::
+        <a href="ComboCode.cc.tools-module.html">Package&nbsp;tools</a> ::
+        <a href="ComboCode.cc.tools.readers-module.html">Package&nbsp;readers</a> ::
+        <a href="ComboCode.cc.tools.readers.MolReader-module.html">Module&nbsp;MolReader</a> ::
+        Class&nbsp;MolReader
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ComboCode.cc.tools.readers.MolReader.MolReader-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class MolReader</h1><p class="nomargin-top"><span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader">source&nbsp;code</a></span></p>
+<center>
+
+</center>
+<hr />
+<p>The MolReader class.</p>
+  <p>Inherits from the Reader class.</p>
+  <p>Provides methods to manage molecular spectroscopic data (excitation 
+  levels, Einstein A coefficients, transitions, etc). The only exception to
+  this is the collisional rate data.</p>
+  <p>Subclasses provide the read and parse methods that are 
+  code-specific:</p>
+  <ul>
+    <li>
+      MlineReader for GASTRoNOoM output
+    </li>
+    <li>
+      RadiatReader for GASTRoNOoM input
+    </li>
+    <li>
+      LamdaReader for ALI/MCP input and Lamda data files in general (see 
+      http://home.strw.leidenuniv.nl/~moldata/).
+    </li>
+  </ul>
+  <p>The level populations are read with PopReader for MCP/ALI, and 
+  MlineReader for GASTRoNOoM. The collision rates are read with 
+  CollisReader for GASTRoNOoM, and LamdaReader for MCP/ALI.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><pre class="literalblock">
+new empty dictionary
+
+</pre></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MolReader.MolReader-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fn</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Initialize an MolReader object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">float/array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MolReader.MolReader-class.html#getTFrequency" class="summary-sig-name">getTFrequency</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default">Unit(&quot;GHz&quot;)</span>)</span><br />
+      Return the frequencies for the &lt;nline&gt; included transitions.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getTFrequency">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">float/array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MolReader.MolReader-class.html#getTEinsteinA" class="summary-sig-name">getTEinsteinA</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Return the Einstein A coefficients for the &lt;nline&gt; included 
+      transitions.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getTEinsteinA">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MolReader.MolReader-class.html#getTI" class="summary-sig-name">getTI</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">trans</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">lup</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">llow</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Return the indices of the transitions read from the molecular 
+      spectroscopy data.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getTI">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int/array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MolReader.MolReader-class.html#getTUpper" class="summary-sig-name">getTUpper</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">trans</code><code class="variable-quote">'</code></span>)</span><br />
+      Return the indices of the upper states of the &lt;nline&gt; included 
+      transitions.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getTUpper">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int/array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MolReader.MolReader-class.html#getTLower" class="summary-sig-name">getTLower</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">trans</code><code class="variable-quote">'</code></span>)</span><br />
+      Return the indices of the lower states of the &lt;nline&gt; included 
+      transitions.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getTLower">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MolReader.MolReader-class.html#getLI" class="summary-sig-name">getLI</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return the indices of the excitation levels read from the molecular 
+      spectroscopy data.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getLI">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">float/array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MolReader.MolReader-class.html#getLWeight" class="summary-sig-name">getLWeight</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Return the weights of the &lt;ny_up+ny_low&gt; excitation levels.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getLWeight">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">float/array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.MolReader.MolReader-class.html#getLEnergy" class="summary-sig-name">getLEnergy</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default">&lt;Quantity 1.0 1 / cm&gt;</span>)</span><br />
+      Return the energies of the &lt;ny_up+ny_low&gt; excitation levels.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getLEnergy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.tools.readers.SpectroscopyReader.SpectroscopyReader</code></b>:
+      <code>get</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.tools.readers.Reader.Reader</code></b>:
+      <code>getFile</code>,
+      <code>readFile</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>dict</code></b>:
+      <code>__cmp__</code>,
+      <code>__contains__</code>,
+      <code>__delitem__</code>,
+      <code>__eq__</code>,
+      <code>__ge__</code>,
+      <code>__getattribute__</code>,
+      <code>__getitem__</code>,
+      <code>__gt__</code>,
+      <code>__iter__</code>,
+      <code>__le__</code>,
+      <code>__len__</code>,
+      <code>__lt__</code>,
+      <code>__ne__</code>,
+      <code>__new__</code>,
+      <code>__repr__</code>,
+      <code>__setitem__</code>,
+      <code>__sizeof__</code>,
+      <code>clear</code>,
+      <code>copy</code>,
+      <code>fromkeys</code>,
+      <code>has_key</code>,
+      <code>items</code>,
+      <code>iteritems</code>,
+      <code>iterkeys</code>,
+      <code>itervalues</code>,
+      <code>keys</code>,
+      <code>pop</code>,
+      <code>popitem</code>,
+      <code>setdefault</code>,
+      <code>update</code>,
+      <code>values</code>,
+      <code>viewitems</code>,
+      <code>viewkeys</code>,
+      <code>viewvalues</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>dict</code></b>:
+      <code>__hash__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fn</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialize an MolReader object. The filename and additional 
+  args/kwargs are passed to the Reader parent class, where the dict is made
+  and the filename is stored.</p>
+  <p>Additional args/kwargs are used for the dict creation.</p>
+  <p>Note that this is the only class directly inheriting from Reader that 
+  does not have its own read method (unlike PopReader and CollisReader). 
+  This is because it is always combined with a different type of class in 
+  multiple inheritance, depending on the input type of the spectroscopy 
+  (GASTRoNOoM versus Lamda)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fn</code></strong> (str) - The filename of molecular spectroscopic data.</li>
+    </ul></dd>
+    <dt>Returns: <pre class="literalblock">
+new empty dictionary
+
+</pre></dt>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTFrequency"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTFrequency</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">unit</span>=<span class="sig-default">Unit(&quot;GHz&quot;)</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getTFrequency">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the frequencies for the &lt;nline&gt; included transitions.</p>
+  <p>In case a single frequency is requested via index, the frequency is 
+  extracted from the array.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int/array) - The index. In case of default, all are returned. Can be any 
+          array-like object that includes indices
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>unit</code></strong> (string/unit) - The unit of the returned values. Can be any valid units str from 
+          the astropy units module (freq or wavelength), or the unit 
+          itself. In case of wavelength, the values are *not* reversed.
+          <p>(default: u.GHz)</p></li>
+    </ul></dd>
+    <dt>Returns: float/array</dt>
+        <dd>The frequencies/y ordered by transition index.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTEinsteinA"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTEinsteinA</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getTEinsteinA">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the Einstein A coefficients for the &lt;nline&gt; included 
+  transitions.</p>
+  <p>In case a single Einstein coefficient is requested via index, the 
+  value is extracted from the array.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int/array) - The index. In case of default, all are returned. Can be any 
+          array-like object that includes indices
+          <p>(default: None)</p></li>
+    </ul></dd>
+    <dt>Returns: float/array</dt>
+        <dd>The Einstein A coefficient(s) (s^-1) ordered by transition index.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTI"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTI</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">itype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">trans</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">lup</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">llow</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getTI">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the indices of the transitions read from the molecular 
+  spectroscopy data.</p>
+  <p>A specific index (or array of indices) can be requested by specifying 
+  the lower and upper level index.</p>
+  <p>LamdaReader first inherits from MolReader, so the default will be 
+  itype 'trans' for LamdaReader.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>itype</code></strong> (str) - The type of index. Default is for MolReader. Needs to be here in 
+          case LamdaReader calls this method, where the type has to be 
+          specified. It will call both this method and the version in 
+          CollisReader and pass on the call.
+          <p>(default: 'trans')</p></li>
+        <li><strong class="pname"><code>lup</code></strong> (int) - The index of the upper energy level in the transition. If both 
+          this and llow are None, all transition indices are returned.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>llow</code></strong> (int) - The index of the lower energy level in the transition. If both 
+          this and lup are None, all transition indices are returned.
+          <p>(default: None)</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The transition indices</dd>
+    <dt>Overrides:
+        cc.tools.readers.SpectroscopyReader.SpectroscopyReader.getTI
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTUpper"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTUpper</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">itype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">trans</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getTUpper">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the indices of the upper states of the &lt;nline&gt; included 
+  transitions.</p>
+  <p>These are NOT the quantum numbers! Especially for CO-type molecules, 
+  the J-level is equal to level_index-1.</p>
+  <p>In case a single upper level is requested via index, the level index 
+  is extracted from the array.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int/array) - The index. In case of default, all are returned. Can be any 
+          array-like object that includes indices
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>itype</code></strong> (str) - The type of index. Default is for MolReader. CollisReader needs 
+          this to be 'coll_trans'.
+          <p>(default: 'trans')</p></li>
+    </ul></dd>
+    <dt>Returns: int/array</dt>
+        <dd>The upper level indices/x ordered by transition index.</dd>
+    <dt>Overrides:
+        cc.tools.readers.SpectroscopyReader.SpectroscopyReader.getTUpper
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTLower"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTLower</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">itype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">trans</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getTLower">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the indices of the lower states of the &lt;nline&gt; included 
+  transitions.</p>
+  <p>These are NOT the quantum numbers! Especially for CO-type molecules, 
+  the J-level is equal to level_index-1.</p>
+  <p>In case a single lower level is requested via index, the level index 
+  is extracted from the array.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int/array) - The index. In case of default, all are returned. Can be any 
+          array-like object that includes indices
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>itype</code></strong> (str) - The type of index. Default is for MolReader. CollisReader needs 
+          this to be 'coll_trans'.
+          <p>(default: 'trans')</p></li>
+    </ul></dd>
+    <dt>Returns: int/array</dt>
+        <dd>The lower level indices/x ordered by transition index.</dd>
+    <dt>Overrides:
+        cc.tools.readers.SpectroscopyReader.SpectroscopyReader.getTLower
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getLI"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getLI</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getLI">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the indices of the excitation levels read from the molecular 
+  spectroscopy data.</p>
+  <dl class="fields">
+    <dt>Returns: array</dt>
+        <dd>The level indices</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getLWeight"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getLWeight</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getLWeight">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the weights of the &lt;ny_up+ny_low&gt; excitation levels.</p>
+  <p>In case a single weight is requested via index, the weight value is 
+  extracted from the array.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int/array) - The index. In case of default, all are returned. Can be any 
+          array-like object that includes indices
+          <p>(default: None)</p></li>
+    </ul></dd>
+    <dt>Returns: float/array</dt>
+        <dd>The weights ordered by level index.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getLEnergy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getLEnergy</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">unit</span>=<span class="sig-default">&lt;Quantity 1.0 1 / cm&gt;</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.MolReader-pysrc.html#MolReader.getLEnergy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the energies of the &lt;ny_up+ny_low&gt; excitation levels.</p>
+  <p>In case a single energy level is requested via index the energy value 
+  is extracted from the array.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int/array) - The index. In case of default, all are returned. Can be any 
+          array-like object that includes indices
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>unit</code></strong> (string/unit) - The unit of the returned values. Can be any valid units str from 
+          the astropy units module (energy), or the unit itself. 'cm-1' and
+          'cm^-1' are accepted as well.
+          <p>(default: 1./u.cm)</p></li>
+    </ul></dd>
+    <dt>Returns: float/array</dt>
+        <dd>The energies ordered by level index.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:51 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

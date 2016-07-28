@@ -1,0 +1,1764 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ComboCode.cc.ivs.sed.extinctionmodels</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ComboCode-module.html">Package&nbsp;ComboCode</a> ::
+        <a href="ComboCode.cc-module.html">Package&nbsp;cc</a> ::
+        <a href="ComboCode.cc.ivs-module.html">Package&nbsp;ivs</a> ::
+        <a href="ComboCode.cc.ivs.sed-module.html">Package&nbsp;sed</a> ::
+        Module&nbsp;extinctionmodels
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module extinctionmodels</h1><p class="nomargin-top"><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html">source&nbsp;code</a></span></p>
+<p>Extinction models of Arenou, Drimmel and Marschall</p>
+  <p>Uniformly rewritten by K. Smolders</p>
+
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Top level wrapper</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#findext" class="summary-sig-name">findext</a>(<span class="summary-sig-arg">lng</span>,
+        <span class="summary-sig-arg">lat</span>,
+        <span class="summary-sig-arg">model</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">drimmel</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">distance</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Get the &quot;model&quot; extinction at a certain longitude and 
+      latitude.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#findext">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Arenou 3D extinction model</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#findext_arenou" class="summary-sig-name">findext_arenou</a>(<span class="summary-sig-arg">ll</span>,
+        <span class="summary-sig-arg">bb</span>,
+        <span class="summary-sig-arg">distance</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">redlaw</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cardelli1989</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">Rv</span>=<span class="summary-sig-default">3.1</span>,
+        <span class="summary-sig-arg">norm</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Av</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Find the predicted V-band extinction (Av) according to the 3D model 
+      for galactic extinction of Arenou et al, &quot;Modelling the Galactic
+      interstellar extinction distribution in three dimensions&quot;, 
+      Arenou et al, &quot;A tridimensional model of the galactic 
+      interstellar extinction&quot; published in Astronomy and Astrophysics
+      (ISSN 0004-6361), vol.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#findext_arenou">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#_getarenouparams" class="summary-sig-name" onclick="show_private();">_getarenouparams</a>(<span class="summary-sig-arg">ll</span>,
+        <span class="summary-sig-arg">bb</span>)</span><br />
+      Input: galactic coordinates Output: Arenou 1992 alpha, beta, gamma, 
+      rr0, saa</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_getarenouparams">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Marshall 3D extinction model</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#get_marshall_data" class="summary-sig-name">get_marshall_data</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Read in the Marshall data</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#get_marshall_data">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#findext_marshall" class="summary-sig-name">findext_marshall</a>(<span class="summary-sig-arg">ll</span>,
+        <span class="summary-sig-arg">bb</span>,
+        <span class="summary-sig-arg">distance</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">redlaw</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cardelli1989</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">Rv</span>=<span class="summary-sig-default">3.1</span>,
+        <span class="summary-sig-arg">norm</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Av</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Find the V-band extinction according to the reddening model of 
+      Marshall et al.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#findext_marshall">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Drimmel 3D extinction model presented in Drimmel et al. in</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#findext_drimmel" class="summary-sig-name">findext_drimmel</a>(<span class="summary-sig-arg">lng</span>,
+        <span class="summary-sig-arg">lat</span>,
+        <span class="summary-sig-arg">distance</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">rescaling</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">redlaw</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cardelli1989</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">Rv</span>=<span class="summary-sig-default">3.1</span>,
+        <span class="summary-sig-arg">norm</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Av</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Procedure to retrieve the absorption in V from three-dimensional 
+      grids, based on the Galactic dust distribution of Drimmel &amp; 
+      Spergel.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#findext_drimmel">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#_pix2xy" class="summary-sig-name" onclick="show_private();">_pix2xy</a>(<span class="summary-sig-arg">pixel</span>,
+        <span class="summary-sig-arg">resolution</span>,
+        <span class="summary-sig-arg">sixpack</span>=<span class="summary-sig-default">0</span>)</span><br />
+      _pix2xy creates a raster image (sky cube or face) given a pixelindex 
+      and a resolution  The data array can be either a vector or 
+      two-dimensional array.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_pix2xy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_rastr"></a><span class="summary-sig-name">_rastr</span>(<span class="summary-sig-arg">pixel</span>,
+        <span class="summary-sig-arg">resolution</span>)</span><br />
+      SMOLDERS SEAL OF APPROVAL</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_rastr">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#_pix2fij" class="summary-sig-name" onclick="show_private();">_pix2fij</a>(<span class="summary-sig-arg">pixel</span>,
+        <span class="summary-sig-arg">resolution</span>)</span><br />
+      This function takes an n-element pixel array and generates an n by 3 
+      element array containing the corresponding face, column, and row 
+      number (the latter two within the face).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_pix2fij">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_incube"></a><span class="summary-sig-name">_incube</span>(<span class="summary-sig-arg">alpha</span>,
+        <span class="summary-sig-arg">beta</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_incube">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">ndarray</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#_ll2uv" class="summary-sig-name" onclick="show_private();">_ll2uv</a>(<span class="summary-sig-arg">lng</span>,
+        <span class="summary-sig-arg">lat</span>)</span><br />
+      Convert longitude, latitude to unit vectors SMOLDERS SEAL OF APPROVAL</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_ll2uv">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_galvec2eclvec"></a><span class="summary-sig-name">_galvec2eclvec</span>(<span class="summary-sig-arg">in_uvec</span>)</span><br />
+      Unitvector for galactic coordinates to unitvector for ecliptic 
+      coordinates SMOLDERS SEAL OF APPROVAL</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_galvec2eclvec">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_axisxy"></a><span class="summary-sig-name">_axisxy</span>(<span class="summary-sig-arg">vector</span>)</span><br />
+      converts unitvector into nface number (0-5) and X,Y in range 0-1 
+      SMOLDERS SEAL OF APPROVAL</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_axisxy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_fij2pix"></a><span class="summary-sig-name">_fij2pix</span>(<span class="summary-sig-arg">fij</span>,
+        <span class="summary-sig-arg">res</span>)</span><br />
+      This function takes an n by 3 element vector containing the face, 
+      column, and row number (the latter two within the face) of a pixel 
+      and converts it into an n-element pixel array for a given resolution.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_fij2pix">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#_uv2pix" class="summary-sig-name" onclick="show_private();">_uv2pix</a>(<span class="summary-sig-arg">vector</span>,
+        <span class="summary-sig-arg">resolution</span>)</span><br />
+      Routine returns pixel number given unit vector pointing to center of 
+      pixel resolution of the cube.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_uv2pix">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">ndarray
+      <p>(Note: The default coordinate system for pixels is ecliptic.)</p></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#_ll2pix" class="summary-sig-name" onclick="show_private();">_ll2pix</a>(<span class="summary-sig-arg">lng</span>,
+        <span class="summary-sig-arg">lat</span>,
+        <span class="summary-sig-arg">res</span>=<span class="summary-sig-default">9</span>)</span><br />
+      _ll2pix is a python function to convert galactic coordinates to DIRBE
+      pixels (coorconv([lng,lat], infmt='L', outfmt='P', inco='G', 
+      outco='R9'))</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_ll2pix">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_trint"></a><span class="summary-sig-name">_trint</span>(<span class="summary-sig-arg">mm</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">z</span>,
+        <span class="summary-sig-arg">missing</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Pixel-based trilinear interpolation, where mm is a 3d data cube.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_trint">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Schlegel 3D extinction model presented in Schlegel et al.</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#get_schlegel_data_south" class="summary-sig-name">get_schlegel_data_south</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#get_schlegel_data_south">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_schlegel_data_north"></a><span class="summary-sig-name">get_schlegel_data_north</span>()</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#get_schlegel_data_north">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">ndarray</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#_lb2xy_schlegel" class="summary-sig-name" onclick="show_private();">_lb2xy_schlegel</a>(<span class="summary-sig-arg">ll</span>,
+        <span class="summary-sig-arg">bb</span>)</span><br />
+      Converts coordinates in lattitude and longitude to coordinates in x 
+      and y pixel coordinates.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_lb2xy_schlegel">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#findext_schlegel" class="summary-sig-name">findext_schlegel</a>(<span class="summary-sig-arg">ll</span>,
+        <span class="summary-sig-arg">bb</span>,
+        <span class="summary-sig-arg">distance</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">redlaw</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cardelli1989</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">Rv</span>=<span class="summary-sig-default">3.1</span>,
+        <span class="summary-sig-arg">norm</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Av</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Get the &quot;Schlegel&quot; extinction at certain longitude and 
+      latitude</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#findext_schlegel">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="logger"></a><span class="summary-name">logger</span> = <code title="logging.getLogger(&quot;SED.EXT&quot;)">logging.getLogger(&quot;SED.EXT&quot;)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.ivs.sed'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.ivs.sed</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Drimmel 3D extinction model presented in Drimmel et al. in</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="fn_base"></a><span class="summary-name">fn_base</span> = <code title="'/Users/robinl/ComboCode/aux/ivsdata/drimmel'"><code class="variable-quote">'</code><code class="variable-string">/Users/robinl/ComboCode/aux/ivsdata/drimmel</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#avdisk" class="summary-name">avdisk</a> = <code title="array([[[  1.4955765 ,   1.51041055,   1.52583313, ...,  14.16928196,
+          14.33589268,  14.50690556],
+        [  1.49150336,   1.50631094,   1.52171242, ...,  14.25491714,
+          14.42823792,  14.6043644 ],
+        [  1.48738921,   1.50216699,   1.51754415, ...,  14.34758663,
+          14.52599049,  14.70586777],
+        ..., 
+        [  1.13166916,   1.13840032,   1.14543295, ...,  13.64110756,
+...">array([[[  1.4955765 ,   1.51041055,   1.52583313, ..<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#avloc" class="summary-name">avloc</a> = <code title="array([[[ 0.51059103,  0.50907248,  0.50760478, ...,  0.55334765,
+          0.55604851,  0.55879277],
+        [ 0.50627148,  0.50473255,  0.5032438 , ...,  0.5490455 ,
+          0.55175978,  0.55451769],
+        [ 0.50197417,  0.50041586,  0.49890628, ...,  0.54475415,
+          0.54748213,  0.55025381],
+        ..., 
+        [ 0.45234904,  0.45094237,  0.44959182, ...,  0.52910644,
+...">array([[[ 0.51059103,  0.50907248,  0.50760478, ...,  <code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#avspir" class="summary-name">avspir</a> = <code title="array([[[ 0.03569764,  0.03420052,  0.03268857, ...,  1.38737524,
+          1.43040562,  1.47390473],
+        [ 0.03654352,  0.03497045,  0.03350747, ...,  1.41928446,
+          1.46210182,  1.50381613],
+        [ 0.03744392,  0.03583845,  0.03428919, ...,  1.44910383,
+          1.4893527 ,  1.52848864],
+        ..., 
+        [ 0.23173086,  0.23290038,  0.23394479, ...,  0.7445206 ,
+...">array([[[ 0.03569764,  0.03420052,  0.03268857, ..., <code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#avdloc" class="summary-name">avdloc</a> = <code title="array([[[ 0.25433207,  0.24842149,  0.24276738, ...,  0.26471582,
+          0.27269766,  0.28105965],
+        [ 0.24726538,  0.24116401,  0.23531477, ...,  0.25683123,
+          0.26499909,  0.27354625],
+        [ 0.24051285,  0.23421949,  0.22817302, ...,  0.24926975,
+          0.25762734,  0.26636243],
+        ..., 
+        [ 0.23173071,  0.22590324,  0.2203003 , ...,  0.24627914,
+...">array([[[ 0.25433207,  0.24842149,  0.24276738, ..., <code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#avori" class="summary-name">avori</a> = <code title="array([[[  1.37120429e-02,   1.63412001e-02,   1.94005072e-02, ...,
+           5.95959888e-15,   5.99463597e-15,   6.03022491e-15],
+        [  1.26305996e-02,   1.51010454e-02,   1.79849099e-02, ...,
+           5.90241230e-15,   5.93778693e-15,   5.97371468e-15],
+        [  1.16044367e-02,   1.39205093e-02,   1.66331585e-02, ...,
+           5.84544552e-15,   5.88116278e-15,   5.91743358e-15],
+        ..., 
+        [  8.16510574e-12,   2.29976216e-09,   4.68663952e-09, ...,
+...">array([[[  1.37120429e-02,   1.63412001e-02,   1.94005<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#coordinates" class="summary-name">coordinates</a> = <code title="FITS_rec([(1.0, 118.8959, 6.4741001), (32.0, 133.4691, -40.774502),
+       (38.0, 128.32899, -2.1266999), (91.0, 153.8748, 0.28259999),
+       (100.0, 163.8517, -6.9454999), (127.0, 192.57401, -17.1416),
+       (166.0, 210.34171, -15.5775), (173.0, 213.9559, -15.9047),
+       (177.0, 154.27589, 17.4807), (179.0, 176.29401, 6.3464999),
+       (191.0, 182.99809, 4.3060999), (196.0, 167.41431, 12.8883),
+       (202.0, 246.6821, -23.914301), (218.0, 177.98911, 11.2576),
+       (220.0, 194.13589, 3.0009), (229.0, 234.82381, -15.4124),
+...">FITS_rec([(1.0, 118.8959, 6.4741001), (32.0, 133<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#avgrid" class="summary-name">avgrid</a> = <code title="array([[[  1.53127408,   1.5446111 ,   1.55852175, ...,  15.55665684,
+          15.76629829,  15.98081017],
+        [  1.52804685,   1.54128134,   1.55521989, ...,  15.67420197,
+          15.89033985,  16.108181  ],
+        [  1.52483308,   1.53800547,   1.55183339, ...,  15.79668999,
+          16.01534271,  16.23435593],
+        ..., 
+        [  1.36339998,   1.3713007 ,   1.37937772, ...,  14.38562775,
+...">array([[[  1.53127408,   1.5446111 ,   1.55852175, ..<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#avori2" class="summary-name">avori2</a> = <code title="array([[[  6.74924115e-04,   7.81801646e-04,   8.86501570e-04, ...,
+           2.64837877e-06,   2.14805345e-06,   1.74239563e-06],
+        [  6.11458207e-04,   7.02597725e-04,   8.05983378e-04, ...,
+           2.33851642e-06,   1.89349714e-06,   1.53337783e-06],
+        [  5.52941929e-04,   6.36523997e-04,   7.31527805e-04, ...,
+           2.06035520e-06,   1.66541224e-06,   1.34641925e-06],
+        ..., 
+        [  1.77380842e-13,   2.56713731e-13,   3.70240622e-13, ...,
+...">array([[[  6.74924115e-04,   7.81801646e-04,   8.8650<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#rf_allsky" class="summary-name">rf_allsky</a> = <code title="FITS_rec([(12.537686, 312.5304, 1.0, 218453.0, 0.88002169),
+       (12.59496, 312.15927, 1.0, 218452.0, 0.92727238),
+       (12.6505, 311.79578, 1.0, 218449.0, 1.0062375), ...,
+       (52.684265, 27.530857, 1.0, 43694.0, 1.0541877),
+       (52.361267, 27.273281, 1.0, 43691.0, 1.0950361),
+       (52.030758, 27.013985, 1.0, 43690.0, 0.83686513)], 
+      dtype=(numpy.record, [('glat', '&gt;f4'), ('glng', '&gt;f4'), ('ncomp'\
+, '&gt;f4'), ('pnum', '&gt;f4'), ('rfac', '&gt;f4')]))">FITS_rec([(12.537686, 312.5304, 1.0, 218453.0, 0.8<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#glat" class="summary-name">glat</a> = <code title="array([ 12.53768635,  12.59496021,  12.6505003 , ...,  52.68426514,
+        52.36126709,  52.0307579 ], dtype=float32)">array([ 12.53768635,  12.59496021,  12.6505003 , ...,  <code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#glng" class="summary-name">glng</a> = <code title="array([ 312.53039551,  312.15927124,  311.79577637, ...,   27.53085709\
+,
+         27.2732811 ,   27.01398468], dtype=float32)">array([ 312.53039551,  312.15927124,  311.79577637, ...<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ncomp"></a><span class="summary-name">ncomp</span> = <code title="array([ 1.,  1.,  1., ...,  1.,  1.,  1.], dtype=float32)">array([ 1.,  1.,  1., ...,  1.,  1.,  1.], dtype=float32)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#pnum" class="summary-name">pnum</a> = <code title="array([ 218453.,  218452.,  218449., ...,   43694.,   43691.,   43690.\
+], dtype=float32)">array([ 218453.,  218452.,  218449., ...,   43694.,   4<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#rfac" class="summary-name">rfac</a> = <code title="array([ 0.88002169,  0.92727238,  1.00623751, ...,  1.05418766,
+        1.09503615,  0.83686513], dtype=float32)">array([ 0.88002169,  0.92727238,  1.00623751, ...,  1.0<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.ivs.sed.extinctionmodels-module.html#g2e" class="summary-name">g2e</a> = <code title="array([[ -5.48824860e-02,  -9.93821033e-01,  -9.64762490e-02],
+       [  4.94116468e-01,  -1.10993846e-01,   8.62281440e-01],
+       [ -8.67661702e-01,  -3.46354000e-04,   4.97154957e-01]])">array([[ -5.48824860e-02,  -9.93821033e-01,  -9.64762490<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="findext"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">findext</span>(<span class="sig-arg">lng</span>,
+        <span class="sig-arg">lat</span>,
+        <span class="sig-arg">model</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">drimmel</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">distance</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#findext">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the &quot;model&quot; extinction at a certain longitude and 
+  latitude.</p>
+  <p>Find the predicted V-band extinction (Av) based on three dimensional 
+  models of the galactic interstellar extinction. The user can choose 
+  between different models by setting the model keyword:</p>
+  <p>1) &quot;arenou&quot;: model from Arenou et al. (1992). 2) 
+  &quot;schlegel&quot;: model from Schlegel et al. (1998) 3) 
+  &quot;drimmel&quot;: model from Drimmel et al. (2003) 4) 
+  &quot;marshall&quot;: model from Marshall et al. (2006)</p>
+  <p>example useage:</p>
+  <ol start="1">
+    <li>
+      Find the total galactic extinction for a star at galactic lattitude 
+      10.2 and longitude 59.0 along the line of sight, as given by the 
+      model of Arenou et al. (1992)
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>lng = 10.2
+<span class="py-prompt">&gt;&gt;&gt; </span>lat = 59.0
+<span class="py-prompt">&gt;&gt;&gt; </span>av = findext(lng, lat, model=<span class="py-string">'arenou'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span>(<span class="py-string">&quot;Av at lng = %.2f, lat = %.2f is %.2f magnitude&quot;</span> %(lng, lat, av))
+<span class="py-output">Av at lng = 10.20, lat = 59.00 is 0.05 magnitude</span></pre>
+    </li>
+    <li>
+      Find the extinction for a star at galactic lattitude 107.05 and 
+      longitude -34.93 and a distance of 144.65 parsecs, as given by the 
+      model of Arenou et al. (1992)
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>lng = 107.05
+<span class="py-prompt">&gt;&gt;&gt; </span>lat = -34.93
+<span class="py-prompt">&gt;&gt;&gt; </span>dd  = 144.65
+<span class="py-prompt">&gt;&gt;&gt; </span>av = findext(lng, lat, distance = dd, model=<span class="py-string">'arenou'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span>(<span class="py-string">&quot;Av at lng = %.2f, lat = %.2f and distance = %.2f parsecs is %.2f magnitude&quot;</span> %(lng, lat, dd, av))
+<span class="py-output">Av at lng = 107.05, lat = -34.93 and distance = 144.65 parsecs is 0.15 magnitude</span></pre>
+    </li>
+    <li>
+      Find the Marschall extinction for a star at galactic longitude 10.2 
+      and latitude 9.0. If the distance is not given, we return the 
+      complete extinction along the line of sight (i.e. put the star 
+      somewhere out of the galaxy).
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>lng = 10.2
+<span class="py-prompt">&gt;&gt;&gt; </span>lat = 9.0
+<span class="py-prompt">&gt;&gt;&gt; </span>av = findext(lng, lat, model=<span class="py-string">'marshall'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span>(<span class="py-string">&quot;Av at lng = %.2f, lat = %.2f is %.2f magnitude&quot;</span> %(lng, lat, av))
+<span class="py-output">Av at lng = 10.20, lat = 9.00 is 10.67 magnitude</span></pre>
+    </li>
+    <li>
+      Find the Marshall extinction for a star at galactic lattitude 271.05 
+      and longitude -4.93 and a distance of 144.65 parsecs, but convert to 
+      Av using Rv = 2.5 instead of Rv = 3.1
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>lng = 271.05
+<span class="py-prompt">&gt;&gt;&gt; </span>lat = -4.93
+<span class="py-prompt">&gt;&gt;&gt; </span>dd  = 144.65
+<span class="py-prompt">&gt;&gt;&gt; </span>av = findext(lng, lat, distance = dd, model=<span class="py-string">'marshall'</span>, Rv=2.5)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span>(<span class="py-string">&quot;Av at lng = %.2f, lat = %.2f and distance = %.2f parsecs is %.2f magnitude&quot;</span> %(lng, lat, dd, av))
+<span class="py-output">Av at lng = 271.05, lat = -4.93 and distance = 144.65 parsecs is 13.95 magnitude</span></pre>
+    </li>
+    <li>
+      Find the extinction for a star at galactic longitude 10.2 and 
+      latitude 9.0, using the schlegel model, using Rv=2.9 instead of 
+      Rv=3.1
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>lng = 58.2
+<span class="py-prompt">&gt;&gt;&gt; </span>lat = 24.0
+<span class="py-prompt">&gt;&gt;&gt; </span>distance = 848.
+<span class="py-prompt">&gt;&gt;&gt; </span>av = findext(lng, lat, distance=distance)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span>(<span class="py-string">&quot;Av at lng = %.2f, lat = %.2f is %.2f magnitude&quot;</span> %(lng, lat, av))
+<span class="py-output">Av at lng = 58.20, lat = 24.00 is 0.12 magnitude</span></pre>
+    </li>
+  </ol>
+  <p>REMARKS: a) Schlegel actually returns E(B-V), this value is then 
+  converted to Av (the desired value for Rv can be set as a keyword; 
+  standard sets Rv=3.1) b) Schlegel is very dubious for latitudes between 
+  -5 and 5 degrees c) Marschall actually returns Ak, this value is then 
+  converted to Av (the reddening law and Rv can be set as keyword; standard
+  sets Rv=3.1, redlaw='cardelli1989') d) Marschall is only available for 
+  certain longitudes and latitudes: 0 &lt; lng &lt; 100 or 260 &lt; lng 
+  &lt; 360 and -10 &lt; lat &lt; 10</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>lng</code></strong> (float) - Galactic Longitude (in degrees)</li>
+        <li><strong class="pname"><code>lat</code></strong> (float) - Galactic Lattitude (in degrees)</li>
+        <li><strong class="pname"><code>model</code></strong> (str) - the name of the extinction model: (&quot;arenou&quot;, 
+          &quot;schlegel&quot;, &quot;drimmel&quot; or 
+          &quot;marshall&quot;; if none given, the program uses 
+          &quot;drimmel&quot;)</li>
+        <li><strong class="pname"><code>distance</code></strong> (float) - Distance to the source (in parsecs), if the distance is not 
+          given, the total galactic extinction along the line of sight is 
+          calculated</li>
+    </ul></dd>
+    <dt>Returns: float</dt>
+        <dd>The extinction in Johnson V-band</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="findext_arenou"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">findext_arenou</span>(<span class="sig-arg">ll</span>,
+        <span class="sig-arg">bb</span>,
+        <span class="sig-arg">distance</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">redlaw</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cardelli1989</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">Rv</span>=<span class="sig-default">3.1</span>,
+        <span class="sig-arg">norm</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Av</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#findext_arenou">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Find the predicted V-band extinction (Av) according to the 3D model 
+  for galactic extinction of Arenou et al, &quot;Modelling the Galactic 
+  interstellar extinction distribution in three dimensions&quot;, Arenou et
+  al, &quot;A tridimensional model of the galactic interstellar 
+  extinction&quot; published in Astronomy and Astrophysics (ISSN 
+  0004-6361), vol. 258, no. 1, p. 104-111, 1992</p>
+  <p>Example usage:</p>
+  <ol start="1">
+    <li>
+      Find the extinction for a star at galactic lattitude 10.2 and 
+      longitude 59.0. If the distance is not given, we use the maximal 
+      distance r0 for that line of sight, as given in the Appendix of 
+      Arenou et al. (1992)
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>lng = 10.2
+<span class="py-prompt">&gt;&gt;&gt; </span>lat = 59.0
+<span class="py-prompt">&gt;&gt;&gt; </span>av = findext_arenou(lng, lat)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span>(<span class="py-string">&quot;Av at lng = %.2f, lat = %.2f is %.2f magnitude&quot;</span> %(lng, lat, av))
+<span class="py-output">Av at lng = 10.20, lat = 59.00 is 0.05 magnitude</span></pre>
+    </li>
+    <li>
+      Find the extinction for a star at galactic lattitude 107.05 and 
+      longitude -34.93 and a distance of 144.65 parsecs
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>lng = 107.05
+<span class="py-prompt">&gt;&gt;&gt; </span>lat = -34.93
+<span class="py-prompt">&gt;&gt;&gt; </span>dd  = 144.65
+<span class="py-prompt">&gt;&gt;&gt; </span>av = findext_arenou(lng, lat, distance = dd)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span>(<span class="py-string">&quot;Av at lng = %.2f, lat = %.2f and distance = %.2f parsecs is %.2f magnitude&quot;</span> %(lng, lat, dd, av))
+<span class="py-output">Av at lng = 107.05, lat = -34.93 and distance = 144.65 parsecs is 0.15 magnitude</span></pre>
+    </li>
+  </ol>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ll</code></strong> (float) - Galactic Longitude (in degrees)</li>
+        <li><strong class="pname"><code>bb</code></strong> (float) - Galactic Lattitude (in degrees)</li>
+        <li><strong class="pname"><code>distance</code></strong> (float) - Distance to the source (in parsecs)</li>
+    </ul></dd>
+    <dt>Returns: float</dt>
+        <dd>The extinction in Johnson V-band</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_getarenouparams"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_getarenouparams</span>(<span class="sig-arg">ll</span>,
+        <span class="sig-arg">bb</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_getarenouparams">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Input: galactic coordinates Output: Arenou 1992 alpha, beta, gamma, 
+  rr0, saa</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ll</code></strong> (float) - Galactic Longitude (in degrees)</li>
+        <li><strong class="pname"><code>bb</code></strong> (float) - Galactic Lattitude (in degrees)</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_marshall_data"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_marshall_data</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#get_marshall_data">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+  Read in the Marshall data
+  
+This function is memoized.
+
+</pre>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@memoized</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="findext_marshall"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">findext_marshall</span>(<span class="sig-arg">ll</span>,
+        <span class="sig-arg">bb</span>,
+        <span class="sig-arg">distance</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">redlaw</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cardelli1989</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">Rv</span>=<span class="sig-default">3.1</span>,
+        <span class="sig-arg">norm</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Av</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#findext_marshall">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Find the V-band extinction according to the reddening model of 
+  Marshall et al. (2006) published in Astronomy and Astrophysics, Volume 
+  453, Issue 2, July II 2006, pp.635-651</p>
+  <p>The band in which the extinction is calculated is actually optional, 
+  and given with the keyword <code>norm</code>. If you set 
+  <code>norm='Av'</code>, you get visual extinction (in JOHNSON.V) band, if
+  you set <code>norm='Ak'</code>, you get infrared extinction (in 
+  JOHNSON.K). If you want the extinction in different passbands, you can 
+  set them via <code>norm='GENEVA.V'</code>. So, <code>norm='Av'</code> is 
+  equivalent to setting <code>norm='JOHNSON.V'</code>.</p>
+  <p>Example usage:</p>
+  <ol start="1">
+    <li>
+      Find the extinction for a star at galactic longitude 10.2 and 
+      latitude 9.0. If the distance is not given, we return the complete 
+      extinction along the line of sight (i.e. put the star somewhere out 
+      of the galaxy).
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>lng = 10.2
+<span class="py-prompt">&gt;&gt;&gt; </span>lat = 9.0
+<span class="py-prompt">&gt;&gt;&gt; </span>ak = findext_marshall(lng, lat, norm=<span class="py-string">'Ak'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span>(<span class="py-string">&quot;Ak at lng = %.2f, lat = %.2f is %.2f magnitude&quot;</span> %(lng, lat, ak))
+<span class="py-output">Ak at lng = 10.20, lat = 9.00 is 0.15 magnitude</span></pre>
+    </li>
+    <li>
+      Find the extinction for a star at galactic lattitude 271.05 and 
+      longitude -4.93 and a distance of 144.65 parsecs
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>lng = 271.05
+<span class="py-prompt">&gt;&gt;&gt; </span>lat = -4.93
+<span class="py-prompt">&gt;&gt;&gt; </span>dd  = 144.65
+<span class="py-prompt">&gt;&gt;&gt; </span>ak = findext_marshall(lng, lat, distance = dd, norm=<span class="py-string">'Ak'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span>(<span class="py-string">&quot;Ak at lng = %.2f, lat = %.2f and distance = %.2f parsecs is %.2f magnitude&quot;</span> %(lng, lat, dd, ak))
+<span class="py-output">Ak at lng = 271.05, lat = -4.93 and distance = 144.65 parsecs is 0.02 magnitude</span></pre>
+    </li>
+    <li>
+      The extinction for galactic longitude 10.2 and latitude 59.0 can not 
+      be calculated using the Marshall models, because they are only valid 
+      at certain lng and lat (0 &lt; lng &lt; 100 or 260 &lt; lng &lt; 360,
+      -10 &lt; lat &lt; 10)
+    </li>
+  </ol>
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>lng = 10.2
+<span class="py-prompt">&gt;&gt;&gt; </span>lat = 59.0
+<span class="py-prompt">&gt;&gt;&gt; </span>ak = findext_marshall(lng, lat, norm=<span class="py-string">'Ak'</span>)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span>(ak)
+<span class="py-output">None</span></pre>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ll</code></strong> (float) - Galactic Longitude (in degrees) should be between 0 and 100 or 
+          260 and 360 degrees</li>
+        <li><strong class="pname"><code>bb</code></strong> (float) - Galactic Lattitude (in degrees) should be between -10 and 10 
+          degrees</li>
+        <li><strong class="pname"><code>distance</code></strong> (float) - Distance to the source (in parsecs)</li>
+        <li><strong class="pname"><code>redlaw</code></strong> (str) - the used reddening law (standard: 'cardelli1989')</li>
+        <li><strong class="pname"><code>Rv</code></strong> (float) - Av/E(B-V) (standard: 3.1)</li>
+    </ul></dd>
+    <dt>Returns: float</dt>
+        <dd>The extinction in V-band (or norm)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="findext_drimmel"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">findext_drimmel</span>(<span class="sig-arg">lng</span>,
+        <span class="sig-arg">lat</span>,
+        <span class="sig-arg">distance</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">rescaling</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">redlaw</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cardelli1989</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">Rv</span>=<span class="sig-default">3.1</span>,
+        <span class="sig-arg">norm</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Av</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#findext_drimmel">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Procedure to retrieve the absorption in V from three-dimensional 
+  grids, based on the Galactic dust distribution of Drimmel &amp; 
+  Spergel.</p>
+  <p>Example usage:</p>
+  <ol start="1">
+    <li>
+      Find the extinction for a star at galactic longitude 10.2 and 
+      latitude 9.0. If the distance is not given, we return the complete 
+      extinction along the line of sight (i.e. put the star somewhere out 
+      of the galaxy).
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>lng = 10.2
+<span class="py-prompt">&gt;&gt;&gt; </span>lat = 9.0
+<span class="py-prompt">&gt;&gt;&gt; </span>av = findext_drimmel(lng, lat)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span>(<span class="py-string">&quot;Av at lng = %.2f, lat = %.2f is %.2f magnitude&quot;</span> %(lng, lat, av))
+<span class="py-output">Av at lng = 10.20, lat = 9.00 is 1.24 magnitude</span></pre>
+    </li>
+    <li>
+      Find the extinction for a star at galactic lattitude 107.05 and 
+      longitude -34.93 and a distance of 144.65 parsecs
+<pre class="py-doctest">
+<span class="py-prompt">&gt;&gt;&gt; </span>lng = 271.05
+<span class="py-prompt">&gt;&gt;&gt; </span>lat = -4.93
+<span class="py-prompt">&gt;&gt;&gt; </span>dd  = 144.65
+<span class="py-prompt">&gt;&gt;&gt; </span>ak = findext_marshall(lng, lat, distance = dd)
+<span class="py-prompt">&gt;&gt;&gt; </span><span class="py-keyword">print</span>(<span class="py-string">&quot;Ak at lng = %.2f, lat = %.2f and distance = %.2f parsecs is %.2f magnitude&quot;</span> %(lng, lat, dd, ak))
+<span class="py-output">Ak at lng = 271.05, lat = -4.93 and distance = 144.65 parsecs is 0.02 magnitude</span></pre>
+    </li>
+  </ol>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>lng</code></strong> (float) - Galactic Longitude (in degrees)</li>
+        <li><strong class="pname"><code>lat</code></strong> (float) - Galactic Lattitude (in degrees)</li>
+        <li><strong class="pname"><code>distance</code></strong> (float) - Distance to the source (in parsecs)</li>
+        <li><strong class="pname"><code>rescaling</code></strong> (boolean) - Rescaling needed or not?</li>
+    </ul></dd>
+    <dt>Returns: float</dt>
+        <dd>extinction in V band with/without rescaling</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_pix2xy"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_pix2xy</span>(<span class="sig-arg">pixel</span>,
+        <span class="sig-arg">resolution</span>,
+        <span class="sig-arg">sixpack</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_pix2xy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>_pix2xy creates a raster image (sky cube or face) given a pixelindex 
+  and a resolution  The data array can be either a vector or 
+  two-dimensional array. In the latter case, the data for each raster image
+  can be stored in either the columns or rows.  The procedure also returns 
+  the x and y raster coordinates of each pixel. Only right oriented, 
+  ecliptic coordinate images are built. SMOLDERS SEAL OF APPROVAL</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_pix2fij"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_pix2fij</span>(<span class="sig-arg">pixel</span>,
+        <span class="sig-arg">resolution</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_pix2fij">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This function takes an n-element pixel array and generates an n by 3 
+  element array containing the corresponding face, column, and row number 
+  (the latter two within the face). SMOLDERS SEAL OF APPROVAL</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ll2uv"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ll2uv</span>(<span class="sig-arg">lng</span>,
+        <span class="sig-arg">lat</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_ll2uv">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Convert longitude, latitude to unit vectors SMOLDERS SEAL OF 
+  APPROVAL</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>lng</code></strong> (float) - galactic longitude</li>
+        <li><strong class="pname"><code>lat</code></strong> (float) - galactic lattitude</li>
+    </ul></dd>
+    <dt>Returns: ndarray</dt>
+        <dd>unitvector</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_uv2pix"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_uv2pix</span>(<span class="sig-arg">vector</span>,
+        <span class="sig-arg">resolution</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_uv2pix">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Routine returns pixel number given unit vector pointing to center of 
+  pixel resolution of the cube. SMOLDERS SEAL OF APPROVAL</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_ll2pix"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_ll2pix</span>(<span class="sig-arg">lng</span>,
+        <span class="sig-arg">lat</span>,
+        <span class="sig-arg">res</span>=<span class="sig-default">9</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_ll2pix">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>_ll2pix is a python function to convert galactic coordinates to DIRBE 
+  pixels (coorconv([lng,lat], infmt='L', outfmt='P', inco='G', 
+  outco='R9'))</p>
+  <p>Input</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>lng</code></strong> (float) - galactic longitude</li>
+        <li><strong class="pname"><code>lat</code></strong> (float) - galactic lattitude</li>
+    </ul></dd>
+    <dt>Returns: ndarray
+      <p>(Note: The default coordinate system for pixels is ecliptic.)</p></dt>
+        <dd>output coordinate array</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_schlegel_data_south"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_schlegel_data_south</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#get_schlegel_data_south">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@memoized</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_lb2xy_schlegel"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_lb2xy_schlegel</span>(<span class="sig-arg">ll</span>,
+        <span class="sig-arg">bb</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#_lb2xy_schlegel">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Converts coordinates in lattitude and longitude to coordinates in x 
+  and y pixel coordinates.</p>
+  <p>The x and y coordinates you find with these formulas are not the 
+  coordinates you can read in ds9, but 1 smaller. Hence (x+1, y+1) are the 
+  coordinates you find in DS9.</p>
+  <p>Input</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ll</code></strong> (float) - galactic longitude</li>
+        <li><strong class="pname"><code>bb</code></strong> (float) - galactic lattitude</li>
+    </ul></dd>
+    <dt>Returns: ndarray</dt>
+        <dd>output coordinate array</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="findext_schlegel"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">findext_schlegel</span>(<span class="sig-arg">ll</span>,
+        <span class="sig-arg">bb</span>,
+        <span class="sig-arg">distance</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">redlaw</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cardelli1989</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">Rv</span>=<span class="sig-default">3.1</span>,
+        <span class="sig-arg">norm</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Av</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sed.extinctionmodels-pysrc.html#findext_schlegel">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the &quot;Schlegel&quot; extinction at certain longitude and 
+  latitude</p>
+  <p>This function returns the E(B-V) maps of Schlegel et al. (1998), 
+  depending on wether the distance is given or not, the E(B-V) value is 
+  corrected. If distance is set we use the distance-corrected values:</p>
+  <p>E(B-V) = E(B-V)_maps * (1 - exp(-10 * r * sin(|b|))) where E(B-V) is 
+  the value to be used and E(B-V)_maps the value as found with the Schlegel
+  dust maps</p>
+  <p>Then we convert the E(B-V) to Av. Standard we use Av = E(B-V)*Rv with 
+  Rv=3.1, but the value of Rv can be given as a keyword.</p>
+  <p>! WARNING: the schlegel maps are not usefull when |b| &lt; 5 degrees 
+  !</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="avdisk"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">avdisk</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+array([[[  1.4955765 ,   1.51041055,   1.52583313, ...,  14.16928196,
+          14.33589268,  14.50690556],
+        [  1.49150336,   1.50631094,   1.52171242, ...,  14.25491714,
+          14.42823792,  14.6043644 ],
+        [  1.48738921,   1.50216699,   1.51754415, ...,  14.34758663,
+          14.52599049,  14.70586777],
+        ..., 
+        [  1.13166916,   1.13840032,   1.14543295, ...,  13.64110756,
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="avloc"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">avloc</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+array([[[ 0.51059103,  0.50907248,  0.50760478, ...,  0.55334765,
+          0.55604851,  0.55879277],
+        [ 0.50627148,  0.50473255,  0.5032438 , ...,  0.5490455 ,
+          0.55175978,  0.55451769],
+        [ 0.50197417,  0.50041586,  0.49890628, ...,  0.54475415,
+          0.54748213,  0.55025381],
+        ..., 
+        [ 0.45234904,  0.45094237,  0.44959182, ...,  0.52910644,
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="avspir"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">avspir</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+array([[[ 0.03569764,  0.03420052,  0.03268857, ...,  1.38737524,
+          1.43040562,  1.47390473],
+        [ 0.03654352,  0.03497045,  0.03350747, ...,  1.41928446,
+          1.46210182,  1.50381613],
+        [ 0.03744392,  0.03583845,  0.03428919, ...,  1.44910383,
+          1.4893527 ,  1.52848864],
+        ..., 
+        [ 0.23173086,  0.23290038,  0.23394479, ...,  0.7445206 ,
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="avdloc"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">avdloc</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+array([[[ 0.25433207,  0.24842149,  0.24276738, ...,  0.26471582,
+          0.27269766,  0.28105965],
+        [ 0.24726538,  0.24116401,  0.23531477, ...,  0.25683123,
+          0.26499909,  0.27354625],
+        [ 0.24051285,  0.23421949,  0.22817302, ...,  0.24926975,
+          0.25762734,  0.26636243],
+        ..., 
+        [ 0.23173071,  0.22590324,  0.2203003 , ...,  0.24627914,
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="avori"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">avori</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+array([[[  1.37120429e-02,   1.63412001e-02,   1.94005072e-02, ...,
+           5.95959888e-15,   5.99463597e-15,   6.03022491e-15],
+        [  1.26305996e-02,   1.51010454e-02,   1.79849099e-02, ...,
+           5.90241230e-15,   5.93778693e-15,   5.97371468e-15],
+        [  1.16044367e-02,   1.39205093e-02,   1.66331585e-02, ...,
+           5.84544552e-15,   5.88116278e-15,   5.91743358e-15],
+        ..., 
+        [  8.16510574e-12,   2.29976216e-09,   4.68663952e-09, ...,
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="coordinates"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">coordinates</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+FITS_rec([(1.0, 118.8959, 6.4741001), (32.0, 133.4691, -40.774502),
+       (38.0, 128.32899, -2.1266999), (91.0, 153.8748, 0.28259999),
+       (100.0, 163.8517, -6.9454999), (127.0, 192.57401, -17.1416),
+       (166.0, 210.34171, -15.5775), (173.0, 213.9559, -15.9047),
+       (177.0, 154.27589, 17.4807), (179.0, 176.29401, 6.3464999),
+       (191.0, 182.99809, 4.3060999), (196.0, 167.41431, 12.8883),
+       (202.0, 246.6821, -23.914301), (218.0, 177.98911, 11.2576),
+       (220.0, 194.13589, 3.0009), (229.0, 234.82381, -15.4124),
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="avgrid"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">avgrid</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+array([[[  1.53127408,   1.5446111 ,   1.55852175, ...,  15.55665684,
+          15.76629829,  15.98081017],
+        [  1.52804685,   1.54128134,   1.55521989, ...,  15.67420197,
+          15.89033985,  16.108181  ],
+        [  1.52483308,   1.53800547,   1.55183339, ...,  15.79668999,
+          16.01534271,  16.23435593],
+        ..., 
+        [  1.36339998,   1.3713007 ,   1.37937772, ...,  14.38562775,
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="avori2"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">avori2</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+array([[[  6.74924115e-04,   7.81801646e-04,   8.86501570e-04, ...,
+           2.64837877e-06,   2.14805345e-06,   1.74239563e-06],
+        [  6.11458207e-04,   7.02597725e-04,   8.05983378e-04, ...,
+           2.33851642e-06,   1.89349714e-06,   1.53337783e-06],
+        [  5.52941929e-04,   6.36523997e-04,   7.31527805e-04, ...,
+           2.06035520e-06,   1.66541224e-06,   1.34641925e-06],
+        ..., 
+        [  1.77380842e-13,   2.56713731e-13,   3.70240622e-13, ...,
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rf_allsky"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rf_allsky</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+FITS_rec([(12.537686, 312.5304, 1.0, 218453.0, 0.88002169),
+       (12.59496, 312.15927, 1.0, 218452.0, 0.92727238),
+       (12.6505, 311.79578, 1.0, 218449.0, 1.0062375), ...,
+       (52.684265, 27.530857, 1.0, 43694.0, 1.0541877),
+       (52.361267, 27.273281, 1.0, 43691.0, 1.0950361),
+       (52.030758, 27.013985, 1.0, 43690.0, 0.83686513)], 
+      dtype=(numpy.record, [('glat', '&gt;f4'), ('glng', '&gt;f4'), ('ncomp'<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+, '&gt;f4'), ('pnum', '&gt;f4'), ('rfac', '&gt;f4')]))
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="glat"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">glat</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+array([ 12.53768635,  12.59496021,  12.6505003 , ...,  52.68426514,
+        52.36126709,  52.0307579 ], dtype=float32)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="glng"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">glng</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+array([ 312.53039551,  312.15927124,  311.79577637, ...,   27.53085709<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+,
+         27.2732811 ,   27.01398468], dtype=float32)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pnum"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">pnum</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+array([ 218453.,  218452.,  218449., ...,   43694.,   43691.,   43690.<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+], dtype=float32)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rfac"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rfac</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+array([ 0.88002169,  0.92727238,  1.00623751, ...,  1.05418766,
+        1.09503615,  0.83686513], dtype=float32)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="g2e"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">g2e</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+array([[ -5.48824860e-02,  -9.93821033e-01,  -9.64762490e-02],
+       [  4.94116468e-01,  -1.10993846e-01,   8.62281440e-01],
+       [ -8.67661702e-01,  -3.46354000e-04,   4.97154957e-01]])
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:49 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

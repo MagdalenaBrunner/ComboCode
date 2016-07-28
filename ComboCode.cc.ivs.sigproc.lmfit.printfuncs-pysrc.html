@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ComboCode.cc.ivs.sigproc.lmfit.printfuncs</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ComboCode-module.html">Package&nbsp;ComboCode</a> ::
+        <a href="ComboCode.cc-module.html">Package&nbsp;cc</a> ::
+        <a href="ComboCode.cc.ivs-module.html">Package&nbsp;ivs</a> ::
+        <a href="ComboCode.cc.ivs.sigproc-module.html">Package&nbsp;sigproc</a> ::
+        <a href="ComboCode.cc.ivs.sigproc.lmfit-module.html">Package&nbsp;lmfit</a> ::
+        Module&nbsp;printfuncs
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ComboCode.cc.ivs.sigproc.lmfit.printfuncs-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="ComboCode.cc.ivs.sigproc.lmfit.printfuncs-module.html">Module ComboCode.cc.ivs.sigproc.lmfit.printfuncs</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-docstring">Created on Fri Apr 20 19:24:21 2012</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-docstring">@author: Tillsten</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-docstring">Changes:</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-docstring">  -  13-Feb-2013 M Newville</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring">     complemented  "report_errors" and "report_ci" with</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-docstring">     "error_report" and "ci_report" (respectively) which</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-docstring">     return the text of the report.  Thus report_errors()</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">     is simply:</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">        def report_errors(params, modelpars=None, show_correl=True):</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">            print error_report(params, modelpars=modelpars,</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">                               show_correl=show_correl)</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring">     and similar for report_ci() / ci_report()</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">__future__</tt> <tt class="py-keyword">import</tt> <tt class="py-name">print_function</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"> </tt>
+<a name="fit_report"></a><div id="fit_report-def"><a name="L23"></a><tt class="py-lineno"> 23</tt> <a class="py-toggle" href="#" id="fit_report-toggle" onclick="return toggle('fit_report');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="ComboCode.cc.ivs.sigproc.lmfit.printfuncs-module.html#fit_report">fit_report</a><tt class="py-op">(</tt><tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-param">modelpars</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">,</tt> <tt class="py-param">show_correl</tt><tt class="py-op">=</tt><tt class="py-name">True</tt><tt class="py-op">,</tt> <tt class="py-param">min_correl</tt><tt class="py-op">=</tt><tt class="py-number">0.1</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="fit_report-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="fit_report-expanded"><a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">    <tt class="py-docstring">"""return text of a report for fitted params best-fit values,</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">    uncertainties and correlations</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">    arguments</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-docstring">    ----------</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring">       params       Parameters from fit</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-docstring">       modelpars    Optional Known Model Parameters [None]</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-docstring">       show_correl  whether to show list of sorted correlations [True]</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-docstring">       min_correl   smallest correlation absolute value to show [0.1]</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">    <tt class="py-name">parnames</tt> <tt class="py-op">=</tt> <tt class="py-name">sorted</tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">    <tt class="py-name">buff</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">    <tt id="link-0" class="py-name" targets="Method ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameters.add()=ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameters-class.html#add"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameters.add" class="py-name" href="#" onclick="return doclink('link-0', 'add', 'link-0');">add</a></tt> <tt class="py-op">=</tt> <tt class="py-name">buff</tt><tt class="py-op">.</tt><tt class="py-name">append</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">    <tt class="py-name">namelen</tt> <tt class="py-op">=</tt> <tt class="py-name">max</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt id="link-1" class="py-name" targets="Variable ComboCode.cc.ivs.units.constants.n=ComboCode.cc.ivs.units.constants-module.html#n"><a title="ComboCode.cc.ivs.units.constants.n" class="py-name" href="#" onclick="return doclink('link-1', 'n', 'link-1');">n</a></tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt id="link-2" class="py-name"><a title="ComboCode.cc.ivs.units.constants.n" class="py-name" href="#" onclick="return doclink('link-2', 'n', 'link-1');">n</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">parnames</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">    <tt id="link-3" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameters.add" class="py-name" href="#" onclick="return doclink('link-3', 'add', 'link-0');">add</a></tt><tt class="py-op">(</tt><tt class="py-string">"[[Variables]]"</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt id="link-4" class="py-name" targets="Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath-module.html#name,Variable ComboCode.cc.ivs.units.uncertainties.umath.name=ComboCode.cc.ivs.units.uncertainties.umath-module.html#name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-4', 'name', 'link-4');">name</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">parnames</tt><tt class="py-op">:</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-name">par</tt> <tt class="py-op">=</tt> <tt class="py-name">params</tt><tt class="py-op">[</tt><tt id="link-5" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-5', 'name', 'link-4');">name</a></tt><tt class="py-op">]</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">        <tt class="py-name">space</tt> <tt class="py-op">=</tt> <tt class="py-string">' '</tt><tt class="py-op">*</tt><tt class="py-op">(</tt><tt class="py-name">namelen</tt><tt class="py-op">+</tt><tt class="py-number">2</tt> <tt class="py-op">-</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt id="link-6" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-6', 'name', 'link-4');">name</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">        <tt class="py-name">nout</tt> <tt class="py-op">=</tt> <tt class="py-string">" %s: %s"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-7" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-7', 'name', 'link-4');">name</a></tt><tt class="py-op">,</tt> <tt class="py-name">space</tt><tt class="py-op">)</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-name">initval</tt> <tt class="py-op">=</tt> <tt class="py-string">'inital = ?'</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">par</tt><tt class="py-op">.</tt><tt class="py-name">init_value</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">            <tt class="py-name">initval</tt> <tt class="py-op">=</tt> <tt class="py-string">'initial = % .6f'</tt> <tt class="py-op">%</tt> <tt class="py-name">par</tt><tt class="py-op">.</tt><tt class="py-name">init_value</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">modelpars</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt> <tt class="py-keyword">and</tt> <tt id="link-8" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-8', 'name', 'link-4');">name</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">modelpars</tt><tt class="py-op">:</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">            <tt class="py-name">initval</tt> <tt class="py-op">=</tt> <tt class="py-string">'%s, model_value =% .6f'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">initval</tt><tt class="py-op">,</tt> <tt class="py-name">modelpars</tt><tt class="py-op">[</tt><tt id="link-9" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-9', 'name', 'link-4');">name</a></tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Variable ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameter.value=ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameter-class.html#value"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameter.value" class="py-name" href="#" onclick="return doclink('link-10', 'value', 'link-10');">value</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">        <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">            <tt class="py-name">sval</tt> <tt class="py-op">=</tt> <tt class="py-string">'% .6f'</tt> <tt class="py-op">%</tt> <tt class="py-name">par</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameter.value" class="py-name" href="#" onclick="return doclink('link-11', 'value', 'link-10');">value</a></tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-keyword">except</tt> <tt class="py-op">(</tt><tt class="py-name">TypeError</tt><tt class="py-op">,</tt> <tt class="py-name">ValueError</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">            <tt class="py-name">sval</tt> <tt class="py-op">=</tt> <tt class="py-string">'Non Numeric Value?'</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">par</tt><tt class="py-op">.</tt><tt class="py-name">stderr</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">            <tt class="py-name">sval</tt> <tt class="py-op">=</tt> <tt class="py-string">'% .6f +/- %.6f'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">par</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameter.value" class="py-name" href="#" onclick="return doclink('link-12', 'value', 'link-10');">value</a></tt><tt class="py-op">,</tt> <tt class="py-name">par</tt><tt class="py-op">.</tt><tt class="py-name">stderr</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">            <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">                <tt class="py-name">sval</tt> <tt class="py-op">=</tt> <tt class="py-string">'%s (%.2f%%)'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">sval</tt><tt class="py-op">,</tt> <tt class="py-name">abs</tt><tt class="py-op">(</tt><tt class="py-name">par</tt><tt class="py-op">.</tt><tt class="py-name">stderr</tt><tt class="py-op">/</tt><tt class="py-name">par</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameter.value" class="py-name" href="#" onclick="return doclink('link-13', 'value', 'link-10');">value</a></tt><tt class="py-op">)</tt><tt class="py-op">*</tt><tt class="py-number">100</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">            <tt class="py-keyword">except</tt> <tt class="py-name">ZeroDivisionError</tt><tt class="py-op">:</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">                <tt class="py-keyword">pass</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">par</tt><tt class="py-op">.</tt><tt class="py-name">vary</tt><tt class="py-op">:</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">            <tt id="link-14" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameters.add" class="py-name" href="#" onclick="return doclink('link-14', 'add', 'link-0');">add</a></tt><tt class="py-op">(</tt><tt class="py-string">"    %s %s %s"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">nout</tt><tt class="py-op">,</tt> <tt class="py-name">sval</tt><tt class="py-op">,</tt> <tt class="py-name">initval</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">        <tt class="py-keyword">elif</tt> <tt class="py-name">par</tt><tt class="py-op">.</tt><tt class="py-name">expr</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">            <tt id="link-15" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameters.add" class="py-name" href="#" onclick="return doclink('link-15', 'add', 'link-0');">add</a></tt><tt class="py-op">(</tt><tt class="py-string">"    %s %s == '%s'"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">nout</tt><tt class="py-op">,</tt> <tt class="py-name">sval</tt><tt class="py-op">,</tt> <tt class="py-name">par</tt><tt class="py-op">.</tt><tt class="py-name">expr</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">            <tt id="link-16" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameters.add" class="py-name" href="#" onclick="return doclink('link-16', 'add', 'link-0');">add</a></tt><tt class="py-op">(</tt><tt class="py-string">"    %s fixed"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">nout</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">show_correl</tt><tt class="py-op">:</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt id="link-17" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameters.add" class="py-name" href="#" onclick="return doclink('link-17', 'add', 'link-0');">add</a></tt><tt class="py-op">(</tt><tt class="py-string">'[[Correlations]] (unreported correlations are &lt; % .3f)'</tt> <tt class="py-op">%</tt> <tt class="py-name">min_correl</tt><tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-name">correls</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">i</tt><tt class="py-op">,</tt> <tt id="link-18" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-18', 'name', 'link-4');">name</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">enumerate</tt><tt class="py-op">(</tt><tt class="py-name">parnames</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">            <tt class="py-name">par</tt> <tt class="py-op">=</tt> <tt class="py-name">params</tt><tt class="py-op">[</tt><tt id="link-19" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-19', 'name', 'link-4');">name</a></tt><tt class="py-op">]</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">par</tt><tt class="py-op">.</tt><tt class="py-name">vary</tt><tt class="py-op">:</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">                <tt class="py-keyword">continue</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">hasattr</tt><tt class="py-op">(</tt><tt class="py-name">par</tt><tt class="py-op">,</tt> <tt class="py-string">'correl'</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt class="py-name">par</tt><tt class="py-op">.</tt><tt class="py-name">correl</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">                <tt class="py-keyword">for</tt> <tt class="py-name">name2</tt> <tt class="py-keyword">in</tt> <tt class="py-name">parnames</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">                    <tt class="py-keyword">if</tt> <tt id="link-20" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-20', 'name', 'link-4');">name</a></tt> <tt class="py-op">!=</tt> <tt class="py-name">name2</tt> <tt class="py-keyword">and</tt> <tt class="py-name">name2</tt> <tt class="py-keyword">in</tt> <tt class="py-name">par</tt><tt class="py-op">.</tt><tt class="py-name">correl</tt><tt class="py-op">:</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">                        <tt class="py-name">correls</tt><tt class="py-op">[</tt><tt class="py-string">"%s, %s"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-21" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-21', 'name', 'link-4');">name</a></tt><tt class="py-op">,</tt> <tt class="py-name">name2</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">par</tt><tt class="py-op">.</tt><tt class="py-name">correl</tt><tt class="py-op">[</tt><tt class="py-name">name2</tt><tt class="py-op">]</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">        <tt class="py-name">sort_correl</tt> <tt class="py-op">=</tt> <tt class="py-name">sorted</tt><tt class="py-op">(</tt><tt class="py-name">correls</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name" targets="Method ComboCode.cc.ivs.sigproc.lmfit.ordereddict.OrderedDict.items()=ComboCode.cc.ivs.sigproc.lmfit.ordereddict.OrderedDict-class.html#items"><a title="ComboCode.cc.ivs.sigproc.lmfit.ordereddict.OrderedDict.items" class="py-name" href="#" onclick="return doclink('link-22', 'items', 'link-22');">items</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">key</tt><tt class="py-op">=</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">it</tt><tt class="py-op">:</tt> <tt class="py-name">abs</tt><tt class="py-op">(</tt><tt class="py-name">it</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-name">sort_correl</tt><tt class="py-op">.</tt><tt class="py-name">reverse</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt id="link-23" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-23', 'name', 'link-4');">name</a></tt><tt class="py-op">,</tt> <tt class="py-name">val</tt> <tt class="py-keyword">in</tt> <tt class="py-name">sort_correl</tt><tt class="py-op">:</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">abs</tt><tt class="py-op">(</tt><tt class="py-name">val</tt><tt class="py-op">)</tt> <tt class="py-op">&lt;</tt> <tt class="py-name">min_correl</tt><tt class="py-op">:</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                <tt class="py-keyword">break</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">            <tt class="py-name">lspace</tt> <tt class="py-op">=</tt> <tt class="py-name">max</tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">,</tt> <tt class="py-number">25</tt> <tt class="py-op">-</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt id="link-24" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-24', 'name', 'link-4');">name</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">            <tt id="link-25" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameters.add" class="py-name" href="#" onclick="return doclink('link-25', 'add', 'link-0');">add</a></tt><tt class="py-op">(</tt><tt class="py-string">'    C(%s)%s = % .3f '</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-26" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-26', 'name', 'link-4');">name</a></tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-string">' '</tt><tt class="py-op">*</tt><tt class="py-number">30</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-name">lspace</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">val</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">'\n'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">buff</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"> </tt>
+<a name="report_errors"></a><div id="report_errors-def"><a name="L90"></a><tt class="py-lineno"> 90</tt> <a class="py-toggle" href="#" id="report_errors-toggle" onclick="return toggle('report_errors');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="ComboCode.cc.ivs.sigproc.lmfit.printfuncs-module.html#report_errors">report_errors</a><tt class="py-op">(</tt><tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kws</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="report_errors-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="report_errors-expanded"><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">    <tt class="py-docstring">"""print a report for fitted params:  see error_report()"""</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt id="link-27" class="py-name" targets="Function ComboCode.cc.ivs.sigproc.lmfit.printfuncs.fit_report()=ComboCode.cc.ivs.sigproc.lmfit.printfuncs-module.html#fit_report"><a title="ComboCode.cc.ivs.sigproc.lmfit.printfuncs.fit_report" class="py-name" href="#" onclick="return doclink('link-27', 'fit_report', 'link-27');">fit_report</a></tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kws</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="report_fit"></a><div id="report_fit-def"><a name="L94"></a><tt class="py-lineno"> 94</tt> <a class="py-toggle" href="#" id="report_fit-toggle" onclick="return toggle('report_fit');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="ComboCode.cc.ivs.sigproc.lmfit.printfuncs-module.html#report_fit">report_fit</a><tt class="py-op">(</tt><tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kws</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="report_fit-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="report_fit-expanded"><a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">    <tt class="py-docstring">"""print a report for fitted params:  see error_report()"""</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt id="link-28" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.printfuncs.fit_report" class="py-name" href="#" onclick="return doclink('link-28', 'fit_report', 'link-27');">fit_report</a></tt><tt class="py-op">(</tt><tt class="py-name">params</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-name">kws</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"> </tt>
+<a name="ci_report"></a><div id="ci_report-def"><a name="L98"></a><tt class="py-lineno"> 98</tt> <a class="py-toggle" href="#" id="ci_report-toggle" onclick="return toggle('ci_report');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="ComboCode.cc.ivs.sigproc.lmfit.printfuncs-module.html#ci_report">ci_report</a><tt class="py-op">(</tt><tt class="py-param">ci</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ci_report-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ci_report-expanded"><a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">    <tt class="py-docstring">"""return text of a report for confidence intervals"""</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">    <tt class="py-name">maxlen</tt> <tt class="py-op">=</tt> <tt class="py-name">max</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">i</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt class="py-name">ci</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">    <tt class="py-name">buff</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">    <tt id="link-29" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameters.add" class="py-name" href="#" onclick="return doclink('link-29', 'add', 'link-0');">add</a></tt> <tt class="py-op">=</tt> <tt class="py-name">buff</tt><tt class="py-op">.</tt><tt class="py-name">append</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">    <tt class="py-name">convp</tt> <tt class="py-op">=</tt> <tt class="py-keyword">lambda</tt> <tt class="py-name">x</tt><tt class="py-op">:</tt> <tt class="py-op">(</tt><tt class="py-string">"%.2f"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">*</tt><tt class="py-number">100</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-string">'%'</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">    <tt class="py-name">conv</tt> <tt class="py-op">=</tt> <tt class="py-keyword">lambda</tt> <tt class="py-name">x</tt><tt class="py-op">:</tt> <tt class="py-string">"%.5f"</tt> <tt class="py-op">%</tt> <tt class="py-name">x</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">    <tt class="py-name">title_shown</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt id="link-30" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-30', 'name', 'link-4');">name</a></tt><tt class="py-op">,</tt> <tt class="py-name">row</tt> <tt class="py-keyword">in</tt> <tt class="py-name">ci</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.ordereddict.OrderedDict.items" class="py-name" href="#" onclick="return doclink('link-31', 'items', 'link-22');">items</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">title_shown</tt><tt class="py-op">:</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">            <tt id="link-32" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameters.add" class="py-name" href="#" onclick="return doclink('link-32', 'add', 'link-0');">add</a></tt><tt class="py-op">(</tt><tt class="py-string">""</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-string">''</tt><tt class="py-op">.</tt><tt class="py-name">rjust</tt><tt class="py-op">(</tt><tt class="py-name">maxlen</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">+</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">.</tt><tt class="py-name">rjust</tt><tt class="py-op">(</tt><tt class="py-number">10</tt><tt class="py-op">)</tt>   <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt class="py-name">map</tt><tt class="py-op">(</tt><tt class="py-name">convp</tt><tt class="py-op">,</tt> <tt class="py-name">row</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">            <tt class="py-name">title_shown</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt id="link-33" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.parameter.Parameters.add" class="py-name" href="#" onclick="return doclink('link-33', 'add', 'link-0');">add</a></tt><tt class="py-op">(</tt><tt class="py-string">""</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt id="link-34" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.name
+ComboCode.cc.ivs.units.uncertainties.umath.name" class="py-name" href="#" onclick="return doclink('link-34', 'name', 'link-4');">name</a></tt><tt class="py-op">.</tt><tt class="py-name">rjust</tt><tt class="py-op">(</tt><tt class="py-name">maxlen</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">+</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">.</tt><tt class="py-name">rjust</tt><tt class="py-op">(</tt><tt class="py-number">10</tt><tt class="py-op">)</tt> <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt class="py-name">map</tt><tt class="py-op">(</tt><tt class="py-name">conv</tt><tt class="py-op">,</tt>  <tt class="py-name">row</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">'\n'</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">buff</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt>
+<a name="report_ci"></a><div id="report_ci-def"><a name="L113"></a><tt class="py-lineno">113</tt> <a class="py-toggle" href="#" id="report_ci-toggle" onclick="return toggle('report_ci');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="ComboCode.cc.ivs.sigproc.lmfit.printfuncs-module.html#report_ci">report_ci</a><tt class="py-op">(</tt><tt class="py-param">ci</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="report_ci-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="report_ci-expanded"><a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">    <tt class="py-docstring">"""print a report for confidence intervals"""</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt id="link-35" class="py-name" targets="Function ComboCode.cc.ivs.sigproc.lmfit.printfuncs.ci_report()=ComboCode.cc.ivs.sigproc.lmfit.printfuncs-module.html#ci_report"><a title="ComboCode.cc.ivs.sigproc.lmfit.printfuncs.ci_report" class="py-name" href="#" onclick="return doclink('link-35', 'ci_report', 'link-35');">ci_report</a></tt><tt class="py-op">(</tt><tt class="py-name">ci</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:55 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

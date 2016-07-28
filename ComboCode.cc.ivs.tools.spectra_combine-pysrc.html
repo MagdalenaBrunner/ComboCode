@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ComboCode.cc.ivs.tools.spectra_combine</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ComboCode-module.html">Package&nbsp;ComboCode</a> ::
+        <a href="ComboCode.cc-module.html">Package&nbsp;cc</a> ::
+        <a href="ComboCode.cc.ivs-module.html">Package&nbsp;ivs</a> ::
+        <a href="ComboCode.cc.ivs.tools-module.html">Package&nbsp;tools</a> ::
+        Module&nbsp;spectra_combine
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ComboCode.cc.ivs.tools.spectra_combine-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="ComboCode.cc.ivs.tools.spectra_combine-module.html">Module ComboCode.cc.ivs.tools.spectra_combine</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring">The combine method from the ivs.spectra.tools module.</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">logging</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">numpy</tt> <tt class="py-keyword">as</tt> <tt class="py-name">np</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">scipy</tt><tt class="py-op">.</tt><tt class="py-name">stats</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package ComboCode.cc=ComboCode.cc-module.html,Variable ComboCode.cc.ivs.units.constants.cc=ComboCode.cc.ivs.units.constants-module.html#cc"><a title="ComboCode.cc
+ComboCode.cc.ivs.units.constants.cc" class="py-name" href="#" onclick="return doclink('link-0', 'cc', 'link-0');">cc</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package ComboCode.cc.ivs=ComboCode.cc.ivs-module.html"><a title="ComboCode.cc.ivs" class="py-name" href="#" onclick="return doclink('link-1', 'ivs', 'link-1');">ivs</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Package ComboCode.cc.ivs.units=ComboCode.cc.ivs.units-module.html,Package ComboCode.cc.tools.units=ComboCode.cc.tools.units-module.html"><a title="ComboCode.cc.ivs.units
+ComboCode.cc.tools.units" class="py-name" href="#" onclick="return doclink('link-2', 'units', 'link-2');">units</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Module ComboCode.cc.ivs.units.conversions=ComboCode.cc.ivs.units.conversions-module.html"><a title="ComboCode.cc.ivs.units.conversions" class="py-name" href="#" onclick="return doclink('link-3', 'conversions', 'link-3');">conversions</a></tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable ComboCode.cc.ivs.aux.decorators.logger=ComboCode.cc.ivs.aux.decorators-module.html#logger,Variable ComboCode.cc.ivs.catalogs.corot.logger=ComboCode.cc.ivs.catalogs.corot-module.html#logger,Variable ComboCode.cc.ivs.catalogs.crossmatch.logger=ComboCode.cc.ivs.catalogs.crossmatch-module.html#logger,Variable ComboCode.cc.ivs.catalogs.gator.logger=ComboCode.cc.ivs.catalogs.gator-module.html#logger,Variable ComboCode.cc.ivs.catalogs.gcpd.logger=ComboCode.cc.ivs.catalogs.gcpd-module.html#logger,Variable ComboCode.cc.ivs.catalogs.mast.logger=ComboCode.cc.ivs.catalogs.mast-module.html#logger,Variable ComboCode.cc.ivs.catalogs.sesame.logger=ComboCode.cc.ivs.catalogs.sesame-module.html#logger,Variable ComboCode.cc.ivs.catalogs.vizier.logger=ComboCode.cc.ivs.catalogs.vizier-module.html#logger,Variable ComboCode.cc.ivs.io.ascii.logger=ComboCode.cc.ivs.io.ascii-module.html#logger,Variable ComboCode.cc.ivs.io.fits.logger=ComboCode.cc.ivs.io.fits-module.html#logger,Variable ComboCode.cc.ivs.io.hdf5.logger=ComboCode.cc.ivs.io.hdf5-module.html#logger,Variable ComboCode.cc.ivs.sed.builder.logger=ComboCode.cc.ivs.sed.builder-module.html#logger,Variable ComboCode.cc.ivs.sed.decorators.logger=ComboCode.cc.ivs.sed.decorators-module.html#logger,Variable ComboCode.cc.ivs.sed.distance.logger=ComboCode.cc.ivs.sed.distance-module.html#logger,Variable ComboCode.cc.ivs.sed.extinctionmodels.logger=ComboCode.cc.ivs.sed.extinctionmodels-module.html#logger,Variable ComboCode.cc.ivs.sed.filters.logger=ComboCode.cc.ivs.sed.filters-module.html#logger,Variable ComboCode.cc.ivs.sed.fit.logger=ComboCode.cc.ivs.sed.fit-module.html#logger,Variable ComboCode.cc.ivs.sed.model.logger=ComboCode.cc.ivs.sed.model-module.html#logger,Variable ComboCode.cc.ivs.sed.reddening.logger=ComboCode.cc.ivs.sed.reddening-module.html#logger,Variable ComboCode.cc.ivs.sigproc.evaluate.logger=ComboCode.cc.ivs.sigproc.evaluate-module.html#logger,Variable ComboCode.cc.ivs.sigproc.fit.logger=ComboCode.cc.ivs.sigproc.fit-module.html#logger,Variable ComboCode.cc.ivs.sigproc.funclib.logger=ComboCode.cc.ivs.sigproc.funclib-module.html#logger,Variable ComboCode.cc.ivs.tools.spectra_combine.logger=ComboCode.cc.ivs.tools.spectra_combine-module.html#logger,Variable ComboCode.cc.ivs.units.conversions.logger=ComboCode.cc.ivs.units.conversions-module.html#logger"><a title="ComboCode.cc.ivs.aux.decorators.logger
+ComboCode.cc.ivs.catalogs.corot.logger
+ComboCode.cc.ivs.catalogs.crossmatch.logger
+ComboCode.cc.ivs.catalogs.gator.logger
+ComboCode.cc.ivs.catalogs.gcpd.logger
+ComboCode.cc.ivs.catalogs.mast.logger
+ComboCode.cc.ivs.catalogs.sesame.logger
+ComboCode.cc.ivs.catalogs.vizier.logger
+ComboCode.cc.ivs.io.ascii.logger
+ComboCode.cc.ivs.io.fits.logger
+ComboCode.cc.ivs.io.hdf5.logger
+ComboCode.cc.ivs.sed.builder.logger
+ComboCode.cc.ivs.sed.decorators.logger
+ComboCode.cc.ivs.sed.distance.logger
+ComboCode.cc.ivs.sed.extinctionmodels.logger
+ComboCode.cc.ivs.sed.filters.logger
+ComboCode.cc.ivs.sed.fit.logger
+ComboCode.cc.ivs.sed.model.logger
+ComboCode.cc.ivs.sed.reddening.logger
+ComboCode.cc.ivs.sigproc.evaluate.logger
+ComboCode.cc.ivs.sigproc.fit.logger
+ComboCode.cc.ivs.sigproc.funclib.logger
+ComboCode.cc.ivs.tools.spectra_combine.logger
+ComboCode.cc.ivs.units.conversions.logger" class="py-name" href="#" onclick="return doclink('link-4', 'logger', 'link-4');">logger</a></tt> <tt class="py-op">=</tt> <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">getLogger</tt><tt class="py-op">(</tt><tt class="py-string">"SPEC.TOOLS"</tt><tt class="py-op">)</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"> </tt>
+<a name="combine"></a><div id="combine-def"><a name="L15"></a><tt class="py-lineno">15</tt> <a class="py-toggle" href="#" id="combine-toggle" onclick="return toggle('combine');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="ComboCode.cc.ivs.tools.spectra_combine-module.html#combine">combine</a><tt class="py-op">(</tt><tt class="py-param">list_of_spectra</tt><tt class="py-op">,</tt><tt class="py-param">R</tt><tt class="py-op">=</tt><tt class="py-number">200.</tt><tt class="py-op">,</tt><tt class="py-param">lambda0</tt><tt class="py-op">=</tt><tt class="py-op">(</tt><tt class="py-number">950.</tt><tt class="py-op">,</tt><tt class="py-string">'AA'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-param">lambdan</tt><tt class="py-op">=</tt><tt class="py-op">(</tt><tt class="py-number">3350.</tt><tt class="py-op">,</tt><tt class="py-string">'AA'</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="combine-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="combine-expanded"><a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">    <tt class="py-docstring">"""</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-docstring">    Combine and weight-average spectra on a common wavelength grid.</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"><tt class="py-docstring">    C{list_of_spectra} should be a list of lists/arrays. Each element in the</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-docstring">    main list should be (wavelength,flux,error).</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-docstring">    If you have FUSE fits files, use L{cc.ivs.fits.read_fuse}.</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-docstring">    If you have IUE FITS files, use L{cc.ivs.fits.read_iue}.</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"><tt class="py-docstring">    After Peter Woitke.</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"><tt class="py-docstring">    @param R: resolution</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"><tt class="py-docstring">    @type R: float</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"><tt class="py-docstring">    @param lambda0: start wavelength, unit</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-docstring">    @type lambda0: tuple (float,str)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"><tt class="py-docstring">    @param lambdan: end wavelength, unit</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"><tt class="py-docstring">    @type lambdan: tuple (float,str)</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"><tt class="py-docstring">    @return: binned spectrum (wavelengths,flux, error)</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"><tt class="py-docstring">    @rtype: array, array, array</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">    <tt class="py-name">l0</tt> <tt class="py-op">=</tt> <tt id="link-5" class="py-name"><a title="ComboCode.cc.ivs.units.conversions" class="py-name" href="#" onclick="return doclink('link-5', 'conversions', 'link-3');">conversions</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method ComboCode.cc.ivs.units.conversions.Unit.convert()=ComboCode.cc.ivs.units.conversions.Unit-class.html#convert,Function ComboCode.cc.ivs.units.conversions.convert()=ComboCode.cc.ivs.units.conversions-module.html#convert"><a title="ComboCode.cc.ivs.units.conversions.Unit.convert
+ComboCode.cc.ivs.units.conversions.convert" class="py-name" href="#" onclick="return doclink('link-6', 'convert', 'link-6');">convert</a></tt><tt class="py-op">(</tt><tt class="py-name">lambda0</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt><tt class="py-string">'AA'</tt><tt class="py-op">,</tt><tt class="py-name">lambda0</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">    <tt class="py-name">ln</tt> <tt class="py-op">=</tt> <tt id="link-7" class="py-name"><a title="ComboCode.cc.ivs.units.conversions" class="py-name" href="#" onclick="return doclink('link-7', 'conversions', 'link-3');">conversions</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name"><a title="ComboCode.cc.ivs.units.conversions.Unit.convert
+ComboCode.cc.ivs.units.conversions.convert" class="py-name" href="#" onclick="return doclink('link-8', 'convert', 'link-6');">convert</a></tt><tt class="py-op">(</tt><tt class="py-name">lambdan</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt><tt class="py-string">'AA'</tt><tt class="py-op">,</tt><tt class="py-name">lambdan</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">    <tt class="py-comment">#-- STEP 1: define wavelength bins</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">    <tt class="py-name">Delta</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Function ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10()=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath-module.html#log10,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#log10,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy-module.html#log10,Method ComboCode.cc.ivs.units.conversions.Unit.log10()=ComboCode.cc.ivs.units.conversions.Unit-class.html#log10,Function ComboCode.cc.ivs.units.uncertainties.umath.log10()=ComboCode.cc.ivs.units.uncertainties.umath-module.html#log10,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10=ComboCode.cc.ivs.units.uncertainties.unumpy.core-module.html#log10,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.log10=ComboCode.cc.ivs.units.uncertainties.unumpy-module.html#log10"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-9', 'log10', 'link-9');">log10</a></tt><tt class="py-op">(</tt><tt class="py-number">1.</tt><tt class="py-op">+</tt><tt class="py-number">1.</tt><tt class="py-op">/</tt><tt class="py-name">R</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">    <tt class="py-name">x</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">arange</tt><tt class="py-op">(</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-10', 'log10', 'link-9');">log10</a></tt><tt class="py-op">(</tt><tt class="py-name">l0</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.log10
+ComboCode.cc.ivs.units.conversions.Unit.log10
+ComboCode.cc.ivs.units.uncertainties.umath.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.log10
+ComboCode.cc.ivs.units.uncertainties.unumpy.log10" class="py-name" href="#" onclick="return doclink('link-11', 'log10', 'link-9');">log10</a></tt><tt class="py-op">(</tt><tt class="py-name">ln</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-name">Delta</tt><tt class="py-op">,</tt><tt class="py-name">Delta</tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">    <tt class="py-name">x</tt> <tt class="py-op">=</tt> <tt class="py-number">10</tt><tt class="py-op">**</tt><tt class="py-name">x</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">    <tt class="py-name">lamc_j</tt> <tt class="py-op">=</tt> <tt class="py-number">0.5</tt><tt class="py-op">*</tt><tt class="py-op">(</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">roll</tt><tt class="py-op">(</tt><tt class="py-name">x</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-name">x</tt><tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line"> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">    <tt class="py-comment">#-- STEP 2: rebinning of data onto newly defined wavelength bins</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">    <tt class="py-name">Ns</tt> <tt class="py-op">=</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">list_of_spectra</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">    <tt class="py-name">Nw</tt> <tt class="py-op">=</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">lamc_j</tt><tt class="py-op">)</tt><tt class="py-op">-</tt><tt class="py-number">1</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">    <tt class="py-name">binned_fluxes</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">zeros</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">Ns</tt><tt class="py-op">,</tt><tt class="py-name">Nw</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">    <tt class="py-name">binned_errors</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">inf</tt><tt class="py-op">*</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">ones</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">Ns</tt><tt class="py-op">,</tt><tt class="py-name">Nw</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">snr</tt><tt class="py-op">,</tt><tt class="py-op">(</tt><tt class="py-name">wave</tt><tt class="py-op">,</tt><tt class="py-name">flux</tt><tt class="py-op">,</tt><tt class="py-name">err</tt><tt class="py-op">)</tt> <tt class="py-keyword">in</tt> <tt class="py-name">enumerate</tt><tt class="py-op">(</tt><tt class="py-name">list_of_spectra</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">        <tt class="py-name">wave0</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">roll</tt><tt class="py-op">(</tt><tt class="py-name">wave</tt><tt class="py-op">,</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">        <tt class="py-name">wave1</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">roll</tt><tt class="py-op">(</tt><tt class="py-name">wave</tt><tt class="py-op">,</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">        <tt class="py-name">lam_i0_dc</tt> <tt class="py-op">=</tt> <tt class="py-number">0.5</tt><tt class="py-op">*</tt><tt class="py-op">(</tt><tt class="py-name">wave0</tt><tt class="py-op">+</tt><tt class="py-name">wave</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">        <tt class="py-name">lam_i1_dc</tt> <tt class="py-op">=</tt> <tt class="py-number">0.5</tt><tt class="py-op">*</tt><tt class="py-op">(</tt><tt class="py-name">wave1</tt><tt class="py-op">+</tt><tt class="py-name">wave</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line">        <tt class="py-name">dlam_i</tt> <tt class="py-op">=</tt> <tt class="py-name">lam_i1_dc</tt><tt class="py-op">-</tt><tt class="py-name">lam_i0_dc</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">         </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">j</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">Nw</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line">            <tt class="py-name">A</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">min</tt><tt class="py-op">(</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">vstack</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">lamc_j</tt><tt class="py-op">[</tt><tt class="py-name">j</tt><tt class="py-op">+</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">*</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">ones</tt><tt class="py-op">(</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">wave</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">lam_i1_dc</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">axis</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line">            <tt class="py-name">B</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">max</tt><tt class="py-op">(</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">vstack</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">lamc_j</tt><tt class="py-op">[</tt><tt class="py-name">j</tt><tt class="py-op">]</tt><tt class="py-op">*</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">ones</tt><tt class="py-op">(</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">wave</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">lam_i0_dc</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-name">axis</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">            <tt class="py-name">overlaps</tt> <tt class="py-op">=</tt> <tt class="py-name">scipy</tt><tt class="py-op">.</tt><tt class="py-name">stats</tt><tt class="py-op">.</tt><tt class="py-name">threshold</tt><tt class="py-op">(</tt><tt class="py-name">A</tt><tt class="py-op">-</tt><tt class="py-name">B</tt><tt class="py-op">,</tt><tt class="py-name">threshmin</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line">            <tt class="py-name">norm</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">sum</tt><tt class="py-op">(</tt><tt class="py-name">overlaps</tt><tt class="py-op">)</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line">            <tt class="py-name">binned_fluxes</tt><tt class="py-op">[</tt><tt class="py-name">snr</tt><tt class="py-op">,</tt><tt class="py-name">j</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">sum</tt><tt class="py-op">(</tt><tt class="py-name">flux</tt><tt class="py-op">*</tt><tt class="py-name">overlaps</tt><tt class="py-op">)</tt><tt class="py-op">/</tt><tt class="py-name">norm</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line">            <tt class="py-name">binned_errors</tt><tt class="py-op">[</tt><tt class="py-name">snr</tt><tt class="py-op">,</tt><tt class="py-name">j</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Function ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.sqrt()=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath-module.html#sqrt,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.sqrt=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#sqrt,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.sqrt=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy-module.html#sqrt,Method ComboCode.cc.ivs.units.conversions.Unit.sqrt()=ComboCode.cc.ivs.units.conversions.Unit-class.html#sqrt,Function ComboCode.cc.ivs.units.uncertainties.umath.sqrt()=ComboCode.cc.ivs.units.uncertainties.umath-module.html#sqrt,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.core.sqrt=ComboCode.cc.ivs.units.uncertainties.unumpy.core-module.html#sqrt,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.sqrt=ComboCode.cc.ivs.units.uncertainties.unumpy-module.html#sqrt"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.sqrt
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.sqrt
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.sqrt
+ComboCode.cc.ivs.units.conversions.Unit.sqrt
+ComboCode.cc.ivs.units.uncertainties.umath.sqrt
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.sqrt
+ComboCode.cc.ivs.units.uncertainties.unumpy.sqrt" class="py-name" href="#" onclick="return doclink('link-12', 'sqrt', 'link-12');">sqrt</a></tt><tt class="py-op">(</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">sum</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">err</tt><tt class="py-op">*</tt><tt class="py-name">overlaps</tt><tt class="py-op">)</tt><tt class="py-op">**</tt><tt class="py-number">2</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">/</tt><tt class="py-name">norm</tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">     </tt>
+<a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line">    <tt class="py-comment">#-- STEP 3: all available spectra sets are co-added, using the inverse</tt> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">    <tt class="py-comment">#   square of the bin uncertainty as weight</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line">    <tt class="py-name">binned_fluxes</tt><tt class="py-op">[</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Function ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.isnan()=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath-module.html#isnan,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.isnan=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core-module.html#isnan,Variable ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.isnan=ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy-module.html#isnan,Function ComboCode.cc.ivs.units.uncertainties.umath.isnan()=ComboCode.cc.ivs.units.uncertainties.umath-module.html#isnan,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.core.isnan=ComboCode.cc.ivs.units.uncertainties.unumpy.core-module.html#isnan,Variable ComboCode.cc.ivs.units.uncertainties.unumpy.isnan=ComboCode.cc.ivs.units.uncertainties.unumpy-module.html#isnan"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.isnan
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.isnan
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.isnan
+ComboCode.cc.ivs.units.uncertainties.umath.isnan
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.isnan
+ComboCode.cc.ivs.units.uncertainties.unumpy.isnan" class="py-name" href="#" onclick="return doclink('link-13', 'isnan', 'link-13');">isnan</a></tt><tt class="py-op">(</tt><tt class="py-name">binned_fluxes</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">    <tt class="py-name">binned_errors</tt><tt class="py-op">[</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.isnan
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.isnan
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.isnan
+ComboCode.cc.ivs.units.uncertainties.umath.isnan
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.isnan
+ComboCode.cc.ivs.units.uncertainties.unumpy.isnan" class="py-name" href="#" onclick="return doclink('link-14', 'isnan', 'link-13');">isnan</a></tt><tt class="py-op">(</tt><tt class="py-name">binned_errors</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-number">1e300</tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">    <tt class="py-name">weights</tt> <tt class="py-op">=</tt> <tt class="py-number">1.</tt><tt class="py-op">/</tt><tt class="py-name">binned_errors</tt><tt class="py-op">**</tt><tt class="py-number">2</tt> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line">     </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line">    <tt class="py-name">totalflux</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">sum</tt><tt class="py-op">(</tt><tt class="py-name">weights</tt><tt class="py-op">*</tt><tt class="py-name">binned_fluxes</tt><tt class="py-op">,</tt><tt class="py-name">axis</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">)</tt><tt class="py-op">/</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">sum</tt><tt class="py-op">(</tt><tt class="py-name">weights</tt><tt class="py-op">,</tt><tt class="py-name">axis</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line">    <tt class="py-name">totalerr</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.umath.sqrt
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.core.sqrt
+ComboCode.cc.ivs.sigproc.lmfit.uncertainties.unumpy.sqrt
+ComboCode.cc.ivs.units.conversions.Unit.sqrt
+ComboCode.cc.ivs.units.uncertainties.umath.sqrt
+ComboCode.cc.ivs.units.uncertainties.unumpy.core.sqrt
+ComboCode.cc.ivs.units.uncertainties.unumpy.sqrt" class="py-name" href="#" onclick="return doclink('link-15', 'sqrt', 'link-12');">sqrt</a></tt><tt class="py-op">(</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">sum</tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">weights</tt><tt class="py-op">*</tt><tt class="py-name">binned_errors</tt><tt class="py-op">)</tt><tt class="py-op">**</tt><tt class="py-number">2</tt><tt class="py-op">,</tt><tt class="py-name">axis</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">/</tt><tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">sum</tt><tt class="py-op">(</tt><tt class="py-name">weights</tt><tt class="py-op">,</tt><tt class="py-name">axis</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line">    <tt class="py-name">totalspec</tt> <tt class="py-op">=</tt> <tt class="py-name">np</tt><tt class="py-op">.</tt><tt class="py-name">sum</tt><tt class="py-op">(</tt><tt class="py-name">binned_fluxes</tt><tt class="py-op">&gt;</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-name">axis</tt><tt class="py-op">=</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line">     </tt>
+<a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line">    <tt class="py-comment">#-- that's it!</tt> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">x</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt><tt class="py-name">totalflux</tt><tt class="py-op">,</tt><tt class="py-name">totalerr</tt><tt class="py-op">,</tt><tt class="py-name">totalspec</tt> </tt>
+</div><a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:53 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

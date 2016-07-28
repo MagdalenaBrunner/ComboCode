@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ComboCode.cc.modeling.profilers.Velocity</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ComboCode-module.html">Package&nbsp;ComboCode</a> ::
+        <a href="ComboCode.cc-module.html">Package&nbsp;cc</a> ::
+        <a href="ComboCode.cc.modeling-module.html">Package&nbsp;modeling</a> ::
+        <a href="ComboCode.cc.modeling.profilers-module.html">Package&nbsp;profilers</a> ::
+        Module&nbsp;Velocity
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ComboCode.cc.modeling.profilers.Velocity-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module Velocity</h1><p class="nomargin-top"><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html">source&nbsp;code</a></span></p>
+<p>Module for calculating the velocity profile as a function of 
+  radius.</p>
+  <p>Author: R. Lombaert</p>
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.modeling.profilers.Velocity.Velocity-class.html" class="summary-name">Velocity</a><br />
+      An interface for a velocity profile and its derivative
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="ComboCode.cc.modeling.profilers.Velocity.Drift-class.html" class="summary-name">Drift</a><br />
+      An interface for the drift velocity as a function of radius and 
+        grain size.
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array/float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Velocity-module.html#driftRPDF" class="summary-sig-name">driftRPDF</a>(<span class="summary-sig-arg">r</span>,
+        <span class="summary-sig-arg">a</span>,
+        <span class="summary-sig-arg">l</span>,
+        <span class="summary-sig-arg">v</span>,
+        <span class="summary-sig-arg">mdot</span>,
+        <span class="summary-sig-arg">opac</span>,
+        <span class="summary-sig-arg">sd</span>,
+        <span class="summary-sig-arg">radiance</span>,
+        <span class="summary-sig-arg">T</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">P</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">alpha</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">mu</span>=<span class="summary-sig-default">2.0</span>,
+        <span class="summary-sig-arg">w_thermal</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">none</code><code class="variable-quote">'</code></span>)</span><br />
+      Calculate the drift velocity as a function of radius and grain size 
+      by equating the radiation pressure force and drag force.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#driftRPDF">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Velocity-module.html#vbeta" class="summary-sig-name">vbeta</a>(<span class="summary-sig-arg">r</span>,
+        <span class="summary-sig-arg">r0</span>,
+        <span class="summary-sig-arg">v0</span>,
+        <span class="summary-sig-arg">vinf</span>,
+        <span class="summary-sig-arg">beta</span>)</span><br />
+      The beta-power law description of the velocity profile.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#vbeta">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Velocity-module.html#dvbetadr" class="summary-sig-name">dvbetadr</a>(<span class="summary-sig-arg">r</span>,
+        <span class="summary-sig-arg">r0</span>,
+        <span class="summary-sig-arg">v0</span>,
+        <span class="summary-sig-arg">vinf</span>,
+        <span class="summary-sig-arg">beta</span>)</span><br />
+      The derivative of the vbeta function: analytic.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#dvbetadr">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Velocity-module.html#vdust" class="summary-sig-name">vdust</a>(<span class="summary-sig-arg">r</span>,
+        <span class="summary-sig-arg">v</span>,
+        <span class="summary-sig-arg">w</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Calculate the dust velocity profile from a gas velocity and a drift 
+      velocity profile.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#vdust">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.modeling.profilers'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.modeling.profilers</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="driftRPDF"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">driftRPDF</span>(<span class="sig-arg">r</span>,
+        <span class="sig-arg">a</span>,
+        <span class="sig-arg">l</span>,
+        <span class="sig-arg">v</span>,
+        <span class="sig-arg">mdot</span>,
+        <span class="sig-arg">opac</span>,
+        <span class="sig-arg">sd</span>,
+        <span class="sig-arg">radiance</span>,
+        <span class="sig-arg">T</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">P</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">alpha</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">mu</span>=<span class="sig-default">2.0</span>,
+        <span class="sig-arg">w_thermal</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">none</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#driftRPDF">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Calculate the drift velocity as a function of radius and grain size by
+  equating the radiation pressure force and drag force.</p>
+  <p>If the grain size is given as a constant value, the profile is 
+  calculated only for an average grain size, and is essentially 1d, in 
+  which case the drift does not depend on grain size.</p>
+  <p>For now in the approximation that the thermal velocities are small 
+  compared to the drift. This is only valid in the outer, cool regions of 
+  the wind.</p>
+  <p>The function integrates the luminosity and the opacity over the 
+  wavelength grid to estimate the component for the radiation pressure.</p>
+  <p>Inclusion of the thermal velocity requires T profile. Mean molecular 
+  weight assumed to be one in that case.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>r</code></strong> (array/float) - The radial points (cm)</li>
+        <li><strong class="pname"><code>a</code></strong> (array/float) - The grain size grid (cm)</li>
+        <li><strong class="pname"><code>l</code></strong> (array/float) - The wavelength grid (cm)</li>
+        <li><strong class="pname"><code>v</code></strong> (float/Velocity()) - The velocity profile (cm/s)</li>
+        <li><strong class="pname"><code>mdot</code></strong> (float/Mdot()) - The mass-loss profile (Msun/yr)</li>
+        <li><strong class="pname"><code>opac</code></strong> (Opacity()) - The opacity profile (cm2/g), must include l-dependence. Can be 
+          extinction, absorption, or scattering, but note that the 
+          calculation assumes this is an absorption opacity.</li>
+        <li><strong class="pname"><code>sd</code></strong> (float) - The specific density of the dust species</li>
+        <li><strong class="pname"><code>radiance</code></strong> (Radiance()) - The luminosity profile (ergs/s), must include l-dependence</li>
+        <li><strong class="pname"><code>T</code></strong> (Temperature()) - The temperature profile. Only relevant if w_thermal is not none.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>P</code></strong> (float) - The porosity of the grain (or equivalent, to represent effective 
+          grain surface). Default is the spherical case. Is given as the 
+          ratio of vacuum per unit volume of a grain.
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>alpha</code></strong> (float) - Sticking coefficient (Kwok 1975, Van Marle 2011). Default is 
+          current value in MCP/GASTRoNOoM. Should be 0.25 according to Kwok
+          and van Marle. 1-alpha gives the fraction of elastic collisions.
+          <p>(default: 0.)</p></li>
+        <li><strong class="pname"><code>mu</code></strong> (float) - The mean molecular weight. Default is a wind with purely H2. To 
+          get the GASTRoNOoM value of 1.4, set fH to 1.5.
+          <p>(default: 2.0)</p></li>
+        <li><strong class="pname"><code>w_thermal</code></strong> (str) - Type of thermal velocity.
+          <ul>
+            <li>
+              sqrt(2kT/m): most probably speed df(v)/dr = 0
+            </li>
+            <li>
+              sqrt(8/pi kT/m): mean speed (f(v) * v dv)/f(v) dv
+            </li>
+            <li>
+              sqrt(3kT/m): rms speed sqrt((f(v) * v2 dv)/f(v) dv)
+            </li>
+            <li>
+              Kwok version: 3/4 sqrt(3kT/m)
+            </li>
+            <li>
+              Epstein: 4/3 sqrt(8kT/mpi)
+            </li>
+          </ul>
+          <p>Choose from: epstein, kwok, prob, mean, rms, none</p>
+          <p>(default: none)</p></li>
+    </ul></dd>
+    <dt>Returns: array/float</dt>
+        <dd>The drift velocity (cm/s) as a function of r and a</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="vbeta"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">vbeta</span>(<span class="sig-arg">r</span>,
+        <span class="sig-arg">r0</span>,
+        <span class="sig-arg">v0</span>,
+        <span class="sig-arg">vinf</span>,
+        <span class="sig-arg">beta</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#vbeta">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The beta-power law description of the velocity profile.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>r</code></strong> (array) - The radial points (cm)</li>
+        <li><strong class="pname"><code>r0</code></strong> (float) - The inner radius (typically at dust condensation radius, cm)</li>
+        <li><strong class="pname"><code>v0</code></strong> (float) - The initial velocity at r0 (cm/s)</li>
+        <li><strong class="pname"><code>vinf</code></strong> (float) - The terminal wind velocity (cm/s)</li>
+        <li><strong class="pname"><code>beta</code></strong> (float) - The exponent of the beta law</li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The beta law velocity profile (cm/s)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dvbetadr"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dvbetadr</span>(<span class="sig-arg">r</span>,
+        <span class="sig-arg">r0</span>,
+        <span class="sig-arg">v0</span>,
+        <span class="sig-arg">vinf</span>,
+        <span class="sig-arg">beta</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#dvbetadr">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The derivative of the vbeta function: analytic.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>r</code></strong> (array) - The radial points (cm)</li>
+        <li><strong class="pname"><code>r0</code></strong> (float) - The inner radius (typically at dust condensation radius, cm)</li>
+        <li><strong class="pname"><code>v0</code></strong> (float) - The initial velocity at r0 (cm/s)</li>
+        <li><strong class="pname"><code>vinf</code></strong> (float) - The terminal wind velocity (cm/s)</li>
+        <li><strong class="pname"><code>beta</code></strong> (float) - The exponent of the beta law</li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The analytic derivative of the beta law velocity profile (cm^2/s)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="vdust"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">vdust</span>(<span class="sig-arg">r</span>,
+        <span class="sig-arg">v</span>,
+        <span class="sig-arg">w</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#vdust">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Calculate the dust velocity profile from a gas velocity and a drift 
+  velocity profile.</p>
+  <p>Requires averaging the drift velocity over grain size. Several 
+  normalisation possibilities available. See Drift().avgDrift.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>r</code></strong> (array) - The radial points (cm)</li>
+        <li><strong class="pname"><code>v</code></strong> (float/Velocity()) - The velocity profile (cm/s)</li>
+        <li><strong class="pname"><code>w</code></strong> (float/Drift()) - The drift velocity profile (cm/s) as a function of r and a.</li>
+        <li><strong class="pname"><code>args</code></strong> (tuple) - Additional parameters passed to the avgDrift method
+          <p>(default: [])</p></li>
+        <li><strong class="pname"><code>kwargs</code></strong> (dict) - Additional keywords passed to the avgDrift method
+          <p>(default: {})</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The dust velocity profile (cm/s)</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="ComboCode-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:49 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
