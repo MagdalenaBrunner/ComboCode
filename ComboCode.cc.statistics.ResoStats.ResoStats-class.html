@@ -93,7 +93,10 @@
         <span class="summary-sig-arg">star_name</span>,
         <span class="summary-sig-arg">code</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">GASTRoNOoM</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">path_code</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">codeJun2013</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">lll_p</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">lll_p</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">use_bestvlsr</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">vmin</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">vmax</span>=<span class="summary-sig-default">0.0</span>)</span><br />
       Initializing an instance of IntIntStats.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.__init__">source&nbsp;code</a></span>
@@ -129,9 +132,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#setIntensities" class="summary-sig-name">setIntensities</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">use_bestvlsr</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">partial</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">vcut</span>=<span class="summary-sig-default">0</span>)</span><br />
+        <span class="summary-sig-arg">vmin</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">vmax</span>=<span class="summary-sig-default">0</span>)</span><br />
       The data intensities are stored in the dictionary 
       self.dintint/self.dpeakint, the model intensities in 
       self.mintint/self.mpeakint.</td>
@@ -192,11 +194,28 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#resetNoisy" class="summary-sig-name">resetNoisy</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">factor</span>,
-        <span class="summary-sig-arg">use_fit</span>=<span class="summary-sig-default">True</span>)</span><br />
+        <span class="summary-sig-arg">factor</span>)</span><br />
       Change criterion for noisy lines.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.resetNoisy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#resetLineStrengths" class="summary-sig-name">resetLineStrengths</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Reset the line strengths of the data and calculate the ratio with 
+      model line strengths.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.resetLineStrengths">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -443,6 +462,23 @@
         <span class="summary-sig-arg">plot</span>=<span class="summary-sig-default">0</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcLLL">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="calcLLLrange"></a><span class="summary-sig-name">calcLLLrange</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">plot</span>=<span class="summary-sig-default">0</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcLLLrange">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -719,7 +755,10 @@
         <span class="sig-arg">star_name</span>,
         <span class="sig-arg">code</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">GASTRoNOoM</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">path_code</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">codeJun2013</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">lll_p</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">lll_p</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">use_bestvlsr</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">vmin</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">vmax</span>=<span class="sig-default">0.0</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -742,6 +781,24 @@
           automatic loglikelihood determination is not done. You can still 
           set the threshold values with a class bound method.
           <p>(default: None)</p></li>
+        <li><strong class="pname"><code>use_bestvlsr</code></strong> (bool) - Use the fitted best-guess for the v_lsr when determining the 
+          velocity grid for the model. If not, the vlsr from the Star.dat 
+          file or the fits file is used.
+          <p>(default: 1)</p></li>
+        <li><strong class="pname"><code>vmin</code></strong> (float) - The minimum value in km/s of the spectral line window. Ideally 
+          this is the same for all lines under consideration. If an invalid
+          spectral window is given (vmax==vmin, or vmin&gt;vmax), the 
+          spectral window is taken from the line fit results. This leads to
+          a different window for each line under consideration, and is not 
+          recommended for calculating the loglikelihood.
+          <p>(default: 0.0)</p></li>
+        <li><strong class="pname"><code>vmax</code></strong> (float) - The maximum value in km/s of the spectral line window. Ideally 
+          this is the same for all lines under consideration. If an invalid
+          spectral window is given (vmax==vmin, or vmin&gt;vmax), the 
+          spectral window is taken from the line fit results. This leads to
+          a different window for each line under consideration, and is not 
+          recommended for calculating the loglikelihood.
+          <p>(default: 0.0)</p></li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
@@ -788,9 +845,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">setIntensities</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">use_bestvlsr</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">partial</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">vcut</span>=<span class="sig-default">0</span>)</span>
+        <span class="sig-arg">vmin</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">vmax</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.setIntensities">source&nbsp;code</a></span>&nbsp;
@@ -806,13 +862,6 @@
   values are single floats for the first dataset for the transition.</p>
   <p>In addition, the loglikelihoods are calculated.</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>use_bestvlsr</code></strong> (bool) - Use the fitted best-guess for the v_lsr when determining the 
-          velocity grid for the model. If not, the vlsr from the Star.dat 
-          file or the fits file is used.
-          <p>(default: 1)</p></li>
-    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -903,8 +952,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">resetNoisy</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">factor</span>,
-        <span class="sig-arg">use_fit</span>=<span class="sig-default">True</span>)</span>
+        <span class="sig-arg">factor</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.resetNoisy">source&nbsp;code</a></span>&nbsp;
@@ -914,17 +962,38 @@
   <p>Change criterion for noisy lines.  By default, the script checks if 
   the peak of the line profile is above 3 sigma in the dataset. With this 
   method, the factor can be changed.</p>
-  <p>With use_fit, it is possible to use the gaussian or parabolic fit to 
-  the data to derive the integrated intensity instead of the line itself 
-  for noisy lines.</p>
+  <p>The integrated line strengths are also recalculated based on the new 
+  criterion.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>factor</code></strong> (int) - Sigma level. If the peak intensity of a line is below this level,
           it is marked as noisy.</li>
-        <li><strong class="pname"><code>use_fit</code></strong> (bool) - Use gaussian or parabolic fit instead of the line to derive the 
-          integrated intensity of noisy lines</li>
     </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="resetLineStrengths"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">resetLineStrengths</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.resetLineStrengths">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Reset the line strengths of the data and calculate the ratio with 
+  model line strengths. Also recalculate the loglikelihood in this 
+  case.</p>
+  <p>The fitted line profile is used in case the line is flagged as noisy 
+  by setting use_fit. The fit is either a gaussian or a parabolic fit as 
+  determined by LPTools.fitLP</p>
+  <dl class="fields">
   </dl>
 </td></tr></table>
 </div>
@@ -1458,7 +1527,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:51 2016
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:51 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

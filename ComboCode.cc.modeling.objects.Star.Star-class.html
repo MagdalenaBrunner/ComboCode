@@ -801,6 +801,23 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a name="calcXDEX"></a><span class="summary-sig-name">calcXDEX</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Set the default value of XDEX parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcXDEX">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a name="calcFEHLER"></a><span class="summary-sig-name">calcFEHLER</span>(<span class="summary-sig-arg">self</span>)</span><br />
       Set the default value of FEHLER parameter.</td>
           <td align="right" valign="top">
@@ -2703,41 +2720,6 @@
       Calculate the radial OH maser peak distance in cm.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.calcR_OH1612_NETZER">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">(array,array)</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#getBlackBody" class="summary-sig-name">getBlackBody</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Calculate the black body intensity profile.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getBlackBody">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">(array,array)</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html#getObservedBlackBody" class="summary-sig-name">getObservedBlackBody</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Scale the blackbody intensity following the distance and stellar 
-      radius.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getObservedBlackBody">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -4931,50 +4913,6 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="getBlackBody"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">getBlackBody</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getBlackBody">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Calculate the black body intensity profile.</p>
-  <dl class="fields">
-    <dt>Returns: (array,array)</dt>
-        <dd>The wavelength and black body intensity grid</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="getObservedBlackBody"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">getObservedBlackBody</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Star-pysrc.html#Star.getObservedBlackBody">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Scale the blackbody intensity following the distance and stellar 
-  radius.</p>
-  <p>This is not the flux!</p>
-  <dl class="fields">
-    <dt>Returns: (array,array)</dt>
-        <dd>The wavelength grid and rescaled blackbody intensity</dd>
-  </dl>
-</td></tr></table>
-</div>
 <a name="missingInput"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -5027,7 +4965,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:51 2016
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:51 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

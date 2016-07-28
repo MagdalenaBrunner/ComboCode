@@ -197,23 +197,6 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#readTelescopeProperties" class="summary-sig-name">readTelescopeProperties</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Read the telescope properties from Telescope.dat.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.readTelescopeProperties">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">string</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -341,7 +324,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getEnergyUpper" class="summary-sig-name">getEnergyUpper</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cm-1</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default">&lt;Quantity 1.0 1 / cm&gt;</span>)</span><br />
       Return the energy level of the upper state of this transition.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getEnergyUpper">source&nbsp;code</a></span>
@@ -359,7 +342,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getEnergyLower" class="summary-sig-name">getEnergyLower</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cm-1</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default">&lt;Quantity 1.0 1 / cm&gt;</span>)</span><br />
       Return the energy level of the lower state of this transition.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getEnergyLower">source&nbsp;code</a></span>
@@ -377,7 +360,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#__setIndices" class="summary-sig-name" onclick="show_private();">__setIndices</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Set the index of this transition in the radiat file of GASTRoNOoM.</td>
+      Set the transition index of this transition from the spectroscopy 
+      file.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.__setIndices">source&nbsp;code</a></span>
             
@@ -760,7 +744,8 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getIntTmbData" class="summary-sig-name">getIntTmbData</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">use_fit</span>=<span class="summary-sig-default">0</span>)</span><br />
+        <span class="summary-sig-arg">use_fit</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">tmb</code><code class="variable-quote">'</code></span>)</span><br />
       Calculate the integrated Tmb of the data line profile over velocity.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getIntTmbData">source&nbsp;code</a></span>
@@ -778,7 +763,9 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getPeakTmbData" class="summary-sig-name">getPeakTmbData</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>)</span><br />
+        <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">method</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">mean</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Get the peak Tmb of the data line profile.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getPeakTmbData">source&nbsp;code</a></span>
@@ -841,8 +828,10 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getLoglikelihood" class="summary-sig-name">getLoglikelihood</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">use_bestvlsr</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">partial</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">vcut</span>=<span class="summary-sig-default">0.0</span>)</span><br />
+        <span class="summary-sig-arg">normalise</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">vmin</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">vmax</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">use_fit</span>=<span class="summary-sig-default">0</span>)</span><br />
       Calculate the loglikelihood of comparison between sphinx and dataset.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getLoglikelihood">source&nbsp;code</a></span>
@@ -1085,27 +1074,6 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="readTelescopeProperties"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">readTelescopeProperties</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.readTelescopeProperties">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Read the telescope properties from Telescope.dat.</p>
-  <p>This currently includes the telescope size in m, and the default 
-  absolute flux calibration uncertainty.</p>
-  <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
 <a name="getInputString"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -1291,7 +1259,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getEnergyUpper</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cm-1</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">unit</span>=<span class="sig-default">&lt;Quantity 1.0 1 / cm&gt;</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getEnergyUpper">source&nbsp;code</a></span>&nbsp;
@@ -1299,16 +1267,16 @@
   </tr></table>
   
   <p>Return the energy level of the upper state of this transition.</p>
-  <p>You can choose the unit. Options: ['cm-1','K','erg'] Default is taken 
-  if the unit is not recognized.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>unit</code></strong> (str) - The unit of the returned value. ['cm-1','K','erg']
-          <p>(default: cm-1)</p></li>
+        <li><strong class="pname"><code>unit</code></strong> (string/unit) - The unit of the returned values. Can be any valid units str from 
+          the astropy units module (energy), or the unit itself. 'cm-1' and
+          'cm^-1' are accepted as well.
+          <p>(default: 1./u.cm)</p></li>
     </ul></dd>
     <dt>Returns: float</dt>
-        <dd>energy level in cm^-1</dd>
+        <dd>energy level in chosen unit</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1320,7 +1288,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getEnergyLower</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cm-1</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">unit</span>=<span class="sig-default">&lt;Quantity 1.0 1 / cm&gt;</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getEnergyLower">source&nbsp;code</a></span>&nbsp;
@@ -1328,15 +1296,16 @@
   </tr></table>
   
   <p>Return the energy level of the lower state of this transition.</p>
-  <p>You can choose the unit. Options: ['cm-1','K','erg']</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>unit</code></strong> (str) - The unit of the returned value. ['cm-1','K','erg']
-          <p>(default: cm-1)</p></li>
+        <li><strong class="pname"><code>unit</code></strong> (string/unit) - The unit of the returned values. Can be any valid units str from 
+          the astropy units module (energy), or the unit itself. 'cm-1' and
+          'cm^-1' are accepted as well.
+          <p>(default: 1./u.cm)</p></li>
     </ul></dd>
     <dt>Returns: float</dt>
-        <dd>energy level in cm^-1</dd>
+        <dd>energy level in chosen unit</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1354,8 +1323,9 @@
     </td>
   </tr></table>
   
-  <p>Set the index of this transition in the radiat file of GASTRoNOoM.</p>
-  <p>The index from the indices file for lower and upper state are set.</p>
+  <p>Set the transition index of this transition from the spectroscopy 
+  file.</p>
+  <p>The level indices for lower and upper level are also set.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -1908,7 +1878,8 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getIntTmbData</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">use_fit</span>=<span class="sig-default">0</span>)</span>
+        <span class="sig-arg">use_fit</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">tmb</code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getIntTmbData">source&nbsp;code</a></span>&nbsp;
@@ -1945,15 +1916,24 @@
   <p>The fitting uncertainty is currently not yet implemented, nor the 
   option to add the the flux calibration uncertainty to Radio.py. [TBI]</p>
   <p>Returns None if no data are available.</p>
+  <p>CGS or SI units can be requested as well, where the profile is 
+  converted to Fnu before integration via Fnu = 
+  Tmb/(pi*tel_diameter**2/8/k_B).</p>
   <p>This does not work for PACS or SPIRE data.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>index</code></strong> (int) - The data list index of the requested noise value
           <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>use_fit</code></strong> (bool) - Force the use of the fitted line profile.
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>units</code></strong> (str) - The unit of the integrated line strength. Can be returned in K 
+          Km/s (tmb), erg/s/cm2 (cgs) or w/m2 (si).
+          <p>(default: 'tmb')</p></li>
     </ul></dd>
     <dt>Returns: (float,float)</dt>
-        <dd>The integrated data Tmb in K km/s and the relative uncertainty</dd>
+        <dd>The integrated line strength and the relative uncertainty in the 
+          requested units.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1965,7 +1945,9 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getPeakTmbData</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">index</span>=<span class="sig-default">0</span>)</span>
+        <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">method</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">mean</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getPeakTmbData">source&nbsp;code</a></span>&nbsp;
@@ -1988,6 +1970,13 @@
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>index</code></strong> (int) - The data list index of the requested noise value
           <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>method</code></strong> (str) - The method applied: either 'mean' or 'fit'. Mean derives the peak
+          value from the mean of the npoints flux points around the vlsr. 
+          Fit takes the central peak flux at from the fit.
+          <p>(default: 'mean')</p></li>
+        <li><strong class="pname"><code>kwargs</code></strong> (dict) - Extra keywords passed on to the LPTools method for peak 
+          determination.
+          <p>(default: {})</p></li>
     </ul></dd>
     <dt>Returns: float</dt>
         <dd>The peak Tmb of the sphinx line profile</dd>
@@ -2092,8 +2081,10 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getLoglikelihood</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">use_bestvlsr</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">partial</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">vcut</span>=<span class="sig-default">0.0</span>)</span>
+        <span class="sig-arg">normalise</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">vmin</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">vmax</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">use_fit</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getLoglikelihood">source&nbsp;code</a></span>&nbsp;
@@ -2123,13 +2114,26 @@
           velocity grid for the model. If not, the vlsr from the Star.dat 
           file or the fits file is used.
           <p>(default: 1)</p></li>
-        <li><strong class="pname"><code>partial</code></strong> (int) - Use a partial profile rather than the entire profile. Set to 1 
-          for larger than the cutoff value (vcut), set to -1 for smaller 
-          than the cutoff value.
-          <p>(default: 0)</p></li>
-        <li><strong class="pname"><code>vcut</code></strong> (float) - The cut off value in km/s used by partial.
-          <p>(default: 0.0)</p></li>
         <li><strong class="pname"><code>index</code></strong> (int) - The data list index of the requested noise value
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>normalise</code></strong> (bool) - Normalise the data and model lines to the integrated line 
+          strength of the observed line.
+          <p>(default: 1)</p></li>
+        <li><strong class="pname"><code>vmin</code></strong> (float) - The minimum value in km/s of the spectral line window. Ideally 
+          this is the same for all lines under consideration. If an invalid
+          spectral window is given (vmax==vmin, or vmin&gt;vmax), the 
+          spectral window is taken from the line fit results. This leads to
+          a different window for each line under consideration, and is not 
+          recommended for calculating the loglikelihood.
+          <p>(default: 0.0)</p></li>
+        <li><strong class="pname"><code>vmax</code></strong> (float) - The maximum value in km/s of the spectral line window. Ideally 
+          this is the same for all lines under consideration. If an invalid
+          spectral window is given (vmax==vmin, or vmin&gt;vmax), the 
+          spectral window is taken from the line fit results. This leads to
+          a different window for each line under consideration, and is not 
+          recommended for calculating the loglikelihood.
+          <p>(default: 0.0)</p></li>
+        <li><strong class="pname"><code>use_fit</code></strong> (bool) - Force the use of the fitted line profile.
           <p>(default: 0)</p></li>
     </ul></dd>
     <dt>Returns: float</dt>
@@ -2164,7 +2168,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:51 2016
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:51 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -82,17 +82,38 @@
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.DataIO-module.html#findKey" class="summary-sig-name">findKey</a>(<span class="summary-sig-arg">i</span>,
+        <span class="summary-sig-arg">data</span>,
+        <span class="summary-sig-arg">key</span>)</span><br />
+      Find the index of the line that contains the first occurrence of a 
+      keyword.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#findKey">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">list[]</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.DataIO-module.html#getMCMaxOutput" class="summary-sig-name">getMCMaxOutput</a>(<span class="summary-sig-arg">incr</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.DataIO-module.html#getKeyData" class="summary-sig-name">getKeyData</a>(<span class="summary-sig-arg">incr</span>,
         <span class="summary-sig-arg">filename</span>,
-        <span class="summary-sig-arg">keyword</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">RADIUS</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">keyword</span>,
         <span class="summary-sig-arg">single</span>=<span class="summary-sig-default">1</span>)</span><br />
-      Search MCMax output for relevant structural information.</td>
+      Search a data file with data in a single (or multiple) columns, 
+      separated by comment lines containing the type of data.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#getMCMaxOutput">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#getKeyData">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -175,7 +196,10 @@
         <span class="summary-sig-arg">convert_lists</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">convert_floats</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">convert_ints</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">multi_keys</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
+        <span class="summary-sig-arg">multi_keys</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">start_row</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">end_row</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">key_modifier</span>=<span class="summary-sig-default">None</span>)</span><br />
       Read a file as a dictionary.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#readDict">source&nbsp;code</a></span>
@@ -308,7 +332,8 @@
         <span class="summary-sig-arg">nans</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">start_from_keyword</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">return_comments</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">comment_chars</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">#</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">!</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">;</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>)</span><br />
+        <span class="summary-sig-arg">comment_chars</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">#</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">!</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">;</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">end_row</span>=<span class="summary-sig-default">None</span>)</span><br />
       Read columns, remove comments and turn into floats.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#readCols">source&nbsp;code</a></span>
@@ -610,43 +635,81 @@
   </td>
 </tr>
 </table>
-<a name="getMCMaxOutput"></a>
+<a name="findKey"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">getMCMaxOutput</span>(<span class="sig-arg">incr</span>,
-        <span class="sig-arg">filename</span>,
-        <span class="sig-arg">keyword</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">RADIUS</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">single</span>=<span class="sig-default">1</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">findKey</span>(<span class="sig-arg">i</span>,
+        <span class="sig-arg">data</span>,
+        <span class="sig-arg">key</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#getMCMaxOutput">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#findKey">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Search MCMax output for relevant structural information.</p>
+  <p>Find the index of the line that contains the first occurrence of a 
+  keyword.</p>
+  <p>The search is case-insensitive.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>incr</code></strong> (int) - length of partial list that is needed from MCMax output. For 
-          radius and theta this is usually the grid size (NRAD and NTHETA 
-          respectively), and for any other quantity this is NRAD*NTHETA (fi
-          for denstemp.dat). Put this keyword to zero if you are extracting
-          a number from one line that contains the keyword itself. In that 
-          case also put single to 0 so you can take your information from 
-          the whole line. (fi log.dat)</li>
+        <li><strong class="pname"><code>i</code></strong> (int) - The starting index of the search</li>
+        <li><strong class="pname"><code>data</code></strong> (list[list]/list[str]) - The data read with readFile. Either split on a delimiter, or the 
+          full line as a str.</li>
+        <li><strong class="pname"><code>key</code></strong> (str) - The keyword that is searched</li>
+    </ul></dd>
+    <dt>Returns: int</dt>
+        <dd>The index of the line that contains the key for the first time</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getKeyData"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getKeyData</span>(<span class="sig-arg">incr</span>,
+        <span class="sig-arg">filename</span>,
+        <span class="sig-arg">keyword</span>,
+        <span class="sig-arg">single</span>=<span class="sig-default">1</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#getKeyData">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Search a data file with data in a single (or multiple) columns, 
+  separated by comment lines containing the type of data.</p>
+  <p>The data returned follow the line that contains the key, unless incr 
+  is set to 0. In this case, the line that contains the data is returned in
+  its entirety, and single is put to 0.</p>
+  <p>This method is often used for extracting MCMax output. In that case, 
+  for radius and theta incr is usually the grid size (NRAD and NTHETA 
+  respectively), and for any other quantity incr is NRAD*NTHETA (fi for 
+  denstemp.dat). incr==0 can be used to extract inputvalues from 
+  log.dat.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>incr</code></strong> (int) - length of the data after key that is required. Put this keyword 
+          to zero if you are extracting a number from one line that 
+          contains the keyword itself. In that case single is put to 0 so 
+          you can take your information from the whole line.</li>
         <li><strong class="pname"><code>filename</code></strong> (string) - name and path of the file searched</li>
         <li><strong class="pname"><code>keyword</code></strong> (string) - the type of information required, always equal to one of the 
-          keywords present in the outputfiles of MCMax
-          <p>(default: 'RADIUS')</p></li>
-        <li><strong class="pname"><code>single</code></strong> (bool) - return a list of only the first element on every row
+          keywords present in the file</li>
+        <li><strong class="pname"><code>single</code></strong> (bool) - return a list of only the first element on every row. Otherwise 
+          the entire line is returned. Off by default if incr == 0.
           <p>(default: 1)</p></li>
     </ul></dd>
     <dt>Returns: list[]</dt>
-        <dd>The requested data from MCMax output</dd>
+        <dd>The requested data</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -793,7 +856,10 @@
         <span class="sig-arg">convert_lists</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">convert_floats</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">convert_ints</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">multi_keys</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
+        <span class="sig-arg">multi_keys</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">start_row</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">end_row</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">key_modifier</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#readDict">source&nbsp;code</a></span>&nbsp;
@@ -824,6 +890,16 @@
           dictionary. They are included in the dict as a list even if they 
           are present only once.
           <p>(default: [])</p></li>
+        <li><strong class="pname"><code>start_row</code></strong> (int) - Limit the text file to lines starting from this index.
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>end_row</code></strong> (int) - Limit the text file to lines ending before this index (ie last 
+          line is end_index - 1). Default includes up to the last line of 
+          the file.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>key_modifier</code></strong> (str) - A function that modifies the key, such as lower(). Any method 
+          that works on a string in principle works. Give the function as a
+          string.
+          <p>(default: None)</p></li>
     </ul></dd>
     <dt>Returns: dict</dt>
         <dd>the dictionary with the info from the file.</dd>
@@ -1023,7 +1099,8 @@
         <span class="sig-arg">nans</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">start_from_keyword</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">return_comments</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">comment_chars</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">#</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">!</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">;</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>)</span>
+        <span class="sig-arg">comment_chars</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">#</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">!</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">;</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">end_row</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#readCols">source&nbsp;code</a></span>&nbsp;
@@ -1039,7 +1116,9 @@
           <p>(default: ' ')</p></li>
         <li><strong class="pname"><code>make_float</code></strong> (bool) - turn everything into floats
           <p>(default: 1)</p></li>
-        <li><strong class="pname"><code>start_row</code></strong> (int) - read from this row number onward
+        <li><strong class="pname"><code>start_row</code></strong> (int) - Limit the text file to lines starting from this row. If 
+          start_from_keyword is used, start_row counts from the index where
+          the keyword is first found.
           <p>(default: 0)</p></li>
         <li><strong class="pname"><code>make_array</code></strong> (bool) - return numpy arrays instead of python lists
           <p>(default: 1)</p></li>
@@ -1054,6 +1133,11 @@
           <p>(default: 0)</p></li>
         <li><strong class="pname"><code>comment_chars</code></strong> (list[str]) - single character strings setting the comment characters
           <p>(default: ['#','!',';'])</p></li>
+        <li><strong class="pname"><code>end_row</code></strong> (int) - Limit the text file to lines ending before this index (ie last 
+          line is end_index - 1). Default includes up to the last line of 
+          the file. If start_from_keyword is given, end_row counts with 
+          respect to the found index.
+          <p>(default: None)</p></li>
     </ul></dd>
     <dt>Returns: list[list or array] or (list[list or array],list[str])</dt>
         <dd>The columns are returned, with in addition the comments if 
@@ -1208,6 +1292,8 @@
   zero in the list. Can be at index itself!</p>
   <p>Cannot work with non-float or non-convertible-to-float input 
   values.</p>
+  <p>If at the end of the list, the index is returned as the length of the 
+  list.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -1237,6 +1323,8 @@
   
   <p>Starting from index, find the index of the next number equal to zero 
   in the list. Can be at index itself!</p>
+  <p>If at the end of the list, the index is returned as the length of the 
+  list.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -1487,7 +1575,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:50 2016
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:49 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

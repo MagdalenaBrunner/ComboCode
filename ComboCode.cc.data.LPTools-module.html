@@ -80,6 +80,23 @@
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">(float,float)</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.data.LPTools-module.html#readTelescopeProperties" class="summary-sig-name">readTelescopeProperties</a>(<span class="summary-sig-arg">telescope</span>)</span><br />
+      Read the telescope properties from Telescope.dat.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.data.LPTools-pysrc.html#readTelescopeProperties">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">LPDataReader()</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -123,7 +140,9 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.data.LPTools-module.html#getPeakLPData" class="summary-sig-name">getPeakLPData</a>(<span class="summary-sig-arg">filename</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">lprof</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">vlsr</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">vlsr</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">method</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">mean</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">npoints</span>=<span class="summary-sig-default">5</span>)</span><br />
       Calculate the peak value of a line profile read from a fits file or a
       txt file.</td>
           <td align="right" valign="top">
@@ -164,7 +183,7 @@
         <span class="summary-sig-arg">index</span>,
         <span class="summary-sig-arg">values</span>,
         <span class="summary-sig-arg">vary</span>,
-        <span class="summary-sig-arg">function</span>=<span class="summary-sig-default">&lt;function soft_parabola at 0x106d79ed8&gt;</span>,
+        <span class="summary-sig-arg">function</span>=<span class="summary-sig-default">&lt;function soft_parabola at 0x10776d398&gt;</span>,
         <span class="summary-sig-arg">vary_window</span>=<span class="summary-sig-default">0</span>)</span><br />
       Fit a function to a line profile for different initial guesses of a 
       single parameter.</td>
@@ -293,6 +312,33 @@
   </td>
 </tr>
 </table>
+<a name="readTelescopeProperties"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">readTelescopeProperties</span>(<span class="sig-arg">telescope</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.data.LPTools-pysrc.html#readTelescopeProperties">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Read the telescope properties from Telescope.dat.</p>
+  <p>This currently includes the telescope size in m, and the default 
+  absolute flux calibration uncertainty.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>telescope</code></strong> (str) - The telescope requested</li>
+    </ul></dd>
+    <dt>Returns: (float,float)</dt>
+        <dd>The telescope size and absolute flux calibration uncertainty</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="readLineProfile"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -371,7 +417,9 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getPeakLPData</span>(<span class="sig-arg">filename</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">lprof</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">vlsr</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">vlsr</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">method</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">mean</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">npoints</span>=<span class="sig-default">5</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.data.LPTools-pysrc.html#getPeakLPData">source&nbsp;code</a></span>&nbsp;
@@ -397,6 +445,13 @@
         <li><strong class="pname"><code>vlsr</code></strong> (float) - If you want to provide your own vlsr for some reason. Leave as 
           default if you don't have a good reason to do that.
           <p>(default: None)</p></li>
+        <li><strong class="pname"><code>method</code></strong> (str) - The method applied: either 'mean' or 'fit'. Mean derives the peak
+          value from the mean of the npoints flux points around the vlsr. 
+          Fit takes the central peak flux at from the fit.
+          <p>(default: 'mean')</p></li>
+        <li><strong class="pname"><code>npoints</code></strong> (int) - The number of points around vlsr used for deriving the peak value
+          via the mean method.
+          <p>(default: 5)</p></li>
     </ul></dd>
     <dt>Returns: float</dt>
         <dd>The peak intensity of the profile</dd>
@@ -441,7 +496,7 @@
         <span class="sig-arg">index</span>,
         <span class="sig-arg">values</span>,
         <span class="sig-arg">vary</span>,
-        <span class="sig-arg">function</span>=<span class="sig-default">&lt;function soft_parabola at 0x106d79ed8&gt;</span>,
+        <span class="sig-arg">function</span>=<span class="sig-default">&lt;function soft_parabola at 0x10776d398&gt;</span>,
         <span class="sig-arg">vary_window</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -669,7 +724,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:49 2016
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:48 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

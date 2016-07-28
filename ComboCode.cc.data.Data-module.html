@@ -145,24 +145,6 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">list(tuple)</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.data.Data-module.html#angularSize" class="summary-sig-name">angularSize</a>(<span class="summary-sig-arg">distance</span>)</span><br />
-      Equivalency for the astropy.units module for converting angular size 
-      to physical length and vice versa.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.data.Data-pysrc.html#angularSize">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">np.array</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -260,6 +242,23 @@
       Select the sub array of a flux, given a wavelength range.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.data.Data-pysrc.html#selectArray">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.data.Data-module.html#arrayify" class="summary-sig-name">arrayify</a>(<span class="summary-sig-arg">x</span>)</span><br />
+      Check whether the input value is a proper array.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.data.Data-pysrc.html#arrayify">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -434,41 +433,6 @@
     </ul></dd>
     <dt>Returns: array</dt>
         <dd>The new y values after convolution</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="angularSize"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">angularSize</span>(<span class="sig-arg">distance</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.data.Data-pysrc.html#angularSize">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Equivalency for the astropy.units module for converting angular size 
-  to physical length and vice versa.</p>
-  <p>Requires the distance to be given in pc.</p>
-  <p>Can be used to convert angular sizes and lengths using the units 
-  module. &gt;&gt;&gt; equiv = angularSize(1000.) &gt;&gt;&gt; rad = 
-  (0.001*u.arcsec).to(u.au,equivalencies=equiv) gives the length in 
-  astronomical units.</p>
-  <p>Note that you don't have to give arcsec or au. You can also ask for 
-  u.cm, u.arcminute, etc. The astropy unit conversion module takes care of 
-  these conversions as long as no equivalency is needed.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>distance</code></strong> (float) - The distance to the object in parsec</li>
-    </ul></dd>
-    <dt>Returns: list(tuple)</dt>
-        <dd>list of (unit in, unit out, forward conversion, reverse 
-          conversion)</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -714,6 +678,31 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="arrayify"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">arrayify</span>(<span class="sig-arg">x</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.data.Data-pysrc.html#arrayify">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Check whether the input value is a proper array.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (anything) - The input candidate array</li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>an array of the input value</dd>
+  </dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -741,7 +730,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Apr 26 17:48:49 2016
+    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:48 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
