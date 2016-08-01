@@ -122,7 +122,8 @@
         <span class="summary-sig-arg">enhance_abundance_factor</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">new_temperature_filename</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">linelist</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">starfile</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">starfile</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default">None</span>)</span><br />
       Initiate a Molecule class, setting all values for the allowed 
       transition parameters to zero (by default).</td>
           <td align="right" valign="top">
@@ -181,6 +182,42 @@
       Return a dict with molecule string, and other relevant parameters.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.makeDict">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Molecule.Molecule-class.html#makeMlineFilename" class="summary-sig-name">makeMlineFilename</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">number</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">*</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">include_path</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Return an mline filename for this object.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.makeMlineFilename">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Molecule.Molecule-class.html#readMline" class="summary-sig-name">readMline</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Read the mline output if the model id is valid.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.readMline">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -294,24 +331,6 @@
       
     </td>
   </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Molecule.Molecule-class.html#readMline" class="summary-sig-name">readMline</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Read the mline output for this molecule, given that a model_id is 
-      available.</td>
-          <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.readMline">source&nbsp;code</a></span>
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
 </table>
 <!-- ==================== METHOD DETAILS ==================== -->
 <a name="section-MethodDetails"></a>
@@ -375,7 +394,8 @@
         <span class="sig-arg">enhance_abundance_factor</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">new_temperature_filename</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">linelist</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">starfile</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">starfile</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">path_gastronoom</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -499,6 +519,8 @@
         <li><strong class="pname"><code>starfile</code></strong> (str) - input filename for a stellar input spectrum (either user defined 
           or from a model atmosphere spectrum)
           <p>(default: '')</p></li>
+        <li><strong class="pname"><code>path_gastronoom</code></strong> (string) - model output folder in the GASTRoNOoM home
+          <p>(default: None)</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -558,6 +580,58 @@
     <dt>Returns: dict()</dt>
         <dd>The molecule dictionary including all relevant, defining 
           information</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="makeMlineFilename"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">makeMlineFilename</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">number</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">*</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">include_path</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.makeMlineFilename">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return an mline filename for this object.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>number</code></strong> (string) - the number in the filename (ml*, ml1, ml2, ml3. Hence can be *, 
+          1, 2, 3)
+          <p>(default: '*')</p></li>
+        <li><strong class="pname"><code>include_path</code></strong> (bool) - Include the full filepath.
+          <p>(default: 0)</p></li>
+    </ul></dd>
+    <dt>Returns: string</dt>
+        <dd>The sphinx filename for this transition</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="readMline"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">readMline</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.readMline">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Read the mline output if the model id is valid.</p>
+  <p>The mline output is available in the MlineReader object mline, as a 
+  property of Molecule().</p>
+  <dl class="fields">
   </dl>
 </td></tr></table>
 </div>
@@ -674,29 +748,6 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="readMline"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">readMline</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.readMline">source&nbsp;code</a></span>&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Read the mline output for this molecule, given that a model_id is 
-  available.</p>
-  <p>The mline output is available in the MlineReader object, as a property
-  of Molecule().</p>
-  <p>[NYI]</p>
-  <dl class="fields">
-  </dl>
-</td></tr></table>
-</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -724,7 +775,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:50 2016
+    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:04 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

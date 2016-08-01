@@ -71,7 +71,7 @@
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.asteval.Interpreter-class.html">ComboCode.cc.ivs.sigproc.lmfit.asteval.Interpreter</a></strong>:
       <em class="summary">mathematical expression compiler and interpreter.</em>
     </li>
-    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.io.LineList.LineList-class.html">ComboCode.cc.tools.io.LineList.LineList</a></strong>:
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.LineList.LineList-class.html">ComboCode.cc.tools.readers.LineList.LineList</a></strong>:
       <em class="summary">Reading, managing and parsing of line lists taken from online 
         databases.</em>
     </li>
@@ -152,21 +152,21 @@
     <li> <strong class="uidlink">object</strong>:
       <em class="summary">The most base type</em>
     <ul>
-    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.AffineScalarFunc-class.html" onclick="show_private();">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.AffineScalarFunc</a></strong>:
-      <em class="summary">Affine functions that support basic mathematical operations
-(addition, etc.).</em>
-    <ul>
-    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.Variable-class.html" onclick="show_private();">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.Variable</a></strong>:
-      <em class="summary">Representation of a float-like scalar random variable, along with 
-        its uncertainty.</em>
-    </li>
-    </ul>
-    </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.units.uncertainties.AffineScalarFunc-class.html" onclick="show_private();">ComboCode.cc.ivs.units.uncertainties.AffineScalarFunc</a></strong>:
       <em class="summary">Affine functions that support basic mathematical operations
 (addition, etc.).</em>
     <ul>
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.units.uncertainties.Variable-class.html" onclick="show_private();">ComboCode.cc.ivs.units.uncertainties.Variable</a></strong>:
+      <em class="summary">Representation of a float-like scalar random variable, along with 
+        its uncertainty.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.AffineScalarFunc-class.html" onclick="show_private();">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.AffineScalarFunc</a></strong>:
+      <em class="summary">Affine functions that support basic mathematical operations
+(addition, etc.).</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.Variable-class.html" onclick="show_private();">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.Variable</a></strong>:
       <em class="summary">Representation of a float-like scalar random variable, along with 
         its uncertainty.</em>
     </li>
@@ -241,9 +241,6 @@
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.fit.Function-class.html">ComboCode.cc.ivs.sigproc.fit.Function</a></strong>:
       <em class="summary">Class to define a function with associated parameters.</em>
     </li>
-    <li> <strong class="uidlink"><a href="ComboCode.cc.data.instruments.Instrument.Instrument-class.html">ComboCode.cc.data.instruments.Instrument.Instrument</a></strong>:
-      <em class="summary">Instrument-specific calculations.</em>
-    </li>
     <li> <strong class="uidlink">cc.data.instruments.Instrument.Instrument</strong>:
       <em class="summary">Instrument-specific calculations.</em>
     <ul>
@@ -256,6 +253,9 @@
         managing.</em>
     </li>
     </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.data.instruments.Instrument.Instrument-class.html">ComboCode.cc.data.instruments.Instrument.Instrument</a></strong>:
+      <em class="summary">Instrument-specific calculations.</em>
     </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.KappaReader.KappaReader-class.html">ComboCode.cc.tools.readers.KappaReader.KappaReader</a></strong>:
       <em class="summary">An interface for reading opacities of multiple dust species.</em>
@@ -275,9 +275,6 @@
         href="ComboCode.cc.ivs.sigproc.fit.Function-class.html" 
         class="link">Function</a>s each with their associated parameters.</em>
     </li>
-    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.codes.ModelingSession.ModelingSession-class.html">ComboCode.cc.modeling.codes.ModelingSession.ModelingSession</a></strong>:
-      <em class="summary">The basic modeling environment.</em>
-    </li>
     <li> <strong class="uidlink">cc.modeling.codes.ModelingSession.ModelingSession</strong>:
       <em class="summary">The basic modeling environment.</em>
     <ul>
@@ -290,6 +287,9 @@
         model.</em>
     </li>
     </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.codes.ModelingSession.ModelingSession-class.html">ComboCode.cc.modeling.codes.ModelingSession.ModelingSession</a></strong>:
+      <em class="summary">The basic modeling environment.</em>
     </li>
     <li> <strong class="uidlink">ast.NodeVisitor</strong>:
       <em class="summary">A node visitor base class that walks the abstract syntax tree and 
@@ -363,6 +363,11 @@
         and calculate the central difference with respect to a coordinate 
         grid.</em>
     </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.profilers.Profiler.Profiler2D-class.html">ComboCode.cc.modeling.profilers.Profiler.Profiler2D</a></strong>:
+      <em class="summary">An interface for creating 2D profiles, and allowing to evaluate 
+        them and calculate the central difference with respect to a 2D 
+        coordinate grid.</em>
+    </li>
     <li> <strong class="uidlink">cc.modeling.profilers.Profiler.Profiler2D</strong>:
       <em class="summary">An interface for creating 2D profiles, and allowing to evaluate 
         them and calculate the central difference with respect to a 2D 
@@ -377,11 +382,6 @@
         grain size.</em>
     </li>
     </ul>
-    </li>
-    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.profilers.Profiler.Profiler2D-class.html">ComboCode.cc.modeling.profilers.Profiler.Profiler2D</a></strong>:
-      <em class="summary">An interface for creating 2D profiles, and allowing to evaluate 
-        them and calculate the central difference with respect to a 2D 
-        coordinate grid.</em>
     </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.aux.progressMeter.ProgressMeter-class.html">ComboCode.cc.ivs.aux.progressMeter.ProgressMeter</a></strong>
     </li>
@@ -461,6 +461,9 @@ dict(iterable) -&gt; new dictionary initialized as if via:
 dict(**kwargs) -&gt; new dictionary initialized with the name=value pairs
     in the keyword argument list.</em>
     <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.io.Database.Database-class.html">ComboCode.cc.tools.io.Database.Database</a></strong>:
+      <em class="summary">A database class.</em>
+    </li>
     <li> <strong class="uidlink">cc.tools.io.Database.Database</strong>:
       <em class="summary">A database class.</em>
     <ul>
@@ -469,9 +472,6 @@ dict(**kwargs) -&gt; new dictionary initialized with the name=value pairs
         Radio data.</em>
     </li>
     </ul>
-    </li>
-    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.io.Database.Database-class.html">ComboCode.cc.tools.io.Database.Database</a></strong>:
-      <em class="summary">A database class.</em>
     </li>
     <li> <strong class="uidlink">collections.OrderedDict</strong>:
       <em class="summary">Dictionary that remembers insertion order</em>
@@ -609,7 +609,7 @@ dict(**kwargs) -&gt; new dictionary initialized with the name=value pairs
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Jul 28 10:37:48 2016
+    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:01 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
