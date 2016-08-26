@@ -134,7 +134,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Radiance.Radiance-class.html#eval" class="summary-sig-name">eval</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">f</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">l</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">ftype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Rnu</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">ftype</span>=<span class="summary-sig-default">'Rnu'</span>,
         <span class="summary-sig-arg">warn</span>=<span class="summary-sig-default">1</span>)</span><br />
       Evaluate the radiance function at a coordinate point.</td>
           <td align="right" valign="top">
@@ -177,7 +177,7 @@
         <span class="summary-sig-arg">surface</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">f</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">l</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">ftype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Lnu</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">ftype</span>=<span class="summary-sig-default">'Lnu'</span>,
         <span class="summary-sig-arg">warn</span>=<span class="summary-sig-default">1</span>)</span><br />
       Return the spectral luminosity, i.e.</td>
           <td align="right" valign="top">
@@ -198,7 +198,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Radiance.Radiance-class.html#getFluxDensity" class="summary-sig-name">getFluxDensity</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">f</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">l</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">ftype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Fnu</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">ftype</span>=<span class="summary-sig-default">'Fnu'</span>,
         <span class="summary-sig-arg">warn</span>=<span class="summary-sig-default">1</span>)</span><br />
       Return the spectral flux density, i.e.</td>
           <td align="right" valign="top">
@@ -220,7 +220,7 @@
         <span class="summary-sig-arg">surface</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">f</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">l</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">ftype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Inu</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">ftype</span>=<span class="summary-sig-default">'Inu'</span>,
         <span class="summary-sig-arg">warn</span>=<span class="summary-sig-default">1</span>)</span><br />
       Return the spectral intensity, i.e.</td>
           <td align="right" valign="top">
@@ -234,8 +234,8 @@
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.modeling.profilers.Profiler.Profiler</code></b>:
-      <code>__call__</code>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="ComboCode.cc.modeling.profilers.Profiler.Profiler-class.html">Profiler.Profiler</a></code></b>:
+      <code><a href="ComboCode.cc.modeling.profilers.Profiler.Profiler-class.html#__call__">__call__</a></code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
@@ -389,7 +389,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">eval</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">f</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">l</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">ftype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Rnu</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">ftype</span>=<span class="sig-default">'Rnu'</span>,
         <span class="sig-arg">warn</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -425,7 +425,7 @@
     <dt>Returns: array/float</dt>
         <dd>The profile evaluated at l/f (erg/s/cm2/Hz/sr or erg/s/cm3/sr)</dd>
     <dt>Overrides:
-        cc.modeling.profilers.Profiler.Profiler.eval
+        <a href="ComboCode.cc.modeling.profilers.Profiler.Profiler-class.html#eval">Profiler.Profiler.eval</a>
     </dt>
   </dl>
 </td></tr></table>
@@ -470,7 +470,7 @@
     <dt>Returns: array/float</dt>
         <dd>The derivative evaluated at l or f</dd>
     <dt>Overrides:
-        cc.modeling.profilers.Profiler.Profiler.diff
+        <a href="ComboCode.cc.modeling.profilers.Profiler.Profiler-class.html#diff">Profiler.Profiler.diff</a>
     </dt>
   </dl>
 </td></tr></table>
@@ -486,7 +486,7 @@
         <span class="sig-arg">surface</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">f</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">l</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">ftype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Lnu</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">ftype</span>=<span class="sig-default">'Lnu'</span>,
         <span class="sig-arg">warn</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -544,7 +544,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getFluxDensity</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">f</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">l</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">ftype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Fnu</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">ftype</span>=<span class="sig-default">'Fnu'</span>,
         <span class="sig-arg">warn</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -599,7 +599,7 @@
         <span class="sig-arg">surface</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">f</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">l</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">ftype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Inu</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">ftype</span>=<span class="sig-default">'Inu'</span>,
         <span class="sig-arg">warn</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -669,7 +669,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:05 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:37 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

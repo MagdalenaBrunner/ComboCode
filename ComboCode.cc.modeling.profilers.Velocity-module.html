@@ -93,8 +93,8 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a href="ComboCode.cc.modeling.profilers.Velocity.Drift-class.html" class="summary-name">Drift</a><br />
-      An interface for the drift velocity as a function of radius and 
-        grain size.
+      An interface for the drift velocity as a function of radius and grain
+      size.
     </td>
   </tr>
 </table>
@@ -131,13 +131,32 @@
         <span class="summary-sig-arg">radiance</span>,
         <span class="summary-sig-arg">T</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">P</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">alpha</span>=<span class="summary-sig-default">0.0</span>,
-        <span class="summary-sig-arg">mu</span>=<span class="summary-sig-default">2.0</span>,
-        <span class="summary-sig-arg">w_thermal</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">none</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">alpha</span>=<span class="summary-sig-default">0.</span>,
+        <span class="summary-sig-arg">mu</span>=<span class="summary-sig-default">2.</span>,
+        <span class="summary-sig-arg">w_thermal</span>=<span class="summary-sig-default">'none'</span>)</span><br />
       Calculate the drift velocity as a function of radius and grain size 
       by equating the radiation pressure force and drag force.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#driftRPDF">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array/float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Velocity-module.html#vsound" class="summary-sig-name">vsound</a>(<span class="summary-sig-arg">T</span>,
+        <span class="summary-sig-arg">gamma</span>,
+        <span class="summary-sig-arg">mu</span>)</span><br />
+      The sound velocity at T for a given mean molecular weight and gamma.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#vsound">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -155,7 +174,12 @@
         <span class="summary-sig-arg">r0</span>,
         <span class="summary-sig-arg">v0</span>,
         <span class="summary-sig-arg">vinf</span>,
-        <span class="summary-sig-arg">beta</span>)</span><br />
+        <span class="summary-sig-arg">beta</span>,
+        <span class="summary-sig-arg">vi_mode</span>=<span class="summary-sig-default">'constant'</span>,
+        <span class="summary-sig-arg">rstar</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">beta_inner</span>=<span class="summary-sig-default">0.5</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       The beta-power law description of the velocity profile.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#vbeta">source&nbsp;code</a></span>
@@ -176,7 +200,12 @@
         <span class="summary-sig-arg">r0</span>,
         <span class="summary-sig-arg">v0</span>,
         <span class="summary-sig-arg">vinf</span>,
-        <span class="summary-sig-arg">beta</span>)</span><br />
+        <span class="summary-sig-arg">beta</span>,
+        <span class="summary-sig-arg">vi_mode</span>=<span class="summary-sig-default">'constant'</span>,
+        <span class="summary-sig-arg">rstar</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">beta_inner</span>=<span class="summary-sig-default">0.5</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       The derivative of the vbeta function: analytic.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#dvbetadr">source&nbsp;code</a></span>
@@ -207,31 +236,6 @@
         </tr>
       </table>
       
-    </td>
-  </tr>
-</table>
-<!-- ==================== VARIABLES ==================== -->
-<a name="section-Variables"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Variables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.modeling.profilers'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.modeling.profilers</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -270,9 +274,9 @@
         <span class="sig-arg">radiance</span>,
         <span class="sig-arg">T</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">P</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">alpha</span>=<span class="sig-default">0.0</span>,
-        <span class="sig-arg">mu</span>=<span class="sig-default">2.0</span>,
-        <span class="sig-arg">w_thermal</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">none</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">alpha</span>=<span class="sig-default">0.</span>,
+        <span class="sig-arg">mu</span>=<span class="sig-default">2.</span>,
+        <span class="sig-arg">w_thermal</span>=<span class="sig-default">'none'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#driftRPDF">source&nbsp;code</a></span>&nbsp;
@@ -343,6 +347,36 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="vsound"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">vsound</span>(<span class="sig-arg">T</span>,
+        <span class="sig-arg">gamma</span>,
+        <span class="sig-arg">mu</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#vsound">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The sound velocity at T for a given mean molecular weight and 
+  gamma.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>T</code></strong> (array/float) - The temperature (K)</li>
+        <li><strong class="pname"><code>gamma</code></strong> (float) - The adiabatic constant</li>
+        <li><strong class="pname"><code>mu</code></strong> (float) - the mean molecular weight in units of hydrogen mass (g)</li>
+    </ul></dd>
+    <dt>Returns: array/float</dt>
+        <dd>The sound velocity</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="vbeta"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -354,7 +388,12 @@
         <span class="sig-arg">r0</span>,
         <span class="sig-arg">v0</span>,
         <span class="sig-arg">vinf</span>,
-        <span class="sig-arg">beta</span>)</span>
+        <span class="sig-arg">beta</span>,
+        <span class="sig-arg">vi_mode</span>=<span class="sig-default">'constant'</span>,
+        <span class="sig-arg">rstar</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">beta_inner</span>=<span class="sig-default">0.5</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#vbeta">source&nbsp;code</a></span>&nbsp;
@@ -362,14 +401,36 @@
   </tr></table>
   
   <p>The beta-power law description of the velocity profile.</p>
+  <p>Below the cut-off r0, the velocity is taken constant and equal to v0. 
+  This behaviour can be changed with the vi_mode keyword.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>r</code></strong> (array) - The radial points (cm)</li>
         <li><strong class="pname"><code>r0</code></strong> (float) - The inner radius (typically at dust condensation radius, cm)</li>
-        <li><strong class="pname"><code>v0</code></strong> (float) - The initial velocity at r0 (cm/s)</li>
+        <li><strong class="pname"><code>v0</code></strong> (float) - The initial velocity at r0 (cm/s). Can be 'vs' for the sound 
+          velocity, in which case additional args and kwargs must be passed
+          to the function call (see method vsound()).</li>
         <li><strong class="pname"><code>vinf</code></strong> (float) - The terminal wind velocity (cm/s)</li>
         <li><strong class="pname"><code>beta</code></strong> (float) - The exponent of the beta law</li>
+        <li><strong class="pname"><code>vi_mode</code></strong> (str) - The type of velocity law used in the inner wind at r&lt;r0. 
+          Options:
+          <ul>
+            <li>
+              constant: A constant value at v0
+            </li>
+            <li>
+              beta: an increasing velocity up to v0 according to a beta law
+              with beta=beta_inner, r0~rstar.
+            </li>
+          </ul>
+          <p>Lower case letters required.</p>
+          <p>(default: 'constant')</p></li>
+        <li><strong class="pname"><code>rstar</code></strong> (float) - The stellar radius (cm), only relevant when vi_mode==beta
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>beta_inner</code></strong> (float) - Only relevant for vi_mode==beta, the beta exponent for the inner 
+          wind at r&lt;r0. Default is value for GASTRonOoM
+          <p>(default: 0.5)</p></li>
     </ul></dd>
     <dt>Returns: array</dt>
         <dd>The beta law velocity profile (cm/s)</dd>
@@ -387,7 +448,12 @@
         <span class="sig-arg">r0</span>,
         <span class="sig-arg">v0</span>,
         <span class="sig-arg">vinf</span>,
-        <span class="sig-arg">beta</span>)</span>
+        <span class="sig-arg">beta</span>,
+        <span class="sig-arg">vi_mode</span>=<span class="sig-default">'constant'</span>,
+        <span class="sig-arg">rstar</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">beta_inner</span>=<span class="sig-default">0.5</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#dvbetadr">source&nbsp;code</a></span>&nbsp;
@@ -395,14 +461,36 @@
   </tr></table>
   
   <p>The derivative of the vbeta function: analytic.</p>
+  <p>Below the cut-off r0, the velocity is taken constant and equal to v0. 
+  This behaviour can be changed with the vi_mode keyword. (NYI)</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>r</code></strong> (array) - The radial points (cm)</li>
         <li><strong class="pname"><code>r0</code></strong> (float) - The inner radius (typically at dust condensation radius, cm)</li>
-        <li><strong class="pname"><code>v0</code></strong> (float) - The initial velocity at r0 (cm/s)</li>
+        <li><strong class="pname"><code>v0</code></strong> (float) - The initial velocity at r0 (cm/s). Can be 'vs' for the sound 
+          velocity, in which case additional args and kwargs must be passed
+          to the function call (see method vsound()).</li>
         <li><strong class="pname"><code>vinf</code></strong> (float) - The terminal wind velocity (cm/s)</li>
         <li><strong class="pname"><code>beta</code></strong> (float) - The exponent of the beta law</li>
+        <li><strong class="pname"><code>vi_mode</code></strong> (str) - The type of velocity law used in the inner wind at r&lt;r0. 
+          Options:
+          <ul>
+            <li>
+              constant: A constant value at v0
+            </li>
+            <li>
+              beta: an increasing velocity up to v0 according to a beta law
+              with beta=beta_inner, r0~rstar.
+            </li>
+          </ul>
+          <p>Lower case letters required.</p>
+          <p>(default: 'constant')</p></li>
+        <li><strong class="pname"><code>rstar</code></strong> (float) - The stellar radius (cm), only relevant when vi_mode==beta
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>beta_inner</code></strong> (float) - Only relevant for vi_mode==beta, the beta exponent for the inner 
+          wind at r&lt;r0. Default is value for GASTRonOoM
+          <p>(default: 0.5)</p></li>
     </ul></dd>
     <dt>Returns: array</dt>
         <dd>The analytic derivative of the beta law velocity profile (cm^2/s)</dd>
@@ -474,7 +562,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:03 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:35 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

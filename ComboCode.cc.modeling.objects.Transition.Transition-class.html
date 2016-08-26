@@ -103,13 +103,13 @@
         <span class="summary-sig-arg">exc_energy</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">int_intensity_log</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">n_quad</span>=<span class="summary-sig-default">100</span>,
-        <span class="summary-sig-arg">fraction_tau_step</span>=<span class="summary-sig-default">0.01</span>,
-        <span class="summary-sig-arg">min_tau_step</span>=<span class="summary-sig-default">0.0001</span>,
+        <span class="summary-sig-arg">fraction_tau_step</span>=<span class="summary-sig-default">1e-2</span>,
+        <span class="summary-sig-arg">min_tau_step</span>=<span class="summary-sig-default">1e-4</span>,
         <span class="summary-sig-arg">write_intensities</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">tau_max</span>=<span class="summary-sig-default">12.0</span>,
-        <span class="summary-sig-arg">tau_min</span>=<span class="summary-sig-default">-6.0</span>,
-        <span class="summary-sig-arg">check_tau_step</span>=<span class="summary-sig-default">0.01</span>,
-        <span class="summary-sig-arg">vibrational</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">tau_max</span>=<span class="summary-sig-default">12.</span>,
+        <span class="summary-sig-arg">tau_min</span>=<span class="summary-sig-default">-6.</span>,
+        <span class="summary-sig-arg">check_tau_step</span>=<span class="summary-sig-default">1e-2</span>,
+        <span class="summary-sig-arg">vibrational</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default">None</span>)</span><br />
       Initiate a Transition instance, setting all values for the 
       quantummechanical parameters to zero (by default).</td>
@@ -183,9 +183,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#__hash__" class="summary-sig-name">__hash__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Return a hash number based on the string of the transition, but make 
-      sure that every comparison includes the isTransition method of the 
-      trans.</td>
+      Return a hash number based on the string of the transition.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.__hash__">source&nbsp;code</a></span>
             
@@ -289,7 +287,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#makeSphinxFilename" class="summary-sig-name">makeSphinxFilename</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">number</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">*</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">number</span>=<span class="summary-sig-default">'*'</span>,
         <span class="summary-sig-arg">include_path</span>=<span class="summary-sig-default">0</span>)</span><br />
       Return a string in the sphinx filename format.</td>
           <td align="right" valign="top">
@@ -325,7 +323,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getEnergyUpper" class="summary-sig-name">getEnergyUpper</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default">&lt;Quantity 1.0 1 / cm&gt;</span>)</span><br />
+        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default">1./u.cm</span>)</span><br />
       Return the energy level of the upper state of this transition.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getEnergyUpper">source&nbsp;code</a></span>
@@ -343,7 +341,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getEnergyLower" class="summary-sig-name">getEnergyLower</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default">&lt;Quantity 1.0 1 / cm&gt;</span>)</span><br />
+        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default">1./u.cm</span>)</span><br />
       Return the energy level of the lower state of this transition.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getEnergyLower">source&nbsp;code</a></span>
@@ -669,7 +667,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getIntIntIntSphinx" class="summary-sig-name">getIntIntIntSphinx</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">si</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">units</span>=<span class="summary-sig-default">'si'</span>,
         <span class="summary-sig-arg">cont_subtract</span>=<span class="summary-sig-default">1</span>)</span><br />
       Calculate the integrated intrinsic intensity of the sphinx line 
       profile in SI or cgs units.</td>
@@ -746,7 +744,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getIntTmbData" class="summary-sig-name">getIntTmbData</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">use_fit</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">tmb</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">units</span>=<span class="summary-sig-default">'tmb'</span>)</span><br />
       Calculate the integrated Tmb of the data line profile over velocity.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getIntTmbData">source&nbsp;code</a></span>
@@ -765,7 +763,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getPeakTmbData" class="summary-sig-name">getPeakTmbData</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">method</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">mean</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">method</span>=<span class="summary-sig-default">'mean'</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Get the peak Tmb of the data line profile.</td>
           <td align="right" valign="top">
@@ -807,7 +805,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html#getIntIntUnresolved" class="summary-sig-name">getIntIntUnresolved</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">''</span>)</span><br />
       If already set, the integrated intensity can be accessed here based 
       on filename (multiple measurements can be available for a single 
       transition).</td>
@@ -887,13 +885,13 @@
         <span class="sig-arg">exc_energy</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">int_intensity_log</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">n_quad</span>=<span class="sig-default">100</span>,
-        <span class="sig-arg">fraction_tau_step</span>=<span class="sig-default">0.01</span>,
-        <span class="sig-arg">min_tau_step</span>=<span class="sig-default">0.0001</span>,
+        <span class="sig-arg">fraction_tau_step</span>=<span class="sig-default">1e-2</span>,
+        <span class="sig-arg">min_tau_step</span>=<span class="sig-default">1e-4</span>,
         <span class="sig-arg">write_intensities</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">tau_max</span>=<span class="sig-default">12.0</span>,
-        <span class="sig-arg">tau_min</span>=<span class="sig-default">-6.0</span>,
-        <span class="sig-arg">check_tau_step</span>=<span class="sig-default">0.01</span>,
-        <span class="sig-arg">vibrational</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">tau_max</span>=<span class="sig-default">12.</span>,
+        <span class="sig-arg">tau_min</span>=<span class="sig-default">-6.</span>,
+        <span class="sig-arg">check_tau_step</span>=<span class="sig-default">1e-2</span>,
+        <span class="sig-arg">vibrational</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">path_gastronoom</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -1019,8 +1017,12 @@
   </tr></table>
   
   <p>Compare two transitions and return true if equal.</p>
-  <p>The condition is the dictionary of this Transition() returned by the 
-  makeDict() method.</p>
+  <p>The condition is the string representation of this Transition(). Note 
+  that the other properties included in the self.makeDict() dictionary are 
+  not compared. Those properties do not determine whether a transition is 
+  equal or not.</p>
+  <p>In this sense equal refers to the quantum numbers, telescope and 
+  offset properties, ie the tags that go into the GASTRoNOoM model.</p>
   <dl class="fields">
     <dt>Returns: bool</dt>
         <dd>The comparison</dd>
@@ -1043,8 +1045,12 @@
   </tr></table>
   
   <p>Compare two transitions and return true if not equal.</p>
-  <p>The condition is the dictionary of this Transition() returned by the 
-  makeDict() method.</p>
+  <p>The condition is the string representation of this Transition(). Note 
+  that the other properties included in the self.makeDict() dictionary are 
+  not compared. Those properties do not determine whether a transition is 
+  equal or not.</p>
+  <p>In this sense equal refers to the quantum numbers, telescope and 
+  offset properties, ie the tags that go into the GASTRoNOoM model.</p>
   <dl class="fields">
     <dt>Returns: bool</dt>
         <dd>The negative comparison</dd>
@@ -1066,9 +1072,13 @@
     </td>
   </tr></table>
   
-  <p>Return a hash number based on the string of the transition, but make 
-  sure that every comparison includes the isTransition method of the 
-  trans.</p>
+  <p>Return a hash number based on the string of the transition.</p>
+  <p>The condition is the string representation of this Transition(). Note 
+  that the other properties included in the self.makeDict() dictionary are 
+  not compared. Those properties do not determine whether a transition is 
+  equal or not.</p>
+  <p>In this sense equal refers to the quantum numbers, telescope and 
+  offset properties, ie the tags that go into the GASTRoNOoM model.</p>
   <dl class="fields">
     <dt>Returns: int</dt>
         <dd>The hash number:</dd>
@@ -1211,7 +1221,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">makeSphinxFilename</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">number</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">*</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">number</span>=<span class="sig-default">'*'</span>,
         <span class="sig-arg">include_path</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1263,7 +1273,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getEnergyUpper</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">unit</span>=<span class="sig-default">&lt;Quantity 1.0 1 / cm&gt;</span>)</span>
+        <span class="sig-arg">unit</span>=<span class="sig-default">1./u.cm</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getEnergyUpper">source&nbsp;code</a></span>&nbsp;
@@ -1292,7 +1302,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getEnergyLower</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">unit</span>=<span class="sig-default">&lt;Quantity 1.0 1 / cm&gt;</span>)</span>
+        <span class="sig-arg">unit</span>=<span class="sig-default">1./u.cm</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getEnergyLower">source&nbsp;code</a></span>&nbsp;
@@ -1760,7 +1770,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getIntIntIntSphinx</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">si</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">units</span>=<span class="sig-default">'si'</span>,
         <span class="sig-arg">cont_subtract</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1883,7 +1893,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getIntTmbData</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">use_fit</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">tmb</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">units</span>=<span class="sig-default">'tmb'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getIntTmbData">source&nbsp;code</a></span>&nbsp;
@@ -1950,7 +1960,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getPeakTmbData</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">index</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">method</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">mean</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">method</span>=<span class="sig-default">'mean'</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -2042,7 +2052,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getIntIntUnresolved</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">fn</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">fn</span>=<span class="sig-default">''</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#Transition.getIntIntUnresolved">source&nbsp;code</a></span>&nbsp;
@@ -2172,7 +2182,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:05 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:36 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

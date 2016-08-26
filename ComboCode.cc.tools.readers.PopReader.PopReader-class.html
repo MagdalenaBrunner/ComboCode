@@ -140,6 +140,61 @@ new empty dictionary
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.PopReader.PopReader-class.html#setNY" class="summary-sig-name">setNY</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ny</span>)</span><br />
+      Set the number of levels.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.PopReader-pysrc.html#PopReader.setNY">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.PopReader.PopReader-class.html#setP" class="summary-sig-name">setP</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">p</span>)</span><br />
+      Instead of reading the impact parameters, set them explicitly.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.PopReader-pysrc.html#PopReader.setP">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.PopReader.PopReader-class.html#setPop" class="summary-sig-name">setPop</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>,
+        <span class="summary-sig-arg">n</span>)</span><br />
+      Instead of reading the populations, set them here per level.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.PopReader-pysrc.html#PopReader.setPop">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">array</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -157,14 +212,13 @@ new empty dictionary
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">array/dict</span>
+      <span class="summary-type">array</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.PopReader.PopReader-class.html#getPop" class="summary-sig-name">getPop</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Return the level populations for a given index or irrespective of 
-      index.</td>
+      Return the level populations for a set of level indices.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.tools.readers.PopReader-pysrc.html#PopReader.getPop">source&nbsp;code</a></span>
             
@@ -199,7 +253,7 @@ new empty dictionary
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.PopReader.PopReader-class.html#setInterp" class="summary-sig-name">setInterp</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">spline</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default">'spline'</span>,
         <span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Set the interpolator for the level populations.</td>
@@ -250,9 +304,9 @@ new empty dictionary
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.tools.readers.Reader.Reader</code></b>:
-      <code>getFile</code>,
-      <code>readFile</code>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="ComboCode.cc.tools.readers.Reader.Reader-class.html">Reader.Reader</a></code></b>:
+      <code><a href="ComboCode.cc.tools.readers.Reader.Reader-class.html#getFile">getFile</a></code>,
+      <code><a href="ComboCode.cc.tools.readers.Reader.Reader-class.html#readFile">readFile</a></code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>dict</code></b>:
       <code>__cmp__</code>,
@@ -394,6 +448,9 @@ new empty dictionary
   and the filename is stored.</p>
   <p>Additional args/kwargs are used for the dict creation of the parent of
   Reader.</p>
+  <p>Note that the filename can be given as None, or may not be an existing
+  file. In this case, nothing is read, and the user can set the impact 
+  parameter and the level populations manually with setP and setPop.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -427,6 +484,81 @@ new empty dictionary
   <p>Each level is stored as an index according to the column from which it
   was read.</p>
   <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="setNY"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setNY</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">ny</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.PopReader-pysrc.html#PopReader.setNY">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the number of levels. Usually the highest level index.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ny</code></strong> (int) - The number of levels</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setP"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setP</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">p</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.PopReader-pysrc.html#PopReader.setP">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Instead of reading the impact parameters, set them explicitly.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>p</code></strong> (array) - the impact parameters (cm)</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setPop"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setPop</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>,
+        <span class="sig-arg">n</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.PopReader-pysrc.html#PopReader.setPop">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Instead of reading the populations, set them here per level.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>index</code></strong> (int) - The level index</li>
+        <li><strong class="pname"><code>n</code></strong> (array) - The level populations as a function of impact parameter for level
+          with index</li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -466,14 +598,18 @@ new empty dictionary
     </td>
   </tr></table>
   
-  <p>Return the level populations for a given index or irrespective of 
-  index.</p>
+  <p>Return the level populations for a set of level indices.</p>
   <p>Note that this is the level index, not lower J. For CO, the J quantum 
   number would be index-1.</p>
   <p>Note that the array approach is not used because that makes indexing 
   (0-based for python, 1-based for fortran) more confusing and prone to 
-  mistakes. Hence, a dictionary explicity index-key approach is 
-  preferred.</p>
+  mistakes. Hence, a dictionary explicity index-key approach is preferred. 
+  This is internal only.</p>
+  <p>If an index is given as an iterable, an array is still returened with 
+  shape = (len(index),len(self['p'])) for ease of use. This includes when 
+  all level populations are requested, i.e. when index is None.</p>
+  <p>If one wants to use the dictionary itself, self['pop'] is of course 
+  available.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -481,7 +617,7 @@ new empty dictionary
           dict. Each level is then accessed through pop[index].
           <p>(default: None)</p></li>
     </ul></dd>
-    <dt>Returns: array/dict</dt>
+    <dt>Returns: array</dt>
         <dd>The level populations in the form of a 1d or 2d array, depending 
           if a single level or multiple levels are requested.</dd>
   </dl>
@@ -517,7 +653,7 @@ new empty dictionary
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">setInterp</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">itype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">spline</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">itype</span>=<span class="sig-default">'spline'</span>,
         <span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -617,7 +753,7 @@ new empty dictionary
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:05 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:37 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -109,8 +109,8 @@
         <span class="summary-sig-arg">results</span>,
         <span class="summary-sig-arg">units</span>,
         <span class="summary-sig-arg">master</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">e_flag</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">e_</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">q_flag</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">q_</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">e_flag</span>=<span class="summary-sig-default">'e_'</span>,
+        <span class="summary-sig-arg">q_flag</span>=<span class="summary-sig-default">'q_'</span>,
         <span class="summary-sig-arg">extra_fields</span>=<span class="summary-sig-default">None</span>)</span><br />
       Convert/combine GCPD record arrays to measurement record arrays.</td>
           <td align="right" valign="top">
@@ -129,7 +129,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.catalogs.gcpd-module.html#get_photometry" class="summary-sig-name">get_photometry</a>(<span class="summary-sig-arg">ID</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">extra_fields</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">extra_fields</span>=<span class="summary-sig-default">[]</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Download all available photometry from a star to a record array.</td>
           <td align="right" valign="top">
@@ -150,7 +150,7 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.catalogs.gcpd-module.html#_get_URI" class="summary-sig-name" onclick="show_private();">_get_URI</a>(<span class="summary-sig-arg">name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">GENEVA</code><code class="variable-quote">'</code></span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.catalogs.gcpd-module.html#_get_URI" class="summary-sig-name" onclick="show_private();">_get_URI</a>(<span class="summary-sig-arg">name</span>=<span class="summary-sig-default">'GENEVA'</span>,
         <span class="summary-sig-arg">ID</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Build GCPD URI from available options.</td>
@@ -185,15 +185,8 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="ComboCode.cc.ivs.catalogs.gcpd-module.html#systems" class="summary-name">systems</a> = <code title="{'ARGUE': 10,
- 'DDO': 12,
- 'GENEVA': 13,
- 'JOHNSON': 1,
- 'KRON': 19,
- 'STRAIZYS': 80,
- 'STROMGREN': 4,
- 'VILNIUS': 21,
-..."><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">ARGUE</code><code class="variable-quote">'</code><code class="variable-op">: </code>10<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">DDO</code><code class="variable-quote">'</code><code class="variable-op">: </code>12<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">GENEVA</code><code class="variable-quote">'</code><code class="variable-op">: </code>13<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">JOHNSON</code><code class="variable-quote">'</code><code class="variable-op">: </code>1<code class="variable-op">,</code><code class="variable-ellipsis">...</code></code>
+        <a href="ComboCode.cc.ivs.catalogs.gcpd-module.html#systems" class="summary-name">systems</a> = <code title="{'JOHNSON': 1, 'STROMGREN': 4, 'ARGUE': 10, 'GENEVA': 13, 'KRON': 19, \
+'VILNIUS': 21, 'WOOD': 22, 'WBVR': 78, 'STRAIZYS': 80, 'DDO': 12}">{'JOHNSON': 1, 'STROMGREN': 4, 'ARGUE': 10, 'GENEVA'<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
@@ -207,7 +200,7 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="basedir"></a><span class="summary-name">basedir</span> = <code title="'/Users/robinl/ComboCode/cc/ivs/catalogs'"><code class="variable-quote">'</code><code class="variable-string">/Users/robinl/ComboCode/cc/ivs/catalogs</code><code class="variable-quote">'</code></code>
+        <a name="basedir"></a><span class="summary-name">basedir</span> = <code title="os.path.dirname(os.path.abspath(__file__))">os.path.dirname(os.path.abspath(__file__))</code>
     </td>
   </tr>
 <tr>
@@ -215,13 +208,6 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a name="cat_info"></a><span class="summary-name">cat_info</span> = <code title="ConfigParser.ConfigParser()">ConfigParser.ConfigParser()</code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.ivs.catalogs'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.ivs.catalogs</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -278,8 +264,8 @@
         <span class="sig-arg">results</span>,
         <span class="sig-arg">units</span>,
         <span class="sig-arg">master</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">e_flag</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">e_</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">q_flag</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">q_</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">e_flag</span>=<span class="sig-default">'e_'</span>,
+        <span class="sig-arg">q_flag</span>=<span class="sig-default">'q_'</span>,
         <span class="sig-arg">extra_fields</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -343,7 +329,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_photometry</span>(<span class="sig-arg">ID</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">extra_fields</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">extra_fields</span>=<span class="sig-default">[]</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -369,7 +355,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">_get_URI</span>(<span class="sig-arg">name</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">GENEVA</code><code class="variable-quote">'</code></span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_get_URI</span>(<span class="sig-arg">name</span>=<span class="sig-default">'GENEVA'</span>,
         <span class="sig-arg">ID</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -420,15 +406,8 @@
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">ARGUE</code><code class="variable-quote">'</code><code class="variable-op">: </code>10<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">DDO</code><code class="variable-quote">'</code><code class="variable-op">: </code>12<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">GENEVA</code><code class="variable-quote">'</code><code class="variable-op">: </code>13<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">JOHNSON</code><code class="variable-quote">'</code><code class="variable-op">: </code>1<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">KRON</code><code class="variable-quote">'</code><code class="variable-op">: </code>19<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">STRAIZYS</code><code class="variable-quote">'</code><code class="variable-op">: </code>80<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">STROMGREN</code><code class="variable-quote">'</code><code class="variable-op">: </code>4<code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">VILNIUS</code><code class="variable-quote">'</code><code class="variable-op">: </code>21<code class="variable-op">,</code>
-<code class="variable-ellipsis">...</code>
+{'JOHNSON': 1, 'STROMGREN': 4, 'ARGUE': 10, 'GENEVA': 13, 'KRON': 19, <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+'VILNIUS': 21, 'WOOD': 22, 'WBVR': 78, 'STRAIZYS': 80, 'DDO': 12}
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -461,7 +440,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:02 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:34 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

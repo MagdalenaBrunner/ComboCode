@@ -109,7 +109,66 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type">array/float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Opacity.Opacity-class.html#__call__" class="summary-sig-name">__call__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">l</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Evaluate the profile function at a coordinate point.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Opacity-pysrc.html#Opacity.__call__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array/float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Opacity.Opacity-class.html#eval" class="summary-sig-name">eval</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">l</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">alpha</span>=<span class="summary-sig-default">2.</span>)</span><br />
+      Evaluate the profile function at a coordinate point.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Opacity-pysrc.html#Opacity.eval">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array/float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Opacity.Opacity-class.html#diff" class="summary-sig-name">diff</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">l</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">alpha</span>=<span class="summary-sig-default">2.</span>)</span><br />
+      Evaluate the derivative of the profile function at a coordinate 
+      point.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Opacity-pysrc.html#Opacity.diff">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -117,7 +176,8 @@
         <span class="summary-sig-arg">l</span>,
         <span class="summary-sig-arg">a</span>,
         <span class="summary-sig-arg">sd</span>,
-        <span class="summary-sig-arg">P</span>=<span class="summary-sig-default">0.0</span>)</span><br />
+        <span class="summary-sig-arg">P</span>=<span class="summary-sig-default">0.</span>,
+        <span class="summary-sig-arg">alpha</span>=<span class="summary-sig-default">2.</span>)</span><br />
       Calculate the extinction/absorption/scattering (depending on index) 
       efficiency for given grain size and porosity on a wavelength grid.</td>
           <td align="right" valign="top">
@@ -131,11 +191,6 @@
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.modeling.profilers.Profiler.Profiler</code></b>:
-      <code>__call__</code>,
-      <code>diff</code>,
-      <code>eval</code>
-      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -238,12 +293,22 @@
       2: scattering
     </li>
   </ul>
+  <p>Note that if func is an interpolator object, the original input x and 
+  y grids can be passed as additional keywords xin/lin and yin, which would
+  then be arrays. Otherwise, the x and the interpolator(x) are set as 
+  xin/lin and yin. xin/lin and yin are ignored if func is a function, even 
+  if it returns an interpolator (in which case the original grids are 
+  known)</p>
+  <p>Extrapolation is done outside of the &quot;original&quot; (depending 
+  on if xin/yin are given) wavelength ranges according to a power law 
+  ~l^-alpha, with alpha given upon eval() calls.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>l</code></strong> (array) - The wavelength points (cm)</li>
         <li><strong class="pname"><code>func</code></strong> (function) - The function that describes the opacity profile. Can be given as 
-          an interpolation object.</li>
+          an interpolation object, in which case lin and yin keywords can 
+          be passed as arrays for the original grids.</li>
         <li><strong class="pname"><code>dfunc</code></strong> (function/interpolation object) - Function that describes the derivative of the profile with 
           respect to x. Can be given as an interpolation object. If None, a
           generic central difference is taken &amp; interpolated with a 
@@ -264,6 +329,127 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="__call__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__call__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">l</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Call operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Opacity-pysrc.html#Opacity.__call__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Evaluate the profile function at a coordinate point.</p>
+  <p>l can be any value or array. No warning is printed in case of 
+  extrapolation, which is done with a power law at small or large l values 
+  by the eval() function.</p>
+  <p>The default y-grid is returned if l is None.</p>
+  <p>Passes the call to eval. Additional keywords for the power law 
+  extrapolation can be passed this way as well.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>l</code></strong> (array/float) - The primary coordinate point(s). If None, the default coordinate 
+          grid is used.
+          <p>(default: None)</p></li>
+    </ul></dd>
+    <dt>Returns: array/float</dt>
+        <dd>The profile evaluated at l</dd>
+    <dt>Overrides:
+        <a href="ComboCode.cc.modeling.profilers.Profiler.Profiler-class.html#__call__">Profiler.Profiler.__call__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="eval"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">eval</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">l</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">alpha</span>=<span class="sig-default">2.</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Opacity-pysrc.html#Opacity.eval">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Evaluate the profile function at a coordinate point.</p>
+  <p>l can be any value or array. No warning is printed in case of 
+  extrapolation, which is done with a power law at small or large l 
+  values</p>
+  <p>The default y-grid is returned if l is None and alpha is 2 (the 
+  default)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>l</code></strong> (array/float) - The coordinate point(s). If None, the default coordinate grid is 
+          used.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>alpha</code></strong> (float) - The exponent of the wavelength-dependent power law extrapolation,
+          such that kappa ~ lambda^-alpha
+          <p>(default: 2.)</p></li>
+    </ul></dd>
+    <dt>Returns: array/float</dt>
+        <dd>The profile evaluated at l</dd>
+    <dt>Overrides:
+        <a href="ComboCode.cc.modeling.profilers.Profiler.Profiler-class.html#eval">Profiler.Profiler.eval</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="diff"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">diff</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">l</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">alpha</span>=<span class="sig-default">2.</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Opacity-pysrc.html#Opacity.diff">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Evaluate the derivative of the profile function at a coordinate 
+  point.</p>
+  <p>l can be any value or array. No warning is printed in case of 
+  extrapolation, which is done with a power law at small or large l 
+  values</p>
+  <p>The default y-grid is returned if l is None and alpha is 2 (the 
+  default)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>l</code></strong> (array/float) - The coordinate point(s). If None, the default coordinate grid is 
+          used.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>alpha</code></strong> (float) - The exponent of the wavelength-dependent power law extrapolation,
+          such that kappa ~ lambda^-alpha
+          <p>(default: 2.)</p></li>
+    </ul></dd>
+    <dt>Returns: array/float</dt>
+        <dd>The derivative evaluated at l</dd>
+    <dt>Overrides:
+        <a href="ComboCode.cc.modeling.profilers.Profiler.Profiler-class.html#diff">Profiler.Profiler.diff</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
 <a name="getEfficiency"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -275,7 +461,8 @@
         <span class="sig-arg">l</span>,
         <span class="sig-arg">a</span>,
         <span class="sig-arg">sd</span>,
-        <span class="sig-arg">P</span>=<span class="sig-default">0.0</span>)</span>
+        <span class="sig-arg">P</span>=<span class="sig-default">0.</span>,
+        <span class="sig-arg">alpha</span>=<span class="sig-default">2.</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Opacity-pysrc.html#Opacity.getEfficiency">source&nbsp;code</a></span>&nbsp;
@@ -297,7 +484,12 @@
           grain surface). Default is the spherical case. Is given as the 
           ratio of vacuum per unit volume of a grain.
           <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>alpha</code></strong> (float) - The exponent of the wavelength-dependent power law extrapolation,
+          such that kappa ~ lambda^-alpha
+          <p>(default: 2.)</p></li>
     </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The dimensionless extinction efficiencies</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -328,7 +520,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:05 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:37 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

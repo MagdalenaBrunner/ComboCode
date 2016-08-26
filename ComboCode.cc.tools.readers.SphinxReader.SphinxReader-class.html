@@ -114,7 +114,8 @@ new empty dictionary
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.SphinxReader.SphinxReader-class.html#parseImpact" class="summary-sig-name">parseImpact</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Parse sphinx file 1, which includes all the impact parameter info.</td>
+      Parse sphinx file 1, line intensities at line center (!) as a 
+      function of impact parameter.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.tools.readers.SphinxReader-pysrc.html#SphinxReader.parseImpact">source&nbsp;code</a></span>
             
@@ -275,7 +276,7 @@ new empty dictionary
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.SphinxReader.SphinxReader-class.html#getWeightedIntensity" class="summary-sig-name">getWeightedIntensity</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Return the weighted intensity with respect to impact parameter 
-      squared.</td>
+      squared at line center.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.tools.readers.SphinxReader-pysrc.html#SphinxReader.getWeightedIntensity">source&nbsp;code</a></span>
             
@@ -292,10 +293,28 @@ new empty dictionary
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.SphinxReader.SphinxReader-class.html#getNormalizedIntensity" class="summary-sig-name">getNormalizedIntensity</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Return the normalized weighted intensity with respect to impact 
-      parameter squared.</td>
+      Return the normalized p^2-weighted intensity at line center with 
+      respect to impact parameter squared.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.tools.readers.SphinxReader-pysrc.html#SphinxReader.getNormalizedIntensity">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.SphinxReader.SphinxReader-class.html#getLineIntensity" class="summary-sig-name">getLineIntensity</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return the intensity at line center as a function of impact 
+      parameter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.readers.SphinxReader-pysrc.html#SphinxReader.getLineIntensity">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -497,8 +516,12 @@ new empty dictionary
     </td>
   </tr></table>
   
-  <p>Parse sphinx file 1, which includes all the impact parameter info.</p>
+  <p>Parse sphinx file 1, line intensities at line center (!) as a function
+  of impact parameter.</p>
   <p>The output is stored in dict self['sph1'].</p>
+  <p>Note that the headers of the sph1 file state the last two columns are 
+  summed intensities. This is not true! It is the intensity at line 
+  center.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -719,11 +742,11 @@ new empty dictionary
     </td>
   </tr></table>
   
-  <p>Return the weighted intensity with respect to impact parameter 
-  squared.</p>
+  <p>Return the weighted intensity with respect to impact parameter squared
+  at line center.</p>
   <dl class="fields">
     <dt>Returns: array</dt>
-        <dd>The weighted intensity list.</dd>
+        <dd>The weighted intensity at line center.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -741,11 +764,33 @@ new empty dictionary
     </td>
   </tr></table>
   
-  <p>Return the normalized weighted intensity with respect to impact 
-  parameter squared.</p>
+  <p>Return the normalized p^2-weighted intensity at line center with 
+  respect to impact parameter squared.</p>
   <dl class="fields">
     <dt>Returns: array</dt>
-        <dd>The normalized weighted intensity lists.</dd>
+        <dd>The normalized p^2-weighted intensity at line center.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getLineIntensity"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getLineIntensity</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.readers.SphinxReader-pysrc.html#SphinxReader.getLineIntensity">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the intensity at line center as a function of impact 
+  parameter.</p>
+  <dl class="fields">
+    <dt>Returns: array</dt>
+        <dd>The intensity at line center as a function of impact parameter.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -798,7 +843,7 @@ new empty dictionary
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:05 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:37 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

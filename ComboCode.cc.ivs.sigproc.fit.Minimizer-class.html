@@ -155,7 +155,7 @@
         <span class="summary-sig-arg">errors</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">weights</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">resfunc</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">engine</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">leastsq</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">engine</span>=<span class="summary-sig-default">'leastsq'</span>,
         <span class="summary-sig-arg">args</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">kws</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">grid_points</span>=<span class="summary-sig-default">1</span>,
@@ -200,7 +200,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.fit.Minimizer-class.html#calculate_CI" class="summary-sig-name">calculate_CI</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">parameters</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">sigmas</span>=<span class="summary-sig-default"><code class="variable-group">[</code>0.654<code class="variable-op">, </code>0.95<code class="variable-op">, </code>0.997<code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">sigmas</span>=<span class="summary-sig-default">[0.654,0.95,0.997]</span>,
         <span class="summary-sig-arg">maxiter</span>=<span class="summary-sig-default">200</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Returns the confidence intervalls of the given parameters.</td>
@@ -224,7 +224,7 @@
         <span class="summary-sig-arg">ypar</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">res</span>=<span class="summary-sig-default">10</span>,
         <span class="summary-sig-arg">limits</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">ctype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">prob</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">ctype</span>=<span class="summary-sig-default">'prob'</span>)</span><br />
       Calculates the confidence interval for 2 given parameters.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.fit-pysrc.html#Minimizer.calculate_CI_2D">source&nbsp;code</a></span>
@@ -244,7 +244,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.fit.Minimizer-class.html#calculate_MC_error" class="summary-sig-name">calculate_MC_error</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">points</span>=<span class="summary-sig-default">100</span>,
         <span class="summary-sig-arg">errors</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">distribution</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">gauss</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">distribution</span>=<span class="summary-sig-default">'gauss'</span>,
         <span class="summary-sig-arg">short_output</span>=<span class="summary-sig-default">True</span>,
         <span class="summary-sig-arg">verbose</span>=<span class="summary-sig-default">True</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
@@ -335,7 +335,7 @@
         <span class="summary-sig-arg">ypar</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">res</span>=<span class="summary-sig-default">10</span>,
         <span class="summary-sig-arg">limits</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">ctype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">prob</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">ctype</span>=<span class="summary-sig-default">'prob'</span>,
         <span class="summary-sig-arg">filled</span>=<span class="summary-sig-default">True</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Plot the confidence interval for 2 given parameters.</td>
@@ -358,13 +358,69 @@
         <span class="summary-sig-arg">xpar</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">ypar</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">chi2lim</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">chi2scale</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">log</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">show_colorbar</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">True</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">chi2scale</span>=<span class="summary-sig-default">'log'</span>,
+        <span class="summary-sig-arg">show_colorbar</span>=<span class="summary-sig-default">'True'</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Plot the convergence path of the results from grid_minimize stored in
       this minimizer.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.fit-pysrc.html#Minimizer.plot_grid_convergence">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr bgcolor="#e8f0f8" >
+  <th colspan="2" class="group-header"
+    >&nbsp;&nbsp;&nbsp;&nbsp;Advanced attributes</th></tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.fit.Minimizer-class.html#minimizer" class="summary-sig-name">minimizer</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">val</span>)</span><br />
+      set minimizer</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.fit-pysrc.html#Minimizer.minimizer">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.fit.Minimizer-class.html#errors" class="summary-sig-name">errors</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">val</span>)</span><br />
+      set error</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.fit-pysrc.html#Minimizer.errors">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sigproc.fit.Minimizer-class.html#grid" class="summary-sig-name">grid</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      get minimizer grid</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.ivs.sigproc.fit-pysrc.html#Minimizer.grid">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -548,33 +604,6 @@
       </p>
     </td>
   </tr>
-<tr bgcolor="#e8f0f8" >
-  <th colspan="2" class="group-header"
-    >&nbsp;&nbsp;&nbsp;&nbsp;Advanced attributes</th></tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="ComboCode.cc.ivs.sigproc.fit.Minimizer-class.html#minimizer" class="summary-name">minimizer</a><br />
-      get minimizer
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="ComboCode.cc.ivs.sigproc.fit.Minimizer-class.html#errors" class="summary-name">errors</a><br />
-      get error
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="ComboCode.cc.ivs.sigproc.fit.Minimizer-class.html#grid" class="summary-name">grid</a><br />
-      get minimizer grid
-    </td>
-  </tr>
 </table>
 <!-- ==================== METHOD DETAILS ==================== -->
 <a name="section-MethodDetails"></a>
@@ -608,7 +637,7 @@
         <span class="sig-arg">errors</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">weights</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">resfunc</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">engine</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">leastsq</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">engine</span>=<span class="sig-default">'leastsq'</span>,
         <span class="sig-arg">args</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">kws</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">grid_points</span>=<span class="sig-default">1</span>,
@@ -640,7 +669,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">calculate_CI</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">parameters</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">sigmas</span>=<span class="sig-default"><code class="variable-group">[</code>0.654<code class="variable-op">, </code>0.95<code class="variable-op">, </code>0.997<code class="variable-group">]</code></span>,
+        <span class="sig-arg">sigmas</span>=<span class="sig-default">[0.654,0.95,0.997]</span>,
         <span class="sig-arg">maxiter</span>=<span class="sig-default">200</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -698,7 +727,7 @@
         <span class="sig-arg">ypar</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">res</span>=<span class="sig-default">10</span>,
         <span class="sig-arg">limits</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">ctype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">prob</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">ctype</span>=<span class="sig-default">'prob'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.fit-pysrc.html#Minimizer.calculate_CI_2D">source&nbsp;code</a></span>&nbsp;
@@ -739,7 +768,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">calculate_MC_error</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">points</span>=<span class="sig-default">100</span>,
         <span class="sig-arg">errors</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">distribution</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">gauss</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">distribution</span>=<span class="sig-default">'gauss'</span>,
         <span class="sig-arg">short_output</span>=<span class="sig-default">True</span>,
         <span class="sig-arg">verbose</span>=<span class="sig-default">True</span>,
         <span class="sig-arg">**kwargs</span>)</span>
@@ -883,7 +912,7 @@
         <span class="sig-arg">ypar</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">res</span>=<span class="sig-default">10</span>,
         <span class="sig-arg">limits</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">ctype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">prob</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">ctype</span>=<span class="sig-default">'prob'</span>,
         <span class="sig-arg">filled</span>=<span class="sig-default">True</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -930,8 +959,8 @@
         <span class="sig-arg">xpar</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">ypar</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">chi2lim</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">chi2scale</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">log</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">show_colorbar</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">True</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">chi2scale</span>=<span class="sig-default">'log'</span>,
+        <span class="sig-arg">show_colorbar</span>=<span class="sig-default">'True'</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -950,6 +979,77 @@
         <li><strong class="pname"><code>ypar</code></strong> - The parameter on the y axis</li>
         <li><strong class="pname"><code>chi2lim</code></strong> - Optional limit on the chi2 value (in % of the maximum chi2)</li>
         <li><strong class="pname"><code>chi2scale</code></strong> - Scale for the chi2 values: 'log' or 'linear'</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="minimizer"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">minimizer</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">val</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.fit-pysrc.html#Minimizer.minimizer">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>set minimizer</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@minimizer.setter</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="errors"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">errors</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">val</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.fit-pysrc.html#Minimizer.errors">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>set error</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@errors.setter</code></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="grid"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">grid</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.ivs.sigproc.fit-pysrc.html#Minimizer.grid">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>get minimizer grid</p>
+  <dl class="fields">
+    <dt>Decorators:</dt>
+    <dd><ul class="nomargin-top">
+        <li><code>@property</code></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -974,80 +1074,6 @@
     <dt>Overrides:
         object.__str__
     </dt>
-  </dl>
-</td></tr></table>
-</div>
-<br />
-<!-- ==================== PROPERTY DETAILS ==================== -->
-<a name="section-PropertyDetails"></a>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Property Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-PropertyDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="minimizer"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">minimizer</h3>
-  <p>get minimizer</p>
-  <dl class="fields">
-    <dt>Get Method:</dt>
-    <dd class="value"><span class="summary-sig"><i>unreachable</i>.minimizer(<span class="summary-sig-arg">self</span>)</span>
-        - get minimizer
-    </dd>
-    <dt>Set Method:</dt>
-    <dd class="value"><span class="summary-sig"><i>unreachable</i>.minimizer(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">val</span>)</span>
-        - set minimizer
-    </dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="errors"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">errors</h3>
-  <p>get error</p>
-  <dl class="fields">
-    <dt>Get Method:</dt>
-    <dd class="value"><span class="summary-sig"><i>unreachable</i>.errors(<span class="summary-sig-arg">self</span>)</span>
-        - get error
-    </dd>
-    <dt>Set Method:</dt>
-    <dd class="value"><span class="summary-sig"><i>unreachable</i>.errors(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">val</span>)</span>
-        - set error
-    </dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="grid"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">grid</h3>
-  <p>get minimizer grid</p>
-  <dl class="fields">
-    <dt>Get Method:</dt>
-    <dd class="value"><span class="summary-sig"><i>unreachable</i>.grid(<span class="summary-sig-arg">self</span>)</span>
-        - get minimizer grid
-    </dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1078,7 +1104,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:04 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:36 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

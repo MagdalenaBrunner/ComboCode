@@ -92,18 +92,18 @@
         <span class="summary-sig-arg">nline</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">n_impact</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">n_impact_extra</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">abun_molec</span>=<span class="summary-sig-default">1e-10</span>,
-        <span class="summary-sig-arg">abun_molec_rinner</span>=<span class="summary-sig-default">1e-10</span>,
-        <span class="summary-sig-arg">abun_molec_re</span>=<span class="summary-sig-default">1e-10</span>,
-        <span class="summary-sig-arg">rmax_molec</span>=<span class="summary-sig-default">1.0</span>,
+        <span class="summary-sig-arg">abun_molec</span>=<span class="summary-sig-default">1.0e-10</span>,
+        <span class="summary-sig-arg">abun_molec_rinner</span>=<span class="summary-sig-default">1.0e-10</span>,
+        <span class="summary-sig-arg">abun_molec_re</span>=<span class="summary-sig-default">1.0e-10</span>,
+        <span class="summary-sig-arg">rmax_molec</span>=<span class="summary-sig-default">1.</span>,
         <span class="summary-sig-arg">itera</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">lte_request</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">use_collis_radiat_switch</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">dust_to_gas_change_ml_sp</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">use_no_maser_option</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">use_maser_in_sphinx</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">fehler</span>=<span class="summary-sig-default">0.0001</span>,
-        <span class="summary-sig-arg">xdex</span>=<span class="summary-sig-default">2.0</span>,
+        <span class="summary-sig-arg">fehler</span>=<span class="summary-sig-default">1e-4</span>,
+        <span class="summary-sig-arg">xdex</span>=<span class="summary-sig-default">2.</span>,
         <span class="summary-sig-arg">n_freq</span>=<span class="summary-sig-default">30</span>,
         <span class="summary-sig-arg">start_approx</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">use_fraction_level_corr</span>=<span class="summary-sig-default">1</span>,
@@ -114,7 +114,7 @@
         <span class="summary-sig-arg">ratio_16o_to_18o</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">opr</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">r_outer</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">outer_r_mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">MAMON</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">outer_r_mode</span>=<span class="summary-sig-default">'MAMON'</span>,
         <span class="summary-sig-arg">abundance_filename</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">change_fraction_filename</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">set_keyword_change_abundance</span>=<span class="summary-sig-default">0</span>,
@@ -122,7 +122,7 @@
         <span class="summary-sig-arg">enhance_abundance_factor</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">new_temperature_filename</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">linelist</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">starfile</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">starfile</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default">None</span>)</span><br />
       Initiate a Molecule class, setting all values for the allowed 
       transition parameters to zero (by default).</td>
@@ -145,6 +145,59 @@
       Printing a molecule as it should appear in the GASTRoNOoM input file.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.__str__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Molecule.Molecule-class.html#__eq__" class="summary-sig-name">__eq__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">other</span>)</span><br />
+      Compare two molecules and return true if equal.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.__eq__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Molecule.Molecule-class.html#__ne__" class="summary-sig-name">__ne__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">other</span>)</span><br />
+      Compare two molecules and return true if not equal.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.__ne__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Molecule.Molecule-class.html#__hash__" class="summary-sig-name">__hash__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return a hash number based on the string of the molecule.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.__hash__">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -196,7 +249,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Molecule.Molecule-class.html#makeMlineFilename" class="summary-sig-name">makeMlineFilename</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">number</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">*</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">number</span>=<span class="summary-sig-default">'*'</span>,
         <span class="summary-sig-arg">include_path</span>=<span class="summary-sig-default">0</span>)</span><br />
       Return an mline filename for this object.</td>
           <td align="right" valign="top">
@@ -364,18 +417,18 @@
         <span class="sig-arg">nline</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">n_impact</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">n_impact_extra</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">abun_molec</span>=<span class="sig-default">1e-10</span>,
-        <span class="sig-arg">abun_molec_rinner</span>=<span class="sig-default">1e-10</span>,
-        <span class="sig-arg">abun_molec_re</span>=<span class="sig-default">1e-10</span>,
-        <span class="sig-arg">rmax_molec</span>=<span class="sig-default">1.0</span>,
+        <span class="sig-arg">abun_molec</span>=<span class="sig-default">1.0e-10</span>,
+        <span class="sig-arg">abun_molec_rinner</span>=<span class="sig-default">1.0e-10</span>,
+        <span class="sig-arg">abun_molec_re</span>=<span class="sig-default">1.0e-10</span>,
+        <span class="sig-arg">rmax_molec</span>=<span class="sig-default">1.</span>,
         <span class="sig-arg">itera</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">lte_request</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">use_collis_radiat_switch</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">dust_to_gas_change_ml_sp</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">use_no_maser_option</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">use_maser_in_sphinx</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">fehler</span>=<span class="sig-default">0.0001</span>,
-        <span class="sig-arg">xdex</span>=<span class="sig-default">2.0</span>,
+        <span class="sig-arg">fehler</span>=<span class="sig-default">1e-4</span>,
+        <span class="sig-arg">xdex</span>=<span class="sig-default">2.</span>,
         <span class="sig-arg">n_freq</span>=<span class="sig-default">30</span>,
         <span class="sig-arg">start_approx</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">use_fraction_level_corr</span>=<span class="sig-default">1</span>,
@@ -386,7 +439,7 @@
         <span class="sig-arg">ratio_16o_to_18o</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">opr</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">r_outer</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">outer_r_mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">MAMON</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">outer_r_mode</span>=<span class="sig-default">'MAMON'</span>,
         <span class="sig-arg">abundance_filename</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">change_fraction_filename</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">set_keyword_change_abundance</span>=<span class="sig-default">0</span>,
@@ -394,7 +447,7 @@
         <span class="sig-arg">enhance_abundance_factor</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">new_temperature_filename</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">linelist</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">starfile</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">starfile</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">path_gastronoom</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -525,6 +578,94 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="__eq__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__eq__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">other</span>)</span>
+    <br /><em class="fname">(Equality operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.__eq__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Compare two molecules and return true if equal.</p>
+  <p>The condition is the string representation of this Molecule(). Note 
+  that the other properties included in the self.makeDict() dictionary are 
+  not compared. Those properties do not determine whether a molecule is 
+  equal or not.</p>
+  <p>In this sense equal refers to the spectroscopy included for this 
+  molecule, the number of impact parameters, and the molecule itself, of 
+  course.</p>
+  <dl class="fields">
+    <dt>Returns: bool</dt>
+        <dd>The comparison</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__ne__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__ne__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">other</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.__ne__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Compare two molecules and return true if not equal.</p>
+  <p>The condition is the string representation of this Molecule(). Note 
+  that the other properties included in the self.makeDict() dictionary are 
+  not compared. Those properties do not determine whether a molecule is 
+  equal or not.</p>
+  <p>In this sense equal refers to the spectroscopy included for this 
+  molecule, the number of impact parameters, and the molecule itself, of 
+  course.</p>
+  <dl class="fields">
+    <dt>Returns: bool</dt>
+        <dd>The negative comparison</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__hash__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__hash__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Hashing function)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Molecule-pysrc.html#Molecule.__hash__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return a hash number based on the string of the molecule.</p>
+  <p>The condition is the string representation of this Molecule(). Note 
+  that the other properties included in the self.makeDict() dictionary are 
+  not compared. Those properties do not determine whether a molecule is 
+  equal or not.</p>
+  <p>In this sense equal refers to the spectroscopy included for this 
+  molecule, the number of impact parameters, and the molecule itself, of 
+  course.</p>
+  <dl class="fields">
+    <dt>Returns: int</dt>
+        <dd>The hash number:</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="updateParameters"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -591,7 +732,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">makeMlineFilename</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">number</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">*</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">number</span>=<span class="sig-default">'*'</span>,
         <span class="sig-arg">include_path</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -775,7 +916,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:04 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:36 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -145,7 +145,7 @@ new empty dictionary
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#getTI" class="summary-sig-name">getTI</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">coll_trans</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default">'coll_trans'</span>,
         <span class="summary-sig-arg">lup</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">llow</span>=<span class="summary-sig-default">None</span>)</span><br />
       Return the indices of the transitions read from the collisional rate 
@@ -167,7 +167,7 @@ new empty dictionary
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#getTUpper" class="summary-sig-name">getTUpper</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">coll_trans</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default">'coll_trans'</span>)</span><br />
       Return the indices of the upper states of the &lt;nline&gt; included 
       transitions.</td>
           <td align="right" valign="top">
@@ -187,7 +187,7 @@ new empty dictionary
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#getTLower" class="summary-sig-name">getTLower</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">coll_trans</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default">'coll_trans'</span>)</span><br />
       Return the indices of the lower states of the &lt;nline&gt; included 
       transitions.</td>
           <td align="right" valign="top">
@@ -244,7 +244,7 @@ new empty dictionary
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html#setInterp" class="summary-sig-name">setInterp</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">index</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">spline</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">itype</span>=<span class="summary-sig-default">'spline'</span>,
         <span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Set the interpolator for the collision rates versus temperature.</td>
@@ -297,12 +297,12 @@ new empty dictionary
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.tools.readers.SpectroscopyReader.SpectroscopyReader</code></b>:
-      <code>get</code>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="ComboCode.cc.tools.readers.SpectroscopyReader.SpectroscopyReader-class.html">SpectroscopyReader.SpectroscopyReader</a></code></b>:
+      <code><a href="ComboCode.cc.tools.readers.SpectroscopyReader.SpectroscopyReader-class.html#get">get</a></code>
       </p>
-    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.tools.readers.Reader.Reader</code></b>:
-      <code>getFile</code>,
-      <code>readFile</code>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="ComboCode.cc.tools.readers.Reader.Reader-class.html">Reader.Reader</a></code></b>:
+      <code><a href="ComboCode.cc.tools.readers.Reader.Reader-class.html#getFile">getFile</a></code>,
+      <code><a href="ComboCode.cc.tools.readers.Reader.Reader-class.html#readFile">readFile</a></code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>dict</code></b>:
       <code>__cmp__</code>,
@@ -489,7 +489,7 @@ new empty dictionary
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getTI</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">itype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">coll_trans</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">itype</span>=<span class="sig-default">'coll_trans'</span>,
         <span class="sig-arg">lup</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">llow</span>=<span class="sig-default">None</span>)</span>
   </h3>
@@ -522,7 +522,7 @@ new empty dictionary
     <dt>Returns: array</dt>
         <dd>The transition indices</dd>
     <dt>Overrides:
-        cc.tools.readers.SpectroscopyReader.SpectroscopyReader.getTI
+        <a href="ComboCode.cc.tools.readers.SpectroscopyReader.SpectroscopyReader-class.html#getTI">SpectroscopyReader.SpectroscopyReader.getTI</a>
     </dt>
   </dl>
 </td></tr></table>
@@ -536,7 +536,7 @@ new empty dictionary
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getTUpper</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">index</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">itype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">coll_trans</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">itype</span>=<span class="sig-default">'coll_trans'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getTUpper">source&nbsp;code</a></span>&nbsp;
@@ -562,7 +562,7 @@ new empty dictionary
     <dt>Returns: array</dt>
         <dd>The upper level indices/x ordered by transition index.</dd>
     <dt>Overrides:
-        cc.tools.readers.SpectroscopyReader.SpectroscopyReader.getTUpper
+        <a href="ComboCode.cc.tools.readers.SpectroscopyReader.SpectroscopyReader-class.html#getTUpper">SpectroscopyReader.SpectroscopyReader.getTUpper</a>
     </dt>
   </dl>
 </td></tr></table>
@@ -576,7 +576,7 @@ new empty dictionary
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getTLower</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">index</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">itype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">coll_trans</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">itype</span>=<span class="sig-default">'coll_trans'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.tools.readers.CollisReader-pysrc.html#CollisReader.getTLower">source&nbsp;code</a></span>&nbsp;
@@ -602,7 +602,7 @@ new empty dictionary
     <dt>Returns: array</dt>
         <dd>The lower level indices/x ordered by transition index.</dd>
     <dt>Overrides:
-        cc.tools.readers.SpectroscopyReader.SpectroscopyReader.getTLower
+        <a href="ComboCode.cc.tools.readers.SpectroscopyReader.SpectroscopyReader-class.html#getTLower">SpectroscopyReader.SpectroscopyReader.getTLower</a>
     </dt>
   </dl>
 </td></tr></table>
@@ -683,7 +683,7 @@ new empty dictionary
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">setInterp</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">index</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">itype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">spline</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">itype</span>=<span class="sig-default">'spline'</span>,
         <span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -793,7 +793,7 @@ new empty dictionary
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:05 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:37 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -85,7 +85,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.Plotting2-module.html#plotTiles" class="summary-sig-name">plotTiles</a>(<span class="summary-sig-arg">data</span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Plot data in tiles in a single figure.</td>
           <td align="right" valign="top">
@@ -103,11 +103,11 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.plotting.Plotting2-module.html#plotCols" class="summary-sig-name">plotCols</a>(<span class="summary-sig-arg">x</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">y</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">xerr</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">yerr</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.plotting.Plotting2-module.html#plotCols" class="summary-sig-name">plotCols</a>(<span class="summary-sig-arg">x</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">y</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">xerr</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">yerr</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Plot a spectrum, with or without a number of subplots.</td>
           <td align="right" valign="top">
@@ -126,7 +126,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.Plotting2-module.html#saveFig" class="summary-sig-name">saveFig</a>(<span class="summary-sig-arg">filename</span>,
-        <span class="summary-sig-arg">extension</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">pdf</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">extension</span>=<span class="summary-sig-default">'pdf'</span>,
         <span class="summary-sig-arg">landscape</span>=<span class="summary-sig-default">0</span>)</span><br />
       Save a figure to a filename for a given extension.</td>
           <td align="right" valign="top">
@@ -229,7 +229,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.Plotting2-module.html#makeHistoPlot" class="summary-sig-name">makeHistoPlot</a>(<span class="summary-sig-arg">x</span>,
         <span class="summary-sig-arg">y</span>,
-        <span class="summary-sig-arg">indices</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
+        <span class="summary-sig-arg">indices</span>=<span class="summary-sig-default">[]</span>)</span><br />
       [DEPRECATED]  -- not used by Plotting2 anymore.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.plotting.Plotting2-pysrc.html#makeHistoPlot">source&nbsp;code</a></span>
@@ -255,31 +255,6 @@
         </tr>
       </table>
       
-    </td>
-  </tr>
-</table>
-<!-- ==================== VARIABLES ==================== -->
-<a name="section-Variables"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Variables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.plotting'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.plotting</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -309,7 +284,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotTiles</span>(<span class="sig-arg">data</span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -569,11 +544,11 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">plotCols</span>(<span class="sig-arg">x</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">y</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">xerr</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">yerr</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plotCols</span>(<span class="sig-arg">x</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">y</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">xerr</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">yerr</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -679,7 +654,7 @@
           <p>(default: 1)</p></li>
         <li><strong class="pname"><code>keytags</code></strong> (list[string]) - if default no keys, else a key for every dataset in y
           <p>(default: [])</p></li>
-        <li><strong class="pname"><code>twiny_keytags</code></strong> (list[string]) - as keytags, but only if twinyaxis &lt;&gt; None.
+        <li><strong class="pname"><code>twiny_keytags</code></strong> (list[string]) - as keytags, but only if not twinyaxis is None.
           <p>(default: [])</p></li>
         <li><strong class="pname"><code>size_ticklines</code></strong> (float) - The relative size of the tick lines
           <p>(default: 10)</p></li>
@@ -745,6 +720,8 @@
         <li><strong class="pname"><code>xlogscale</code></strong> (bool) - set logarithmic scale of x-axis
           <p>(default: 0)</p></li>
         <li><strong class="pname"><code>ylogscale</code></strong> (bool) - set logarithmic scale of y-axis
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>twiny_logscale</code></strong> (bool) - set logarithmic scale of the twiny-axis
           <p>(default: 0)</p></li>
         <li><strong class="pname"><code>xmin</code></strong> (float) - if default then autoscaling is done, otherwise min x value
           <p>(default: None)</p></li>
@@ -901,7 +878,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">saveFig</span>(<span class="sig-arg">filename</span>,
-        <span class="sig-arg">extension</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">pdf</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">extension</span>=<span class="sig-default">'pdf'</span>,
         <span class="sig-arg">landscape</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1075,7 +1052,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">makeHistoPlot</span>(<span class="sig-arg">x</span>,
         <span class="sig-arg">y</span>,
-        <span class="sig-arg">indices</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
+        <span class="sig-arg">indices</span>=<span class="sig-default">[]</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.Plotting2-pysrc.html#makeHistoPlot">source&nbsp;code</a></span>&nbsp;
@@ -1153,7 +1130,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:03 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:35 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -91,7 +91,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_name</span>,
-        <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Output2014</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default">'Output2014'</span>,
         <span class="summary-sig-arg">inputfilename</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">pacs</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">spire</span>=<span class="summary-sig-default">None</span>,
@@ -131,10 +131,10 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotVelocity" class="summary-sig-name">plotVelocity</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">models</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">models</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>)</span><br />
       Plot velocity versus radius for every model in star_grid.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotVelocity">source&nbsp;code</a></span>
@@ -152,11 +152,11 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotTemp" class="summary-sig-name">plotTemp</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">models</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">models</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">force_plot</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>)</span><br />
       Plot temperature profiles of all models.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotTemp">source&nbsp;code</a></span>
@@ -175,7 +175,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotTransitions" class="summary-sig-name">plotTransitions</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">no_data</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">vg_factor</span>=<span class="summary-sig-default">3</span>,
         <span class="summary-sig-arg">telescope_label</span>=<span class="summary-sig-default">1</span>,
@@ -185,8 +185,8 @@
         <span class="summary-sig-arg">limited_axis_labels</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">date_tag</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">n_max_models</span>=<span class="summary-sig-default">10</span>,
-        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">fn_suffix</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">fn_suffix</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">fit_vlsr</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">plot_intrinsic</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">plot_unresolved</span>=<span class="summary-sig-default">0</span>,
@@ -212,9 +212,9 @@
         <span class="summary-sig-arg">star</span>,
         <span class="summary-sig-arg">xmin</span>,
         <span class="summary-sig-arg">xmax</span>,
-        <span class="summary-sig-arg">xunit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">micron</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">instrument</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">PACS</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">xunit</span>=<span class="summary-sig-default">'micron'</span>,
+        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">instrument</span>=<span class="summary-sig-default">'PACS'</span>)</span><br />
       Create a list of line labels for all molecules and transitions in the
       molecular linelists requested.</td>
           <td align="right" valign="top">
@@ -235,10 +235,10 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotLineLists" class="summary-sig-name">plotLineLists</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>,
         <span class="summary-sig-arg">include_sphinx</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">instrument</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">PACS</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">instrument</span>=<span class="summary-sig-default">'PACS'</span>)</span><br />
       Plot linelists along with the indicated data.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotLineLists">source&nbsp;code</a></span>
@@ -256,12 +256,12 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotAbundanceProfiles" class="summary-sig-name">plotAbundanceProfiles</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">models</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">models</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">per_molecule</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default">'cm'</span>)</span><br />
       Plot abundance profiles for all molecules in every model.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotAbundanceProfiles">source&nbsp;code</a></span>
@@ -280,11 +280,11 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotLineContributions" class="summary-sig-name">plotLineContributions</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>,
-        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">normalized</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">do_sort</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">include_velocity</span>=<span class="summary-sig-default">1</span>)</span><br />
+        <span class="summary-sig-arg">include</span>=<span class="summary-sig-default">'intensity'</span>)</span><br />
       Plot the source function as function of impact parameter for every 
       transition.</td>
           <td align="right" valign="top">
@@ -322,13 +322,13 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#createLineLabels" class="summary-sig-name">createLineLabels</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">linelist</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">molecules</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">micron</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">linelist</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">molecules</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default">'micron'</span>,
         <span class="summary-sig-arg">mark_undetected</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">instrument</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">PACS</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">instrument</span>=<span class="summary-sig-default">'PACS'</span>)</span><br />
       Create line labels for all transitions in Star() objects or in 
       LineList() objects or in a TRANSITION definition file.</td>
           <td align="right" valign="top">
@@ -347,14 +347,14 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotPacsLineScans" class="summary-sig-name">plotPacsLineScans</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">models</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">models</span>=<span class="summary-sig-default">[]</span>,
         <span class="summary-sig-arg">exclude_data</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">cont_subtracted</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">dimensions</span>=<span class="summary-sig-default"><code class="variable-group">(</code>5<code class="variable-op">, </code>2<code class="variable-group">)</code></span>,
+        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">dimensions</span>=<span class="summary-sig-default">(5,2)</span>,
         <span class="summary-sig-arg">mark_undetected</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">remove_axis_titles</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">include_band</span>=<span class="summary-sig-default">1</span>)</span><br />
@@ -375,12 +375,12 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotPacs" class="summary-sig-name">plotPacs</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">models</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">models</span>=<span class="summary-sig-default">[]</span>,
         <span class="summary-sig-arg">exclude_data</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">include_band</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">number_subplots</span>=<span class="summary-sig-default">3</span>,
         <span class="summary-sig-arg">mark_undetected</span>=<span class="summary-sig-default">0</span>)</span><br />
@@ -402,11 +402,11 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotPacsSegments" class="summary-sig-name">plotPacsSegments</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>,
-        <span class="summary-sig-arg">pacs_segments_path</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">sphinx</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">pacs_segments_path</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default">'sphinx'</span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">include_sphinx</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">exclude_data</span>=<span class="summary-sig-default">0</span>)</span><br />
       Plot segments of spectra only.</td>
@@ -426,13 +426,13 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotSpire" class="summary-sig-name">plotSpire</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">models</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">models</span>=<span class="summary-sig-default">[]</span>,
         <span class="summary-sig-arg">exclude_data</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">fn_trans_marker</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">number_subplots</span>=<span class="summary-sig-default">3</span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>)</span><br />
       Plot SPIRE data along with Sphinx results.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotSpire">source&nbsp;code</a></span>
@@ -450,10 +450,10 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html#plotIntTmb" class="summary-sig-name">plotIntTmb</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">star_grid</span>=<span class="summary-sig-default">[]</span>,
         <span class="summary-sig-arg">scale</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">fn_plt</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>)</span><br />
       Plot of the integrated main beam temperature of the molecular data 
       and that obtained from model(s).</td>
           <td align="right" valign="top">
@@ -467,10 +467,10 @@
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.plotting.objects.PlottingSession.PlottingSession</code></b>:
-      <code>checkChangedPars</code>,
-      <code>makeModelList</code>,
-      <code>setFnPlt</code>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="ComboCode.cc.plotting.objects.PlottingSession.PlottingSession-class.html">PlottingSession.PlottingSession</a></code></b>:
+      <code><a href="ComboCode.cc.plotting.objects.PlottingSession.PlottingSession-class.html#checkChangedPars">checkChangedPars</a></code>,
+      <code><a href="ComboCode.cc.plotting.objects.PlottingSession.PlottingSession-class.html#makeModelList">makeModelList</a></code>,
+      <code><a href="ComboCode.cc.plotting.objects.PlottingSession.PlottingSession-class.html#setFnPlt">setFnPlt</a></code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
@@ -541,7 +541,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_name</span>,
-        <span class="sig-arg">path_gastronoom</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Output2014</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">path_gastronoom</span>=<span class="sig-default">'Output2014'</span>,
         <span class="sig-arg">inputfilename</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">pacs</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">spire</span>=<span class="sig-default">None</span>,
@@ -615,10 +615,10 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotVelocity</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">models</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">star_grid</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">models</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotVelocity">source&nbsp;code</a></span>&nbsp;
@@ -650,11 +650,11 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotTemp</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">models</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">star_grid</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">models</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">force_plot</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotTemp">source&nbsp;code</a></span>&nbsp;
@@ -689,7 +689,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotTransitions</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">no_data</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">vg_factor</span>=<span class="sig-default">3</span>,
         <span class="sig-arg">telescope_label</span>=<span class="sig-default">1</span>,
@@ -699,8 +699,8 @@
         <span class="sig-arg">limited_axis_labels</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">date_tag</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">n_max_models</span>=<span class="sig-default">10</span>,
-        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">fn_suffix</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">fn_suffix</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">fit_vlsr</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">plot_intrinsic</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">plot_unresolved</span>=<span class="sig-default">0</span>,
@@ -774,9 +774,9 @@
         <span class="sig-arg">star</span>,
         <span class="sig-arg">xmin</span>,
         <span class="sig-arg">xmax</span>,
-        <span class="sig-arg">xunit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">micron</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">instrument</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">PACS</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">xunit</span>=<span class="sig-default">'micron'</span>,
+        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">instrument</span>=<span class="sig-default">'PACS'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.createLineLabelsFromLineLists">source&nbsp;code</a></span>&nbsp;
@@ -822,10 +822,10 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotLineLists</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>,
         <span class="sig-arg">include_sphinx</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">instrument</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">PACS</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">instrument</span>=<span class="sig-default">'PACS'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotLineLists">source&nbsp;code</a></span>&nbsp;
@@ -867,12 +867,12 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotAbundanceProfiles</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">models</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">star_grid</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">models</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">per_molecule</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cm</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">unit</span>=<span class="sig-default">'cm'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotAbundanceProfiles">source&nbsp;code</a></span>&nbsp;
@@ -909,11 +909,11 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotLineContributions</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>,
-        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">normalized</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">do_sort</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">include_velocity</span>=<span class="sig-default">1</span>)</span>
+        <span class="sig-arg">include</span>=<span class="sig-default">'intensity'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotLineContributions">source&nbsp;code</a></span>&nbsp;
@@ -936,8 +936,10 @@
         <li><strong class="pname"><code>do_sort</code></strong> (bool) - Sort the transition list according to wavelength. If off, the 
           original order given in the CC input file is kept
           <p>(default: 1)</p></li>
-        <li><strong class="pname"><code>include_velocity</code></strong> (bool) - Include the velocity profile on the plot
-          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>include</code></strong> (str) - Include and additional profile on a second axis. Can be 
+          'velocity' or 'intensity' (at line center) at the moment. Any 
+          other value will add no second axis.
+          <p>(default: 'intensity')</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -979,13 +981,13 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">createLineLabels</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">linelist</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">molecules</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">micron</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">star_grid</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">linelist</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">molecules</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">unit</span>=<span class="sig-default">'micron'</span>,
         <span class="sig-arg">mark_undetected</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">instrument</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">PACS</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">instrument</span>=<span class="sig-default">'PACS'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.createLineLabels">source&nbsp;code</a></span>&nbsp;
@@ -1034,14 +1036,14 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotPacsLineScans</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">models</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">star_grid</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">models</span>=<span class="sig-default">[]</span>,
         <span class="sig-arg">exclude_data</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">cont_subtracted</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">dimensions</span>=<span class="sig-default"><code class="variable-group">(</code>5<code class="variable-op">, </code>2<code class="variable-group">)</code></span>,
+        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">dimensions</span>=<span class="sig-default">(5,2)</span>,
         <span class="sig-arg">mark_undetected</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">remove_axis_titles</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">include_band</span>=<span class="sig-default">1</span>)</span>
@@ -1103,12 +1105,12 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotPacs</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">models</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">star_grid</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">models</span>=<span class="sig-default">[]</span>,
         <span class="sig-arg">exclude_data</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">include_band</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">number_subplots</span>=<span class="sig-default">3</span>,
         <span class="sig-arg">mark_undetected</span>=<span class="sig-default">0</span>)</span>
@@ -1164,11 +1166,11 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotPacsSegments</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>,
-        <span class="sig-arg">pacs_segments_path</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">sphinx</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">pacs_segments_path</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">mode</span>=<span class="sig-default">'sphinx'</span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">include_sphinx</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">exclude_data</span>=<span class="sig-default">0</span>)</span>
   </h3>
@@ -1226,13 +1228,13 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotSpire</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">models</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">star_grid</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">models</span>=<span class="sig-default">[]</span>,
         <span class="sig-arg">exclude_data</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">fn_trans_marker</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">number_subplots</span>=<span class="sig-default">3</span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotSpire">source&nbsp;code</a></span>&nbsp;
@@ -1278,10 +1280,10 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotIntTmb</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">star_grid</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">star_grid</span>=<span class="sig-default">[]</span>,
         <span class="sig-arg">scale</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">fn_plt</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">fn_plt</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.plotting.objects.PlotGas-pysrc.html#PlotGas.plotIntTmb">source&nbsp;code</a></span>&nbsp;
@@ -1334,7 +1336,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:05 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:37 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

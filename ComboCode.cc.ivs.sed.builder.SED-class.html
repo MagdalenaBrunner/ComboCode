@@ -124,7 +124,7 @@
         <span class="summary-sig-arg">plx</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">load_fits</span>=<span class="summary-sig-default">True</span>,
         <span class="summary-sig-arg">load_hdf5</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">label</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">label</span>=<span class="summary-sig-default">''</span>)</span><br />
       Initialize SED class.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.__init__">source&nbsp;code</a></span>
@@ -176,9 +176,9 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="generate_ranges"></a><span class="summary-sig-name">generate_ranges</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">single</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">start_from</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">distribution</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">uniform</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">type</span>=<span class="summary-sig-default">'single'</span>,
+        <span class="summary-sig-arg">start_from</span>=<span class="summary-sig-default">'igrid_search'</span>,
+        <span class="summary-sig-arg">distribution</span>=<span class="summary-sig-default">'uniform'</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Generate sensible search range for each parameter.</td>
           <td align="right" valign="top">
@@ -222,7 +222,7 @@
         <span class="summary-sig-arg">include</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">exclude</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/s/cm2/AA</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">units</span>=<span class="summary-sig-default">'erg/s/cm2/AA'</span>)</span><br />
       Search photometry on the net or from the phot file if it exists.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.get_photometry">source&nbsp;code</a></span>
@@ -386,7 +386,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#set_photometry_scheme" class="summary-sig-name">set_photometry_scheme</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">scheme</span>,
-        <span class="summary-sig-arg">infrared</span>=<span class="summary-sig-default"><code class="variable-group">(</code>1<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">micron</code><code class="variable-quote">'</code><code class="variable-group">)</code></span>)</span><br />
+        <span class="summary-sig-arg">infrared</span>=<span class="summary-sig-default">(1,'micron')</span>)</span><br />
       Set a default scheme of colors/absolute values to fit the SED.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.set_photometry_scheme">source&nbsp;code</a></span>
@@ -467,7 +467,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#get_distance_from_plx" class="summary-sig-name">get_distance_from_plx</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">plx</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">lutz_kelker</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">pc</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">unit</span>=<span class="summary-sig-default">'pc'</span>)</span><br />
       Get the probability density function for the distance, given a 
       parallax.</td>
           <td align="right" valign="top">
@@ -522,7 +522,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#compute_distance" class="summary-sig-name">compute_distance</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>)</span><br />
       Compute distance from radius and angular diameter (scale factor).</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.compute_distance">source&nbsp;code</a></span>
@@ -543,7 +543,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#clip_grid" class="summary-sig-name">clip_grid</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>,
         <span class="summary-sig-arg">CI_limit</span>=<span class="summary-sig-default">None</span>)</span><br />
       Clip grid on CI limit, to save memory.</td>
           <td align="right" valign="top">
@@ -564,8 +564,8 @@
           <td><span class="summary-sig"><a name="collect_results"></a><span class="summary-sig-name">collect_results</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">grid</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">fitresults</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">selfact</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">chisq</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>,
+        <span class="summary-sig-arg">selfact</span>=<span class="summary-sig-default">'chisq'</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       creates a record array of all fit results and removes the failurs</td>
           <td align="right" valign="top">
@@ -604,8 +604,8 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#calculate_statistics" class="summary-sig-name">calculate_statistics</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">df</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">ranges</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">selfact</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">chisq</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>,
+        <span class="summary-sig-arg">selfact</span>=<span class="summary-sig-default">'chisq'</span>)</span><br />
       Calculates the Chi2 and reduced Chi2 based on nr of observations and 
       degrees of freedom.</td>
           <td align="right" valign="top">
@@ -624,8 +624,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#calculate_confidence_intervals" class="summary-sig-name">calculate_confidence_intervals</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">chi2_type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">red</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>,
+        <span class="summary-sig-arg">chi2_type</span>=<span class="summary-sig-default">'red'</span>,
         <span class="summary-sig-arg">CI_limit</span>=<span class="summary-sig-default">None</span>)</span><br />
       Compute confidence interval of all columns in the results grid.</td>
           <td align="right" valign="top">
@@ -644,7 +644,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#store_confidence_intervals" class="summary-sig-name">store_confidence_intervals</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>,
         <span class="summary-sig-arg">name</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">value</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">cilow</span>=<span class="summary-sig-default">None</span>,
@@ -672,9 +672,9 @@
         <span class="summary-sig-arg">teffrange</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">ebvrange</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">zrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>0<code class="variable-op">, </code>0<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">rvrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>3.1<code class="variable-op">, </code>3.1<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">vradrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>0<code class="variable-op">, </code>0<code class="variable-group">)</code></span>,
+        <span class="summary-sig-arg">zrange</span>=<span class="summary-sig-default">(0,0)</span>,
+        <span class="summary-sig-arg">rvrange</span>=<span class="summary-sig-default">(3.1,3.1)</span>,
+        <span class="summary-sig-arg">vradrange</span>=<span class="summary-sig-default">(0,0)</span>,
         <span class="summary-sig-arg">df</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">CI_limit</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">set_model</span>=<span class="summary-sig-default">True</span>,
@@ -696,7 +696,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="generate_fit_param"></a><span class="summary-sig-name">generate_fit_param</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">start_from</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">start_from</span>=<span class="summary-sig-default">'igrid_search'</span>,
         <span class="summary-sig-arg">**pars</span>)</span><br />
       generates a dictionary with parameter information that can be handled
       by fit.iminimize</td>
@@ -716,7 +716,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="calculate_iminimize_CI"></a><span class="summary-sig-name">calculate_iminimize_CI</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">iminimize</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'iminimize'</span>,
         <span class="summary-sig-arg">CI_limit</span>=<span class="summary-sig-default">0.66</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span></td>
           <td align="right" valign="top">
@@ -737,7 +737,7 @@
           <td><span class="summary-sig"><a name="calculate_iminimize_CI2D"></a><span class="summary-sig-name">calculate_iminimize_CI2D</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">xpar</span>,
         <span class="summary-sig-arg">ypar</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">iminimize</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'iminimize'</span>,
         <span class="summary-sig-arg">limits</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">res</span>=<span class="summary-sig-default">10</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span></td>
@@ -757,7 +757,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="_get_imin_ci"></a><span class="summary-sig-name">_get_imin_ci</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">iminimize</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'iminimize'</span>,
         <span class="summary-sig-arg">**ranges</span>)</span><br />
       returns ci information for store_confidence_intervals</td>
           <td align="right" valign="top">
@@ -790,7 +790,7 @@
         <span class="summary-sig-arg">vradrange</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">points</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">distance</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">start_from</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">start_from</span>=<span class="summary-sig-default">'igrid_search'</span>,
         <span class="summary-sig-arg">df</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">CI_limit</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">calc_ci</span>=<span class="summary-sig-default">False</span>,
@@ -818,10 +818,10 @@
         <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">ebvrange</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">zrange</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">start_from</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">imc</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">distribution</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">uniform</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">start_from</span>=<span class="summary-sig-default">'imc'</span>,
+        <span class="summary-sig-arg">distribution</span>=<span class="summary-sig-default">'uniform'</span>,
         <span class="summary-sig-arg">points</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">fitmethod</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">fmin</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">fitmethod</span>=<span class="summary-sig-default">'fmin'</span>,
         <span class="summary-sig-arg">disturb</span>=<span class="summary-sig-default">True</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.imc">source&nbsp;code</a></span>
@@ -859,8 +859,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="set_best_model"></a><span class="summary-sig-name">set_best_model</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">law</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">fitzpatrick2004</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>,
+        <span class="summary-sig-arg">law</span>=<span class="summary-sig-default">'fitzpatrick2004'</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Get reddenend and unreddened model</td>
           <td align="right" valign="top">
@@ -881,7 +881,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#set_model" class="summary-sig-name">set_model</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">wave</span>,
         <span class="summary-sig-arg">flux</span>,
-        <span class="summary-sig-arg">label</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">manual</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">label</span>=<span class="summary-sig-default">'manual'</span>)</span><br />
       Manually set the best SED model.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.set_model">source&nbsp;code</a></span>
@@ -899,7 +899,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#get_model" class="summary-sig-name">get_model</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">label</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">label</span>=<span class="summary-sig-default">'igrid_search'</span>)</span><br />
       Retrieve the best SED model.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.get_model">source&nbsp;code</a></span>
@@ -919,7 +919,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#sample_gridsearch" class="summary-sig-name">sample_gridsearch</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">NrSamples</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">df</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">selfact</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">chisq</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">selfact</span>=<span class="summary-sig-default">'chisq'</span>)</span><br />
       Retrieve an element from the results of a grid search according to 
       the derived probability.</td>
           <td align="right" valign="top">
@@ -940,7 +940,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#chi2" class="summary-sig-name">chi2</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">select</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">reduced</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">label</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">label</span>=<span class="summary-sig-default">'igrid_search'</span>)</span><br />
       Calculate chi2 of best model.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.chi2">source&nbsp;code</a></span>
@@ -962,7 +962,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#add_constraint_distance" class="summary-sig-name">add_constraint_distance</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">distance</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Use the distance to compute additional information.</td>
           <td align="right" valign="top">
@@ -983,8 +983,8 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#add_constraint_slo" class="summary-sig-name">add_constraint_slo</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">numax</span>,
         <span class="summary-sig-arg">Deltanu0</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">chi2_type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">red</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>,
+        <span class="summary-sig-arg">chi2_type</span>=<span class="summary-sig-default">'red'</span>)</span><br />
       Use diagnostics from solar-like oscillations to put additional 
       constraints on the parameters.</td>
           <td align="right" valign="top">
@@ -1008,8 +1008,8 @@
         <span class="summary-sig-arg">e_ebv</span>=<span class="summary-sig-default">0.1</span>,
         <span class="summary-sig-arg">Rv</span>=<span class="summary-sig-default">3.1</span>,
         <span class="summary-sig-arg">model</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">chi2_type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">red</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>,
+        <span class="summary-sig-arg">chi2_type</span>=<span class="summary-sig-default">'red'</span>,
         <span class="summary-sig-arg">upper_limit</span>=<span class="summary-sig-default">False</span>)</span><br />
       Use reddening maps to put additional constraints on the parameters.</td>
           <td align="right" valign="top">
@@ -1046,8 +1046,8 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#add_constraint_mass" class="summary-sig-name">add_constraint_mass</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">mass</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">chi2_type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">red</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>,
+        <span class="summary-sig-arg">chi2_type</span>=<span class="summary-sig-default">'red'</span>)</span><br />
       Add constraints on the mass.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.add_constraint_mass">source&nbsp;code</a></span>
@@ -1085,7 +1085,13 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_grid" class="summary-sig-name">plot_grid</a>(<span class="summary-sig-arg">*args</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_grid" class="summary-sig-name">plot_grid</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>=<span class="summary-sig-default">'teff'</span>,
+        <span class="summary-sig-arg">y</span>=<span class="summary-sig-default">'logg'</span>,
+        <span class="summary-sig-arg">ptype</span>=<span class="summary-sig-default">'ci_red'</span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>,
+        <span class="summary-sig-arg">limit</span>=<span class="summary-sig-default">0.95</span>,
+        <span class="summary-sig-arg">d</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Plot grid as scatter plot</td>
           <td align="right" valign="top">
@@ -1103,7 +1109,11 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_CI2D" class="summary-sig-name">plot_CI2D</a>(<span class="summary-sig-arg">*args</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_CI2D" class="summary-sig-name">plot_CI2D</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">xpar</span>=<span class="summary-sig-default">'teff'</span>,
+        <span class="summary-sig-arg">ypar</span>=<span class="summary-sig-default">'logg'</span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'iminimize'</span>,
+        <span class="summary-sig-arg">ptype</span>=<span class="summary-sig-default">'ci_red'</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Plot a 2D confidence intervall calculated using the CI2D computation 
       from calculate_iminimize_CI2D.</td>
@@ -1122,7 +1132,11 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_data" class="summary-sig-name">plot_data</a>(<span class="summary-sig-arg">*args</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_data" class="summary-sig-name">plot_data</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">colors</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">plot_unselected</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">unit_wavelength</span>=<span class="summary-sig-default">'angstrom'</span>,
+        <span class="summary-sig-arg">unit_flux</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Plot only the SED data.</td>
           <td align="right" valign="top">
@@ -1140,7 +1154,13 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_sed" class="summary-sig-name">plot_sed</a>(<span class="summary-sig-arg">*args</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_sed" class="summary-sig-name">plot_sed</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">colors</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>,
+        <span class="summary-sig-arg">plot_deredded</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">plot_unselected</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default">'AA'</span>,
+        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default">'erg/s/cm2'</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Plot a fitted SED together with the data.</td>
           <td align="right" valign="top">
@@ -1158,8 +1178,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_chi2" class="summary-sig-name">plot_chi2</a>(<span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_chi2" class="summary-sig-name">plot_chi2</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">colors</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>)</span><br />
       Plot chi2 statistic for every datapoint included in the fit.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.plot_chi2">source&nbsp;code</a></span>
@@ -1176,8 +1197,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_distance" class="summary-sig-name">plot_distance</a>(<span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_distance" class="summary-sig-name">plot_distance</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.plot_distance">source&nbsp;code</a></span>
             
@@ -1193,8 +1214,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_grid_model" class="summary-sig-name">plot_grid_model</a>(<span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_grid_model" class="summary-sig-name">plot_grid_model</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ptype</span>=<span class="summary-sig-default">'prob'</span>)</span><br />
       Grid of models</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.plot_grid_model">source&nbsp;code</a></span>
@@ -1211,8 +1232,7 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_MW_side" class="summary-sig-name">plot_MW_side</a>(<span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_MW_side" class="summary-sig-name">plot_MW_side</a>(<span class="summary-sig-arg">self</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.plot_MW_side">source&nbsp;code</a></span>
             
@@ -1228,8 +1248,7 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_MW_top" class="summary-sig-name">plot_MW_top</a>(<span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span></td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_MW_top" class="summary-sig-name">plot_MW_top</a>(<span class="summary-sig-arg">self</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.plot_MW_top">source&nbsp;code</a></span>
             
@@ -1245,8 +1264,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_finderchart" class="summary-sig-name">plot_finderchart</a>(<span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#plot_finderchart" class="summary-sig-name">plot_finderchart</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cmap_photometry</span>=<span class="summary-sig-default">pl.cm.spectral</span>,
+        <span class="summary-sig-arg">window_size</span>=<span class="summary-sig-default">5.</span>)</span><br />
       Size is x and y width in arcminutes</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.plot_finderchart">source&nbsp;code</a></span>
@@ -1413,8 +1433,8 @@
           <td><span class="summary-sig"><a name="save_summary"></a><span class="summary-sig-name">save_summary</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">CI_limit</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">method</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">chi2type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">ci_red</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">method</span>=<span class="summary-sig-default">'igrid_search'</span>,
+        <span class="summary-sig-arg">chi2type</span>=<span class="summary-sig-default">'ci_red'</span>)</span><br />
       Save a summary of the results to an ASCII file.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.save_summary">source&nbsp;code</a></span>
@@ -1432,7 +1452,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html#ci2str" class="summary-sig-name">ci2str</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>)</span><br />
       Prints the stored confidence intervals of the given mtype, the 
       confidence intervals are sorted alfabetically.</td>
           <td align="right" valign="top">
@@ -1501,7 +1521,7 @@
         <span class="sig-arg">plx</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">load_fits</span>=<span class="sig-default">True</span>,
         <span class="sig-arg">load_hdf5</span>=<span class="sig-default">True</span>,
-        <span class="sig-arg">label</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">label</span>=<span class="sig-default">''</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -1592,7 +1612,7 @@
         <span class="sig-arg">include</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">exclude</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">force</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/s/cm2/AA</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">units</span>=<span class="sig-default">'erg/s/cm2/AA'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.get_photometry">source&nbsp;code</a></span>&nbsp;
@@ -1664,7 +1684,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">set_photometry_scheme</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">scheme</span>,
-        <span class="sig-arg">infrared</span>=<span class="sig-default"><code class="variable-group">(</code>1<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">micron</code><code class="variable-quote">'</code><code class="variable-group">)</code></span>)</span>
+        <span class="sig-arg">infrared</span>=<span class="sig-default">(1,'micron')</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.set_photometry_scheme">source&nbsp;code</a></span>&nbsp;
@@ -1795,7 +1815,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_distance_from_plx</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">plx</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">lutz_kelker</span>=<span class="sig-default">True</span>,
-        <span class="sig-arg">unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">pc</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">unit</span>=<span class="sig-default">'pc'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.get_distance_from_plx">source&nbsp;code</a></span>&nbsp;
@@ -1827,7 +1847,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">compute_distance</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">mtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.compute_distance">source&nbsp;code</a></span>&nbsp;
@@ -1857,7 +1877,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">clip_grid</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">mtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>,
         <span class="sig-arg">CI_limit</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1885,8 +1905,8 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">calculate_statistics</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">df</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">ranges</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">mtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">selfact</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">chisq</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>,
+        <span class="sig-arg">selfact</span>=<span class="sig-default">'chisq'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.calculate_statistics">source&nbsp;code</a></span>&nbsp;
@@ -1908,8 +1928,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">calculate_confidence_intervals</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">mtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">chi2_type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">red</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>,
+        <span class="sig-arg">chi2_type</span>=<span class="sig-default">'red'</span>,
         <span class="sig-arg">CI_limit</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1936,7 +1956,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">store_confidence_intervals</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">mtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>,
         <span class="sig-arg">name</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">value</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">cilow</span>=<span class="sig-default">None</span>,
@@ -1976,9 +1996,9 @@
         <span class="sig-arg">teffrange</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">loggrange</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">ebvrange</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">zrange</span>=<span class="sig-default"><code class="variable-group">(</code>0<code class="variable-op">, </code>0<code class="variable-group">)</code></span>,
-        <span class="sig-arg">rvrange</span>=<span class="sig-default"><code class="variable-group">(</code>3.1<code class="variable-op">, </code>3.1<code class="variable-group">)</code></span>,
-        <span class="sig-arg">vradrange</span>=<span class="sig-default"><code class="variable-group">(</code>0<code class="variable-op">, </code>0<code class="variable-group">)</code></span>,
+        <span class="sig-arg">zrange</span>=<span class="sig-default">(0,0)</span>,
+        <span class="sig-arg">rvrange</span>=<span class="sig-default">(3.1,3.1)</span>,
+        <span class="sig-arg">vradrange</span>=<span class="sig-default">(0,0)</span>,
         <span class="sig-arg">df</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">CI_limit</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">set_model</span>=<span class="sig-default">True</span>,
@@ -2008,7 +2028,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">set_model</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">wave</span>,
         <span class="sig-arg">flux</span>,
-        <span class="sig-arg">label</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">manual</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">label</span>=<span class="sig-default">'manual'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.set_model">source&nbsp;code</a></span>&nbsp;
@@ -2039,7 +2059,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_model</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">label</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">label</span>=<span class="sig-default">'igrid_search'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.get_model">source&nbsp;code</a></span>&nbsp;
@@ -2074,7 +2094,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">sample_gridsearch</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">NrSamples</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">df</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">selfact</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">chisq</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">selfact</span>=<span class="sig-default">'chisq'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.sample_gridsearch">source&nbsp;code</a></span>&nbsp;
@@ -2104,7 +2124,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">chi2</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">select</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">reduced</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">label</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">label</span>=<span class="sig-default">'igrid_search'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.chi2">source&nbsp;code</a></span>&nbsp;
@@ -2126,7 +2146,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">add_constraint_distance</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">distance</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">mtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -2163,8 +2183,8 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">add_constraint_slo</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">numax</span>,
         <span class="sig-arg">Deltanu0</span>,
-        <span class="sig-arg">mtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">chi2_type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">red</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>,
+        <span class="sig-arg">chi2_type</span>=<span class="sig-default">'red'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.add_constraint_slo">source&nbsp;code</a></span>&nbsp;
@@ -2200,8 +2220,8 @@
         <span class="sig-arg">e_ebv</span>=<span class="sig-default">0.1</span>,
         <span class="sig-arg">Rv</span>=<span class="sig-default">3.1</span>,
         <span class="sig-arg">model</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">mtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">chi2_type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">red</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>,
+        <span class="sig-arg">chi2_type</span>=<span class="sig-default">'red'</span>,
         <span class="sig-arg">upper_limit</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -2243,8 +2263,8 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">add_constraint_mass</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">mass</span>,
-        <span class="sig-arg">mtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">chi2_type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">red</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>,
+        <span class="sig-arg">chi2_type</span>=<span class="sig-default">'red'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.add_constraint_mass">source&nbsp;code</a></span>&nbsp;
@@ -2288,7 +2308,13 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_grid</span>(<span class="sig-arg">*args</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_grid</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">x</span>=<span class="sig-default">'teff'</span>,
+        <span class="sig-arg">y</span>=<span class="sig-default">'logg'</span>,
+        <span class="sig-arg">ptype</span>=<span class="sig-default">'ci_red'</span>,
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>,
+        <span class="sig-arg">limit</span>=<span class="sig-default">0.95</span>,
+        <span class="sig-arg">d</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -2327,7 +2353,11 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_CI2D</span>(<span class="sig-arg">*args</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_CI2D</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">xpar</span>=<span class="sig-default">'teff'</span>,
+        <span class="sig-arg">ypar</span>=<span class="sig-default">'logg'</span>,
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'iminimize'</span>,
+        <span class="sig-arg">ptype</span>=<span class="sig-default">'ci_red'</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -2353,7 +2383,11 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_data</span>(<span class="sig-arg">*args</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_data</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">colors</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">plot_unselected</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">unit_wavelength</span>=<span class="sig-default">'angstrom'</span>,
+        <span class="sig-arg">unit_flux</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -2391,7 +2425,13 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_sed</span>(<span class="sig-arg">*args</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_sed</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">colors</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>,
+        <span class="sig-arg">plot_deredded</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">plot_unselected</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">wave_units</span>=<span class="sig-default">'AA'</span>,
+        <span class="sig-arg">flux_units</span>=<span class="sig-default">'erg/s/cm2'</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -2428,8 +2468,9 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_chi2</span>(<span class="sig-arg">*args</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_chi2</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">colors</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.plot_chi2">source&nbsp;code</a></span>&nbsp;
@@ -2473,8 +2514,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_distance</span>(<span class="sig-arg">*args</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_distance</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.plot_distance">source&nbsp;code</a></span>&nbsp;
@@ -2497,8 +2538,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_grid_model</span>(<span class="sig-arg">*args</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_grid_model</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">ptype</span>=<span class="sig-default">'prob'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.plot_grid_model">source&nbsp;code</a></span>&nbsp;
@@ -2521,8 +2562,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_MW_side</span>(<span class="sig-arg">*args</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_MW_side</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.plot_MW_side">source&nbsp;code</a></span>&nbsp;
@@ -2545,8 +2585,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_MW_top</span>(<span class="sig-arg">*args</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_MW_top</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.plot_MW_top">source&nbsp;code</a></span>&nbsp;
@@ -2569,8 +2608,9 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_finderchart</span>(<span class="sig-arg">*args</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plot_finderchart</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cmap_photometry</span>=<span class="sig-default">pl.cm.spectral</span>,
+        <span class="sig-arg">window_size</span>=<span class="sig-default">5.</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.plot_finderchart">source&nbsp;code</a></span>&nbsp;
@@ -2817,7 +2857,7 @@ The .fits file can contain the following extensions:
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">ci2str</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">mtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.builder-pysrc.html#SED.ci2str">source&nbsp;code</a></span>&nbsp;
@@ -2863,7 +2903,7 @@ The .fits file can contain the following extensions:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:03 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:35 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

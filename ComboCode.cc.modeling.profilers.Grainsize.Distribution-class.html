@@ -106,12 +106,49 @@
       
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array/float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Grainsize.Distribution-class.html#__call__" class="summary-sig-name">__call__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Evaluate the profile function at a coordinate point.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Grainsize-pysrc.html#Distribution.__call__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array/float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Grainsize.Distribution-class.html#eval" class="summary-sig-name">eval</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">y</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">warn</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">w_sputter</span>=<span class="summary-sig-default">0.</span>,
+        <span class="summary-sig-arg">w</span>=<span class="summary-sig-default">np.empty(0)</span>)</span><br />
+      Evaluate the grain-size distribution function at a coordinate point.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Grainsize-pysrc.html#Distribution.eval">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.modeling.profilers.Profiler.Profiler2D</code></b>:
-      <code>__call__</code>,
-      <code>eval</code>
-      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -219,6 +256,100 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="__call__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__call__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Call operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Grainsize-pysrc.html#Distribution.__call__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Evaluate the profile function at a coordinate point.</p>
+  <p>Passes all args and kwargs on the call to self.eval().</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> - The primary coordinate point(s). If None, the default coordinate 
+          grid is used.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>y</code></strong> - The secondary coordinate point(s). If None, the default 
+          coordinate grid is used.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>warn</code></strong> - Warn when extrapolation occurs.
+          <p>(default: 1)</p></li>
+    </ul></dd>
+    <dt>Returns: array/float</dt>
+        <dd>The profile evaluated at x and y</dd>
+    <dt>Overrides:
+        <a href="ComboCode.cc.modeling.profilers.Profiler.Profiler2D-class.html#__call__">Profiler.Profiler2D.__call__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="eval"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">eval</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">x</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">y</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">warn</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">w_sputter</span>=<span class="sig-default">0.</span>,
+        <span class="sig-arg">w</span>=<span class="sig-default">np.empty(0)</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Grainsize-pysrc.html#Distribution.eval">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Evaluate the grain-size distribution function at a coordinate 
+  point.</p>
+  <p>x/y can be any value or array. If func is an interpolation object, it 
+  is in principle limited by the x/y-range of the interpolator. It is 
+  advised not to extend much beyond the given x/y-range.</p>
+  <p>If one of the two variables is None, it is replaced by the default 
+  grid.</p>
+  <p>Sputtering can be applied here by passing the drift array and the max 
+  drift velocity to the call. Any grain sizes with a drift above w_sputter 
+  will have their number density set to 0. This depends on both the grain 
+  size and the radius.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (array/float) - The primary coordinate point(s). If None, the default coordinate 
+          grid is used.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>y</code></strong> (array/float) - The secondary coordinate point(s). If None, the default 
+          coordinate grid is used.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>warn</code></strong> (bool) - Warn when extrapolation occurs.
+          <p>(default: 1)</p></li>
+        <li><strong class="pname"><code>w_sputter</code></strong> (float) - The sputtering drift velocity above which the number density is 
+          set to zero. Default in case no sputtering is to be applied.
+          <p>(default: 0.)</p></li>
+        <li><strong class="pname"><code>w</code></strong> (array) - The Drift() object. Only relevant when w_sputter is nonzero.
+          <p>(default: np.empty(0))</p></li>
+    </ul></dd>
+    <dt>Returns: array/float</dt>
+        <dd>The profile evaluated at x and y</dd>
+    <dt>Overrides:
+        <a href="ComboCode.cc.modeling.profilers.Profiler.Profiler2D-class.html#eval">Profiler.Profiler2D.eval</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -246,7 +377,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:05 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:37 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

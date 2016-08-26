@@ -82,6 +82,29 @@
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">anything. Or function.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.DataIO-module.html#read" class="summary-sig-name">read</a>(<span class="summary-sig-arg">func</span>,
+        <span class="summary-sig-arg">module</span>=<span class="summary-sig-default">&lt;module 'ComboCode.cc.tools.io.DataIO' from '/Users/robinl/Com<code class="variable-ellipsis">...</code></span>,
+        <span class="summary-sig-arg">return_func</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Takes any function given as a str (preceding modules separated with a
+      dot '.' ) and passes any additional args and kwargs to the function 
+      found in either the DataIO module or the given module.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#read">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">int</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -114,6 +137,26 @@
       separated by comment lines containing the type of data.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#getKeyData">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.DataIO-module.html#readFortranFile" class="summary-sig-name">readFortranFile</a>(<span class="summary-sig-arg">convert_cols</span>,
+        <span class="summary-sig-arg">func</span>=<span class="summary-sig-default">&lt;function loadtxt at 0x103dea7d0&gt;</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Reads a fortran data file.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#readFortranFile">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -190,7 +233,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.DataIO-module.html#readDict" class="summary-sig-name">readDict</a>(<span class="summary-sig-arg">filename</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.tools.io.DataIO-module.html#readDict" class="summary-sig-name">readDict</a>(<span class="summary-sig-arg">filename</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">lines</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">delimiter</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">=</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">comment_chars</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">#</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">convert_lists</span>=<span class="summary-sig-default">0</span>,
@@ -635,6 +679,47 @@
   </td>
 </tr>
 </table>
+<a name="read"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">read</span>(<span class="sig-arg">func</span>,
+        <span class="sig-arg">module</span>=<span class="sig-default">&lt;module 'ComboCode.cc.tools.io.DataIO' from '/Users/robinl/Com<code class="variable-ellipsis">...</code></span>,
+        <span class="sig-arg">return_func</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#read">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Takes any function given as a str (preceding modules separated with a 
+  dot '.' ) and passes any additional args and kwargs to the function found
+  in either the DataIO module or the given module.</p>
+  <p>Note that numpy is important in DataIO as np, and can also be 
+  requested this way.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>func</code></strong> (str/function) - The requested function. Can also be given as a function, in which
+          case no search for the function is done, and this returns that 
+          function's results.</li>
+        <li><strong class="pname"><code>module</code></strong> (module) - The home module of the function. Default is DataIO, and any 
+          module therein can be accessed by passing module.func to the 
+          keyword.
+          <p>(default: DataIO)</p></li>
+        <li><strong class="pname"><code>return_func</code></strong> (bool) - Return the function itself, rather than calling it.
+          <p>(default: 0)</p></li>
+    </ul></dd>
+    <dt>Returns: anything. Or function.</dt>
+        <dd>the function's output is returned.</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="findKey"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -710,6 +795,40 @@
     </ul></dd>
     <dt>Returns: list[]</dt>
         <dd>The requested data</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="readFortranFile"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">readFortranFile</span>(<span class="sig-arg">convert_cols</span>,
+        <span class="sig-arg">func</span>=<span class="sig-default">&lt;function loadtxt at 0x103dea7d0&gt;</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.tools.io.DataIO-pysrc.html#readFortranFile">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Reads a fortran data file.</p>
+  <p>The method is identical to np.loadtxt, but defines a converters dict 
+  for converting double-notation into floats.</p>
+  <p>Use as np.loadtxt, but leave out the converters argument.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>convert_cols</code></strong> (list) - The indices of the columns containing double notation</li>
+        <li><strong class="pname"><code>func</code></strong> (function) - The read function used. Default is np.loadtxt, alternative is 
+          np.genfromtxt. Function requires converters keyword.
+          <p>(default: np.loadtxt)</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The np.loadtxt output</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -850,7 +969,8 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">readDict</span>(<span class="sig-arg">filename</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">readDict</span>(<span class="sig-arg">filename</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">lines</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">delimiter</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">=</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">comment_chars</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">#</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">convert_lists</span>=<span class="sig-default">0</span>,
@@ -874,7 +994,13 @@
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>filename</code></strong> (string) - the filename of the file to be read</li>
+        <li><strong class="pname"><code>filename</code></strong> (string) - the filename of the file to be read. In case of default, lines 
+          are required. filename takes precedence over lines.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>lines</code></strong> (list[str]) - Skip reading a file, and parse these lines instead. If default, a
+          filename is required. Is a list of strings, each interpreted as a
+          line. Ignored if filename is given.
+          <p>(default: None)</p></li>
         <li><strong class="pname"><code>delimiter</code></strong> (string) - the delimiter defining the key/value pairs
           <p>(default: '=')</p></li>
         <li><strong class="pname"><code>comment_chars</code></strong> (list of strings) - single character strings setting the comment characters
@@ -1108,6 +1234,9 @@
   </tr></table>
   
   <p>Read columns, remove comments and turn into floats.</p>
+  <p>Note that number of columns returned is the minimum number of columns 
+  from all rows, where the columns are split by the chosen delimiter 
+  (space-like by default).</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -1575,7 +1704,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:03 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:35 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

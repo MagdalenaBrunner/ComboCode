@@ -123,7 +123,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.catalogs.gator-module.html#get_photometry" class="summary-sig-name">get_photometry</a>(<span class="summary-sig-arg">ID</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">extra_fields</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">dist</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">ra</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">dec</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">extra_fields</span>=<span class="summary-sig-default">['dist','ra','dec']</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Download all available photometry from a star to a record array.</td>
           <td align="right" valign="top">
@@ -165,7 +165,7 @@
         <span class="summary-sig-arg">results</span>,
         <span class="summary-sig-arg">units</span>,
         <span class="summary-sig-arg">master</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">extra_fields</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">_r</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">_RAJ2000</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">_DEJ2000</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>)</span><br />
+        <span class="summary-sig-arg">extra_fields</span>=<span class="summary-sig-default">['_r','_RAJ2000','_DEJ2000']</span>)</span><br />
       Convert/combine Gator record arrays to measurement record arrays.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.catalogs.gator-pysrc.html#gator2phot">source&nbsp;code</a></span>
@@ -189,9 +189,9 @@
         <span class="summary-sig-arg">ID</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">ra</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">dec</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">radius</span>=<span class="summary-sig-default">1.0</span>,
-        <span class="summary-sig-arg">filetype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">1</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">spatial</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cone</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">radius</span>=<span class="summary-sig-default">1.</span>,
+        <span class="summary-sig-arg">filetype</span>=<span class="summary-sig-default">'1'</span>,
+        <span class="summary-sig-arg">spatial</span>=<span class="summary-sig-default">'cone'</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Build GATOR URI from available options.</td>
           <td align="right" valign="top">
@@ -232,7 +232,7 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="basedir"></a><span class="summary-name">basedir</span> = <code title="'/Users/robinl/ComboCode/cc/ivs/catalogs'"><code class="variable-quote">'</code><code class="variable-string">/Users/robinl/ComboCode/cc/ivs/catalogs</code><code class="variable-quote">'</code></code>
+        <a name="basedir"></a><span class="summary-name">basedir</span> = <code title="os.path.dirname(os.path.abspath(__file__))">os.path.dirname(os.path.abspath(__file__))</code>
     </td>
   </tr>
 <tr>
@@ -240,13 +240,6 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a name="cat_info"></a><span class="summary-name">cat_info</span> = <code title="ConfigParser.ConfigParser()">ConfigParser.ConfigParser()</code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.ivs.catalogs'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.ivs.catalogs</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -350,7 +343,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_photometry</span>(<span class="sig-arg">ID</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">extra_fields</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">dist</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">ra</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">dec</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">extra_fields</span>=<span class="sig-default">['dist','ra','dec']</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -422,7 +415,7 @@
         <span class="sig-arg">results</span>,
         <span class="sig-arg">units</span>,
         <span class="sig-arg">master</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">extra_fields</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">_r</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">_RAJ2000</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">_DEJ2000</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>)</span>
+        <span class="sig-arg">extra_fields</span>=<span class="sig-default">['_r','_RAJ2000','_DEJ2000']</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.catalogs.gator-pysrc.html#gator2phot">source&nbsp;code</a></span>&nbsp;
@@ -487,9 +480,9 @@
         <span class="sig-arg">ID</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">ra</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">dec</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">radius</span>=<span class="sig-default">1.0</span>,
-        <span class="sig-arg">filetype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">1</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">spatial</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cone</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">radius</span>=<span class="sig-default">1.</span>,
+        <span class="sig-arg">filetype</span>=<span class="sig-default">'1'</span>,
+        <span class="sig-arg">spatial</span>=<span class="sig-default">'cone'</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -546,7 +539,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:02 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:34 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

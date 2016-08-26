@@ -93,7 +93,7 @@
         <span class="summary-sig-arg">plx</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">load_fits</span>=<span class="summary-sig-default">True</span>,
         <span class="summary-sig-arg">load_hdf5</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">label</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">label</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Setup the Binary sed in the same way as a normal SED.</td>
           <td align="right" valign="top">
@@ -210,9 +210,9 @@
         <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">ebvrange</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">zrange</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">rvrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code><code class="variable-group">(</code>3.1<code class="variable-op">, </code>3.1<code class="variable-group">)</code><code class="variable-op">, </code><code class="variable-group">(</code>3.1<code class="variable-op">, </code>3.1<code class="variable-group">)</code><code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">vradrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code><code class="variable-group">(</code>0<code class="variable-op">, </code>0<code class="variable-group">)</code><code class="variable-op">, </code><code class="variable-group">(</code>0<code class="variable-op">, </code>0<code class="variable-group">)</code><code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">radrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
+        <span class="summary-sig-arg">rvrange</span>=<span class="summary-sig-default">((3.1,3.1),(3.1,3.1))</span>,
+        <span class="summary-sig-arg">vradrange</span>=<span class="summary-sig-default">((0,0),(0,0))</span>,
+        <span class="summary-sig-arg">radrange</span>=<span class="summary-sig-default">(None,None)</span>,
         <span class="summary-sig-arg">compare</span>=<span class="summary-sig-default">True</span>,
         <span class="summary-sig-arg">df</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">CI_limit</span>=<span class="summary-sig-default">None</span>,
@@ -236,7 +236,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.BinarySED-class.html#generate_fit_param" class="summary-sig-name">generate_fit_param</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">start_from</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">start_from</span>=<span class="summary-sig-default">'igrid_search'</span>,
         <span class="summary-sig-arg">**pars</span>)</span><br />
       generates a dictionary with parameter information that can be handled
       by fit.iminimize</td>
@@ -256,23 +256,23 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.BinarySED-class.html#iminimize" class="summary-sig-name">iminimize</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">teff</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">logg</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">ebv</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">z</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">rv</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">vrad</span>=<span class="summary-sig-default"><code class="variable-group">(</code>0<code class="variable-op">, </code>0<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">teffrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">ebvrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">zrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">rvrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">vradrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">radrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
+        <span class="summary-sig-arg">teff</span>=<span class="summary-sig-default">(None,None)</span>,
+        <span class="summary-sig-arg">logg</span>=<span class="summary-sig-default">(None,None)</span>,
+        <span class="summary-sig-arg">ebv</span>=<span class="summary-sig-default">(None,None)</span>,
+        <span class="summary-sig-arg">z</span>=<span class="summary-sig-default">(None,None)</span>,
+        <span class="summary-sig-arg">rv</span>=<span class="summary-sig-default">(None,None)</span>,
+        <span class="summary-sig-arg">vrad</span>=<span class="summary-sig-default">(0,0)</span>,
+        <span class="summary-sig-arg">teffrange</span>=<span class="summary-sig-default">(None,None)</span>,
+        <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default">(None,None)</span>,
+        <span class="summary-sig-arg">ebvrange</span>=<span class="summary-sig-default">(None,None)</span>,
+        <span class="summary-sig-arg">zrange</span>=<span class="summary-sig-default">(None,None)</span>,
+        <span class="summary-sig-arg">rvrange</span>=<span class="summary-sig-default">(None,None)</span>,
+        <span class="summary-sig-arg">vradrange</span>=<span class="summary-sig-default">(None,None)</span>,
+        <span class="summary-sig-arg">radrange</span>=<span class="summary-sig-default">(None,None)</span>,
         <span class="summary-sig-arg">compare</span>=<span class="summary-sig-default">True</span>,
         <span class="summary-sig-arg">df</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">distance</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">start_from</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">start_from</span>=<span class="summary-sig-default">'igrid_search'</span>,
         <span class="summary-sig-arg">points</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">CI_limit</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">calc_ci</span>=<span class="summary-sig-default">True</span>,
@@ -295,7 +295,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.BinarySED-class.html#calculate_iminimize_CI" class="summary-sig-name">calculate_iminimize_CI</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">iminimize</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'iminimize'</span>,
         <span class="summary-sig-arg">CI_limit</span>=<span class="summary-sig-default">0.66</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Calculate the confidence intervals for each parameter using the lmfit
@@ -318,7 +318,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.BinarySED-class.html#calculate_iminimize_CI2D" class="summary-sig-name">calculate_iminimize_CI2D</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">xpar</span>,
         <span class="summary-sig-arg">ypar</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">iminimize</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'iminimize'</span>,
         <span class="summary-sig-arg">limits</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">res</span>=<span class="summary-sig-default">10</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
@@ -359,8 +359,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.builder.BinarySED-class.html#set_best_model" class="summary-sig-name">set_best_model</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">law</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">fitzpatrick2004</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mtype</span>=<span class="summary-sig-default">'igrid_search'</span>,
+        <span class="summary-sig-arg">law</span>=<span class="summary-sig-default">'fitzpatrick2004'</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Get reddenend and unreddened model</td>
           <td align="right" valign="top">
@@ -495,7 +495,7 @@
         <span class="sig-arg">plx</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">load_fits</span>=<span class="sig-default">True</span>,
         <span class="sig-arg">load_hdf5</span>=<span class="sig-default">True</span>,
-        <span class="sig-arg">label</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">label</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">**kwargs</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -561,9 +561,9 @@
         <span class="sig-arg">loggrange</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">ebvrange</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">zrange</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">rvrange</span>=<span class="sig-default"><code class="variable-group">(</code><code class="variable-group">(</code>3.1<code class="variable-op">, </code>3.1<code class="variable-group">)</code><code class="variable-op">, </code><code class="variable-group">(</code>3.1<code class="variable-op">, </code>3.1<code class="variable-group">)</code><code class="variable-group">)</code></span>,
-        <span class="sig-arg">vradrange</span>=<span class="sig-default"><code class="variable-group">(</code><code class="variable-group">(</code>0<code class="variable-op">, </code>0<code class="variable-group">)</code><code class="variable-op">, </code><code class="variable-group">(</code>0<code class="variable-op">, </code>0<code class="variable-group">)</code><code class="variable-group">)</code></span>,
-        <span class="sig-arg">radrange</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
+        <span class="sig-arg">rvrange</span>=<span class="sig-default">((3.1,3.1),(3.1,3.1))</span>,
+        <span class="sig-arg">vradrange</span>=<span class="sig-default">((0,0),(0,0))</span>,
+        <span class="sig-arg">radrange</span>=<span class="sig-default">(None,None)</span>,
         <span class="sig-arg">compare</span>=<span class="sig-default">True</span>,
         <span class="sig-arg">df</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">CI_limit</span>=<span class="sig-default">None</span>,
@@ -596,7 +596,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">generate_fit_param</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">start_from</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">start_from</span>=<span class="sig-default">'igrid_search'</span>,
         <span class="sig-arg">**pars</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -621,23 +621,23 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">iminimize</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">teff</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="sig-arg">logg</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="sig-arg">ebv</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="sig-arg">z</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="sig-arg">rv</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="sig-arg">vrad</span>=<span class="sig-default"><code class="variable-group">(</code>0<code class="variable-op">, </code>0<code class="variable-group">)</code></span>,
-        <span class="sig-arg">teffrange</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="sig-arg">loggrange</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="sig-arg">ebvrange</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="sig-arg">zrange</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="sig-arg">rvrange</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="sig-arg">vradrange</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
-        <span class="sig-arg">radrange</span>=<span class="sig-default"><code class="variable-group">(</code>None<code class="variable-op">, </code>None<code class="variable-group">)</code></span>,
+        <span class="sig-arg">teff</span>=<span class="sig-default">(None,None)</span>,
+        <span class="sig-arg">logg</span>=<span class="sig-default">(None,None)</span>,
+        <span class="sig-arg">ebv</span>=<span class="sig-default">(None,None)</span>,
+        <span class="sig-arg">z</span>=<span class="sig-default">(None,None)</span>,
+        <span class="sig-arg">rv</span>=<span class="sig-default">(None,None)</span>,
+        <span class="sig-arg">vrad</span>=<span class="sig-default">(0,0)</span>,
+        <span class="sig-arg">teffrange</span>=<span class="sig-default">(None,None)</span>,
+        <span class="sig-arg">loggrange</span>=<span class="sig-default">(None,None)</span>,
+        <span class="sig-arg">ebvrange</span>=<span class="sig-default">(None,None)</span>,
+        <span class="sig-arg">zrange</span>=<span class="sig-default">(None,None)</span>,
+        <span class="sig-arg">rvrange</span>=<span class="sig-default">(None,None)</span>,
+        <span class="sig-arg">vradrange</span>=<span class="sig-default">(None,None)</span>,
+        <span class="sig-arg">radrange</span>=<span class="sig-default">(None,None)</span>,
         <span class="sig-arg">compare</span>=<span class="sig-default">True</span>,
         <span class="sig-arg">df</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">distance</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">start_from</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">start_from</span>=<span class="sig-default">'igrid_search'</span>,
         <span class="sig-arg">points</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">CI_limit</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">calc_ci</span>=<span class="sig-default">True</span>,
@@ -665,7 +665,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">calculate_iminimize_CI</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">mtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">iminimize</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'iminimize'</span>,
         <span class="sig-arg">CI_limit</span>=<span class="sig-default">0.66</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -698,7 +698,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">calculate_iminimize_CI2D</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">xpar</span>,
         <span class="sig-arg">ypar</span>,
-        <span class="sig-arg">mtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">iminimize</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'iminimize'</span>,
         <span class="sig-arg">limits</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">res</span>=<span class="sig-default">10</span>,
         <span class="sig-arg">**kwargs</span>)</span>
@@ -729,8 +729,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">set_best_model</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">mtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">igrid_search</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">law</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">fitzpatrick2004</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">mtype</span>=<span class="sig-default">'igrid_search'</span>,
+        <span class="sig-arg">law</span>=<span class="sig-default">'fitzpatrick2004'</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -773,7 +773,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:03 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:35 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -94,6 +94,8 @@
         <span class="summary-sig-arg">func</span>,
         <span class="summary-sig-arg">dfunc</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">order</span>=<span class="summary-sig-default">3</span>,
+        <span class="summary-sig-arg">inner</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">inner_eps</span>=<span class="summary-sig-default">0.5</span>,
         <span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Create an instance of the Temperature() class.</td>
@@ -106,13 +108,70 @@
       
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array/float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Temperature.Temperature-class.html#__call__" class="summary-sig-name">__call__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">r</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">warn</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Evaluate the profile function at a coordinate point.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Temperature-pysrc.html#Temperature.__call__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array/float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Temperature.Temperature-class.html#eval" class="summary-sig-name">eval</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">r</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">warn</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">inner_eps</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Evaluate the profile function at a coordinate point.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Temperature-pysrc.html#Temperature.eval">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array/float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Temperature.Temperature-class.html#diff" class="summary-sig-name">diff</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">r</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">warn</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">inner_eps</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Evaluate the derivative of the profile function at a coordinate 
+      point.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Temperature-pysrc.html#Temperature.diff">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.modeling.profilers.Profiler.Profiler</code></b>:
-      <code>__call__</code>,
-      <code>diff</code>,
-      <code>eval</code>
-      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -185,6 +244,8 @@
         <span class="sig-arg">func</span>,
         <span class="sig-arg">dfunc</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">order</span>=<span class="sig-default">3</span>,
+        <span class="sig-arg">inner</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">inner_eps</span>=<span class="sig-default">0.5</span>,
         <span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
     <br /><em class="fname">(Constructor)</em>
@@ -200,6 +261,17 @@
   <p>The optional args and kwargs give the additional arguments for the 
   temperature function, which are ignored in case func is an interp1d 
   object.</p>
+  <p>An additional option concerns the extrapolation to smaller radii, e.g.
+  in the inner wind between the stellar surface and the dust condensation 
+  radius. In this case, the eval/diff methods will differ between inner 
+  wind (r&lt;r0) and the rest of the wind (r&gt;r0) in terms of 
+  evaluation.</p>
+  <p>At r&gt;r0: The given func (or interpolator) is used. At r&lt;r0: A 
+  Teps power law is used, for which 1 out of Tstar or epsilon can be 
+  defined. The default sets epsilon == 0.5 (the optically thin case), but 
+  inner_epsilon can be passed to the initialisation if needed. r0, T0 must 
+  be defined in kwargs either for the main wind's Teps law, or as an 
+  additional argument if a file is read.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -212,6 +284,14 @@
           <p>(default: None)</p></li>
         <li><strong class="pname"><code>order</code></strong> (int) - Order of the spline interpolation. Default is cubic.
           <p>(default: 3)</p></li>
+        <li><strong class="pname"><code>inner</code></strong> (bool) - Applies a power law to the inner region, as a means of 
+          extrapolation. Off by default, but can be turned on. In this 
+          case, r0 is taken from kwargs, ie the r0 from the power law of 
+          the wind (if Teps is chosen), or as an additional keyword if a 
+          file is read.
+          <p>(default: 0)</p></li>
+        <li><strong class="pname"><code>inner_eps</code></strong> (float) - The exponent for the power law in the inner wind.
+          <p>(default: 0.5)</p></li>
         <li><strong class="pname"><code>args</code></strong> (tuple) - Additional parameters passed to the functions when eval or diff 
           are called.
           <p>(default: [])</p></li>
@@ -221,6 +301,130 @@
     </ul></dd>
     <dt>Overrides:
         object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__call__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__call__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">r</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">warn</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Call operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Temperature-pysrc.html#Temperature.__call__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Evaluate the profile function at a coordinate point.</p>
+  <p>r can be any value or array.</p>
+  <p>The default y-grid is returned if r is None.</p>
+  <p>Passes the call to eval. Additional keywords for the power law 
+  extrapolation can be passed this way as well.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>r</code></strong> (array/float) - The primary coordinate point(s). If None, the default coordinate 
+          grid is used.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>warn</code></strong> (bool) - Warn when extrapolation occurs.
+          <p>(default: 1)</p></li>
+    </ul></dd>
+    <dt>Returns: array/float</dt>
+        <dd>The profile evaluated at r</dd>
+    <dt>Overrides:
+        <a href="ComboCode.cc.modeling.profilers.Profiler.Profiler-class.html#__call__">Profiler.Profiler.__call__</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="eval"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">eval</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">r</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">warn</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">inner_eps</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Temperature-pysrc.html#Temperature.eval">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Evaluate the profile function at a coordinate point.</p>
+  <p>r can be any value or array.</p>
+  <p>The default y-grid is returned if r is None and inner_eps is 0.5 (the 
+  default).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>r</code></strong> (array/float) - The coordinate point(s). If None, the default coordinate grid is 
+          used.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>warn</code></strong> (bool) - Warn when extrapolation occurs.
+          <p>(default: 1)</p></li>
+        <li><strong class="pname"><code>inner_eps</code></strong> (float) - The exponent of the Teps power law inner wind extrapolation. If 
+          default, the inner_eps defined upon initialisation is used.
+          <p>(default: None)</p></li>
+    </ul></dd>
+    <dt>Returns: array/float</dt>
+        <dd>The profile evaluated at r</dd>
+    <dt>Overrides:
+        <a href="ComboCode.cc.modeling.profilers.Profiler.Profiler-class.html#eval">Profiler.Profiler.eval</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="diff"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">diff</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">r</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">warn</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">inner_eps</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Temperature-pysrc.html#Temperature.diff">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Evaluate the derivative of the profile function at a coordinate 
+  point.</p>
+  <p>r can be any value or array.</p>
+  <p>The default y-grid is returned if r is None and inner_eps is 0.5 (the 
+  default).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>r</code></strong> (array/float) - The coordinate point(s). If None, the default coordinate grid is 
+          used.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>warn</code></strong> (bool) - Warn when extrapolation occurs.
+          <p>(default: 1)</p></li>
+        <li><strong class="pname"><code>inner_eps</code></strong> (float) - The exponent of the Teps power law inner wind extrapolation. If 
+          default, the inner_eps defined upon initialisation is used.
+          <p>(default: None)</p></li>
+    </ul></dd>
+    <dt>Returns: array/float</dt>
+        <dd>The derivative evaluated at r</dd>
+    <dt>Overrides:
+        <a href="ComboCode.cc.modeling.profilers.Profiler.Profiler-class.html#diff">Profiler.Profiler.diff</a>
     </dt>
   </dl>
 </td></tr></table>
@@ -252,7 +456,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:05 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:37 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

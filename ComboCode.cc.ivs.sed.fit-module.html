@@ -89,9 +89,9 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.fit-module.html#get_PCA_grid" class="summary-sig-name">get_PCA_grid</a>(<span class="summary-sig-arg">colors</span>,
         <span class="summary-sig-arg">res</span>=<span class="summary-sig-default">3</span>,
-        <span class="summary-sig-arg">teffrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">ebvrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
+        <span class="summary-sig-arg">teffrange</span>=<span class="summary-sig-default">(-np.inf,np.inf)</span>,
+        <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default">(-np.inf,np.inf)</span>,
+        <span class="summary-sig-arg">ebvrange</span>=<span class="summary-sig-default">(-np.inf,np.inf)</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Transform a flux grid to a colour grid.</td>
           <td align="right" valign="top">
@@ -128,7 +128,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.fit-module.html#calibrate_PCA" class="summary-sig-name">calibrate_PCA</a>(<span class="summary-sig-arg">T</span>,
         <span class="summary-sig-arg">pars</span>,
-        <span class="summary-sig-arg">function</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">linear</code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">function</span>=<span class="summary-sig-default">'linear'</span>)</span><br />
       Define the interpretations of the principal components.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.fit-pysrc.html#calibrate_PCA">source&nbsp;code</a></span>
@@ -235,10 +235,10 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.fit-module.html#generate_grid_single" class="summary-sig-name">generate_grid_single</a>(<span class="summary-sig-arg">photbands</span>,
-        <span class="summary-sig-arg">teffrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">ebvrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">zrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
+        <span class="summary-sig-arg">teffrange</span>=<span class="summary-sig-default">(-inf,inf)</span>,
+        <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default">(-inf,inf)</span>,
+        <span class="summary-sig-arg">ebvrange</span>=<span class="summary-sig-default">(-inf,inf)</span>,
+        <span class="summary-sig-arg">zrange</span>=<span class="summary-sig-default">(-inf,inf)</span>,
         <span class="summary-sig-arg">points</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">res</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">clear_memory</span>=<span class="summary-sig-default">True</span>,
@@ -260,16 +260,16 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.fit-module.html#generate_grid" class="summary-sig-name">generate_grid</a>(<span class="summary-sig-arg">photbands</span>,
-        <span class="summary-sig-arg">teffrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code><code class="variable-op">, </code><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code><code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code><code class="variable-op">, </code><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code><code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">ebvrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">zrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code><code class="variable-op">, </code><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code><code class="variable-group">)</code></span>,
-        <span class="summary-sig-arg">radiusrange</span>=<span class="summary-sig-default"><code class="variable-group">(</code><code class="variable-group">(</code>1<code class="variable-op">, </code>1<code class="variable-group">)</code><code class="variable-op">, </code><code class="variable-group">(</code>0.1<code class="variable-op">, </code>10.0<code class="variable-group">)</code><code class="variable-group">)</code></span>,
+        <span class="summary-sig-arg">teffrange</span>=<span class="summary-sig-default">((-inf,inf),(-inf,inf))</span>,
+        <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default">((-inf,inf),(-inf,inf))</span>,
+        <span class="summary-sig-arg">ebvrange</span>=<span class="summary-sig-default">(-inf,inf)</span>,
+        <span class="summary-sig-arg">zrange</span>=<span class="summary-sig-default">((-inf,inf),(-inf,inf))</span>,
+        <span class="summary-sig-arg">radiusrange</span>=<span class="summary-sig-default">((1,1),(0.1,10.))</span>,
         <span class="summary-sig-arg">grids</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">points</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">res</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">clear_memory</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">single</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">type</span>=<span class="summary-sig-default">'single'</span>,
         <span class="summary-sig-arg">primary_hottest</span>=<span class="summary-sig-default">False</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Generate grid points at which to fit an interpolated grid of SEDs.</td>
@@ -294,7 +294,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.fit-module.html#igrid_search_pix" class="summary-sig-name">igrid_search_pix</a>(<span class="summary-sig-arg">meas</span>,
         <span class="summary-sig-arg">e_meas</span>,
         <span class="summary-sig-arg">photbands</span>,
-        <span class="summary-sig-arg">constraints</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">constraints</span>=<span class="summary-sig-default">{}</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Run over gridpoints and evaluate model <code>model_func</code> via 
       <code>stat_func</code>.</td>
@@ -313,7 +313,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.fit-module.html#igrid_search" class="summary-sig-name">igrid_search</a>(<span class="summary-sig-arg">*args</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.fit-module.html#igrid_search" class="summary-sig-name">igrid_search</a>(<span class="summary-sig-arg">meas</span>,
+        <span class="summary-sig-arg">e_meas</span>,
+        <span class="summary-sig-arg">photbands</span>,
+        <span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Run over gridpoints and evaluate model <code>model_func</code> via 
       <code>stat_func</code>.</td>
@@ -515,13 +518,6 @@
         <a name="logger"></a><span class="summary-name">logger</span> = <code title="logging.getLogger(&quot;SED.FIT&quot;)">logging.getLogger(&quot;SED.FIT&quot;)</code>
     </td>
   </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.ivs.sed'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.ivs.sed</code><code class="variable-quote">'</code></code>
-    </td>
-  </tr>
 </table>
 <!-- ==================== FUNCTION DETAILS ==================== -->
 <a name="section-FunctionDetails"></a>
@@ -550,9 +546,9 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_PCA_grid</span>(<span class="sig-arg">colors</span>,
         <span class="sig-arg">res</span>=<span class="sig-default">3</span>,
-        <span class="sig-arg">teffrange</span>=<span class="sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
-        <span class="sig-arg">loggrange</span>=<span class="sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
-        <span class="sig-arg">ebvrange</span>=<span class="sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
+        <span class="sig-arg">teffrange</span>=<span class="sig-default">(-np.inf,np.inf)</span>,
+        <span class="sig-arg">loggrange</span>=<span class="sig-default">(-np.inf,np.inf)</span>,
+        <span class="sig-arg">ebvrange</span>=<span class="sig-default">(-np.inf,np.inf)</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -613,7 +609,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">calibrate_PCA</span>(<span class="sig-arg">T</span>,
         <span class="sig-arg">pars</span>,
-        <span class="sig-arg">function</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">linear</code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">function</span>=<span class="sig-default">'linear'</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.fit-pysrc.html#calibrate_PCA">source&nbsp;code</a></span>&nbsp;
@@ -755,10 +751,10 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">generate_grid_single</span>(<span class="sig-arg">photbands</span>,
-        <span class="sig-arg">teffrange</span>=<span class="sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
-        <span class="sig-arg">loggrange</span>=<span class="sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
-        <span class="sig-arg">ebvrange</span>=<span class="sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
-        <span class="sig-arg">zrange</span>=<span class="sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
+        <span class="sig-arg">teffrange</span>=<span class="sig-default">(-inf,inf)</span>,
+        <span class="sig-arg">loggrange</span>=<span class="sig-default">(-inf,inf)</span>,
+        <span class="sig-arg">ebvrange</span>=<span class="sig-default">(-inf,inf)</span>,
+        <span class="sig-arg">zrange</span>=<span class="sig-default">(-inf,inf)</span>,
         <span class="sig-arg">points</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">res</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">clear_memory</span>=<span class="sig-default">True</span>,
@@ -864,16 +860,16 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">generate_grid</span>(<span class="sig-arg">photbands</span>,
-        <span class="sig-arg">teffrange</span>=<span class="sig-default"><code class="variable-group">(</code><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code><code class="variable-op">, </code><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code><code class="variable-group">)</code></span>,
-        <span class="sig-arg">loggrange</span>=<span class="sig-default"><code class="variable-group">(</code><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code><code class="variable-op">, </code><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code><code class="variable-group">)</code></span>,
-        <span class="sig-arg">ebvrange</span>=<span class="sig-default"><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code></span>,
-        <span class="sig-arg">zrange</span>=<span class="sig-default"><code class="variable-group">(</code><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code><code class="variable-op">, </code><code class="variable-group">(</code>-inf<code class="variable-op">, </code>inf<code class="variable-group">)</code><code class="variable-group">)</code></span>,
-        <span class="sig-arg">radiusrange</span>=<span class="sig-default"><code class="variable-group">(</code><code class="variable-group">(</code>1<code class="variable-op">, </code>1<code class="variable-group">)</code><code class="variable-op">, </code><code class="variable-group">(</code>0.1<code class="variable-op">, </code>10.0<code class="variable-group">)</code><code class="variable-group">)</code></span>,
+        <span class="sig-arg">teffrange</span>=<span class="sig-default">((-inf,inf),(-inf,inf))</span>,
+        <span class="sig-arg">loggrange</span>=<span class="sig-default">((-inf,inf),(-inf,inf))</span>,
+        <span class="sig-arg">ebvrange</span>=<span class="sig-default">(-inf,inf)</span>,
+        <span class="sig-arg">zrange</span>=<span class="sig-default">((-inf,inf),(-inf,inf))</span>,
+        <span class="sig-arg">radiusrange</span>=<span class="sig-default">((1,1),(0.1,10.))</span>,
         <span class="sig-arg">grids</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">points</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">res</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">clear_memory</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">single</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">type</span>=<span class="sig-default">'single'</span>,
         <span class="sig-arg">primary_hottest</span>=<span class="sig-default">False</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -982,7 +978,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">igrid_search_pix</span>(<span class="sig-arg">meas</span>,
         <span class="sig-arg">e_meas</span>,
         <span class="sig-arg">photbands</span>,
-        <span class="sig-arg">constraints</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="sig-arg">constraints</span>=<span class="sig-default">{}</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1009,8 +1005,10 @@
   should be of the same form as <a 
   href="ComboCode.cc.ivs.sed.fit-module.html#stat_chi2" 
   class="link">stat_chi2</a>.</p>
-  <p>Extra arguments are passed to parallel_gridsearch for parallelization 
-  and to {model_func} for further specification of grids etc.</p>
+  <p>Extra arguments are passed to <a 
+  href="ComboCode.cc.ivs.sed.decorators-module.html#parallel_gridsearch" 
+  class="link">parallel_gridsearch</a> for parallelization and to 
+  {model_func} for further specification of grids etc.</p>
   <p>The index array is returned to trace the results after 
   parallelization.</p>
   <dl class="fields">
@@ -1035,7 +1033,10 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">igrid_search</span>(<span class="sig-arg">*args</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">igrid_search</span>(<span class="sig-arg">meas</span>,
+        <span class="sig-arg">e_meas</span>,
+        <span class="sig-arg">photbands</span>,
+        <span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1062,8 +1063,10 @@
   should be of the same form as <a 
   href="ComboCode.cc.ivs.sed.fit-module.html#stat_chi2" 
   class="link">stat_chi2</a>.</p>
-  <p>Extra arguments are passed to parallel_gridsearch for parallelization 
-  and to {model_func} for further specification of grids etc.</p>
+  <p>Extra arguments are passed to <a 
+  href="ComboCode.cc.ivs.sed.decorators-module.html#parallel_gridsearch" 
+  class="link">parallel_gridsearch</a> for parallelization and to 
+  {model_func} for further specification of grids etc.</p>
   <p>The index array is returned to trace the results after 
   parallelization.</p>
   <dl class="fields">
@@ -1195,7 +1198,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:02 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:34 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

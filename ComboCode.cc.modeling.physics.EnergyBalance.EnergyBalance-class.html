@@ -65,6 +65,10 @@
 </center>
 <hr />
 <p>The energy balance class.</p>
+  <p>Author: R. Lombaert, H. Olofsson &amp; M. Maercker (Chalmers, 
+  Sweden)</p>
+  <p>For the use of the EnergyBalance module, please contact one of the 
+  three authors listed here.</p>
   <p>Calculates energy balance and provides tools for reading and writing 
   I/O, and setting input physics.</p>
   <p>For now limited to the energy balance from the dust formation radius 
@@ -129,12 +133,30 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">template</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">standard</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">template</span>=<span class="summary-sig-default">'standard'</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Creating an EnergyBalance object used to calculate the energy 
       balance.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list[str,dict]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#formatInput" class="summary-sig-name">formatInput</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ilst</span>)</span><br />
+      Format an input keyword list for a variable.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.formatInput">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -208,14 +230,14 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#setProfiles" class="summary-sig-name">setProfiles</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">v</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">opac</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">mdot</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">mdot_dust</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">T</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">Td</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Initialise the basic profiles: gas velocity, opacity, mass-loss rate,
-      initial temperature, dust temperature</td>
+        <span class="summary-sig-arg">Td</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">mu</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Initialise the independent profiles:opacity, mass-loss rate, initial 
+      temperature, dust temperature</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setProfiles">source&nbsp;code</a></span>
             
@@ -236,6 +258,119 @@
       Set the adiabatic coefficient.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setGamma">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#setVelocity" class="summary-sig-name">setVelocity</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">v</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set the velocity profile, based on the requested function.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setVelocity">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#setLineCooling" class="summary-sig-name">setLineCooling</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">m</span>)</span><br />
+      Set the line cooling parameters.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setLineCooling">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#setPopInitial" class="summary-sig-name">setPopInitial</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">m</span>)</span><br />
+      Set an initial set of level populations.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setPopInitial">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#setAbundance" class="summary-sig-name">setAbundance</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">m</span>)</span><br />
+      Set the abundance profile for a molecule.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setAbundance">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#setTexc" class="summary-sig-name">setTexc</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">m</span>)</span><br />
+      Calculate the excitation temperature for the level populations given 
+      in self.pop.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setTexc">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#getTexc" class="summary-sig-name">getTexc</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">m</span>,
+        <span class="summary-sig-arg">indices</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">lup</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">llow</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Return the excitation temperature profile as a function of impact 
+      parameter for given transition indices of a given molecule.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.getTexc">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -319,8 +454,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#setDensity" class="summary-sig-name">setDensity</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">dtype</span>,
-        <span class="summary-sig-arg">custom_mu</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">dtype</span>)</span><br />
       Calculate the density profile for gas or dust.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setDensity">source&nbsp;code</a></span>
@@ -337,11 +471,13 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#setLineCooling" class="summary-sig-name">setLineCooling</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">m</span>)</span><br />
-      Set the line cooling parameters.</td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#updatePop" class="summary-sig-name">updatePop</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">m</span>,
+        <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">updateLC</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Update the level populations.</td>
           <td align="right" valign="top">
-            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setLineCooling">source&nbsp;code</a></span>
+            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.updatePop">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -376,7 +512,7 @@
         <span class="summary-sig-arg">conv</span>=<span class="summary-sig-default">0.01</span>,
         <span class="summary-sig-arg">imax</span>=<span class="summary-sig-default">50</span>,
         <span class="summary-sig-arg">step_size</span>=<span class="summary-sig-default">0.05</span>,
-        <span class="summary-sig-arg">dTmax</span>=<span class="summary-sig-default">0.2</span>,
+        <span class="summary-sig-arg">dTmax</span>=<span class="summary-sig-default">0.20</span>,
         <span class="summary-sig-arg">warn</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
@@ -399,8 +535,10 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#calcT" class="summary-sig-name">calcT</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">dTmax</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">order</span>=<span class="summary-sig-default">3</span>,
-        <span class="summary-sig-arg">warn</span>=<span class="summary-sig-default">1</span>)</span><br />
+        <span class="summary-sig-arg">warn</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">ode_kwargs</span>=<span class="summary-sig-default">{}</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Calculate the temperature profile based on the differential equation 
       given by Goldreich &amp; Scoville (1976).</td>
           <td align="right" valign="top">
@@ -469,8 +607,60 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#Hpe" class="summary-sig-name">Hpe</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Calculate the heating rate by the photoelectric effect.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.Hpe">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#Hcr" class="summary-sig-name">Hcr</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Calculate the heating rate by cosmic rays.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.Hcr">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#Ch2" class="summary-sig-name">Ch2</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Calculate the line cooling rate by vibrational excitation of H_2.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.Ch2">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#Clc" class="summary-sig-name">Clc</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">m</span>)</span><br />
+        <span class="summary-sig-arg">m</span>,
+        <span class="summary-sig-arg">update_pop</span>=<span class="summary-sig-default">1</span>)</span><br />
       Calculate the radiative line cooling rate for a molecule.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.Clc">source&nbsp;code</a></span>
@@ -483,14 +673,14 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">str</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#plotRateIterations" class="summary-sig-name">plotRateIterations</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">iterations</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="summary-sig-arg">dTsign</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">C</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">mechanism</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">ad</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">iterations</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">dTsign</span>=<span class="summary-sig-default">'C'</span>,
+        <span class="summary-sig-arg">mechanism</span>=<span class="summary-sig-default">'ad'</span>,
         <span class="summary-sig-arg">scale</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">None</span>,
@@ -508,7 +698,7 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">str</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -519,7 +709,7 @@
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">join</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
-      Plot the heating and cooling rates for this iteration.</td>
+      Plot the heating and cooling rates for a single iteration.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.plotRates">source&nbsp;code</a></span>
             
@@ -531,18 +721,67 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">str</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#plotT" class="summary-sig-name">plotT</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">iterations</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">iterations</span>=<span class="summary-sig-default">[]</span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Plot the temperature profiles of the different iterations.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.plotT">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#plotHCTerm" class="summary-sig-name">plotHCTerm</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">iterations</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">dTsign</span>=<span class="summary-sig-default">'C'</span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Plot the total heating and cooling term (excluding adiabatic cooling)
+      calculated by calcT before the differential equation is solved.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.plotHCTerm">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#plotTexc" class="summary-sig-name">plotTexc</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">m</span>,
+        <span class="summary-sig-arg">indices</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">llow</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">lup</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Plot the excitation temperature as a function of impact parameter for
+      a selection of radiative transitions, given by either the transition 
+      indices or the upper and/or lower level indices.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.plotTexc">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -621,7 +860,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">fn</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">template</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">standard</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">template</span>=<span class="sig-default">'standard'</span>,
         <span class="sig-arg">**kwargs</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -700,6 +939,40 @@
     <dt>Overrides:
         object.__init__
     </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="formatInput"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">formatInput</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">ilst</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.formatInput">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Format an input keyword list for a variable.</p>
+  <p>Can be given as a string, split by spaces, or as the list output from 
+  str.split().</p>
+  <p>Assumes the first element is the requested function or a constant, 
+  followed by key=value pairs that serve as the input keyword arguments for
+  the function if the first element is not a constant. The first element 
+  thus does not contain a '=' sign.</p>
+  <p>The key=value pairs are formatted into a dictionary.</p>
+  <p>Example str: 'read_opacity species=AMCDHSPREI index=1 order=5' Example
+  list: ['read_opacity','species=AMCDHSPREI','index=1','order=5']</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ilst</code></strong> (list[str]/str) - The input line, arguments split by spaces</li>
+    </ul></dd>
+    <dt>Returns: list[str,dict]</dt>
   </dl>
 </td></tr></table>
 </div>
@@ -814,42 +1087,54 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">setProfiles</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">v</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">opac</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">mdot</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">mdot_dust</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">T</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">Td</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">Td</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">mu</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setProfiles">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Initialise the basic profiles: gas velocity, opacity, mass-loss rate, 
-  initial temperature, dust temperature</p>
-  <p>The grids can be given as lists, which are used as input for the 
-  respective Profiler classes. If not given, they are taken from the 
-  inputfile.</p>
+  <p>Initialise the independent profiles:opacity, mass-loss rate, initial 
+  temperature, dust temperature</p>
+  <p>The grids can be given as a 1- or 2-item list, which are used as input
+  for the respective Profiler classes. If not given, they are taken from 
+  the inputfile.</p>
+  <p>Format of the input lists:</p>
+  <ul>
+    <li>
+      [constant value]
+    </li>
+    <li>
+      [func/str,{kwargs}]
+    </li>
+  </ul>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>v</code></strong> (list) - The velocity profile (r, cm/s). [func,*pars]
+        <li><strong class="pname"><code>opac</code></strong> ([func,dict]) - The opacity profiles (l, cm^2/g). [func,{pars}]
           <p>(default: None)</p></li>
-        <li><strong class="pname"><code>opac</code></strong> (list) - The opacity profiles (l, cm^2/g). [func,*pars]
-          <p>(default: None)</p></li>
-        <li><strong class="pname"><code>mdot</code></strong> (list) - The mass-loss rate profile (r, Msun/yr) [func,*pars] or constant.
-          <p>(default: None)</p></li>
-        <li><strong class="pname"><code>mdot_dust</code></strong> (list) - The dust mass-loss rate profile (r, Msun/yr) [func,*pars] or 
+        <li><strong class="pname"><code>mdot</code></strong> ([func,dict]) - The mass-loss rate profile (r, Msun/yr) [func,{pars}] or 
           constant.
           <p>(default: None)</p></li>
-        <li><strong class="pname"><code>T</code></strong> (list/str) - The initial temperature profile (r, K). [func,*pars] The first 
+        <li><strong class="pname"><code>mdot_dust</code></strong> ([func,dict]) - The dust mass-loss rate profile (r, Msun/yr) [func,{pars}] or 
+          constant.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>T</code></strong> ([func,dict]) - The initial temperature profile (r, K). [func,{pars}] The first 
           arg is the function, second argument always the initial 
           temperature. Can be string Td as well to set it to the dust 
           temperature.
           <p>(default: None)</p></li>
-        <li><strong class="pname"><code>Td</code></strong> (list) - The dust temperature profile (r, K). [func,*pars] The first arg 
+        <li><strong class="pname"><code>Td</code></strong> ([func,dict]) - The dust temperature profile (r, K). [func,{pars}] The first arg 
           is the function.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>mu</code></strong> (float) - The mean molecular weight if nonstandard. Otherwise calculated 
+          from fH and fHe. Could be specified in case, e.g., some sort of 
+          dissociation is ongoing in the inner wind.
           <p>(default: None)</p></li>
     </ul></dd>
   </dl>
@@ -892,6 +1177,229 @@
           a step function: 7./5. for T&gt;350 K, 5./3. otherwise.
           <p>(default: None)</p></li>
     </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setVelocity"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setVelocity</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">v</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setVelocity">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the velocity profile, based on the requested function.</p>
+  <p>Done separately from other profiles, because this can depend on the 
+  temperature at the inner radius (independent), and on the adiabatic 
+  coefficient (for the sound velocity).</p>
+  <p>This is done before the line cooling term is set.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>v</code></strong> ([func,dict] or [cst]) - The velocity profile (r, cm/s). [func,{pars}]
+          <p>(default: None)</p></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setLineCooling"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setLineCooling</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">m</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setLineCooling">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the line cooling parameters.</p>
+  <p>This includes reading the collision rates and level populations.</p>
+  <p>This is done per molecule, and upon initialisation of the 
+  EnergyBalance.</p>
+  <p>A distinction is made between the source of the spectroscopy/level 
+  pops:</p>
+  <ul>
+    <li>
+      GASTRoNOoM: The info is taken from the MlineReader and CollisReader
+    </li>
+    <li>
+      ALI: The info is taken from the LamdaReader, PopReader and .par 
+      output file
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>m</code></strong> (str) - The molecule name from the input molecules list.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setPopInitial"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setPopInitial</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">m</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setPopInitial">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set an initial set of level populations.</p>
+  <p>Based on the Boltzmann distribution for a given excitation 
+  temperature. The kinetic temperature is taken for now. Should likely be 
+  scalable in the future.</p>
+  <p>Solves the set of equations:</p>
+  <ul>
+    <li>
+      Sum(n_i) = 1
+    </li>
+    <li>
+      n_i = n_0 * (g_l/g_0) exp((E_0 - E_l)/Tkin)
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>m</code></strong> (str) - The molecule name from the input molecules list.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setAbundance"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setAbundance</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">m</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setAbundance">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the abundance profile for a molecule.</p>
+  <p>Two possibilities:</p>
+  <ul>
+    <li>
+      Level populations are given, which include molecular abundance 
+      profiles as well, and are RT code dependent
+    </li>
+    <li>
+      No level pops are given, so use the default abundance profile
+    </li>
+  </ul>
+  <p>The second possibility requires a read method and a filename to be 
+  given in the molecule definition, e.g. molecule=12C16O np.loadtxt 
+  fname=waql.par usecols=[1,4] skiprows=9 unpack=1 Alternatively, a 
+  constant value can be given as well (not advised).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>m</code></strong> (str) - The molecule name from the input molecules list.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setTexc"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setTexc</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">m</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setTexc">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Calculate the excitation temperature for the level populations given 
+  in self.pop. This method is called when the pops are read for the first 
+  time (or set by setInitialPop), and when the level populations are 
+  updated.</p>
+  <p>The excitation temperature is set as an array of dimensions (number of
+  transition indices, number of impact parameter), hence for a given 
+  transition index, you can retrieve the excitation temperature as 
+  self.Texc[m][i-1,:] as a function of impact parameter. Alternatively, you
+  can access Texc by calling getTexc and passing either the indices or the 
+  lup/llow.</p>
+  <p>The impact parameter grid can be retrieved from 
+  self.pop[m].getP().</p>
+  <p>Note that the excitation temperature is calculated for all radiative 
+  transitions included in the molecular spectroscopy; not for all 
+  collisional transitions.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>m</code></strong> (str) - The molecule tag</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTexc"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTexc</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">m</span>,
+        <span class="sig-arg">indices</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">lup</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">llow</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.getTexc">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the excitation temperature profile as a function of impact 
+  parameter for given transition indices of a given molecule.</p>
+  <p>Can also take upper and/or lower level indices to determine the 
+  transition indices.</p>
+  <p>The excitation temperature is returned as an array of dimensions 
+  (number of transition indices, number of impact parameters).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>m</code></strong> (str) - The molecule tag</li>
+        <li><strong class="pname"><code>indices</code></strong> (list/array) - The transition indices. Can be indirectly given through upper 
+          and/or lower level indices. If default and no llow/lup are given,
+          all Texc are returned for this molecule.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>lup</code></strong> (list/array) - The upper level indices used to extract the transition indices. 
+          If this or llow are defined, the keyword indices is overwritten.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>llow</code></strong> (list/array) - The upper level indices used to extract the transition indices. 
+          If this or lup are defined, the keyword indices is overwritten.
+          <p>(default: None)</p></li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The excitation temperature, with array shape (n_index,n_p)</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -945,8 +1453,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">setDensity</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">dtype</span>,
-        <span class="sig-arg">custom_mu</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">dtype</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setDensity">source&nbsp;code</a></span>&nbsp;
@@ -960,47 +1467,49 @@
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>dtype</code></strong> (str) - The density profile type, being 'gas' or 'dust'.</li>
-        <li><strong class="pname"><code>custom_mu</code></strong> (float.) - Set a custom mean molecular weight. Mainly for testing purposes. 
-          If default, calculated from fH and fHe.
-          <p>(default: None)</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="setLineCooling"></a>
+<a name="updatePop"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">setLineCooling</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">m</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">updatePop</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">m</span>,
+        <span class="sig-arg">fn</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">updateLC</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
-    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.setLineCooling">source&nbsp;code</a></span>&nbsp;
+    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.updatePop">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Set the line cooling parameters.</p>
-  <p>This includes reading the collision rates, level populations and 
-  abundance profiles.</p>
+  <p>Update the level populations.</p>
+  <p>This reads the level populations from the same file as listed upon 
+  creation of the EnergyBalance and assumes those level populations are 
+  appropriate for the temperature profile of the iteration number 
+  self.i.</p>
   <p>This is done per molecule.</p>
-  <p>A distinction is made between the source of the spectroscopy/level 
-  pops:</p>
-  <ul>
-    <li>
-      GASTRoNOoM: The info is taken from the MlineReader and CollisReader
-    </li>
-    <li>
-      ALI: The info is taken from the LamdaReader, PopReader and .par 
-      output file
-    </li>
-  </ul>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>m</code></strong> (str) - The molecule name from the input molecules list.</li>
+        <li><strong class="pname"><code>fn</code></strong> (str) - The filename of a populations file, in case it changes or is 
+          added new after default populations have been used. Ignored if 
+          the file does not exist.
+          <p>(default: '')</p></li>
+        <li><strong class="pname"><code>updateLC</code></strong> (bool) - The flag that moves the self.ipop to the current (or next) 
+          iteration, so that calcClc knows a new line cooling term must be 
+          updated. This is always set to 1 if the populations are updated. 
+          Setting this to 1 upon function call, tells calcClc the LC term 
+          must be calculated anew regardless of reading new pops (and thus 
+          uses the old pops with the new T profile of this iteration). This
+          key can be set in the inpurfile.
+          <p>(default: 0)</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -1038,7 +1547,7 @@
         <span class="sig-arg">conv</span>=<span class="sig-default">0.01</span>,
         <span class="sig-arg">imax</span>=<span class="sig-default">50</span>,
         <span class="sig-arg">step_size</span>=<span class="sig-default">0.05</span>,
-        <span class="sig-arg">dTmax</span>=<span class="sig-default">0.2</span>,
+        <span class="sig-arg">dTmax</span>=<span class="sig-default">0.20</span>,
         <span class="sig-arg">warn</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
@@ -1050,7 +1559,8 @@
   
   <p>Iterate the temperature profile until convergence criterion is 
   reached.</p>
-  <p>Extra arguments are passed on to calcT().</p>
+  <p>Extra arguments are passed on to the spline1d interpolation of the 
+  total cooling and heating terms through the calcT() call.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -1083,8 +1593,10 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">calcT</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">dTmax</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">order</span>=<span class="sig-default">3</span>,
-        <span class="sig-arg">warn</span>=<span class="sig-default">1</span>)</span>
+        <span class="sig-arg">warn</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">ode_kwargs</span>=<span class="sig-default">{}</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.calcT">source&nbsp;code</a></span>&nbsp;
@@ -1097,16 +1609,21 @@
   <p>The initial temperature is taken to be the second argument of the 
   initial temperature profile given by T in inputEnergyBalance.dat. This is
   typically the condensation temperature.</p>
+  <p>Additionals arguments are passed on to the spline1d interpolation of 
+  the total cooling and heating terms, e.g. k=3, ext=0 are defaults.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>dTmax</code></strong> (float) - The maximum allowed relative temperature change for this T 
           calculation. Set to 100% by default.
           <p>(default: 1)</p></li>
-        <li><strong class="pname"><code>order</code></strong> (int) - The spline1d interpolation order for the rates and temperatures.
-          <p>(default: 3)</p></li>
         <li><strong class="pname"><code>warn</code></strong> (bool) - Warn when extrapolation occurs.
           <p>(default: 1)</p></li>
+        <li><strong class="pname"><code>ode_kwargs</code></strong> (dict) - Extra arguments for the ODE solver. They are added to the dict 
+          ode_args made by the function, and hence overwrites any defaults.
+          In principle, the defaults are fine, but can be overwritten if 
+          needed
+          <p>(default: {})</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -1148,6 +1665,12 @@
   </tr></table>
   
   <p>Calculate the heating rate by dust-gas collisions.</p>
+  <p>Note that this term evaluates to zero for the inner wind at r&lt;r0, 
+  if the dust density is 0 there. This can be enforced by choosing an 
+  mdot_step function.</p>
+  <p>Sputtering is applied if a grain size distribution is used. For a 
+  constant grain size, this is not done, since it's not realistic to remove
+  all dust if the drift becomes too large.</p>
   <p>The equation is derived from Goldreich &amp; Scoville 1976, based on 
   Schoier et al 2001, and Decin et al. 2006:</p>
   <p>General case: Hdg = n_d sigma_d w  x  1/2 rho_g w^2 =&gt; Hdg = pi/2 
@@ -1176,9 +1699,120 @@
   <p>Calculate the heating rate by dust-gas heat exchange.</p>
   <p>The equation is derived from Burke &amp; Hollenbach 1983, based on 
   Groenewegen 1994, Schoier et al. 2001, and Decin et al. 2006:</p>
-  <p>General case: Hdt = =&gt; Hdt =</p>
-  <p>MCP/ALI case (average grain size a): Hdt =</p>
-  <p>GASTRoNOoM case (MRN): Hdt =</p>
+  <p>Note that this term evaluates to zero for the inner wind at r&lt;r0, 
+  if the dust density is 0 there. This can be enforced by choosing an 
+  mdot_step function.</p>
+  <p>Sputtering is applied if a grain size distribution is used. For a 
+  constant grain size, this is not done, since it's not realistic to remove
+  all dust if the drift becomes too large.</p>
+  <p>The older implementations used by MCP/ALI and GASTRoNOoM follow Burke 
+  &amp; Hollenbach 1983 and Groenwegen 1994. The general-case 
+  implementation follows the more recent work of Gail &amp; Sedlmayr, 
+  adding in proper vT and drift terms. The GS2014 is not yet fully 
+  implemented, but the Hdt term is already available here.</p>
+  <p>General case (following Gail &amp; Sedlmayr 2014, see Eq 15.19): Hdt =
+  alpha pi k_b n_h2 (fH+2.)(1.-P)^(-2./3.) Int(n_d a^2 da) (T_d - T) 
+  sqrt(8*vT^2+drift^2) (1/(gamma-1))</p>
+  <p>MCP/ALI case (n_d: dust number density, average grain size a): Hdt = 2
+  alpha pi k_b n_h2 (n_d a^2) (T_d - T) vT</p>
+  <p>GASTRoNOoM case (n_d: distribution following MRN): Hdt = 2 alpha pi 
+  k_b n_h2 (fH+2.) Int(n_d a^2 da) (T_d - T) vT</p>
+  <p>In all cases, alpha is the accommodation coefficient (from Groenewegen
+  1994): alpha = 0.35 exp(-sqrt(0.002*(T_d + T)))+0.1</p>
+  <p>and vT is the thermal velocity: vT = sqrt(8 k_b t/(mu pi m_H))</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Hpe"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Hpe</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.Hpe">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Calculate the heating rate by the photoelectric effect.</p>
+  <p>Two methods are available at present: 1) Following Draine 1978 and 
+  Huggins et al. 1988, as used by MCP (see also Crosas &amp; Menten 1997) 
+  2) Following Bakes &amp; Tielens 1994., as implemented by Decin et al. 
+  2006 in GASTRoNOoM.</p>
+  <p>No options to tweak these methods has been implemented yet, but a lot 
+  of consistency checks should be done, and some of the assumptions can be 
+  improved on with a consistent calculation (e.g. Av in method 2).</p>
+  <p>Photoelectric heating as derived by Bakes &amp; Tielens is maybe a 
+  good basis for further development of the heating term, but see also 
+  Woitke 2015 (2015EPJWC.10200011W) for recent developments.</p>
+  <p>The derivation in method 2 makes a lot of assumptions and are applied 
+  specifically to the case of GASTRoNOoM (e.g. fixed grain size 
+  distribution). Hence, the implementation is considered appropriate for 
+  the default settings in the inputEnergyBalance_gastronoom.dat file. Any 
+  deviations from that must be treated carefully.</p>
+  <p>No sputtering is applied. Small grains are the most relevant for Hpe, 
+  and any sputtering would reduce the size of existing dust grains, thus 
+  increasing the amount of small grains. Since we cannot have Hpe directly 
+  depend on the grain size distribution (and instead work with a scaling 
+  factor amin_scale), we do not apply sputtering to the photoelectric 
+  heating.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Hcr"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Hcr</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.Hcr">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Calculate the heating rate by cosmic rays.</p>
+  <p>The rate is taken from Goldsmith &amp; Langer 1978, and is also used 
+  by Groenwegen 1994 and Decin et al 2006. This is a very approximate 
+  formula and will need updating in the future.</p>
+  <p>Two modes are available: The standard one, using n(H2), and the one 
+  used by Groenewegen 1994 and Decin et al. 2006 (where all gas mass is 
+  placed into H2, even if fH or fHe are non-zero). Controlled through the 
+  keyword cr_method == 'groenewegen' or cr_method == 'standard' in the 
+  inputfile.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Ch2"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Ch2</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.Ch2">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Calculate the line cooling rate by vibrational excitation of H_2.</p>
+  <p>Two modes are available (used by MCP/ALI and GASTRoNOoM, 
+  respectively): 1) Following Groenewegen 1994, based on Hartquist et al 
+  1980. Based on fitting of tabulated data of H2 cooling under LTE 
+  conditions 2) Following Decin et al 2006, based on GS1976, Hollenbach 
+  &amp; McKee 1979 and Hollenbach &amp; McKee 1989.</p>
+  <p>The keyword h2_method (groenewegen, or gs1976) determines which of the
+  two is used.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -1191,7 +1825,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">Clc</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">m</span>)</span>
+        <span class="sig-arg">m</span>,
+        <span class="sig-arg">update_pop</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.Clc">source&nbsp;code</a></span>&nbsp;
@@ -1213,6 +1848,8 @@
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>m</code></strong> (str) - The molecule name from the input molecules list.</li>
+        <li><strong class="pname"><code>update_pop</code></strong> (bool) - Check if the level populations have been updated
+          <p>(default: 1)</p></li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -1225,9 +1862,9 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotRateIterations</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">iterations</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
-        <span class="sig-arg">dTsign</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">C</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">mechanism</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">ad</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">iterations</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">dTsign</span>=<span class="sig-default">'C'</span>,
+        <span class="sig-arg">mechanism</span>=<span class="sig-default">'ad'</span>,
         <span class="sig-arg">scale</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">fn</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default">None</span>,
@@ -1262,8 +1899,6 @@
           keys given in the cfg file.
           <p>(default: {})</p></li>
     </ul></dd>
-    <dt>Returns: str</dt>
-        <dd>The filename of the plot is returned, including extension.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1287,7 +1922,7 @@
     </td>
   </tr></table>
   
-  <p>Plot the heating and cooling rates for this iteration.</p>
+  <p>Plot the heating and cooling rates for a single iteration.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -1308,8 +1943,6 @@
           keys given in the cfg file.
           <p>(default: {})</p></li>
     </ul></dd>
-    <dt>Returns: str</dt>
-        <dd>The filename of the plot is returned, including extension.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1322,7 +1955,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotT</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">fn</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">iterations</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">iterations</span>=<span class="sig-default">[]</span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -1340,7 +1973,7 @@
           not the case, the plot is simply shown but not saved.
           <p>(default: None)</p></li>
         <li><strong class="pname"><code>iterations</code></strong> (list) - The iteration indices to be plotted. If default, all iterations 
-          are plotted. The last iteration is always plotted.
+          are plotted. The first and last iterations are always plotted.
           <p>(default: [])</p></li>
         <li><strong class="pname"><code>cfg</code></strong> (str) - The filename to the cfg file for this plot with extra settings.
           <p>(default: None)</p></li>
@@ -1348,8 +1981,107 @@
           keys given in the cfg file.
           <p>(default: {})</p></li>
     </ul></dd>
-    <dt>Returns: str</dt>
-        <dd>The filename of the plot is returned, including extension.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="plotHCTerm"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plotHCTerm</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fn</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">iterations</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">dTsign</span>=<span class="sig-default">'C'</span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.plotHCTerm">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Plot the total heating and cooling term (excluding adiabatic cooling) 
+  calculated by calcT before the differential equation is solved.</p>
+  <p>This includes the density factor that enters, and so is essentially (H
+  - C)/rho. The velocity does not enter here, since that is calculated 
+  explicitly in dTdr. Hence the y-axis units K/s.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>fn</code></strong> (str) - The filename and path of the plot (without extension). If 
+          default, a filename can be given in a cfg file, and if that is 
+          not the case, the plot is simply shown but not saved.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>iterations</code></strong> (list) - The iteration indices to be plotted. If default, all iterations 
+          are plotted. The first and last iteration is always plotted.
+          <p>(default: [])</p></li>
+        <li><strong class="pname"><code>dTsign</code></strong> (str) - The dT type: heating (H) or cooling (C). Either the positive (C) 
+          or the negative (H) sum is plotted.
+          <p>(default: 'C')</p></li>
+        <li><strong class="pname"><code>cfg</code></strong> (str) - The filename to the cfg file for this plot with extra settings.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>kwargs</code></strong> (dict) - Additional keywords passed to the plotting method. Overwrites any
+          keys given in the cfg file.
+          <p>(default: {})</p></li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="plotTexc"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">plotTexc</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">m</span>,
+        <span class="sig-arg">indices</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">llow</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">lup</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">fn</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.physics.EnergyBalance-pysrc.html#EnergyBalance.plotTexc">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Plot the excitation temperature as a function of impact parameter for 
+  a selection of radiative transitions, given by either the transition 
+  indices or the upper and/or lower level indices.</p>
+  <p>Retrieves the excitation temperature from self.Texc. They are 
+  appropriate for the level populations used by the current iteration, and 
+  are updated when the level populations are updated.</p>
+  <p>At this time, plotting Texc for other iterations is not possible.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>m</code></strong> (str) - The molecule tag</li>
+        <li><strong class="pname"><code>indices</code></strong> (list/array) - The transition indices. Can be indirectly given through upper 
+          and/or lower level indices. If default and no llow/lup are given,
+          all Texc are returned for this molecule.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>lup</code></strong> (list/array) - The upper level indices used to extract the transition indices. 
+          If this or llow are defined, the keyword indices is overwritten.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>llow</code></strong> (list/array) - The upper level indices used to extract the transition indices. 
+          If this or lup are defined, the keyword indices is overwritten.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>fn</code></strong> (str) - The filename and path of the plot (without extension). If 
+          default, a filename can be given in a cfg file, and if that is 
+          not the case, the plot is simply shown but not saved.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>cfg</code></strong> (str) - The filename to the cfg file for this plot with extra settings.
+          <p>(default: None)</p></li>
+        <li><strong class="pname"><code>kwargs</code></strong> (dict) - Additional keywords passed to the plotting method. Overwrites any
+          keys given in the cfg file.
+          <p>(default: {})</p></li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1380,7 +2112,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:05 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:36 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

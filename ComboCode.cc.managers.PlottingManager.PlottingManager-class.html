@@ -88,13 +88,15 @@
         <span class="summary-sig-arg">star_name</span>,
         <span class="summary-sig-arg">mcmax</span>=<span class="summary-sig-default">False</span>,
         <span class="summary-sig-arg">gastronoom</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">chemistry</span>=<span class="summary-sig-default">False</span>,
         <span class="summary-sig-arg">pacs</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">codeJun2010</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">path_mcmax</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">codeJun2010</code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">inputfilename</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">inputComboCode.dat</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default">'codeJun2010'</span>,
+        <span class="summary-sig-arg">path_mcmax</span>=<span class="summary-sig-default">'codeJun2010'</span>,
+        <span class="summary-sig-arg">path_chemistry</span>=<span class="summary-sig-default">'OutputClumpy'</span>,
+        <span class="summary-sig-arg">inputfilename</span>=<span class="summary-sig-default">'inputComboCode.dat'</span>,
         <span class="summary-sig-arg">spire</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">fn_add_star</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">plot_pars</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">plot_pars</span>=<span class="summary-sig-default">dict()</span>,
         <span class="summary-sig-arg">sed</span>=<span class="summary-sig-default">None</span>)</span><br />
       Initializing a PlottingManager instance.</td>
           <td align="right" valign="top">
@@ -135,8 +137,8 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.managers.PlottingManager.PlottingManager-class.html#plotTransitions" class="summary-sig-name">plotTransitions</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_grid</span>,
         <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="summary-sig-arg">fn_suffix</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">fn_suffix</span>=<span class="summary-sig-default">''</span>)</span><br />
       Run the plotTransitions method in the PlotGas object of this manager.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.managers.PlottingManager-pysrc.html#PlottingManager.plotTransitions">source&nbsp;code</a></span>
@@ -177,13 +179,15 @@
         <span class="sig-arg">star_name</span>,
         <span class="sig-arg">mcmax</span>=<span class="sig-default">False</span>,
         <span class="sig-arg">gastronoom</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">chemistry</span>=<span class="sig-default">False</span>,
         <span class="sig-arg">pacs</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">path_gastronoom</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">codeJun2010</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">path_mcmax</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">codeJun2010</code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">inputfilename</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">inputComboCode.dat</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">path_gastronoom</span>=<span class="sig-default">'codeJun2010'</span>,
+        <span class="sig-arg">path_mcmax</span>=<span class="sig-default">'codeJun2010'</span>,
+        <span class="sig-arg">path_chemistry</span>=<span class="sig-default">'OutputClumpy'</span>,
+        <span class="sig-arg">inputfilename</span>=<span class="sig-default">'inputComboCode.dat'</span>,
         <span class="sig-arg">spire</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">fn_add_star</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">plot_pars</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="sig-arg">plot_pars</span>=<span class="sig-default">dict()</span>,
         <span class="sig-arg">sed</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -268,8 +272,8 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotTransitions</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_grid</span>,
         <span class="sig-arg">force</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
-        <span class="sig-arg">fn_suffix</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">fn_suffix</span>=<span class="sig-default">''</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.managers.PlottingManager-pysrc.html#PlottingManager.plotTransitions">source&nbsp;code</a></span>&nbsp;
@@ -330,7 +334,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:04 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:36 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

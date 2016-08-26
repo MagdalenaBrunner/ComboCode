@@ -141,7 +141,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.data.LPTools-module.html#getPeakLPData" class="summary-sig-name">getPeakLPData</a>(<span class="summary-sig-arg">filename</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">lprof</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">vlsr</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">method</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">mean</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">method</span>=<span class="summary-sig-default">'mean'</span>,
         <span class="summary-sig-arg">npoints</span>=<span class="summary-sig-default">5</span>)</span><br />
       Calculate the peak value of a line profile read from a fits file or a
       txt file.</td>
@@ -183,7 +183,7 @@
         <span class="summary-sig-arg">index</span>,
         <span class="summary-sig-arg">values</span>,
         <span class="summary-sig-arg">vary</span>,
-        <span class="summary-sig-arg">function</span>=<span class="summary-sig-default">&lt;function soft_parabola at 0x107730cf8&gt;</span>,
+        <span class="summary-sig-arg">function</span>=<span class="summary-sig-default">funclib.soft_parabola</span>,
         <span class="summary-sig-arg">vary_window</span>=<span class="summary-sig-default">0</span>)</span><br />
       Fit a function to a line profile for different initial guesses of a 
       single parameter.</td>
@@ -227,7 +227,7 @@
         <span class="summary-sig-arg">flux</span>,
         <span class="summary-sig-arg">vlsr</span>,
         <span class="summary-sig-arg">vexp</span>,
-        <span class="summary-sig-arg">window</span>=<span class="summary-sig-default">2.0</span>,
+        <span class="summary-sig-arg">window</span>=<span class="summary-sig-default">2.</span>,
         <span class="summary-sig-arg">show</span>=<span class="summary-sig-default">0</span>)</span><br />
       Check the shape of the line profile, to see if any irregular patterns
       are present.</td>
@@ -251,9 +251,9 @@
         <span class="summary-sig-arg">lprof</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">theory</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">show</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">''</span>,
         <span class="summary-sig-arg">convert_ms_kms</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">vary_pars</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">vexp</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">vary_pars</span>=<span class="summary-sig-default">['vexp']</span>,
         <span class="summary-sig-arg">i_vexp</span>=<span class="summary-sig-default">15.0</span>,
         <span class="summary-sig-arg">i_gamma</span>=<span class="summary-sig-default">1.0</span>,
         <span class="summary-sig-arg">do_gauss</span>=<span class="summary-sig-default">0</span>)</span><br />
@@ -266,31 +266,6 @@
         </tr>
       </table>
       
-    </td>
-  </tr>
-</table>
-<!-- ==================== VARIABLES ==================== -->
-<a name="section-Variables"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Variables</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Variables"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.data'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.data</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -418,7 +393,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getPeakLPData</span>(<span class="sig-arg">filename</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">lprof</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">vlsr</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">method</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">mean</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">method</span>=<span class="sig-default">'mean'</span>,
         <span class="sig-arg">npoints</span>=<span class="sig-default">5</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -496,7 +471,7 @@
         <span class="sig-arg">index</span>,
         <span class="sig-arg">values</span>,
         <span class="sig-arg">vary</span>,
-        <span class="sig-arg">function</span>=<span class="sig-default">&lt;function soft_parabola at 0x107730cf8&gt;</span>,
+        <span class="sig-arg">function</span>=<span class="sig-default">funclib.soft_parabola</span>,
         <span class="sig-arg">vary_window</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -575,7 +550,7 @@
         <span class="sig-arg">flux</span>,
         <span class="sig-arg">vlsr</span>,
         <span class="sig-arg">vexp</span>,
-        <span class="sig-arg">window</span>=<span class="sig-default">2.0</span>,
+        <span class="sig-arg">window</span>=<span class="sig-default">2.</span>,
         <span class="sig-arg">show</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -633,9 +608,9 @@
         <span class="sig-arg">lprof</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">theory</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">show</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">cfg</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">cfg</span>=<span class="sig-default">''</span>,
         <span class="sig-arg">convert_ms_kms</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">vary_pars</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">vexp</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">vary_pars</span>=<span class="sig-default">['vexp']</span>,
         <span class="sig-arg">i_vexp</span>=<span class="sig-default">15.0</span>,
         <span class="sig-arg">i_gamma</span>=<span class="sig-default">1.0</span>,
         <span class="sig-arg">do_gauss</span>=<span class="sig-default">0</span>)</span>
@@ -724,7 +699,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Aug  1 12:15:02 2016
+    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:34 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
