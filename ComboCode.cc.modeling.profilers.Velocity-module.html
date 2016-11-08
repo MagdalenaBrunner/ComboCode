@@ -93,8 +93,8 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a href="ComboCode.cc.modeling.profilers.Velocity.Drift-class.html" class="summary-name">Drift</a><br />
-      An interface for the drift velocity as a function of radius and grain
-      size.
+      An interface for the drift velocity as a function of radius and 
+        grain size.
     </td>
   </tr>
 </table>
@@ -131,9 +131,9 @@
         <span class="summary-sig-arg">radiance</span>,
         <span class="summary-sig-arg">T</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">P</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">alpha</span>=<span class="summary-sig-default">0.</span>,
-        <span class="summary-sig-arg">mu</span>=<span class="summary-sig-default">2.</span>,
-        <span class="summary-sig-arg">w_thermal</span>=<span class="summary-sig-default">'none'</span>)</span><br />
+        <span class="summary-sig-arg">alpha</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">mu</span>=<span class="summary-sig-default">2.0</span>,
+        <span class="summary-sig-arg">w_thermal</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">none</code><code class="variable-quote">'</code></span>)</span><br />
       Calculate the drift velocity as a function of radius and grain size 
       by equating the radiation pressure force and drag force.</td>
           <td align="right" valign="top">
@@ -170,12 +170,32 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Velocity-module.html#vbeta2D" class="summary-sig-name">vbeta2D</a>(<span class="summary-sig-arg">r</span>,
+        <span class="summary-sig-arg">a</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Convenience function for vbeta in 2D.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#vbeta2D">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">array</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.profilers.Velocity-module.html#vbeta" class="summary-sig-name">vbeta</a>(<span class="summary-sig-arg">r</span>,
         <span class="summary-sig-arg">r0</span>,
         <span class="summary-sig-arg">v0</span>,
         <span class="summary-sig-arg">vinf</span>,
         <span class="summary-sig-arg">beta</span>,
-        <span class="summary-sig-arg">vi_mode</span>=<span class="summary-sig-default">'constant'</span>,
+        <span class="summary-sig-arg">vi_mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">constant</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">rstar</span>=<span class="summary-sig-default">0.0</span>,
         <span class="summary-sig-arg">beta_inner</span>=<span class="summary-sig-default">0.5</span>,
         <span class="summary-sig-arg">*args</span>,
@@ -201,7 +221,7 @@
         <span class="summary-sig-arg">v0</span>,
         <span class="summary-sig-arg">vinf</span>,
         <span class="summary-sig-arg">beta</span>,
-        <span class="summary-sig-arg">vi_mode</span>=<span class="summary-sig-default">'constant'</span>,
+        <span class="summary-sig-arg">vi_mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">constant</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">rstar</span>=<span class="summary-sig-default">0.0</span>,
         <span class="summary-sig-arg">beta_inner</span>=<span class="summary-sig-default">0.5</span>,
         <span class="summary-sig-arg">*args</span>,
@@ -236,6 +256,31 @@
         </tr>
       </table>
       
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.modeling.profilers'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.modeling.profilers</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -274,9 +319,9 @@
         <span class="sig-arg">radiance</span>,
         <span class="sig-arg">T</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">P</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">alpha</span>=<span class="sig-default">0.</span>,
-        <span class="sig-arg">mu</span>=<span class="sig-default">2.</span>,
-        <span class="sig-arg">w_thermal</span>=<span class="sig-default">'none'</span>)</span>
+        <span class="sig-arg">alpha</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">mu</span>=<span class="sig-default">2.0</span>,
+        <span class="sig-arg">w_thermal</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">none</code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#driftRPDF">source&nbsp;code</a></span>&nbsp;
@@ -292,7 +337,9 @@
   compared to the drift. This is only valid in the outer, cool regions of 
   the wind.</p>
   <p>The function integrates the luminosity and the opacity over the 
-  wavelength grid to estimate the component for the radiation pressure.</p>
+  wavelength grid to estimate the component for the radiation pressure. 
+  Note that the opacities are assumed to be independent of grain size for 
+  this to work, hence the Rayleigh regime should be applicable.</p>
   <p>Inclusion of the thermal velocity requires T profile. Mean molecular 
   weight assumed to be one in that case.</p>
   <dl class="fields">
@@ -377,6 +424,38 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="vbeta2D"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">vbeta2D</span>(<span class="sig-arg">r</span>,
+        <span class="sig-arg">a</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ComboCode.cc.modeling.profilers.Velocity-pysrc.html#vbeta2D">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Convenience function for vbeta in 2D. Used by Drift() to calculate a 
+  beta law for a single grain size.</p>
+  <p>Ignores the grain size array, and passes arguments on to vbeta.</p>
+  <p>Additional args and kwargs are passed on to vbeta.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>r</code></strong> (array) - The radial points (cm)</li>
+        <li><strong class="pname"><code>a</code></strong> (array) - Grain size (cm), dummy variable that is ignored.</li>
+    </ul></dd>
+    <dt>Returns: array</dt>
+        <dd>The beta law velocity profile (cm/s)</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="vbeta"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -389,7 +468,7 @@
         <span class="sig-arg">v0</span>,
         <span class="sig-arg">vinf</span>,
         <span class="sig-arg">beta</span>,
-        <span class="sig-arg">vi_mode</span>=<span class="sig-default">'constant'</span>,
+        <span class="sig-arg">vi_mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">constant</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">rstar</span>=<span class="sig-default">0.0</span>,
         <span class="sig-arg">beta_inner</span>=<span class="sig-default">0.5</span>,
         <span class="sig-arg">*args</span>,
@@ -449,7 +528,7 @@
         <span class="sig-arg">v0</span>,
         <span class="sig-arg">vinf</span>,
         <span class="sig-arg">beta</span>,
-        <span class="sig-arg">vi_mode</span>=<span class="sig-default">'constant'</span>,
+        <span class="sig-arg">vi_mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">constant</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">rstar</span>=<span class="sig-default">0.0</span>,
         <span class="sig-arg">beta_inner</span>=<span class="sig-default">0.5</span>,
         <span class="sig-arg">*args</span>,
@@ -562,7 +641,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:35 2016
+    Generated by Epydoc 3.0.1 on Mon Nov  7 18:01:56 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

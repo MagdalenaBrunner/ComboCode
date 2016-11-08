@@ -91,11 +91,11 @@
         <span class="summary-sig-arg">ID</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">ra</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">dec</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">radius</span>=<span class="summary-sig-default">5.</span>,
-        <span class="summary-sig-arg">filetype</span>=<span class="summary-sig-default">'CSV'</span>,
+        <span class="summary-sig-arg">radius</span>=<span class="summary-sig-default">5.0</span>,
+        <span class="summary-sig-arg">filetype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">CSV</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">out_max</span>=<span class="summary-sig-default">100000</span>,
-        <span class="summary-sig-arg">resolver</span>=<span class="summary-sig-default">'SIMBAD'</span>,
-        <span class="summary-sig-arg">coord</span>=<span class="summary-sig-default">'dec'</span>,
+        <span class="summary-sig-arg">resolver</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">SIMBAD</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">coord</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">dec</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Build MAST URI from available options.</td>
           <td align="right" valign="top">
@@ -187,7 +187,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.catalogs.mast-module.html#get_photometry" class="summary-sig-name">get_photometry</a>(<span class="summary-sig-arg">ID</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">extra_fields</span>=<span class="summary-sig-default">['_r','_RAJ2000','_DEJ2000']</span>,
+        <span class="summary-sig-arg">extra_fields</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">_r</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">_RAJ2000</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">_DEJ2000</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Download all available photometry from a star to a record array.</td>
           <td align="right" valign="top">
@@ -229,7 +229,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.catalogs.mast-module.html#get_FUSE_spectra" class="summary-sig-name">get_FUSE_spectra</a>(<span class="summary-sig-arg">ID</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">directory</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">cat_info</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">select</span>=<span class="summary-sig-default">['ano']</span>)</span><br />
+        <span class="summary-sig-arg">select</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">ano</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>)</span><br />
       Get Fuse spectrum.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.catalogs.mast-pysrc.html#get_FUSE_spectra">source&nbsp;code</a></span>
@@ -269,7 +269,7 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="basedir"></a><span class="summary-name">basedir</span> = <code title="os.path.dirname(os.path.abspath(__file__))">os.path.dirname(os.path.abspath(__file__))</code>
+        <a name="basedir"></a><span class="summary-name">basedir</span> = <code title="'/Users/robinl/ComboCode/cc/ivs/catalogs'"><code class="variable-quote">'</code><code class="variable-string">/Users/robinl/ComboCode/cc/ivs/catalogs</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr>
@@ -277,6 +277,13 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a name="cat_info"></a><span class="summary-name">cat_info</span> = <code title="ConfigParser.ConfigParser()">ConfigParser.ConfigParser()</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.ivs.catalogs'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.ivs.catalogs</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -309,11 +316,11 @@
         <span class="sig-arg">ID</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">ra</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">dec</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">radius</span>=<span class="sig-default">5.</span>,
-        <span class="sig-arg">filetype</span>=<span class="sig-default">'CSV'</span>,
+        <span class="sig-arg">radius</span>=<span class="sig-default">5.0</span>,
+        <span class="sig-arg">filetype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">CSV</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">out_max</span>=<span class="sig-default">100000</span>,
-        <span class="sig-arg">resolver</span>=<span class="sig-default">'SIMBAD'</span>,
-        <span class="sig-arg">coord</span>=<span class="sig-default">'dec'</span>,
+        <span class="sig-arg">resolver</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">SIMBAD</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">coord</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">dec</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -494,7 +501,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_photometry</span>(<span class="sig-arg">ID</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">extra_fields</span>=<span class="sig-default">['_r','_RAJ2000','_DEJ2000']</span>,
+        <span class="sig-arg">extra_fields</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">_r</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">_RAJ2000</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">_DEJ2000</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -550,7 +557,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_FUSE_spectra</span>(<span class="sig-arg">ID</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">directory</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">cat_info</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">select</span>=<span class="sig-default">['ano']</span>)</span>
+        <span class="sig-arg">select</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">ano</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.catalogs.mast-pysrc.html#get_FUSE_spectra">source&nbsp;code</a></span>&nbsp;
@@ -591,7 +598,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:34 2016
+    Generated by Epydoc 3.0.1 on Mon Nov  7 18:01:55 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -91,8 +91,8 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_name</span>,
-        <span class="summary-sig-arg">code</span>=<span class="summary-sig-default">'GASTRoNOoM'</span>,
-        <span class="summary-sig-arg">path_code</span>=<span class="summary-sig-default">'codeJun2013'</span>,
+        <span class="summary-sig-arg">code</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">GASTRoNOoM</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">path_code</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">codeJun2013</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">lll_p</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">use_bestvlsr</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">vmin</span>=<span class="summary-sig-default">0.0</span>,
@@ -151,7 +151,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#calcLoglikelihoodThreshold" class="summary-sig-name">calcLoglikelihoodThreshold</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">bfms</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">bfms</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">ist</span>=<span class="summary-sig-default">None</span>)</span><br />
       Determine the loglikelihood thresholds from the model grid, assuming 
       the amount of free parameters in the model grid is known.</td>
@@ -340,7 +340,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#printStats" class="summary-sig-name">printStats</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">bfms</span>=<span class="summary-sig-default">[]</span>)</span><br />
+        <span class="summary-sig-arg">bfms</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span><br />
       Print the statistics for all transitions and models.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.printStats">source&nbsp;code</a></span>
@@ -358,7 +358,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#selectBestFitModels" class="summary-sig-name">selectBestFitModels</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default">'int'</span>,
+        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">int</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">use_lll</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">output</span>=<span class="summary-sig-default">1</span>)</span><br />
       Returns a list of Star() models for which the uncertainty criteria 
@@ -399,8 +399,8 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#findLLLRange" class="summary-sig-name">findLLLRange</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">includedTrans</span>=<span class="summary-sig-default">1</span>)</span><br />
-      Determines whether a model lies within a 95% confidence interval around 
-the best fitting model (per line).</td>
+      Determines whether a model lies within a 95% confidence interval 
+      around the best fitting model (per line).</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.findLLLRange">source&nbsp;code</a></span>
             
@@ -476,8 +476,8 @@ the best fitting model (per line).</td>
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html#calcLLLrange" class="summary-sig-name">calcLLLrange</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">plot</span>=<span class="summary-sig-default">0</span>)</span><br />
-      Calculate whether the loglikelihood function per transition kies within
-the confidence interval.</td>
+      Calculate whether the loglikelihood function per transition kies 
+      within the confidence interval.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcLLLrange">source&nbsp;code</a></span>
             
@@ -499,7 +499,8 @@ the confidence interval.</td>
         <span class="summary-sig-arg">err</span>=<span class="summary-sig-default">0.2</span>,
         <span class="summary-sig-arg">err_noisy</span>=<span class="summary-sig-default">0.3</span>,
         <span class="summary-sig-arg">plot</span>=<span class="summary-sig-default">0</span>)</span><br />
-      Calculate the ratio of the integrated main beam intensity per transition.</td>
+      Calculate the ratio of the integrated main beam intensity per 
+      transition.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcRatioIntTmb">source&nbsp;code</a></span>
             
@@ -581,8 +582,8 @@ the confidence interval.</td>
         <span class="summary-sig-arg">err</span>=<span class="summary-sig-default">0.2</span>,
         <span class="summary-sig-arg">err_noisy</span>=<span class="summary-sig-default">0.3</span>,
         <span class="summary-sig-arg">plot</span>=<span class="summary-sig-default">0</span>)</span><br />
-      Combine the ratio of the integrated and peak main beam intensity
-    per transition.</td>
+      Combine the ratio of the integrated and peak main beam intensity per 
+      transition.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcRatioComboTmb">source&nbsp;code</a></span>
             
@@ -604,8 +605,8 @@ the confidence interval.</td>
         <span class="summary-sig-arg">useNoisy</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">err</span>=<span class="summary-sig-default">0.2</span>,
         <span class="summary-sig-arg">err_noisy</span>=<span class="summary-sig-default">0.3</span>)</span><br />
-      Calculate the (reduced) chi squared of the integrated 
-    main beam intensities.</td>
+      Calculate the (reduced) chi squared of the integrated main beam 
+      intensities.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.calcChiSquared">source&nbsp;code</a></span>
             
@@ -679,10 +680,10 @@ the confidence interval.</td>
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html">Statistics.Statistics</a></code></b>:
-      <code><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#doDataStats">doDataStats</a></code>,
-      <code><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#setDataInfo">setDataInfo</a></code>,
-      <code><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#setModels">setModels</a></code>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.statistics.Statistics.Statistics</code></b>:
+      <code>doDataStats</code>,
+      <code>setDataInfo</code>,
+      <code>setModels</code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
@@ -753,8 +754,8 @@ the confidence interval.</td>
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_name</span>,
-        <span class="sig-arg">code</span>=<span class="sig-default">'GASTRoNOoM'</span>,
-        <span class="sig-arg">path_code</span>=<span class="sig-default">'codeJun2013'</span>,
+        <span class="sig-arg">code</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">GASTRoNOoM</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">path_code</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">codeJun2013</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">lll_p</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">use_bestvlsr</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">vmin</span>=<span class="sig-default">0.0</span>,
@@ -832,7 +833,7 @@ the confidence interval.</td>
         <li><strong class="pname"><code>sample_transitions</code></strong> (list[Transition()]) - Sample transitions used as reference for the data files.</li>
     </ul></dd>
     <dt>Overrides:
-        <a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#setInstrument">Statistics.Statistics.setInstrument</a>
+        cc.statistics.Statistics.Statistics.setInstrument
     </dt>
   </dl>
 </td></tr></table>
@@ -871,7 +872,7 @@ the confidence interval.</td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">calcLoglikelihoodThreshold</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">bfms</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">bfms</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">ist</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1165,7 +1166,7 @@ the confidence interval.</td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">printStats</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">bfms</span>=<span class="sig-default">[]</span>)</span>
+        <span class="sig-arg">bfms</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.statistics.ResoStats-pysrc.html#ResoStats.printStats">source&nbsp;code</a></span>&nbsp;
@@ -1191,7 +1192,7 @@ the confidence interval.</td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">selectBestFitModels</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">mode</span>=<span class="sig-default">'int'</span>,
+        <span class="sig-arg">mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">int</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">use_lll</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">output</span>=<span class="sig-default">1</span>)</span>
   </h3>
@@ -1269,26 +1270,25 @@ the confidence interval.</td>
     </td>
   </tr></table>
   
-  <pre class="literalblock">
-
-Determines whether a model lies within a 95% confidence interval around 
-the best fitting model (per line). As the best fitting model is included
-in the arrays, at least one model within the range is to be expected.
-
-Based on Decin et al. 2007: 
-    - l_m \leq l \leq l_m - quant/2 
-    - l_m \leq l \leq lll_threshold
-
-The 'output' is divided into three components.
-* Dictionary confidenceLLL (transitions as keywords)
-    Gives the difference between the calculate loglikelihood
-    and the threshold value
-* Dictionary condidenceLLL_verdict (transitions as keywords)
-    Contains the result (1 or 0) for every model per transition
-* Array confidenceLLL_models
-    Models that fit all included transitions
-
-</pre>
+  <p>Determines whether a model lies within a 95% confidence interval 
+  around the best fitting model (per line). As the best fitting model is 
+  included in the arrays, at least one model within the range is to be 
+  expected.</p>
+  <p>Based on Decin et al. 2007:</p>
+  <ul>
+    <li>
+      l_m \leq l \leq l_m - quant/2
+    </li>
+    <li>
+      l_m \leq l \leq lll_threshold
+    </li>
+  </ul>
+  <p>The 'output' is divided into three components. * Dictionary 
+  confidenceLLL (transitions as keywords) Gives the difference between the 
+  calculate loglikelihood and the threshold value * Dictionary 
+  condidenceLLL_verdict (transitions as keywords) Contains the result (1 or
+  0) for every model per transition * Array confidenceLLL_models Models 
+  that fit all included transitions</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -1366,23 +1366,16 @@ The 'output' is divided into three components.
     </td>
   </tr></table>
   
-  <pre class="literalblock">
-
-Calculate the loglikelihood function per transition.
-Output similar to that of calcRatioxxxTmb.
-
-Output can be found in:
-* Dictionary line_lll:  dictionary containing whether 
-    a line satisfies the condition or not. One list per transition,  
-    each list containing the verdict per model.
-* List model_lll: list containing the verdict per transition,
-    per model. Number of lists = number of models. 
-    Length of each list = number of transitions. 
-* List verdict_model_lll: list containing the verdict per 
-    transition, per model. Number of lists = number of models. 
-    Each list contains a single number.
-
-</pre>
+  <p>Calculate the loglikelihood function per transition. Output similar to
+  that of calcRatioxxxTmb.</p>
+  <p>Output can be found in: * Dictionary line_lll:  dictionary containing 
+  whether a line satisfies the condition or not. One list per transition, 
+  each list containing the verdict per model. * List model_lll: list 
+  containing the verdict per transition, per model. Number of lists = 
+  number of models. Length of each list = number of transitions. * List 
+  verdict_model_lll: list containing the verdict per transition, per model.
+  Number of lists = number of models. Each list contains a single 
+  number.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -1402,24 +1395,17 @@ Output can be found in:
     </td>
   </tr></table>
   
-  <pre class="literalblock">
-
-Calculate whether the loglikelihood function per transition kies within
-the confidence interval.
-Output similar to that of calcRatioxxxTmb.
-
-Output can be found in:
-* Dictionary line_lll_range:  dictionary containing whether 
-    a line satisfies the condition or not. One list per transition,  
-    each list containing the verdict per model.
-* List model_lll_range: list containing the verdict per transition,
-    per model. Number of lists = number of models. 
-    Length of each list = number of transitions. 
-* List verdict_model_lll_range: list containing the verdict per 
-    transition, per model. Number of lists = number of models. 
-    Each list contains a single number.
-
-</pre>
+  <p>Calculate whether the loglikelihood function per transition kies 
+  within the confidence interval. Output similar to that of 
+  calcRatioxxxTmb.</p>
+  <p>Output can be found in: * Dictionary line_lll_range:  dictionary 
+  containing whether a line satisfies the condition or not. One list per 
+  transition, each list containing the verdict per model. * List 
+  model_lll_range: list containing the verdict per transition, per model. 
+  Number of lists = number of models. Length of each list = number of 
+  transitions. * List verdict_model_lll_range: list containing the verdict 
+  per transition, per model. Number of lists = number of models. Each list 
+  contains a single number.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -1443,38 +1429,26 @@ Output can be found in:
     </td>
   </tr></table>
   
-  <pre class="literalblock">
-
-Calculate the ratio of the integrated main beam intensity per transition.
-
-@keyword useNoisy: assign a larger error to noisy lines
-@type useNoisy: bool
-
-@keyword useRms: use statistical noise in addition to instrumental error
-@type useRms: bool
-
-@keyword err: error on data
-@type err: float
-
-@keyword err_noisy: error on noisy data (only needed when useNoisy = 1)
-@type err_noisy: float
-
-@keyword plot: Plot the output
-@type plot: bool
-
-Output can be found in:
-* Dictionary verdict_ratioint:  dictionary containing whether 
-    a line satisfies the condition or not. One list per transition,  
-    each list containing the verdict per model.
-* List model_ratioint: list containing the verdict per transition,
-    per model. Number of lists = number of models. 
-    Length of each list = number of transitions. 
-* List model_ratioint_verdict: list containing the verdict per 
-    transition, per model. Number of lists = number of models. 
-    Each list contains a single number.
-
-</pre>
+  <p>Calculate the ratio of the integrated main beam intensity per 
+  transition.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>useNoisy</code></strong> (bool) - assign a larger error to noisy lines</li>
+        <li><strong class="pname"><code>useRms</code></strong> (bool) - use statistical noise in addition to instrumental error</li>
+        <li><strong class="pname"><code>err</code></strong> (float) - error on data</li>
+        <li><strong class="pname"><code>err_noisy</code></strong> (float) - error on noisy data (only needed when useNoisy = 1)</li>
+        <li><strong class="pname"><code>plot</code></strong> (bool
+          <p>Output can be found in: * Dictionary verdict_ratioint:  
+          dictionary containing whether a line satisfies the condition or 
+          not. One list per transition, each list containing the verdict 
+          per model. * List model_ratioint: list containing the verdict per
+          transition, per model. Number of lists = number of models. Length
+          of each list = number of transitions. * List 
+          model_ratioint_verdict: list containing the verdict per 
+          transition, per model. Number of lists = number of models. Each 
+          list contains a single number.</p>) - Plot the output</li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1497,36 +1471,25 @@ Output can be found in:
     </td>
   </tr></table>
   
-  <pre class="literalblock">
-
-Calculate the ratio of the peak main beam intensity per transition.
-
-@keyword useNoisy: assign a larger error to noisy lines
-@type useNoisy: bool
-
-@keyword useRms: use statistical noise in addition to instrumental error
-@type useRms: bool
-
-@keyword err: error on data
-@type err: float
-
-@keyword err_noisy: error on noisy data (only needed when useNoisy = 1)
-@type err_noisy: float
-
-Output can be found in:
-* Dictionary verdict_ratiopeak:  dictionary containing whether 
-    a line satisfies the condition or not. One list per transition,  
-    each list containing the verdict per model.
-* List model_ratiopeak: list containing the verdict per transition,
-    per model. Number of lists = number of models. 
-    Length of each list = number of transitions. 
-* List model_ratiopeak_verdict: list containing the verdict per 
-    transition, per model. Number of lists = number of models. 
-    Each list contains a single number.
-    
-
-</pre>
+  <p>Calculate the ratio of the peak main beam intensity per 
+  transition.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>useNoisy</code></strong> (bool) - assign a larger error to noisy lines</li>
+        <li><strong class="pname"><code>useRms</code></strong> (bool) - use statistical noise in addition to instrumental error</li>
+        <li><strong class="pname"><code>err</code></strong> (float) - error on data</li>
+        <li><strong class="pname"><code>err_noisy</code></strong> (float
+          <p>Output can be found in: * Dictionary verdict_ratiopeak:  
+          dictionary containing whether a line satisfies the condition or 
+          not. One list per transition, each list containing the verdict 
+          per model. * List model_ratiopeak: list containing the verdict 
+          per transition, per model. Number of lists = number of models. 
+          Length of each list = number of transitions. * List 
+          model_ratiopeak_verdict: list containing the verdict per 
+          transition, per model. Number of lists = number of models. Each 
+          list contains a single number.</p>) - error on noisy data (only needed when useNoisy = 1)</li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1549,37 +1512,25 @@ Output can be found in:
     </td>
   </tr></table>
   
-  <pre class="literalblock">
-
-Combine the ratio of the integrated and peak main beam intensity
-    per transition.
-
-@keyword useNoisy: assign a larger error to noisy lines
-@type useNoisy: bool
-
-@keyword useRms: use statist. noise in addition to instrumental error
-@type useRms: bool
-
-@keyword err: error on data
-@type err: float
-
-@keyword err_noisy: error on noisy data (only needed when useNoisy = 1)
-@type err_noisy: float
-
-Output can be found in:
-* Dictionary verdict_ratiocombo:  dictionary containing whether 
-    a line satisfies the condition or not. One list per transition,  
-    each list containing the verdict per model.
-* List model_ratiocombo: list containing the verdict per transition,
-    per model. Number of lists = number of models. 
-    Length of each list = number of transitions. 
-* List model_ratiocombo_verdict: list containing the verdict per 
-    transition, per model. Number of lists = number of models. 
-    Each list contains a single number.
-        
-
-</pre>
+  <p>Combine the ratio of the integrated and peak main beam intensity per 
+  transition.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>useNoisy</code></strong> (bool) - assign a larger error to noisy lines</li>
+        <li><strong class="pname"><code>useRms</code></strong> (bool) - use statist. noise in addition to instrumental error</li>
+        <li><strong class="pname"><code>err</code></strong> (float) - error on data</li>
+        <li><strong class="pname"><code>err_noisy</code></strong> (float
+          <p>Output can be found in: * Dictionary verdict_ratiocombo:  
+          dictionary containing whether a line satisfies the condition or 
+          not. One list per transition, each list containing the verdict 
+          per model. * List model_ratiocombo: list containing the verdict 
+          per transition, per model. Number of lists = number of models. 
+          Length of each list = number of transitions. * List 
+          model_ratiocombo_verdict: list containing the verdict per 
+          transition, per model. Number of lists = number of models. Each 
+          list contains a single number.</p>) - error on noisy data (only needed when useNoisy = 1)</li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1602,39 +1553,34 @@ Output can be found in:
     </td>
   </tr></table>
   
-  <pre class="literalblock">
-
-Calculate the (reduced) chi squared of the integrated 
-    main beam intensities.
-
-@keyword P: Degrees of freedom = len(data) - P
-@type P: int
-
-@keyword useTeleUncertainties: Use telescope uncertainties 
-    instead of a fixed error.
-@type useTeleUncertainties: bool
-
-@keyword useNoisy: Use a higher uncertainty for noisy lines
-@type useNoisy: bool
-
-@keyword err: Fixed uncertainty on lines 
-    (if not telescope uncertainties)
-@type err: float
-
-@keyword err_noisy: Uncertainty on noisy lines
-@type err_noisy: float 
-
-Output can be found in:
-* List chiSquared: Chi squared values of each model
-* list redChiSquared: Reduced chi squared values of each model
-* float errRedChiSquared: Error on reduced chi squared
-* list redChiSquaredWithinThreeSigma:
-    Models that have a reduced chi squared within
-    three sigma of the best model (ie the model with
-    the lowest reduced chi squared)
-
-</pre>
+  <p>Calculate the (reduced) chi squared of the integrated main beam 
+  intensities.</p>
+  <p>Output can be found in:</p>
+  <ul>
+    <li>
+      list chiSquared: Chi squared values of each model
+    </li>
+    <li>
+      list redChiSquared: Reduced chi squared values of each model
+    </li>
+    <li>
+      float errRedChiSquared: Error on reduced chi squared
+    </li>
+    <li>
+      list redChiSquaredWithinThreeSigma: Models that have a reduced chi 
+      squared within three sigma of the best model (ie the model with the 
+      lowest reduced chi squared)
+    </li>
+  </ul>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>P</code></strong> (int) - Degrees of freedom = len(data) - P</li>
+        <li><strong class="pname"><code>useTeleUncertainties</code></strong> (bool) - Use telescope uncertainties instead of a fixed error.</li>
+        <li><strong class="pname"><code>useNoisy</code></strong> (bool) - Use a higher uncertainty for noisy lines</li>
+        <li><strong class="pname"><code>err</code></strong> (float) - Fixed uncertainty on lines (if not telescope uncertainties)</li>
+        <li><strong class="pname"><code>err_noisy</code></strong> (float) - Uncertainty on noisy lines</li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1689,7 +1635,7 @@ Output can be found in:
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:37 2016
+    Generated by Epydoc 3.0.1 on Mon Nov  7 18:01:58 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

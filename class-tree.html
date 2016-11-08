@@ -139,8 +139,6 @@
     <li> <strong class="uidlink"><a href="ComboCode.cc.managers.PlottingManager.PlottingManager-class.html">ComboCode.cc.managers.PlottingManager.PlottingManager</a></strong>:
       <em class="summary">An interface for managing requested plots for a CC session.</em>
     </li>
-    <li> <strong class="uidlink">unittest.TestCase</strong>
-    </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.objects.Transition.Transition-class.html">ComboCode.cc.modeling.objects.Transition.Transition</a></strong>:
       <em class="summary">A class to deal with transitions in GASTRoNOoM.</em>
     </li>
@@ -186,11 +184,11 @@
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer.MinimizerException-class.html">ComboCode.cc.ivs.sigproc.lmfit.minimizer.MinimizerException</a></strong>:
       <em class="summary">General Purpose Exception</em>
     </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.units.uncertainties.NotUpcast-class.html" onclick="show_private();">ComboCode.cc.ivs.units.uncertainties.NotUpcast</a></strong>
+    </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.uncertainties.NotUpcast-class.html" onclick="show_private();">ComboCode.cc.ivs.sigproc.lmfit.uncertainties.NotUpcast</a></strong>:
       <em class="summary">Raised when an object cannot be converted to a number with 
         uncertainty</em>
-    </li>
-    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.units.uncertainties.NotUpcast-class.html" onclick="show_private();">ComboCode.cc.ivs.units.uncertainties.NotUpcast</a></strong>
     </li>
     <li> <strong class="uidlink">exceptions.StandardError</strong>:
       <em class="summary">Base class for all standard Python exceptions that do not represent
@@ -204,6 +202,10 @@
     </ul>
     </li>
     </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.statistics.ChemStats.ChemStats-class.html">ComboCode.cc.statistics.ChemStats.ChemStats</a></strong>:
+      <em class="summary">Environment with several tools to perform statistics on the peak 
+        and integrated intensities of resolved molecular lines.</em>
     </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.tools.ColumnDensity.ColumnDensity-class.html">ComboCode.cc.modeling.tools.ColumnDensity.ColumnDensity</a></strong>:
       <em class="summary">Environment to calculate column densities and similar properties 
@@ -243,11 +245,27 @@
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.fit.Function-class.html">ComboCode.cc.ivs.sigproc.fit.Function</a></strong>:
       <em class="summary">Class to define a function with associated parameters.</em>
     </li>
+    <li> <strong class="uidlink">cc.data.instruments.Instrument.Instrument</strong>:
+      <em class="summary">Instrument-specific calculations.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.data.instruments.Pacs.Pacs-class.html">ComboCode.cc.data.instruments.Pacs.Pacs</a></strong>:
+      <em class="summary">Environment with several tools for Pacs molecular spectroscopy 
+        managing.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.data.instruments.Spire.Spire-class.html">ComboCode.cc.data.instruments.Spire.Spire</a></strong>:
+      <em class="summary">Environment with several tools for Spire molecular spectroscopy 
+        managing.</em>
+    </li>
+    </ul>
+    </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.data.instruments.Instrument.Instrument-class.html">ComboCode.cc.data.instruments.Instrument.Instrument</a></strong>:
       <em class="summary">Instrument-specific calculations.</em>
     </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.KappaReader.KappaReader-class.html">ComboCode.cc.tools.readers.KappaReader.KappaReader</a></strong>:
       <em class="summary">An interface for reading opacities of multiple dust species.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer.Minimizer-class.html">ComboCode.cc.ivs.sigproc.lmfit.minimizer.Minimizer</a></strong>:
+      <em class="summary">general minimizer</em>
     </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.fit.Minimizer-class.html">ComboCode.cc.ivs.sigproc.fit.Minimizer</a></strong>:
       <em class="summary">A minimizer class on the <a 
@@ -256,25 +274,30 @@
         flexible interface to non-linear least-squares optimization, or 
         curve fitting.</em>
     </li>
-    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.minimizer.Minimizer-class.html">ComboCode.cc.ivs.sigproc.lmfit.minimizer.Minimizer</a></strong>:
-      <em class="summary">general minimizer</em>
-    </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.fit.Model-class.html">ComboCode.cc.ivs.sigproc.fit.Model</a></strong>:
       <em class="summary">Class to create a model using different <a 
         href="ComboCode.cc.ivs.sigproc.fit.Function-class.html" 
         class="link">Function</a>s each with their associated parameters.</em>
     </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.codes.ModelingSession.ModelingSession-class.html">ComboCode.cc.modeling.codes.ModelingSession.ModelingSession</a></strong>:
+      <em class="summary">The basic modeling environment.</em>
+    </li>
     <li> <strong class="uidlink">cc.modeling.codes.ModelingSession.ModelingSession</strong>:
       <em class="summary">The basic modeling environment.</em>
     <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.codes.Chemistry.Chemistry-class.html">ComboCode.cc.modeling.codes.Chemistry.Chemistry</a></strong>:
+      <em class="summary">Class that includes all methods required for creating an Chemistry 
+        model.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.codes.Gastronoom.Gastronoom-class.html">ComboCode.cc.modeling.codes.Gastronoom.Gastronoom</a></strong>:
+      <em class="summary">Class that includes all methods required for creating a GATRoNOoM 
+        model.</em>
+    </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.codes.MCMax.MCMax-class.html">ComboCode.cc.modeling.codes.MCMax.MCMax</a></strong>:
       <em class="summary">Class that includes all methods required for creating an MCMax 
         model.</em>
     </li>
     </ul>
-    </li>
-    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.codes.ModelingSession.ModelingSession-class.html">ComboCode.cc.modeling.codes.ModelingSession.ModelingSession</a></strong>:
-      <em class="summary">The basic modeling environment.</em>
     </li>
     <li> <strong class="uidlink">ast.NodeVisitor</strong>:
       <em class="summary">A node visitor base class that walks the abstract syntax tree and 
@@ -298,6 +321,20 @@
     <li> <strong class="uidlink"><a href="ComboCode.cc.plotting.objects.PlottingSession.PlottingSession-class.html">ComboCode.cc.plotting.objects.PlottingSession.PlottingSession</a></strong>:
       <em class="summary">Plotting environment for data and models of circumstellar shells.</em>
     </li>
+    <li> <strong class="uidlink">cc.plotting.objects.PlottingSession.PlottingSession</strong>:
+      <em class="summary">Plotting environment for data and models of circumstellar shells.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.plotting.objects.PlotChem.PlotChem-class.html">ComboCode.cc.plotting.objects.PlotChem.PlotChem</a></strong>:
+      <em class="summary">Class for plotting gas lines and their information.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.plotting.objects.PlotDust.PlotDust-class.html">ComboCode.cc.plotting.objects.PlotDust.PlotDust</a></strong>:
+      <em class="summary">Plotting environment for SEDs and all dust parameters.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.plotting.objects.PlotGas.PlotGas-class.html">ComboCode.cc.plotting.objects.PlotGas.PlotGas</a></strong>:
+      <em class="summary">Class for plotting gas lines and their information.</em>
+    </li>
+    </ul>
+    </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.asteval.Procedure-class.html">ComboCode.cc.ivs.sigproc.lmfit.asteval.Procedure</a></strong>:
       <em class="summary">Procedure: user-defined function for asteval</em>
     </li>
@@ -305,6 +342,52 @@
       <em class="summary">An interface for creating profiles, and allowing to evaluate them 
         and calculate the central difference with respect to a coordinate 
         grid.</em>
+    </li>
+    <li> <strong class="uidlink">cc.modeling.profilers.Profiler.Profiler</strong>:
+      <em class="summary">An interface for creating profiles, and allowing to evaluate them 
+        and calculate the central difference with respect to a coordinate 
+        grid.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.profilers.Density.Density-class.html">ComboCode.cc.modeling.profilers.Density.Density</a></strong>:
+      <em class="summary">An interface for the density profile as a function of radius.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.profilers.Density.DustToGas-class.html">ComboCode.cc.modeling.profilers.Density.DustToGas</a></strong>:
+      <em class="summary">An interface for the dust-to-gas ratio profile as a function of 
+        radius.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.profilers.Mdot.Mdot-class.html">ComboCode.cc.modeling.profilers.Mdot.Mdot</a></strong>:
+      <em class="summary">An interface for the mass-loss rate profile as a function of 
+        radius.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.profilers.Opacity.Opacity-class.html">ComboCode.cc.modeling.profilers.Opacity.Opacity</a></strong>:
+      <em class="summary">An interface for an opacity profile and any type of extinction 
+        quantity.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.profilers.Radiance.Radiance-class.html">ComboCode.cc.modeling.profilers.Radiance.Radiance</a></strong>:
+      <em class="summary">An interface for a spectral radiance and its derivative.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.profilers.Temperature.Temperature-class.html">ComboCode.cc.modeling.profilers.Temperature.Temperature</a></strong>:
+      <em class="summary">An interface for a temperature profile and its derivative</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.profilers.Velocity.Velocity-class.html">ComboCode.cc.modeling.profilers.Velocity.Velocity</a></strong>:
+      <em class="summary">An interface for a velocity profile and its derivative</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">cc.modeling.profilers.Profiler.Profiler2D</strong>:
+      <em class="summary">An interface for creating 2D profiles, and allowing to evaluate 
+        them and calculate the central difference with respect to a 2D 
+        coordinate grid.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.profilers.Grainsize.Distribution-class.html">ComboCode.cc.modeling.profilers.Grainsize.Distribution</a></strong>:
+      <em class="summary">An interface for a grain size distribution as a function of grain 
+        size and radius, and for given minimum and maximum grain sizes.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.profilers.Velocity.Drift-class.html">ComboCode.cc.modeling.profilers.Velocity.Drift</a></strong>:
+      <em class="summary">An interface for the drift velocity as a function of radius and 
+        grain size.</em>
+    </li>
+    </ul>
     </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.profilers.Profiler.Profiler2D-class.html">ComboCode.cc.modeling.profilers.Profiler.Profiler2D</a></strong>:
       <em class="summary">An interface for creating 2D profiles, and allowing to evaluate 
@@ -315,12 +398,36 @@
     </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sed.builder.SED-class.html">ComboCode.cc.ivs.sed.builder.SED</a></strong>:
       <em class="summary">Class that facilitates the use of the cc.ivs.sed module.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sed.builder.BinarySED-class.html">ComboCode.cc.ivs.sed.builder.BinarySED</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sed.builder.Calibrator-class.html">ComboCode.cc.ivs.sed.builder.Calibrator</a></strong>:
+      <em class="summary">Convenience class for a photometric standard star or calibrator.</em>
+    </li>
+    </ul>
     </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sed.builder.SampleSEDs-class.html">ComboCode.cc.ivs.sed.builder.SampleSEDs</a></strong>:
       <em class="summary">Class representing a list of SEDs.</em>
     </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.data.Sed.Sed-class.html">ComboCode.cc.data.Sed.Sed</a></strong>:
       <em class="summary">Tools for:</em>
+    </li>
+    <li> <strong class="uidlink">cc.statistics.Statistics.Statistics</strong>:
+      <em class="summary">An evironment for various statistical calculations for transitions.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.statistics.ResoStats.ResoStats-class.html">ComboCode.cc.statistics.ResoStats.ResoStats</a></strong>:
+      <em class="summary">Environment with several tools to perform statistics on the peak 
+        and integrated intensities of resolved molecular lines.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.statistics.SedStats.SedStats-class.html">ComboCode.cc.statistics.SedStats.SedStats</a></strong>:
+      <em class="summary">Environment with several tools to perform statistics on SED 
+        photometry.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.statistics.UnresoStats.UnresoStats-class.html">ComboCode.cc.statistics.UnresoStats.UnresoStats</a></strong>:
+      <em class="summary">Environment with several tools to perform statistics on 
+        peak-to-peak ratios for unresolved lines.</em>
+    </li>
+    </ul>
     </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html">ComboCode.cc.statistics.Statistics.Statistics</a></strong>:
       <em class="summary">An evironment for various statistical calculations for transitions.</em>
@@ -329,6 +436,21 @@
       <em class="summary">A class whose instances are single test cases.</em>
     <ul>
     <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.io.testIO.HDF5TestCase-class.html">ComboCode.cc.ivs.io.testIO.HDF5TestCase</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sed.testSED.SEDTestCase-class.html">ComboCode.cc.ivs.sed.testSED.SEDTestCase</a></strong>:
+      <em class="summary">Add some extra usefull assertion methods to the testcase class</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sed.testSED.BuilderTestCase-class.html">ComboCode.cc.ivs.sed.testSED.BuilderTestCase</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sed.testSED.MinimizeFitTestCase-class.html">ComboCode.cc.ivs.sed.testSED.MinimizeFitTestCase</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sed.testSED.ModelTestCase-class.html">ComboCode.cc.ivs.sed.testSED.ModelTestCase</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sed.testSED.PixFitTestCase-class.html">ComboCode.cc.ivs.sed.testSED.PixFitTestCase</a></strong>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sed.testSED.XIntegrationTestCase-class.html">ComboCode.cc.ivs.sed.testSED.XIntegrationTestCase</a></strong>
+    </li>
+    </ul>
     </li>
     </ul>
     </li>
@@ -353,6 +475,17 @@ dict(**kwargs) -&gt; new dictionary initialized with the name=value pairs
     <li> <strong class="uidlink"><a href="ComboCode.cc.tools.io.Database.Database-class.html">ComboCode.cc.tools.io.Database.Database</a></strong>:
       <em class="summary">A database class.</em>
     </li>
+    <li> <strong class="uidlink">cc.tools.io.Database.Database</strong>:
+      <em class="summary">A database class.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.data.Radio.Radio-class.html">ComboCode.cc.data.Radio.Radio</a></strong>:
+      <em class="summary">Environment with several tools to load and save a database for 
+        Radio data.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.ordereddict.OrderedDict-class.html">ComboCode.cc.ivs.sigproc.lmfit.ordereddict.OrderedDict</a></strong>
+    </li>
     <li> <strong class="uidlink">collections.OrderedDict</strong>:
       <em class="summary">Dictionary that remembers insertion order</em>
     <ul>
@@ -361,18 +494,77 @@ dict(**kwargs) -&gt; new dictionary initialized with the name=value pairs
     </li>
     </ul>
     </li>
-    <li> <strong class="uidlink"><a href="ComboCode.cc.ivs.sigproc.lmfit.ordereddict.OrderedDict-class.html">ComboCode.cc.ivs.sigproc.lmfit.ordereddict.OrderedDict</a></strong>
-    </li>
-    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.Reader.Reader-class.html">ComboCode.cc.tools.readers.Reader.Reader</a></strong>:
-      <em class="summary">The Reader class.</em>
-    </li>
     <li> <strong class="uidlink">cc.tools.readers.Reader.Reader</strong>:
       <em class="summary">The Reader class.</em>
     <ul>
+    <li> <strong class="uidlink">cc.tools.readers.LPDataReader.LPDataReader</strong>:
+      <em class="summary">A data reader for line profile data.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.FitsReader.FitsReader-class.html">ComboCode.cc.tools.readers.FitsReader.FitsReader</a></strong>:
+      <em class="summary">A FITS file reader for line profile data.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.TxtReader.TxtReader-class.html">ComboCode.cc.tools.readers.TxtReader.TxtReader</a></strong>:
+      <em class="summary">A text file reader for line profile data.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.LPDataReader.LPDataReader-class.html">ComboCode.cc.tools.readers.LPDataReader.LPDataReader</a></strong>:
+      <em class="summary">A data reader for line profile data.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.PopReader.PopReader-class.html">ComboCode.cc.tools.readers.PopReader.PopReader</a></strong>:
+      <em class="summary">The PopReader class.</em>
+    </li>
+    <li> <strong class="uidlink">cc.tools.readers.PopReader.PopReader</strong>:
+      <em class="summary">The PopReader class.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.MlineReader.MlineReader-class.html">ComboCode.cc.tools.readers.MlineReader.MlineReader</a></strong>:
+      <em class="summary">A Reader for Mline output files.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.SpectroscopyReader.SpectroscopyReader-class.html">ComboCode.cc.tools.readers.SpectroscopyReader.SpectroscopyReader</a></strong>:
+      <em class="summary">The SpectroscopyReader class.</em>
+    </li>
+    <li> <strong class="uidlink">cc.tools.readers.SpectroscopyReader.SpectroscopyReader</strong>:
+      <em class="summary">The SpectroscopyReader class.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.CollisReader.CollisReader-class.html">ComboCode.cc.tools.readers.CollisReader.CollisReader</a></strong>:
+      <em class="summary">A Reader for collisional rate data.</em>
+    </li>
+    <li> <strong class="uidlink">cc.tools.readers.CollisReader.CollisReader</strong>:
+      <em class="summary">A Reader for collisional rate data.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.LamdaReader.LamdaReader-class.html">ComboCode.cc.tools.readers.LamdaReader.LamdaReader</a></strong>:
+      <em class="summary">A Reader for Lamda molecular data files.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink">cc.tools.readers.MolReader.MolReader</strong>:
+      <em class="summary">The MolReader class.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.LamdaReader.LamdaReader-class.html">ComboCode.cc.tools.readers.LamdaReader.LamdaReader</a></strong>:
+      <em class="summary">A Reader for Lamda molecular data files.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.MlineReader.MlineReader-class.html">ComboCode.cc.tools.readers.MlineReader.MlineReader</a></strong>:
+      <em class="summary">A Reader for Mline output files.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.RadiatReader.RadiatReader-class.html">ComboCode.cc.tools.readers.RadiatReader.RadiatReader</a></strong>:
+      <em class="summary">Class for working with radiat files from GASTRoNOoM's input.</em>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.MolReader.MolReader-class.html">ComboCode.cc.tools.readers.MolReader.MolReader</a></strong>:
+      <em class="summary">The MolReader class.</em>
+    </li>
+    </ul>
+    </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.SphinxReader.SphinxReader-class.html">ComboCode.cc.tools.readers.SphinxReader.SphinxReader</a></strong>:
       <em class="summary">A Reader for Sphinx output files.</em>
     </li>
     </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="ComboCode.cc.tools.readers.Reader.Reader-class.html">ComboCode.cc.tools.readers.Reader.Reader</a></strong>:
+      <em class="summary">The Reader class.</em>
     </li>
     <li> <strong class="uidlink"><a href="ComboCode.cc.modeling.objects.Star.Star-class.html">ComboCode.cc.modeling.objects.Star.Star</a></strong>:
       <em class="summary">Star class maintains information about a stellar model and its 
@@ -428,7 +620,7 @@ dict(**kwargs) -&gt; new dictionary initialized with the name=value pairs
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:33 2016
+    Generated by Epydoc 3.0.1 on Mon Nov  7 18:01:55 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

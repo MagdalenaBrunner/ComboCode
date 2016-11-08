@@ -167,8 +167,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#get_law" class="summary-sig-name">get_law</a>(<span class="summary-sig-arg">name</span>,
-        <span class="summary-sig-arg">norm</span>=<span class="summary-sig-default">'E(B-V)'</span>,
-        <span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default">'AA'</span>,
+        <span class="summary-sig-arg">norm</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">E(B-V)</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">AA</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">photbands</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Retrieve an interstellar reddening law.</td>
@@ -190,9 +190,9 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#redden" class="summary-sig-name">redden</a>(<span class="summary-sig-arg">flux</span>,
         <span class="summary-sig-arg">wave</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">photbands</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">ebv</span>=<span class="summary-sig-default">0.</span>,
-        <span class="summary-sig-arg">rtype</span>=<span class="summary-sig-default">'flux'</span>,
-        <span class="summary-sig-arg">law</span>=<span class="summary-sig-default">'cardelli1989'</span>,
+        <span class="summary-sig-arg">ebv</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">rtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">flux</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">law</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">cardelli1989</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Redden flux or magnitudes</td>
           <td align="right" valign="top">
@@ -213,8 +213,8 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#deredden" class="summary-sig-name">deredden</a>(<span class="summary-sig-arg">flux</span>,
         <span class="summary-sig-arg">wave</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">photbands</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">ebv</span>=<span class="summary-sig-default">0.</span>,
-        <span class="summary-sig-arg">rtype</span>=<span class="summary-sig-default">'flux'</span>,
+        <span class="summary-sig-arg">ebv</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">rtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">flux</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Deredden flux or magnitudes.</td>
           <td align="right" valign="top">
@@ -231,15 +231,13 @@
     >&nbsp;&nbsp;&nbsp;&nbsp;Curve definitions</th></tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">(ndarray,ndarray)</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#chiar2006" class="summary-sig-name">chiar2006</a>(<span class="summary-sig-arg">Rv</span>=<span class="summary-sig-default">3.1</span>,
-        <span class="summary-sig-arg">curve</span>=<span class="summary-sig-default">'ism'</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#chiar2006" class="summary-sig-name">chiar2006</a>(<span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
-      Extinction curve at infrared wavelengths from Chiar and Tielens 
-      (2006)</td>
+      Extinction curve at infrared wavelengths from Chiar and Tielens (2006)</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.reddening-pysrc.html#chiar2006">source&nbsp;code</a></span>
             
@@ -251,15 +249,14 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">(ndarray,ndarray)</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#fitz2004chiar2006" class="summary-sig-name">fitz2004chiar2006</a>(<span class="summary-sig-arg">Rv</span>=<span class="summary-sig-default">3.1</span>,
-        <span class="summary-sig-arg">curve</span>=<span class="summary-sig-default">'ism'</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#fitz2004chiar2006" class="summary-sig-name">fitz2004chiar2006</a>(<span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
-      Combined and extrapolated extinction curve Fitzpatrick 2004 and from 
-      Chiar and Tielens (2006).</td>
+      Combined and extrapolated extinction curve Fitzpatrick 2004 and 
+    from Chiar and Tielens (2006).</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.reddening-pysrc.html#fitz2004chiar2006">source&nbsp;code</a></span>
             
@@ -271,11 +268,11 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">(ndarray,ndarray)</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#fitzpatrick1999" class="summary-sig-name">fitzpatrick1999</a>(<span class="summary-sig-arg">Rv</span>=<span class="summary-sig-default">3.1</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#fitzpatrick1999" class="summary-sig-name">fitzpatrick1999</a>(<span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       From Fitzpatrick 1999 (downloaded from ASAGIO database)</td>
           <td align="right" valign="top">
@@ -289,11 +286,11 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">(ndarray,ndarray)</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#fitzpatrick2004" class="summary-sig-name">fitzpatrick2004</a>(<span class="summary-sig-arg">Rv</span>=<span class="summary-sig-default">3.1</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#fitzpatrick2004" class="summary-sig-name">fitzpatrick2004</a>(<span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       From Fitzpatrick 2004 (downloaded from FTP)</td>
           <td align="right" valign="top">
@@ -307,11 +304,12 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">(ndarray,ndarray)</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#donnell1994" class="summary-sig-name">donnell1994</a>(<span class="summary-sig-arg">**kwargs</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#donnell1994" class="summary-sig-name">donnell1994</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Small improvement on Cardelli 1989 by James E.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.reddening-pysrc.html#donnell1994">source&nbsp;code</a></span>
@@ -324,13 +322,11 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">(ndarray,ndarray)</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#cardelli1989" class="summary-sig-name">cardelli1989</a>(<span class="summary-sig-arg">Rv</span>=<span class="summary-sig-default">3.1</span>,
-        <span class="summary-sig-arg">curve</span>=<span class="summary-sig-default">'cardelli'</span>,
-        <span class="summary-sig-arg">wave</span>=<span class="summary-sig-default">None</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#cardelli1989" class="summary-sig-name">cardelli1989</a>(<span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Construct extinction laws from Cardelli (1989).</td>
           <td align="right" valign="top">
@@ -344,12 +340,11 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">(ndarray,ndarray)</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#seaton1979" class="summary-sig-name">seaton1979</a>(<span class="summary-sig-arg">Rv</span>=<span class="summary-sig-default">3.1</span>,
-        <span class="summary-sig-arg">wave</span>=<span class="summary-sig-default">None</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.reddening-module.html#seaton1979" class="summary-sig-name">seaton1979</a>(<span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Extinction curve from Seaton, 1979.</td>
           <td align="right" valign="top">
@@ -390,7 +385,14 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="basename"></a><span class="summary-name">basename</span> = <code title="os.path.join(os.path.dirname(__file__), 'redlaws')">os.path.join(os.path.dirname(__file__), 'redlaws')</code>
+        <a name="basename"></a><span class="summary-name">basename</span> = <code title="'/Users/robinl/ComboCode/cc/ivs/sed/redlaws'"><code class="variable-quote">'</code><code class="variable-string">/Users/robinl/ComboCode/cc/ivs/sed/redlaws</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.ivs.sed'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.ivs.sed</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -420,8 +422,8 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_law</span>(<span class="sig-arg">name</span>,
-        <span class="sig-arg">norm</span>=<span class="sig-default">'E(B-V)'</span>,
-        <span class="sig-arg">wave_units</span>=<span class="sig-default">'AA'</span>,
+        <span class="sig-arg">norm</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">E(B-V)</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">wave_units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">AA</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">photbands</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -473,9 +475,9 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">redden</span>(<span class="sig-arg">flux</span>,
         <span class="sig-arg">wave</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">photbands</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">ebv</span>=<span class="sig-default">0.</span>,
-        <span class="sig-arg">rtype</span>=<span class="sig-default">'flux'</span>,
-        <span class="sig-arg">law</span>=<span class="sig-default">'cardelli1989'</span>,
+        <span class="sig-arg">ebv</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">rtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">flux</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">law</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">cardelli1989</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -514,8 +516,8 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">deredden</span>(<span class="sig-arg">flux</span>,
         <span class="sig-arg">wave</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">photbands</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">ebv</span>=<span class="sig-default">0.</span>,
-        <span class="sig-arg">rtype</span>=<span class="sig-default">'flux'</span>,
+        <span class="sig-arg">ebv</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">rtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">flux</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -545,8 +547,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">chiar2006</span>(<span class="sig-arg">Rv</span>=<span class="sig-default">3.1</span>,
-        <span class="sig-arg">curve</span>=<span class="sig-default">'ism'</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">chiar2006</span>(<span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -554,22 +555,31 @@
     </td>
   </tr></table>
   
-  <p>Extinction curve at infrared wavelengths from Chiar and Tielens 
-  (2006)</p>
-  <p>We return A(lambda)/Av, by multiplying A(lambda)/Ak Ak/Av=0.09 (see 
-  Chiar and Tielens (2006).</p>
-  <p>This is only defined for Rv=3.1. If it is different, this will raise 
-  an AssertionError</p>
-  <p>Extra kwags are to catch unwanted keyword arguments.</p>
-  <p>UNCERTAIN NORMALISATION</p>
+  <pre class="literalblock">
+
+    Extinction curve at infrared wavelengths from Chiar and Tielens (2006)
+    
+    We return A(lambda)/Av, by multiplying A(lambda)/Ak Ak/Av=0.09 (see Chiar 
+    and Tielens (2006).
+    
+    This is only defined for Rv=3.1. If it is different, this will raise an
+    AssertionError
+    
+    Extra kwags are to catch unwanted keyword arguments.
+    
+    UNCERTAIN NORMALISATION
+    
+    @param Rv: Rv
+    @type Rv: float
+    @param curve: extinction curve
+    @type curve: string (one of 'gc' or 'ism', galactic centre or local ISM)
+    @return: wavelengths (A), A(lambda)/Av
+    @rtype: (ndarray,ndarray)
+    
+This function is memoized.
+
+</pre>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>Rv</code></strong> (float) - Rv</li>
-        <li><strong class="pname"><code>curve</code></strong> (string (one of 'gc' or 'ism', galactic centre or local ISM)) - extinction curve</li>
-    </ul></dd>
-    <dt>Returns: (ndarray,ndarray)</dt>
-        <dd>wavelengths (A), A(lambda)/Av</dd>
     <dt>Decorators:</dt>
     <dd><ul class="nomargin-top">
         <li><code>@memoized</code></li>
@@ -584,8 +594,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">fitz2004chiar2006</span>(<span class="sig-arg">Rv</span>=<span class="sig-default">3.1</span>,
-        <span class="sig-arg">curve</span>=<span class="sig-default">'ism'</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fitz2004chiar2006</span>(<span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -593,20 +602,29 @@
     </td>
   </tr></table>
   
-  <p>Combined and extrapolated extinction curve Fitzpatrick 2004 and from 
-  Chiar and Tielens (2006).</p>
-  <p>We return A(lambda)/E(B-V), by multiplying A(lambda)/Av with Rv.</p>
-  <p>This is only defined for Rv=3.1. If it is different, this will raise 
-  an AssertionError</p>
-  <p>Extra kwags are to catch unwanted keyword arguments.</p>
+  <pre class="literalblock">
+
+    Combined and extrapolated extinction curve Fitzpatrick 2004 and 
+    from Chiar and Tielens (2006).
+    
+    We return A(lambda)/E(B-V), by multiplying A(lambda)/Av with Rv.
+    
+    This is only defined for Rv=3.1. If it is different, this will raise an
+    AssertionError
+    
+    Extra kwags are to catch unwanted keyword arguments.
+    
+    @param Rv: Rv
+    @type Rv: float
+    @param curve: extinction curve
+    @type curve: string (one of 'gc' or 'ism', galactic centre or local ISM)
+    @return: wavelengths (A), A(lambda)/Av
+    @rtype: (ndarray,ndarray)
+    
+This function is memoized.
+
+</pre>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>Rv</code></strong> (float) - Rv</li>
-        <li><strong class="pname"><code>curve</code></strong> (string (one of 'gc' or 'ism', galactic centre or local ISM)) - extinction curve</li>
-    </ul></dd>
-    <dt>Returns: (ndarray,ndarray)</dt>
-        <dd>wavelengths (A), A(lambda)/Av</dd>
     <dt>Decorators:</dt>
     <dd><ul class="nomargin-top">
         <li><code>@memoized</code></li>
@@ -621,7 +639,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">fitzpatrick1999</span>(<span class="sig-arg">Rv</span>=<span class="sig-default">3.1</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fitzpatrick1999</span>(<span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -629,18 +647,25 @@
     </td>
   </tr></table>
   
-  <p>From Fitzpatrick 1999 (downloaded from ASAGIO database)</p>
-  <p>This function returns A(lambda)/A(V).</p>
-  <p>To get A(lambda)/E(B-V), multiply the return value with Rv 
-  (A(V)=Rv*E(B-V))</p>
-  <p>Extra kwags are to catch unwanted keyword arguments.</p>
+  <pre class="literalblock">
+
+    From Fitzpatrick 1999 (downloaded from ASAGIO database)
+    
+    This function returns A(lambda)/A(V).
+    
+    To get A(lambda)/E(B-V), multiply the return value with Rv (A(V)=Rv*E(B-V))
+    
+    Extra kwags are to catch unwanted keyword arguments.
+    
+    @param Rv: Rv (2.1, 3.1 or 5.0)
+    @type Rv: float
+    @return: wavelengths (A), A(lambda)/Av
+    @rtype: (ndarray,ndarray)
+    
+This function is memoized.
+
+</pre>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>Rv</code></strong> (float) - Rv (2.1, 3.1 or 5.0)</li>
-    </ul></dd>
-    <dt>Returns: (ndarray,ndarray)</dt>
-        <dd>wavelengths (A), A(lambda)/Av</dd>
     <dt>Decorators:</dt>
     <dd><ul class="nomargin-top">
         <li><code>@memoized</code></li>
@@ -655,7 +680,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">fitzpatrick2004</span>(<span class="sig-arg">Rv</span>=<span class="sig-default">3.1</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fitzpatrick2004</span>(<span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -663,18 +688,25 @@
     </td>
   </tr></table>
   
-  <p>From Fitzpatrick 2004 (downloaded from FTP)</p>
-  <p>This function returns A(lambda)/A(V).</p>
-  <p>To get A(lambda)/E(B-V), multiply the return value with Rv 
-  (A(V)=Rv*E(B-V))</p>
-  <p>Extra kwags are to catch unwanted keyword arguments.</p>
+  <pre class="literalblock">
+
+    From Fitzpatrick 2004 (downloaded from FTP)
+    
+    This function returns A(lambda)/A(V).
+    
+    To get A(lambda)/E(B-V), multiply the return value with Rv (A(V)=Rv*E(B-V))
+    
+    Extra kwags are to catch unwanted keyword arguments.
+    
+    @param Rv: Rv (2.1, 3.1 or 5.0)
+    @type Rv: float
+    @return: wavelengths (A), A(lambda)/Av
+    @rtype: (ndarray,ndarray)
+    
+This function is memoized.
+
+</pre>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>Rv</code></strong> (float) - Rv (2.1, 3.1 or 5.0)</li>
-    </ul></dd>
-    <dt>Returns: (ndarray,ndarray)</dt>
-        <dd>wavelengths (A), A(lambda)/Av</dd>
     <dt>Decorators:</dt>
     <dd><ul class="nomargin-top">
         <li><code>@memoized</code></li>
@@ -689,23 +721,31 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">donnell1994</span>(<span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">donnell1994</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.reddening-pysrc.html#donnell1994">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Small improvement on Cardelli 1989 by James E. O'Donnell (1994).</p>
-  <p>Extra kwags are to catch unwanted keyword arguments.</p>
+  <pre class="literalblock">
+
+    Small improvement on Cardelli 1989 by James E. O'Donnell (1994).
+    
+    Extra kwags are to catch unwanted keyword arguments.
+    
+    @keyword Rv: Rv
+    @type Rv: float
+    @keyword wave: wavelengths to compute the curve on
+    @type wave: ndarray
+    @return: wavelengths (A), A(lambda)/Av
+    @rtype: (ndarray,ndarray)
+    
+This function is memoized.
+
+</pre>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>Rv</code></strong> (float) - Rv</li>
-        <li><strong class="pname"><code>wave</code></strong> (ndarray) - wavelengths to compute the curve on</li>
-    </ul></dd>
-    <dt>Returns: (ndarray,ndarray)</dt>
-        <dd>wavelengths (A), A(lambda)/Av</dd>
     <dt>Decorators:</dt>
     <dd><ul class="nomargin-top">
         <li><code>@memoized</code></li>
@@ -720,9 +760,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">cardelli1989</span>(<span class="sig-arg">Rv</span>=<span class="sig-default">3.1</span>,
-        <span class="sig-arg">curve</span>=<span class="sig-default">'cardelli'</span>,
-        <span class="sig-arg">wave</span>=<span class="sig-default">None</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">cardelli1989</span>(<span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -730,22 +768,33 @@
     </td>
   </tr></table>
   
-  <p>Construct extinction laws from Cardelli (1989).</p>
-  <p>Improvement in optical by James E. O'Donnell (1994)</p>
-  <p>wavelengths in Angstrom!</p>
-  <p>This function returns A(lambda)/A(V).</p>
-  <p>To get A(lambda)/E(B-V), multiply the return value with Rv 
-  (A(V)=Rv*E(B-V))</p>
-  <p>Extra kwags are to catch unwanted keyword arguments.</p>
+  <pre class="literalblock">
+
+    Construct extinction laws from Cardelli (1989).
+    
+    Improvement in optical by James E. O'Donnell (1994)
+    
+    wavelengths in Angstrom!
+    
+    This function returns A(lambda)/A(V).
+    
+    To get A(lambda)/E(B-V), multiply the return value with Rv (A(V)=Rv*E(B-V))
+    
+    Extra kwags are to catch unwanted keyword arguments.
+    
+    @param Rv: Rv
+    @type Rv: float
+    @param curve: extinction curve
+    @type curve: string (one of 'cardelli' or 'donnell')
+    @param wave: wavelengths to compute the curve on
+    @type wave: ndarray
+    @return: wavelengths (A), A(lambda)/Av
+    @rtype: (ndarray,ndarray)
+    
+This function is memoized.
+
+</pre>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>Rv</code></strong> (float) - Rv</li>
-        <li><strong class="pname"><code>curve</code></strong> (string (one of 'cardelli' or 'donnell')) - extinction curve</li>
-        <li><strong class="pname"><code>wave</code></strong> (ndarray) - wavelengths to compute the curve on</li>
-    </ul></dd>
-    <dt>Returns: (ndarray,ndarray)</dt>
-        <dd>wavelengths (A), A(lambda)/Av</dd>
     <dt>Decorators:</dt>
     <dd><ul class="nomargin-top">
         <li><code>@memoized</code></li>
@@ -760,8 +809,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">seaton1979</span>(<span class="sig-arg">Rv</span>=<span class="sig-default">3.1</span>,
-        <span class="sig-arg">wave</span>=<span class="sig-default">None</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">seaton1979</span>(<span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -769,19 +817,27 @@
     </td>
   </tr></table>
   
-  <p>Extinction curve from Seaton, 1979.</p>
-  <p>This function returns A(lambda)/A(V).</p>
-  <p>To get A(lambda)/E(B-V), multiply the return value with Rv 
-  (A(V)=Rv*E(B-V))</p>
-  <p>Extra kwags are to catch unwanted keyword arguments.</p>
+  <pre class="literalblock">
+
+    Extinction curve from Seaton, 1979.
+    
+    This function returns A(lambda)/A(V).
+    
+    To get A(lambda)/E(B-V), multiply the return value with Rv (A(V)=Rv*E(B-V))
+    
+    Extra kwags are to catch unwanted keyword arguments.
+    
+    @param Rv: Rv
+    @type Rv: float
+    @param wave: wavelengths to compute the curve on
+    @type wave: ndarray
+    @return: wavelengths (A), A(lambda)/Av
+    @rtype: (ndarray,ndarray)
+    
+This function is memoized.
+
+</pre>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>Rv</code></strong> (float) - Rv</li>
-        <li><strong class="pname"><code>wave</code></strong> (ndarray) - wavelengths to compute the curve on</li>
-    </ul></dd>
-    <dt>Returns: (ndarray,ndarray)</dt>
-        <dd>wavelengths (A), A(lambda)/Av</dd>
     <dt>Decorators:</dt>
     <dd><ul class="nomargin-top">
         <li><code>@memoized</code></li>
@@ -816,7 +872,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:34 2016
+    Generated by Epydoc 3.0.1 on Mon Nov  7 18:01:56 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

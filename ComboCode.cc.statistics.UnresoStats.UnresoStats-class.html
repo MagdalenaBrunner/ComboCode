@@ -91,8 +91,8 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.UnresoStats.UnresoStats-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">star_name</span>,
-        <span class="summary-sig-arg">code</span>=<span class="summary-sig-default">'GASTRoNOoM'</span>,
-        <span class="summary-sig-arg">path_code</span>=<span class="summary-sig-default">'codeSep2010'</span>)</span><br />
+        <span class="summary-sig-arg">code</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">GASTRoNOoM</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">path_code</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">codeSep2010</code><code class="variable-quote">'</code></span>)</span><br />
       Initializing an instance of UnresoStats.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.statistics.UnresoStats-pysrc.html#UnresoStats.__init__">source&nbsp;code</a></span>
@@ -147,7 +147,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.UnresoStats.UnresoStats-class.html#calcChiSquared" class="summary-sig-name">calcChiSquared</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">chi2_method</span>=<span class="summary-sig-default">'diff'</span>,
+        <span class="summary-sig-arg">chi2_method</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">diff</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">ndf</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default">None</span>)</span><br />
       Calculate the chi_squared value for given models and data.</td>
@@ -206,8 +206,8 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.statistics.UnresoStats.UnresoStats-class.html#getRatios" class="summary-sig-name">getRatios</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">this_id</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">sel_type</span>=<span class="summary-sig-default">'peak_ratios'</span>,
-        <span class="summary-sig-arg">data_type</span>=<span class="summary-sig-default">'peak_ratios'</span>,
+        <span class="summary-sig-arg">sel_type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">peak_ratios</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">data_type</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">peak_ratios</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">return_negative</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default">None</span>)</span><br />
       Return all ratios for all filenames, including only the values that 
@@ -260,10 +260,10 @@
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html">Statistics.Statistics</a></code></b>:
-      <code><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#doDataStats">doDataStats</a></code>,
-      <code><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#setDataInfo">setDataInfo</a></code>,
-      <code><a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#setModels">setModels</a></code>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>cc.statistics.Statistics.Statistics</code></b>:
+      <code>doDataStats</code>,
+      <code>setDataInfo</code>,
+      <code>setModels</code>
       </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
@@ -334,8 +334,8 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">star_name</span>,
-        <span class="sig-arg">code</span>=<span class="sig-default">'GASTRoNOoM'</span>,
-        <span class="sig-arg">path_code</span>=<span class="sig-default">'codeSep2010'</span>)</span>
+        <span class="sig-arg">code</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">GASTRoNOoM</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">path_code</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">codeSep2010</code><code class="variable-quote">'</code></span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -383,7 +383,7 @@
         <li><strong class="pname"><code>instrument_name</code></strong> (string) - The instrument (such as 'PACS', 'SPIRE')</li>
     </ul></dd>
     <dt>Overrides:
-        <a href="ComboCode.cc.statistics.Statistics.Statistics-class.html#setInstrument">Statistics.Statistics.setInstrument</a>
+        cc.statistics.Statistics.Statistics.setInstrument
     </dt>
   </dl>
 </td></tr></table>
@@ -417,7 +417,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">calcChiSquared</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">chi2_method</span>=<span class="sig-default">'diff'</span>,
+        <span class="sig-arg">chi2_method</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">diff</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">ndf</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">filename</span>=<span class="sig-default">None</span>)</span>
   </h3>
@@ -516,8 +516,8 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getRatios</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">this_id</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">sel_type</span>=<span class="sig-default">'peak_ratios'</span>,
-        <span class="sig-arg">data_type</span>=<span class="sig-default">'peak_ratios'</span>,
+        <span class="sig-arg">sel_type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">peak_ratios</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">data_type</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">peak_ratios</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">return_negative</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">filename</span>=<span class="sig-default">None</span>)</span>
   </h3>
@@ -646,7 +646,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:37 2016
+    Generated by Epydoc 3.0.1 on Mon Nov  7 18:01:58 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

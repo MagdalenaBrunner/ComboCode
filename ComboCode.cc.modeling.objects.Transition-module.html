@@ -113,7 +113,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#getLineStrengths" class="summary-sig-name">getLineStrengths</a>(<span class="summary-sig-arg">trl</span>,
-        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default">'dint'</span>,
+        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">dint</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">nans</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">n_data</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">scale</span>=<span class="summary-sig-default">0</span>,
@@ -137,7 +137,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#getTransFromStarGrid" class="summary-sig-name">getTransFromStarGrid</a>(<span class="summary-sig-arg">sg</span>,
         <span class="summary-sig-arg">criterion</span>,
-        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default">'index'</span>)</span><br />
+        <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">index</code><code class="variable-quote">'</code></span>)</span><br />
       Select a transition from a list of Star() objects based on a given 
       criterion.</td>
           <td align="right" valign="top">
@@ -158,7 +158,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.objects.Transition-module.html#extractTransFromStars" class="summary-sig-name">extractTransFromStars</a>(<span class="summary-sig-arg">star_grid</span>,
         <span class="summary-sig-arg">sort_freq</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">sort_molec</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">dtype</span>=<span class="summary-sig-default">'all'</span>,
+        <span class="summary-sig-arg">dtype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">all</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">reset_data</span>=<span class="summary-sig-default">1</span>)</span><br />
       Extract a list a of unique transitions included in a list of Star() 
       objects and sort them.</td>
@@ -273,17 +273,17 @@
         <span class="summary-sig-arg">telescope</span>,
         <span class="summary-sig-arg">ls_min</span>,
         <span class="summary-sig-arg">ls_max</span>,
-        <span class="summary-sig-arg">ls_unit</span>=<span class="summary-sig-default">'GHz'</span>,
+        <span class="summary-sig-arg">ls_unit</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">GHz</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">n_quad</span>=<span class="summary-sig-default">100</span>,
         <span class="summary-sig-arg">offset</span>=<span class="summary-sig-default">0.0</span>,
         <span class="summary-sig-arg">path_gastronoom</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">no_vib</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">fraction_tau_step</span>=<span class="summary-sig-default">1e-2</span>,
+        <span class="summary-sig-arg">fraction_tau_step</span>=<span class="summary-sig-default">0.01</span>,
         <span class="summary-sig-arg">write_intensities</span>=<span class="summary-sig-default">0</span>,
-        <span class="summary-sig-arg">tau_max</span>=<span class="summary-sig-default">12.</span>,
-        <span class="summary-sig-arg">tau_min</span>=<span class="summary-sig-default">-6.</span>,
-        <span class="summary-sig-arg">check_tau_step</span>=<span class="summary-sig-default">1e-2</span>,
-        <span class="summary-sig-arg">min_tau_step</span>=<span class="summary-sig-default">1e-4</span>)</span><br />
+        <span class="summary-sig-arg">tau_max</span>=<span class="summary-sig-default">12.0</span>,
+        <span class="summary-sig-arg">tau_min</span>=<span class="summary-sig-default">-6.0</span>,
+        <span class="summary-sig-arg">check_tau_step</span>=<span class="summary-sig-default">0.01</span>,
+        <span class="summary-sig-arg">min_tau_step</span>=<span class="summary-sig-default">0.0001</span>)</span><br />
       Make Transition() objects from a Radiat file of a molecule, within a 
       given wavelength/frequency range.</td>
           <td align="right" valign="top">
@@ -313,6 +313,31 @@
     </td>
   </tr>
 </table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.modeling.objects'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.modeling.objects</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
 <!-- ==================== FUNCTION DETAILS ==================== -->
 <a name="section-FunctionDetails"></a>
 <table class="details" border="1" cellpadding="3"
@@ -339,7 +364,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getLineStrengths</span>(<span class="sig-arg">trl</span>,
-        <span class="sig-arg">mode</span>=<span class="sig-default">'dint'</span>,
+        <span class="sig-arg">mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">dint</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">nans</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">n_data</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">scale</span>=<span class="sig-default">0</span>,
@@ -417,7 +442,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">getTransFromStarGrid</span>(<span class="sig-arg">sg</span>,
         <span class="sig-arg">criterion</span>,
-        <span class="sig-arg">mode</span>=<span class="sig-default">'index'</span>)</span>
+        <span class="sig-arg">mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">index</code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#getTransFromStarGrid">source&nbsp;code</a></span>&nbsp;
@@ -454,7 +479,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">extractTransFromStars</span>(<span class="sig-arg">star_grid</span>,
         <span class="sig-arg">sort_freq</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">sort_molec</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">dtype</span>=<span class="sig-default">'all'</span>,
+        <span class="sig-arg">dtype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">all</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">reset_data</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -672,17 +697,17 @@
         <span class="sig-arg">telescope</span>,
         <span class="sig-arg">ls_min</span>,
         <span class="sig-arg">ls_max</span>,
-        <span class="sig-arg">ls_unit</span>=<span class="sig-default">'GHz'</span>,
+        <span class="sig-arg">ls_unit</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">GHz</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">n_quad</span>=<span class="sig-default">100</span>,
         <span class="sig-arg">offset</span>=<span class="sig-default">0.0</span>,
         <span class="sig-arg">path_gastronoom</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">no_vib</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">fraction_tau_step</span>=<span class="sig-default">1e-2</span>,
+        <span class="sig-arg">fraction_tau_step</span>=<span class="sig-default">0.01</span>,
         <span class="sig-arg">write_intensities</span>=<span class="sig-default">0</span>,
-        <span class="sig-arg">tau_max</span>=<span class="sig-default">12.</span>,
-        <span class="sig-arg">tau_min</span>=<span class="sig-default">-6.</span>,
-        <span class="sig-arg">check_tau_step</span>=<span class="sig-default">1e-2</span>,
-        <span class="sig-arg">min_tau_step</span>=<span class="sig-default">1e-4</span>)</span>
+        <span class="sig-arg">tau_max</span>=<span class="sig-default">12.0</span>,
+        <span class="sig-arg">tau_min</span>=<span class="sig-default">-6.0</span>,
+        <span class="sig-arg">check_tau_step</span>=<span class="sig-default">0.01</span>,
+        <span class="sig-arg">min_tau_step</span>=<span class="sig-default">0.0001</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.modeling.objects.Transition-pysrc.html#makeTransitionsFromRadiat">source&nbsp;code</a></span>&nbsp;
@@ -790,7 +815,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:35 2016
+    Generated by Epydoc 3.0.1 on Mon Nov  7 18:01:56 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

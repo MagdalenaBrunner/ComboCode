@@ -266,16 +266,12 @@
     absolute luminosity assuming the star has a radius of 1Rsol. Multiply 
     by Rstar**2 to get the true luminosity.</p>
     <p>Because photometric filters cannot trivially be assigned a 
-    <b>wavelength</b> to (see <a 
-    href="ComboCode.cc.ivs.sed.filters-module.html#eff_wave" 
-    class="link">filters.eff_wave</a>), by default, no wavelength 
+    <b>wavelength</b> to (see filters.eff_wave), by default, no wavelength 
     information is retrieved. If you want to retrieve the effective 
     wavelengths of the filters themselves (not taking into account the 
     model atmospheres), you can give an extra keyword argument 
     <code>wave_units</code>. If you want to take into account the model 
-    atmosphere, use <a 
-    href="ComboCode.cc.ivs.sed.filters-module.html#eff_wave" 
-    class="link">filters.eff_wave</a>.</p>
+    atmosphere, use filters.eff_wave.</p>
 <pre class="py-doctest">
 <span class="py-prompt">&gt;&gt;&gt; </span>photbands = [<span class="py-string">'GENEVA.U'</span>,<span class="py-string">'2MASS.J'</span>]
 <span class="py-prompt">&gt;&gt;&gt; </span>fluxes,Labs = get_itable(teff=16321,logg=4.321,ebv=0.12345,z=0.123,photbands=photbands)
@@ -360,13 +356,7 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#_get_itable_markers" class="summary-sig-name" onclick="show_private();">_get_itable_markers</a>(<span class="summary-sig-arg">photbands</span>,
-        <span class="summary-sig-arg">teffrange</span>=<span class="summary-sig-default">(-np.inf,np.inf)</span>,
-        <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default">(-np.inf,np.inf)</span>,
-        <span class="summary-sig-arg">ebvrange</span>=<span class="summary-sig-default">(-np.inf,np.inf)</span>,
-        <span class="summary-sig-arg">zrange</span>=<span class="summary-sig-default">(-np.inf,np.inf)</span>,
-        <span class="summary-sig-arg">include_Labs</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">clear_memory</span>=<span class="summary-sig-default">True</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#_get_itable_markers" class="summary-sig-name" onclick="show_private();">_get_itable_markers</a>(<span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Get a list of markers to more easily retrieve integrated fluxes.</td>
           <td align="right" valign="top">
@@ -384,16 +374,7 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#_get_pix_grid" class="summary-sig-name" onclick="show_private();">_get_pix_grid</a>(<span class="summary-sig-arg">photbands</span>,
-        <span class="summary-sig-arg">teffrange</span>=<span class="summary-sig-default">(-np.inf,np.inf)</span>,
-        <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default">(-np.inf,np.inf)</span>,
-        <span class="summary-sig-arg">ebvrange</span>=<span class="summary-sig-default">(-np.inf,np.inf)</span>,
-        <span class="summary-sig-arg">zrange</span>=<span class="summary-sig-default">(-np.inf,np.inf)</span>,
-        <span class="summary-sig-arg">rvrange</span>=<span class="summary-sig-default">(-np.inf,np.inf)</span>,
-        <span class="summary-sig-arg">vradrange</span>=<span class="summary-sig-default">(-np.inf,np.inf)</span>,
-        <span class="summary-sig-arg">include_Labs</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">clear_memory</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">variables</span>=<span class="summary-sig-default">['teff','logg','ebv','z','rv','vrad']</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#_get_pix_grid" class="summary-sig-name" onclick="show_private();">_get_pix_grid</a>(<span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Prepare the pixalted grid.</td>
           <td align="right" valign="top">
@@ -557,10 +538,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#blackbody" class="summary-sig-name">blackbody</a>(<span class="summary-sig-arg">x</span>,
         <span class="summary-sig-arg">T</span>,
-        <span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default">'AA'</span>,
-        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default">'erg/s/cm2/AA'</span>,
-        <span class="summary-sig-arg">disc_integrated</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">ang_diam</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Definition of black body curve.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#blackbody">source&nbsp;code</a></span>
@@ -579,10 +557,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#rayleigh_jeans" class="summary-sig-name">rayleigh_jeans</a>(<span class="summary-sig-arg">x</span>,
         <span class="summary-sig-arg">T</span>,
-        <span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default">'AA'</span>,
-        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default">'erg/s/cm2/AA'</span>,
-        <span class="summary-sig-arg">disc_integrated</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">ang_diam</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Rayleigh-Jeans approximation of a black body.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#rayleigh_jeans">source&nbsp;code</a></span>
@@ -601,10 +576,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#wien" class="summary-sig-name">wien</a>(<span class="summary-sig-arg">x</span>,
         <span class="summary-sig-arg">T</span>,
-        <span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default">'AA'</span>,
-        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default">'erg/s/cm2/AA'</span>,
-        <span class="summary-sig-arg">disc_integrated</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">ang_diam</span>=<span class="summary-sig-default">None</span>)</span><br />
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Wien approximation of a black body.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#wien">source&nbsp;code</a></span>
@@ -626,8 +598,8 @@
         <span class="summary-sig-arg">ebv</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">rad</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">star</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default">'AA'</span>,
-        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default">'erg/s/cm2/AA/sr'</span>,
+        <span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">AA</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/s/cm2/AA/sr</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Retrieve the spectral energy distribution of a model atmosphere.</td>
           <td align="right" valign="top">
@@ -652,7 +624,7 @@
         <span class="summary-sig-arg">rad</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">photbands</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default">'erg/s/cm2/AA/sr'</span>,
+        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/s/cm2/AA/sr</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Retrieve the spectral energy distribution of a model atmosphere in 
       photometric passbands.</td>
@@ -673,7 +645,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#get_itable" class="summary-sig-name">get_itable</a>(<span class="summary-sig-arg">photbands</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default">'erg/s/cm2/AA/sr'</span>,
+        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/s/cm2/AA/sr</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">grids</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Retrieve the integrated spectral energy distribution of a combined 
@@ -701,7 +673,7 @@
         <span class="summary-sig-arg">vrad</span>=<span class="summary-sig-default">0</span>,
         <span class="summary-sig-arg">photbands</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default">'erg/s/cm2/AA/sr'</span>,
+        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/s/cm2/AA/sr</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Super fast grid interpolator.</td>
           <td align="right" valign="top">
@@ -721,7 +693,7 @@
         <tr>
           <td><span class="summary-sig"><a name="get_itable_pix"></a><span class="summary-sig-name">get_itable_pix</span>(<span class="summary-sig-arg">photbands</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default">'erg/s/cm2/AA/sr'</span>,
+        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/s/cm2/AA/sr</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">grids</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Super fast grid interpolator for multiple tables, completely based on
@@ -741,8 +713,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#get_table" class="summary-sig-name">get_table</a>(<span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default">'AA'</span>,
-        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default">'erg/cm2/s/AA/sr'</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#get_table" class="summary-sig-name">get_table</a>(<span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">AA</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/cm2/s/AA/sr</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">grids</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">full_output</span>=<span class="summary-sig-default">False</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
@@ -794,16 +766,13 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">(3x1Darray,3Darray,interp_func)</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#get_grid_mesh" class="summary-sig-name">get_grid_mesh</a>(<span class="summary-sig-arg">wave</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">teffrange</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">loggrange</span>=<span class="summary-sig-default">None</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#get_grid_mesh" class="summary-sig-name">get_grid_mesh</a>(<span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
-      Return InterpolatingFunction spanning the available grid of 
-      atmosphere models.</td>
+      Return InterpolatingFunction spanning the available grid of atmosphere models.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#get_grid_mesh">source&nbsp;code</a></span>
             
@@ -822,7 +791,7 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#list_calibrators" class="summary-sig-name">list_calibrators</a>(<span class="summary-sig-arg">library</span>=<span class="summary-sig-default">'calspec'</span>)</span><br />
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#list_calibrators" class="summary-sig-name">list_calibrators</a>(<span class="summary-sig-arg">library</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">calspec</code><code class="variable-quote">'</code></span>)</span><br />
       Print and return the list of calibrators</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#list_calibrators">source&nbsp;code</a></span>
@@ -839,11 +808,11 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#get_calibrator" class="summary-sig-name">get_calibrator</a>(<span class="summary-sig-arg">name</span>=<span class="summary-sig-default">'alpha_lyr'</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#get_calibrator" class="summary-sig-name">get_calibrator</a>(<span class="summary-sig-arg">name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">alpha_lyr</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">version</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">wave_units</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">flux_units</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">library</span>=<span class="summary-sig-default">'calspec'</span>)</span><br />
+        <span class="summary-sig-arg">library</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">calspec</code><code class="variable-quote">'</code></span>)</span><br />
       Retrieve a calibration SED</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#get_calibrator">source&nbsp;code</a></span>
@@ -860,7 +829,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#read_calibrator_info" class="summary-sig-name">read_calibrator_info</a>(<span class="summary-sig-arg">library</span>=<span class="summary-sig-default">'ngsl'</span>)</span></td>
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#read_calibrator_info" class="summary-sig-name">read_calibrator_info</a>(<span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span></td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#read_calibrator_info">source&nbsp;code</a></span>
             
@@ -938,7 +908,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.sed.model-module.html#luminosity" class="summary-sig-name">luminosity</a>(<span class="summary-sig-arg">wave</span>,
         <span class="summary-sig-arg">flux</span>,
-        <span class="summary-sig-arg">radius</span>=<span class="summary-sig-default">1.</span>)</span><br />
+        <span class="summary-sig-arg">radius</span>=<span class="summary-sig-default">1.0</span>)</span><br />
       Calculate the bolometric luminosity of a model SED.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#luminosity">source&nbsp;code</a></span>
@@ -971,7 +941,7 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="new_scipy"></a><span class="summary-name">new_scipy</span> = <code title="False">False</code>
+        <a name="new_scipy"></a><span class="summary-name">new_scipy</span> = <code title="True">True</code>
     </td>
   </tr>
 <tr>
@@ -985,30 +955,52 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="ComboCode.cc.ivs.sed.model-module.html#caldir" class="summary-name">caldir</a> = <code title="os.path.join(cc.path.ivsdata, 'sedtables', 'calibrators')">os.path.join(cc.path.ivsdata, 'sedtables', 'calibrato<code class="variable-ellipsis">...</code></code>
+        <a href="ComboCode.cc.ivs.sed.model-module.html#caldir" class="summary-name">caldir</a> = <code title="'/Users/robinl/ComboCode/aux/ivsdata/sedtables/calibrators'"><code class="variable-quote">'</code><code class="variable-string">/Users/robinl/ComboCode/aux/ivsdata/sedtables/calibr</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="ComboCode.cc.ivs.sed.model-module.html#__defaults__" class="summary-name">__defaults__</a> = <code title="dict(grid= 'kurucz', odfnew= True, z=+ 0.0, vturb= 2, alpha= False, no\
-ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
-5, Rv= 3.1, law= 'fitzpatrick2004', use_scratch= False)">dict(grid= 'kurucz', odfnew= True, z=+ 0.0, vtu<code class="variable-ellipsis">...</code></code>
+        <a href="ComboCode.cc.ivs.sed.model-module.html#__defaults__" class="summary-name">__defaults__</a> = <code title="{'He': 97,
+ 'Rv': 3.1,
+ 'a': 0.0,
+ 'alpha': False,
+ 'c': 0.5,
+ 'co': 1.05,
+ 'ct': 'mlt',
+ 'grid': 'kurucz',
+..."><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">He</code><code class="variable-quote">'</code><code class="variable-op">: </code>97<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">Rv</code><code class="variable-quote">'</code><code class="variable-op">: </code>3.1<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">a</code><code class="variable-quote">'</code><code class="variable-op">: </code>0.0<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">alpha</code><code class="variable-quote">'</code><code class="variable-op">: </code>False<code class="variable-op">,</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="defaults"></a><span class="summary-name">defaults</span> = <code title="__defaults__.copy()">__defaults__.copy()</code>
+        <a href="ComboCode.cc.ivs.sed.model-module.html#defaults" class="summary-name">defaults</a> = <code title="{'He': 97,
+ 'Rv': 3.1,
+ 'a': 0.0,
+ 'alpha': False,
+ 'c': 0.5,
+ 'co': 1.05,
+ 'ct': 'mlt',
+ 'grid': 'kurucz',
+..."><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">He</code><code class="variable-quote">'</code><code class="variable-op">: </code>97<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">Rv</code><code class="variable-quote">'</code><code class="variable-op">: </code>3.1<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">a</code><code class="variable-quote">'</code><code class="variable-op">: </code>0.0<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">alpha</code><code class="variable-quote">'</code><code class="variable-op">: </code>False<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">c</code><code class="variable-quote">'</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="defaults_multiple"></a><span class="summary-name">defaults_multiple</span> = <code title="[defaults.copy(), defaults.copy()]">[defaults.copy(), defaults.copy()]</code>
+        <a href="ComboCode.cc.ivs.sed.model-module.html#defaults_multiple" class="summary-name">defaults_multiple</a> = <code title="[{'He': 97,
+  'Rv': 3.1,
+  'a': 0.0,
+  'alpha': False,
+  'c': 0.5,
+  'co': 1.05,
+  'ct': 'mlt',
+  'grid': 'kurucz',
+..."><code class="variable-group">[</code><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">He</code><code class="variable-quote">'</code><code class="variable-op">: </code>97<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">Rv</code><code class="variable-quote">'</code><code class="variable-op">: </code>3.1<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">a</code><code class="variable-quote">'</code><code class="variable-op">: </code>0.0<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">alpha</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
@@ -1017,6 +1009,13 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
     </td><td class="summary">
         <a name="scratchdir"></a><span class="summary-name">scratchdir</span> = <code title="None">None</code><br />
       hash(x)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.ivs.sed'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.ivs.sed</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -1266,10 +1265,7 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">blackbody</span>(<span class="sig-arg">x</span>,
         <span class="sig-arg">T</span>,
-        <span class="sig-arg">wave_units</span>=<span class="sig-default">'AA'</span>,
-        <span class="sig-arg">flux_units</span>=<span class="sig-default">'erg/s/cm2/AA'</span>,
-        <span class="sig-arg">disc_integrated</span>=<span class="sig-default">True</span>,
-        <span class="sig-arg">ang_diam</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#blackbody">source&nbsp;code</a></span>&nbsp;
@@ -1289,8 +1285,8 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
   units, and can even mix them. To be sure that everything is handled 
   correctly, we need to do some preprocessing and unit conversions.</p>
   <p>Be careful when, e.g. during fitting, scale contains an error: be sure
-  to set the option <code>unpack=True</code> in the <code 
-  class="link">conversions.convert</code> function!</p>
+  to set the option <code>unpack=True</code> in the conversions.convert 
+  function!</p>
 <pre class="py-doctest">
 <span class="py-prompt">&gt;&gt;&gt; </span>x = np.linspace(2.3595,193.872,500)
 <span class="py-prompt">&gt;&gt;&gt; </span>F1 = blackbody(x,280.,wave_units=<span class="py-string">'AA'</span>,flux_units=<span class="py-string">'Jy'</span>,ang_diam=(1.,<span class="py-string">'mas'</span>))
@@ -1339,10 +1335,7 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">rayleigh_jeans</span>(<span class="sig-arg">x</span>,
         <span class="sig-arg">T</span>,
-        <span class="sig-arg">wave_units</span>=<span class="sig-default">'AA'</span>,
-        <span class="sig-arg">flux_units</span>=<span class="sig-default">'erg/s/cm2/AA'</span>,
-        <span class="sig-arg">disc_integrated</span>=<span class="sig-default">True</span>,
-        <span class="sig-arg">ang_diam</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#rayleigh_jeans">source&nbsp;code</a></span>&nbsp;
@@ -1373,10 +1366,7 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">wien</span>(<span class="sig-arg">x</span>,
         <span class="sig-arg">T</span>,
-        <span class="sig-arg">wave_units</span>=<span class="sig-default">'AA'</span>,
-        <span class="sig-arg">flux_units</span>=<span class="sig-default">'erg/s/cm2/AA'</span>,
-        <span class="sig-arg">disc_integrated</span>=<span class="sig-default">True</span>,
-        <span class="sig-arg">ang_diam</span>=<span class="sig-default">None</span>)</span>
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#wien">source&nbsp;code</a></span>&nbsp;
@@ -1410,8 +1400,8 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
         <span class="sig-arg">ebv</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">rad</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">star</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">wave_units</span>=<span class="sig-default">'AA'</span>,
-        <span class="sig-arg">flux_units</span>=<span class="sig-default">'erg/s/cm2/AA/sr'</span>,
+        <span class="sig-arg">wave_units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">AA</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">flux_units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/s/cm2/AA/sr</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1490,7 +1480,7 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
         <span class="sig-arg">rad</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">photbands</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">wave_units</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">flux_units</span>=<span class="sig-default">'erg/s/cm2/AA/sr'</span>,
+        <span class="sig-arg">flux_units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/s/cm2/AA/sr</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1540,7 +1530,7 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_itable</span>(<span class="sig-arg">photbands</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">wave_units</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">flux_units</span>=<span class="sig-default">'erg/s/cm2/AA/sr'</span>,
+        <span class="sig-arg">flux_units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/s/cm2/AA/sr</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">grids</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -1606,7 +1596,7 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
         <span class="sig-arg">vrad</span>=<span class="sig-default">0</span>,
         <span class="sig-arg">photbands</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">wave_units</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">flux_units</span>=<span class="sig-default">'erg/s/cm2/AA/sr'</span>,
+        <span class="sig-arg">flux_units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/s/cm2/AA/sr</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1658,8 +1648,8 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_table</span>(<span class="sig-arg">wave_units</span>=<span class="sig-default">'AA'</span>,
-        <span class="sig-arg">flux_units</span>=<span class="sig-default">'erg/cm2/s/AA/sr'</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_table</span>(<span class="sig-arg">wave_units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">AA</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">flux_units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/cm2/s/AA/sr</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">grids</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">full_output</span>=<span class="sig-default">False</span>,
         <span class="sig-arg">**kwargs</span>)</span>
@@ -1755,9 +1745,7 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_grid_mesh</span>(<span class="sig-arg">wave</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">teffrange</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">loggrange</span>=<span class="sig-default">None</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_grid_mesh</span>(<span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1765,32 +1753,41 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
     </td>
   </tr></table>
   
-  <p>Return InterpolatingFunction spanning the available grid of atmosphere
-  models.</p>
-  <p>WARNING: the grid must be entirely defined on a mesh grid, but it does
-  not need to be equidistant.</p>
-  <p>It is thus the user's responsibility to know whether the grid is 
-  evenly spaced in logg and teff (e.g. this is not so for the CMFGEN 
-  models).</p>
-  <p>You can supply your own wavelength range, since the grid models' 
-  resolution are not necessarily homogeneous. If not, the first wavelength 
-  array found in the grid will be used as a template.</p>
-  <p>It might take a long a time and cost a lot of memory if you load the 
-  entire grid. Therefor, you can also set range of temperature and 
-  gravity.</p>
-  <p>WARNING: 30000,50000 did not work out for FASTWIND, since we miss a 
-  model!</p>
-  <p>Example usage:</p>
+  <pre class="literalblock">
+
+    Return InterpolatingFunction spanning the available grid of atmosphere models.
+    
+    WARNING: the grid must be entirely defined on a mesh grid, but it does not
+    need to be equidistant.
+    
+    It is thus the user's responsibility to know whether the grid is evenly
+    spaced in logg and teff (e.g. this is not so for the CMFGEN models).
+    
+    You can supply your own wavelength range, since the grid models'
+    resolution are not necessarily homogeneous. If not, the first wavelength
+    array found in the grid will be used as a template.
+        
+    It might take a long a time and cost a lot of memory if you load the entire
+    grid. Therefor, you can also set range of temperature and gravity.
+    
+    WARNING: 30000,50000 did not work out for FASTWIND, since we miss a model!
+    
+    Example usage:
+    
+    @param wave: wavelength to define the grid on
+    @type wave: ndarray
+    @param teffrange: starting and ending of the grid in teff
+    @type teffrange: tuple of floats
+    @param loggrange: starting and ending of the grid in logg
+    @type loggrange: tuple of floats
+    @return: wavelengths, teffs, loggs and fluxes of grid, and the interpolating
+    function
+    @rtype: (3x1Darray,3Darray,interp_func)
+    
+This function is memoized.
+
+</pre>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>wave</code></strong> (ndarray) - wavelength to define the grid on</li>
-        <li><strong class="pname"><code>teffrange</code></strong> (tuple of floats) - starting and ending of the grid in teff</li>
-        <li><strong class="pname"><code>loggrange</code></strong> (tuple of floats) - starting and ending of the grid in logg</li>
-    </ul></dd>
-    <dt>Returns: (3x1Darray,3Darray,interp_func)</dt>
-        <dd>wavelengths, teffs, loggs and fluxes of grid, and the 
-          interpolating function</dd>
     <dt>Decorators:</dt>
     <dd><ul class="nomargin-top">
         <li><code>@memoized</code></li>
@@ -1805,7 +1802,7 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">list_calibrators</span>(<span class="sig-arg">library</span>=<span class="sig-default">'calspec'</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">list_calibrators</span>(<span class="sig-arg">library</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">calspec</code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#list_calibrators">source&nbsp;code</a></span>&nbsp;
@@ -1830,11 +1827,11 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_calibrator</span>(<span class="sig-arg">name</span>=<span class="sig-default">'alpha_lyr'</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_calibrator</span>(<span class="sig-arg">name</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">alpha_lyr</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">version</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">wave_units</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">flux_units</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">library</span>=<span class="sig-default">'calspec'</span>)</span>
+        <span class="sig-arg">library</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">calspec</code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#get_calibrator">source&nbsp;code</a></span>&nbsp;
@@ -1867,7 +1864,8 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">read_calibrator_info</span>(<span class="sig-arg">library</span>=<span class="sig-default">'ngsl'</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">read_calibrator_info</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#read_calibrator_info">source&nbsp;code</a></span>&nbsp;
@@ -2065,7 +2063,7 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">luminosity</span>(<span class="sig-arg">wave</span>,
         <span class="sig-arg">flux</span>,
-        <span class="sig-arg">radius</span>=<span class="sig-default">1.</span>)</span>
+        <span class="sig-arg">radius</span>=<span class="sig-default">1.0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="ComboCode.cc.ivs.sed.model-pysrc.html#luminosity">source&nbsp;code</a></span>&nbsp;
@@ -2098,13 +2096,7 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">_get_itable_markers</span>(<span class="sig-arg">photbands</span>,
-        <span class="sig-arg">teffrange</span>=<span class="sig-default">(-np.inf,np.inf)</span>,
-        <span class="sig-arg">loggrange</span>=<span class="sig-default">(-np.inf,np.inf)</span>,
-        <span class="sig-arg">ebvrange</span>=<span class="sig-default">(-np.inf,np.inf)</span>,
-        <span class="sig-arg">zrange</span>=<span class="sig-default">(-np.inf,np.inf)</span>,
-        <span class="sig-arg">include_Labs</span>=<span class="sig-default">True</span>,
-        <span class="sig-arg">clear_memory</span>=<span class="sig-default">True</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_get_itable_markers</span>(<span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -2112,7 +2104,13 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
     </td>
   </tr></table>
   
-  <p>Get a list of markers to more easily retrieve integrated fluxes.</p>
+  <pre class="literalblock">
+
+    Get a list of markers to more easily retrieve integrated fluxes.
+    
+This function is memoized.
+
+</pre>
   <dl class="fields">
     <dt>Decorators:</dt>
     <dd><ul class="nomargin-top">
@@ -2128,16 +2126,7 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">_get_pix_grid</span>(<span class="sig-arg">photbands</span>,
-        <span class="sig-arg">teffrange</span>=<span class="sig-default">(-np.inf,np.inf)</span>,
-        <span class="sig-arg">loggrange</span>=<span class="sig-default">(-np.inf,np.inf)</span>,
-        <span class="sig-arg">ebvrange</span>=<span class="sig-default">(-np.inf,np.inf)</span>,
-        <span class="sig-arg">zrange</span>=<span class="sig-default">(-np.inf,np.inf)</span>,
-        <span class="sig-arg">rvrange</span>=<span class="sig-default">(-np.inf,np.inf)</span>,
-        <span class="sig-arg">vradrange</span>=<span class="sig-default">(-np.inf,np.inf)</span>,
-        <span class="sig-arg">include_Labs</span>=<span class="sig-default">True</span>,
-        <span class="sig-arg">clear_memory</span>=<span class="sig-default">True</span>,
-        <span class="sig-arg">variables</span>=<span class="sig-default">['teff','logg','ebv','z','rv','vrad']</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_get_pix_grid</span>(<span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -2147,12 +2136,14 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0\
   
   <pre class="literalblock">
 
-Prepare the pixalted grid.
-
-In principle, it should be possible to return any number of free parameters
-here. I'm thinking about:
-
-    teff, logg, ebv, z, Rv, vrad.
+    Prepare the pixalted grid.
+    
+    In principle, it should be possible to return any number of free parameters
+    here. I'm thinking about:
+    
+        teff, logg, ebv, z, Rv, vrad.
+    
+This function is memoized.
 
 </pre>
   <dl class="fields">
@@ -2224,7 +2215,7 @@ here. I'm thinking about:
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-os.path.join(cc.path.ivsdata, 'sedtables', 'calibrators')
+<code class="variable-quote">'</code><code class="variable-string">/Users/robinl/ComboCode/aux/ivsdata/sedtables/calibrators</code><code class="variable-quote">'</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -2242,9 +2233,67 @@ os.path.join(cc.path.ivsdata, 'sedtables', 'calibrators')
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-dict(grid= 'kurucz', odfnew= True, z=+ 0.0, vturb= 2, alpha= False, no<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-5, Rv= 3.1, law= 'fitzpatrick2004', use_scratch= False)
+<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">He</code><code class="variable-quote">'</code><code class="variable-op">: </code>97<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">Rv</code><code class="variable-quote">'</code><code class="variable-op">: </code>3.1<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">a</code><code class="variable-quote">'</code><code class="variable-op">: </code>0.0<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">alpha</code><code class="variable-quote">'</code><code class="variable-op">: </code>False<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">c</code><code class="variable-quote">'</code><code class="variable-op">: </code>0.5<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">co</code><code class="variable-quote">'</code><code class="variable-op">: </code>1.05<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">ct</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">mlt</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">grid</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">kurucz</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="defaults"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">defaults</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">He</code><code class="variable-quote">'</code><code class="variable-op">: </code>97<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">Rv</code><code class="variable-quote">'</code><code class="variable-op">: </code>3.1<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">a</code><code class="variable-quote">'</code><code class="variable-op">: </code>0.0<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">alpha</code><code class="variable-quote">'</code><code class="variable-op">: </code>False<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">c</code><code class="variable-quote">'</code><code class="variable-op">: </code>0.5<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">co</code><code class="variable-quote">'</code><code class="variable-op">: </code>1.05<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">ct</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">mlt</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">grid</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">kurucz</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="defaults_multiple"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">defaults_multiple</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">[</code><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">He</code><code class="variable-quote">'</code><code class="variable-op">: </code>97<code class="variable-op">,</code>
+  <code class="variable-quote">'</code><code class="variable-string">Rv</code><code class="variable-quote">'</code><code class="variable-op">: </code>3.1<code class="variable-op">,</code>
+  <code class="variable-quote">'</code><code class="variable-string">a</code><code class="variable-quote">'</code><code class="variable-op">: </code>0.0<code class="variable-op">,</code>
+  <code class="variable-quote">'</code><code class="variable-string">alpha</code><code class="variable-quote">'</code><code class="variable-op">: </code>False<code class="variable-op">,</code>
+  <code class="variable-quote">'</code><code class="variable-string">c</code><code class="variable-quote">'</code><code class="variable-op">: </code>0.5<code class="variable-op">,</code>
+  <code class="variable-quote">'</code><code class="variable-string">co</code><code class="variable-quote">'</code><code class="variable-op">: </code>1.05<code class="variable-op">,</code>
+  <code class="variable-quote">'</code><code class="variable-string">ct</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">mlt</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+  <code class="variable-quote">'</code><code class="variable-string">grid</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">kurucz</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -2277,7 +2326,7 @@ ver= False, He= 97, ct= 'mlt', t= 1.0, a= 0.0, c= 0.5, m= 1.0, co= 1.0<span clas
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:34 2016
+    Generated by Epydoc 3.0.1 on Mon Nov  7 18:01:56 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

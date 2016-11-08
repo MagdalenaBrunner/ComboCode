@@ -73,8 +73,6 @@
   I/O, and setting input physics.</p>
   <p>For now limited to the energy balance from the dust formation radius 
   up to the outer radius.</p>
-  <p>NYI: line cooling/heating, comisc ray heating, photoelectric 
-  heating.</p>
   <p>An example for calculating the energy balance (see the respective 
   functions for in-depth information): &gt;&gt;&gt; from 
   cc.modeling.physics import EnergyBalance as EB &gt;&gt;&gt; eb = 
@@ -133,7 +131,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">template</span>=<span class="summary-sig-default">'standard'</span>,
+        <span class="summary-sig-arg">template</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">standard</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Creating an EnergyBalance object used to calculate the energy 
       balance.</td>
@@ -473,7 +471,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#updatePop" class="summary-sig-name">updatePop</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">m</span>,
-        <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">updateLC</span>=<span class="summary-sig-default">0</span>)</span><br />
       Update the level populations.</td>
           <td align="right" valign="top">
@@ -511,8 +509,8 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#iterT" class="summary-sig-name">iterT</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">conv</span>=<span class="summary-sig-default">0.01</span>,
         <span class="summary-sig-arg">imax</span>=<span class="summary-sig-default">50</span>,
-        <span class="summary-sig-arg">step_size</span>=<span class="summary-sig-default">0.05</span>,
-        <span class="summary-sig-arg">dTmax</span>=<span class="summary-sig-default">0.20</span>,
+        <span class="summary-sig-arg">step_size</span>=<span class="summary-sig-default">0.0</span>,
+        <span class="summary-sig-arg">dTmax</span>=<span class="summary-sig-default">0.1</span>,
         <span class="summary-sig-arg">warn</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
@@ -536,7 +534,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#calcT" class="summary-sig-name">calcT</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">dTmax</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">warn</span>=<span class="summary-sig-default">1</span>,
-        <span class="summary-sig-arg">ode_kwargs</span>=<span class="summary-sig-default">{}</span>,
+        <span class="summary-sig-arg">ode_kwargs</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
         <span class="summary-sig-arg">*args</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Calculate the temperature profile based on the differential equation 
@@ -678,9 +676,9 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#plotRateIterations" class="summary-sig-name">plotRateIterations</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">iterations</span>=<span class="summary-sig-default">[]</span>,
-        <span class="summary-sig-arg">dTsign</span>=<span class="summary-sig-default">'C'</span>,
-        <span class="summary-sig-arg">mechanism</span>=<span class="summary-sig-default">'ad'</span>,
+        <span class="summary-sig-arg">iterations</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">dTsign</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">C</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">mechanism</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">ad</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">scale</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">None</span>,
@@ -727,7 +725,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#plotT" class="summary-sig-name">plotT</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">iterations</span>=<span class="summary-sig-default">[]</span>,
+        <span class="summary-sig-arg">iterations</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Plot the temperature profiles of the different iterations.</td>
@@ -748,8 +746,8 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.modeling.physics.EnergyBalance.EnergyBalance-class.html#plotHCTerm" class="summary-sig-name">plotHCTerm</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">fn</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">iterations</span>=<span class="summary-sig-default">[]</span>,
-        <span class="summary-sig-arg">dTsign</span>=<span class="summary-sig-default">'C'</span>,
+        <span class="summary-sig-arg">iterations</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="summary-sig-arg">dTsign</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">C</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">cfg</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Plot the total heating and cooling term (excluding adiabatic cooling)
@@ -860,7 +858,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">fn</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">template</span>=<span class="sig-default">'standard'</span>,
+        <span class="sig-arg">template</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">standard</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">**kwargs</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -1125,9 +1123,8 @@
           constant.
           <p>(default: None)</p></li>
         <li><strong class="pname"><code>T</code></strong> ([func,dict]) - The initial temperature profile (r, K). [func,{pars}] The first 
-          arg is the function, second argument always the initial 
-          temperature. Can be string Td as well to set it to the dust 
-          temperature.
+          arg is the function, followed by T0 and r0. Can be string Td as 
+          well to set it to the dust temperature.
           <p>(default: None)</p></li>
         <li><strong class="pname"><code>Td</code></strong> ([func,dict]) - The dust temperature profile (r, K). [func,{pars}] The first arg 
           is the function.
@@ -1421,6 +1418,21 @@
   <p>This assumes a stellar radiance profile is given, of which the 
   wavelength grid is used to integrate Q_l * L_l, thereby interpolating the
   opacity.</p>
+  <p>The two available modes are standard and beta:</p>
+  <ul>
+    <li>
+      standard: Calculates the drift velocity based on the balance between 
+      the radiation pressure and the drag force.
+    </li>
+    <li>
+      vbeta: Follows MCP, where the terminal drift velocity is calculated 
+      from the terminal gas velocity, based on the balance between 
+      radiation pressure and drag force, with a beta law going to that max 
+      velocity.
+    </li>
+  </ul>
+  <p>Note that the vbeta mode follows the F mode for dust velocity in 
+  MCP.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -1480,7 +1492,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">updatePop</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">m</span>,
-        <span class="sig-arg">fn</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">fn</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">updateLC</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1499,7 +1511,7 @@
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>m</code></strong> (str) - The molecule name from the input molecules list.</li>
         <li><strong class="pname"><code>fn</code></strong> (str) - The filename of a populations file, in case it changes or is 
-          added new after default populations have been used. Ignored if 
+          added anew after default populations have been used. Ignored if 
           the file does not exist.
           <p>(default: '')</p></li>
         <li><strong class="pname"><code>updateLC</code></strong> (bool) - The flag that moves the self.ipop to the current (or next) 
@@ -1508,7 +1520,7 @@
           Setting this to 1 upon function call, tells calcClc the LC term 
           must be calculated anew regardless of reading new pops (and thus 
           uses the old pops with the new T profile of this iteration). This
-          key can be set in the inpurfile.
+          key can be set in the inputfile.
           <p>(default: 0)</p></li>
     </ul></dd>
   </dl>
@@ -1546,8 +1558,8 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">iterT</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">conv</span>=<span class="sig-default">0.01</span>,
         <span class="sig-arg">imax</span>=<span class="sig-default">50</span>,
-        <span class="sig-arg">step_size</span>=<span class="sig-default">0.05</span>,
-        <span class="sig-arg">dTmax</span>=<span class="sig-default">0.20</span>,
+        <span class="sig-arg">step_size</span>=<span class="sig-default">0.0</span>,
+        <span class="sig-arg">dTmax</span>=<span class="sig-default">0.1</span>,
         <span class="sig-arg">warn</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
@@ -1572,12 +1584,15 @@
         <li><strong class="pname"><code>step_size</code></strong> (float) - The minimum step size in maximum allowed relative temperature 
           change. The code decides dynamically based on how close the 
           iteration is to convergence which multiple of this step size the 
-          next iteration allows.
-          <p>(default: 0.05)</p></li>
+          next iteration allows. If T change percentage grows to fast, 
+          decrease this number. Default is 0, in which case the maximum 
+          allowed T change is kept constant at dTmax.
+          <p>(default: 0)</p></li>
         <li><strong class="pname"><code>dTmax</code></strong> (float) - The starting value for the maximum allowed relative temperature 
           change between iterations. This maximum increases as the code 
-          reaches convergences, through a set multiple of step_size.
-          <p>(default: 0.20)</p></li>
+          reaches convergences, through a set multiple of step_size. If 
+          step_size is 0, dTmax stays constant
+          <p>(default: 0.10)</p></li>
         <li><strong class="pname"><code>warn</code></strong> (bool) - Warn when extrapolation occurs.
           <p>(default: 1)</p></li>
     </ul></dd>
@@ -1594,7 +1609,7 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">calcT</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">dTmax</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">warn</span>=<span class="sig-default">1</span>,
-        <span class="sig-arg">ode_kwargs</span>=<span class="sig-default">{}</span>,
+        <span class="sig-arg">ode_kwargs</span>=<span class="sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
         <span class="sig-arg">*args</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -1811,7 +1826,7 @@
   1980. Based on fitting of tabulated data of H2 cooling under LTE 
   conditions 2) Following Decin et al 2006, based on GS1976, Hollenbach 
   &amp; McKee 1979 and Hollenbach &amp; McKee 1989.</p>
-  <p>The keyword h2_method (groenewegen, or gs1976) determines which of the
+  <p>The keyword h2_method (groenewegen, or decin) determines which of the 
   two is used.</p>
   <dl class="fields">
   </dl>
@@ -1862,9 +1877,9 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotRateIterations</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">iterations</span>=<span class="sig-default">[]</span>,
-        <span class="sig-arg">dTsign</span>=<span class="sig-default">'C'</span>,
-        <span class="sig-arg">mechanism</span>=<span class="sig-default">'ad'</span>,
+        <span class="sig-arg">iterations</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">dTsign</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">C</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">mechanism</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">ad</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">scale</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">fn</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default">None</span>,
@@ -1955,7 +1970,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotT</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">fn</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">iterations</span>=<span class="sig-default">[]</span>,
+        <span class="sig-arg">iterations</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -1993,8 +2008,8 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">plotHCTerm</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">fn</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">iterations</span>=<span class="sig-default">[]</span>,
-        <span class="sig-arg">dTsign</span>=<span class="sig-default">'C'</span>,
+        <span class="sig-arg">iterations</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-group">]</code></span>,
+        <span class="sig-arg">dTsign</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">C</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">cfg</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -2112,7 +2127,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:36 2016
+    Generated by Epydoc 3.0.1 on Mon Nov  7 18:01:58 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

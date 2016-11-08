@@ -169,7 +169,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.catalogs.vizier-module.html#search" class="summary-sig-name">search</a>(<span class="summary-sig-arg">name</span>,
-        <span class="summary-sig-arg">filetype</span>=<span class="summary-sig-default">'tsv'</span>,
+        <span class="summary-sig-arg">filetype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">tsv</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Search and retrieve information from a VizieR catalog.</td>
@@ -190,7 +190,7 @@
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.catalogs.vizier-module.html#list_catalogs" class="summary-sig-name">list_catalogs</a>(<span class="summary-sig-arg">ID</span>,
         <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">filetype</span>=<span class="summary-sig-default">'tsv'</span>,
+        <span class="summary-sig-arg">filetype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">tsv</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Print and return all catalogs containing information on the star.</td>
           <td align="right" valign="top">
@@ -211,7 +211,7 @@
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.catalogs.vizier-module.html#xmatch" class="summary-sig-name">xmatch</a>(<span class="summary-sig-arg">source1</span>,
         <span class="summary-sig-arg">source2</span>,
         <span class="summary-sig-arg">output_file</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">tol</span>=<span class="summary-sig-default">1.</span>,
+        <span class="summary-sig-arg">tol</span>=<span class="summary-sig-default">1.0</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Crossmatch two vizier catalogs via a fast KDTree.</td>
           <td align="right" valign="top">
@@ -236,7 +236,7 @@
         <span class="summary-sig-arg">directory</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">unzip</span>=<span class="summary-sig-default">True</span>,
         <span class="summary-sig-arg">cat_info</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">select</span>=<span class="summary-sig-default">'low'</span>,
+        <span class="summary-sig-arg">select</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">low</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Download IUE spectra.</td>
           <td align="right" valign="top">
@@ -254,7 +254,7 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.catalogs.vizier-module.html#get_UVSST_spectrum" class="summary-sig-name">get_UVSST_spectrum</a>(<span class="summary-sig-arg">units</span>=<span class="summary-sig-default">'erg/s/cm2/AA'</span>,
+          <td><span class="summary-sig"><a href="ComboCode.cc.ivs.catalogs.vizier-module.html#get_UVSST_spectrum" class="summary-sig-name">get_UVSST_spectrum</a>(<span class="summary-sig-arg">units</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/s/cm2/AA</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Get a spectrum from the UVSST spectrograph onboard TD1.</td>
           <td align="right" valign="top">
@@ -276,7 +276,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="ComboCode.cc.ivs.catalogs.vizier-module.html#get_photometry" class="summary-sig-name">get_photometry</a>(<span class="summary-sig-arg">ID</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">extra_fields</span>=<span class="summary-sig-default">['_r','_RAJ2000','_DEJ2000']</span>,
+        <span class="summary-sig-arg">extra_fields</span>=<span class="summary-sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">_r</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">_RAJ2000</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">_DEJ2000</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
         <span class="summary-sig-arg">take_mean</span>=<span class="summary-sig-default">False</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Download all available photometry from a star to a record array.</td>
@@ -336,8 +336,8 @@
         <span class="summary-sig-arg">results</span>,
         <span class="summary-sig-arg">units</span>,
         <span class="summary-sig-arg">master</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">e_flag</span>=<span class="summary-sig-default">'e_'</span>,
-        <span class="summary-sig-arg">q_flag</span>=<span class="summary-sig-default">'q_'</span>,
+        <span class="summary-sig-arg">e_flag</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">e_</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">q_flag</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">q_</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">extra_fields</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">take_mean</span>=<span class="summary-sig-default">False</span>)</span><br />
       Convert/combine VizieR record arrays to measurement record arrays.</td>
@@ -360,8 +360,8 @@
         <span class="summary-sig-arg">results</span>,
         <span class="summary-sig-arg">units</span>,
         <span class="summary-sig-arg">master</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">e_flag</span>=<span class="summary-sig-default">'e_'</span>,
-        <span class="summary-sig-arg">q_flag</span>=<span class="summary-sig-default">'q_'</span>,
+        <span class="summary-sig-arg">e_flag</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">e_</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">q_flag</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">q_</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">extra_fields</span>=<span class="summary-sig-default">None</span>)</span><br />
       Convert/combine VizieR record arrays to measurement record arrays.</td>
           <td align="right" valign="top">
@@ -437,13 +437,13 @@
         <span class="summary-sig-arg">ID</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">ra</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">dec</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">radius</span>=<span class="summary-sig-default">20.</span>,
-        <span class="summary-sig-arg">oc</span>=<span class="summary-sig-default">'deg'</span>,
-        <span class="summary-sig-arg">oc_eq</span>=<span class="summary-sig-default">'J2000'</span>,
+        <span class="summary-sig-arg">radius</span>=<span class="summary-sig-default">20.0</span>,
+        <span class="summary-sig-arg">oc</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">deg</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">oc_eq</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">J2000</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">out_all</span>=<span class="summary-sig-default">True</span>,
         <span class="summary-sig-arg">out_max</span>=<span class="summary-sig-default">1000000</span>,
-        <span class="summary-sig-arg">filetype</span>=<span class="summary-sig-default">'tsv'</span>,
-        <span class="summary-sig-arg">sort</span>=<span class="summary-sig-default">'_r'</span>,
+        <span class="summary-sig-arg">filetype</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">tsv</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">sort</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">_r</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">constraints</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Build Vizier URI from available options.</td>
@@ -520,7 +520,7 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="basedir"></a><span class="summary-name">basedir</span> = <code title="os.path.dirname(os.path.abspath(__file__))">os.path.dirname(os.path.abspath(__file__))</code>
+        <a name="basedir"></a><span class="summary-name">basedir</span> = <code title="'/Users/robinl/ComboCode/cc/ivs/catalogs'"><code class="variable-quote">'</code><code class="variable-string">/Users/robinl/ComboCode/cc/ivs/catalogs</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr>
@@ -541,10 +541,15 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="ComboCode.cc.ivs.catalogs.vizier-module.html#mirrors" class="summary-name">mirrors</a> = <code title="{'cycle': itertools.cycle(['vizier.u-strasbg.fr', 'vizier.nao.ac.jp', \
-'vizier.hia.nrc.ca', 'vizier.ast.cam.ac.uk', 'vizier.cfa.harvard.edu',\
- 'www.ukirt.jach.hawaii.edu', 'vizier.inasan.ru', 'vizier.iucaa.ernet.\
-in', 'data.bao.ac.cn'])}">{'cycle': itertools.cycle(['vizier.u-strasbg.fr', 'v<code class="variable-ellipsis">...</code></code>
+        <a href="ComboCode.cc.ivs.catalogs.vizier-module.html#mirrors" class="summary-name">mirrors</a> = <code title="{'current': 'vizier.u-strasbg.fr',
+ 'cycle': &lt;itertools.cycle object at 0x10ec6a908&gt;}"><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">current</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">vizier.u-strasbg.fr</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">cycle</code><code class="variable-quote">'</code><code class="variable-op">: </code>&lt;itertoo<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'ComboCode.cc.ivs.catalogs'"><code class="variable-quote">'</code><code class="variable-string">ComboCode.cc.ivs.catalogs</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -574,7 +579,7 @@ in', 'data.bao.ac.cn'])}">{'cycle': itertools.cycle(['vizier.u-strasbg.fr', 'v<c
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">search</span>(<span class="sig-arg">name</span>,
-        <span class="sig-arg">filetype</span>=<span class="sig-default">'tsv'</span>,
+        <span class="sig-arg">filetype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">tsv</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">filename</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -668,7 +673,7 @@ in', 'data.bao.ac.cn'])}">{'cycle': itertools.cycle(['vizier.u-strasbg.fr', 'v<c
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">list_catalogs</span>(<span class="sig-arg">ID</span>,
         <span class="sig-arg">filename</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">filetype</span>=<span class="sig-default">'tsv'</span>,
+        <span class="sig-arg">filetype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">tsv</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -705,7 +710,7 @@ in', 'data.bao.ac.cn'])}">{'cycle': itertools.cycle(['vizier.u-strasbg.fr', 'v<c
   <h3 class="epydoc"><span class="sig"><span class="sig-name">xmatch</span>(<span class="sig-arg">source1</span>,
         <span class="sig-arg">source2</span>,
         <span class="sig-arg">output_file</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">tol</span>=<span class="sig-default">1.</span>,
+        <span class="sig-arg">tol</span>=<span class="sig-default">1.0</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -740,7 +745,7 @@ in', 'data.bao.ac.cn'])}">{'cycle': itertools.cycle(['vizier.u-strasbg.fr', 'v<c
         <span class="sig-arg">directory</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">unzip</span>=<span class="sig-default">True</span>,
         <span class="sig-arg">cat_info</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">select</span>=<span class="sig-default">'low'</span>,
+        <span class="sig-arg">select</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">low</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -770,7 +775,7 @@ in', 'data.bao.ac.cn'])}">{'cycle': itertools.cycle(['vizier.u-strasbg.fr', 'v<c
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_UVSST_spectrum</span>(<span class="sig-arg">units</span>=<span class="sig-default">'erg/s/cm2/AA'</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_UVSST_spectrum</span>(<span class="sig-arg">units</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">erg/s/cm2/AA</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -793,7 +798,7 @@ in', 'data.bao.ac.cn'])}">{'cycle': itertools.cycle(['vizier.u-strasbg.fr', 'v<c
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_photometry</span>(<span class="sig-arg">ID</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">extra_fields</span>=<span class="sig-default">['_r','_RAJ2000','_DEJ2000']</span>,
+        <span class="sig-arg">extra_fields</span>=<span class="sig-default"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">_r</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">_RAJ2000</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">_DEJ2000</code><code class="variable-quote">'</code><code class="variable-group">]</code></span>,
         <span class="sig-arg">take_mean</span>=<span class="sig-default">False</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -872,8 +877,8 @@ in', 'data.bao.ac.cn'])}">{'cycle': itertools.cycle(['vizier.u-strasbg.fr', 'v<c
         <span class="sig-arg">results</span>,
         <span class="sig-arg">units</span>,
         <span class="sig-arg">master</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">e_flag</span>=<span class="sig-default">'e_'</span>,
-        <span class="sig-arg">q_flag</span>=<span class="sig-default">'q_'</span>,
+        <span class="sig-arg">e_flag</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">e_</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">q_flag</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">q_</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">extra_fields</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">take_mean</span>=<span class="sig-default">False</span>)</span>
   </h3>
@@ -1023,8 +1028,8 @@ in', 'data.bao.ac.cn'])}">{'cycle': itertools.cycle(['vizier.u-strasbg.fr', 'v<c
         <span class="sig-arg">results</span>,
         <span class="sig-arg">units</span>,
         <span class="sig-arg">master</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">e_flag</span>=<span class="sig-default">'e_'</span>,
-        <span class="sig-arg">q_flag</span>=<span class="sig-default">'q_'</span>,
+        <span class="sig-arg">e_flag</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">e_</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">q_flag</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">q_</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">extra_fields</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1175,13 +1180,13 @@ in', 'data.bao.ac.cn'])}">{'cycle': itertools.cycle(['vizier.u-strasbg.fr', 'v<c
         <span class="sig-arg">ID</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">ra</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">dec</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">radius</span>=<span class="sig-default">20.</span>,
-        <span class="sig-arg">oc</span>=<span class="sig-default">'deg'</span>,
-        <span class="sig-arg">oc_eq</span>=<span class="sig-default">'J2000'</span>,
+        <span class="sig-arg">radius</span>=<span class="sig-default">20.0</span>,
+        <span class="sig-arg">oc</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">deg</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">oc_eq</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">J2000</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">out_all</span>=<span class="sig-default">True</span>,
         <span class="sig-arg">out_max</span>=<span class="sig-default">1000000</span>,
-        <span class="sig-arg">filetype</span>=<span class="sig-default">'tsv'</span>,
-        <span class="sig-arg">sort</span>=<span class="sig-default">'_r'</span>,
+        <span class="sig-arg">filetype</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">tsv</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">sort</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">_r</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">constraints</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">**kwargs</span>)</span>
   </h3>
@@ -1289,10 +1294,8 @@ in', 'data.bao.ac.cn'])}">{'cycle': itertools.cycle(['vizier.u-strasbg.fr', 'v<c
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-{'cycle': itertools.cycle(['vizier.u-strasbg.fr', 'vizier.nao.ac.jp', <span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-'vizier.hia.nrc.ca', 'vizier.ast.cam.ac.uk', 'vizier.cfa.harvard.edu',<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
- 'www.ukirt.jach.hawaii.edu', 'vizier.inasan.ru', 'vizier.iucaa.ernet.<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-in', 'data.bao.ac.cn'])}
+<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">current</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">vizier.u-strasbg.fr</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">cycle</code><code class="variable-quote">'</code><code class="variable-op">: </code>&lt;itertools.cycle object at 0x10ec6a908&gt;<code class="variable-group">}</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -1325,7 +1328,7 @@ in', 'data.bao.ac.cn'])}
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Fri Aug 26 14:55:34 2016
+    Generated by Epydoc 3.0.1 on Mon Nov  7 18:01:55 2016
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
