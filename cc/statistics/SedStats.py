@@ -97,7 +97,7 @@ class SedStats(Statistics):
         self.sed = None
         
         self.chi2 = np.empty(0)
-        
+        print "bla"
         
         
     def setInstrument(self,sed=None,**kwargs):
