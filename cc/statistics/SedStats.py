@@ -96,9 +96,7 @@ class SedStats(Statistics):
         self.photbands = np.empty(0)
         self.sed = None
         
-        self.chi2 = np.empty(0)
-        print "bla"
-        
+        self.chi2 = np.empty(0)        
         
     def setInstrument(self,sed=None,**kwargs):
        

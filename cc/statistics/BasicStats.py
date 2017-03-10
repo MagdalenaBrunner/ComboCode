@@ -39,6 +39,14 @@ def calcChiSquared(data,model,noise,ndf=0,mode='diff'):
                    than the input array distribution the chi^2 'log' method is 
                    mathematically equivalent to the differentiation.
                    
+                   NEW: 'rel' - this method compares the logarithm of the model
+                   with the data points (absolute value, removing difference between 
+                   positive or negative deviation) and scales it with the relative error
+                   of the data points; it is technically no "chi square", but should
+                   represent the goodness of fit in our logarithmic distirbuted data space,
+                   reducing the strong influence of the very low flux values to a
+                   comparable level
+                   
                    (default: 'diff')
     @type mode: str
     
@@ -55,6 +63,9 @@ def calcChiSquared(data,model,noise,ndf=0,mode='diff'):
         chi2 = ((data - model)**2./noise**2.).sum()/(len(data)-ndf-1)
     elif mode == 'log':
         chi2 = ((10**abs(np.log10(data/model))-1)**2./(noise/model)**2.).sum()
+        chi2 /= (len(data)-ndf-1)
+    elif mode == 'rel':
+        chi2 = (abs(np.log10(data/model))/(noise/data)).sum()
         chi2 /= (len(data)-ndf-1)
     else:
         print 'Chi^2 mode not recognized.'
